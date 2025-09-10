@@ -1,0 +1,194 @@
+#!/usr/bin/bash
+
+aur=(
+    cnijfilter2 # canon printer drivers
+    thorium-browser-bin
+    evince-no-gnome
+    chatterino2-bin
+    fcitx5-mozc-ut
+    gemini-cli-bin
+    localsend-bin # share files locally
+    minecraft-launcher
+    protontricks # needed it to install webview for Forza Horizon
+    r2modman-bin
+    rider
+    rose-pine-cursor
+    timg # view img in terminal
+    ttf-comic-sans
+    unityhub
+    vesktop-bin
+    wlogout
+    wlrobs # plugin for OBS to record in wayland
+    zen-browser-bin
+)
+
+pkgs=(
+    aspnet-runtime
+    base-devel
+    bat
+    zathura
+    zathura-pdf-poppler
+    breeze
+    breeze5
+    brightnessctl
+    btop
+    cantor
+    chafa
+    ckb-next
+    clang
+    cliphist
+    code # the OSS version of vscode
+    discord
+    dotnet-runtime
+    dotnet-sdk
+    dunst
+    elixir
+    erlang
+    eza
+    hexchat
+    fastfetch
+    fcitx5-configtool
+    fcitx5-gtk
+    fcitx5-rime
+    firefox
+    fzf
+    gedit
+    geogebra
+    ghostty
+    gimp
+    git
+    github-cli
+    gitui
+    glfw
+    gnome-keyring
+    gnome-weather
+    go
+    godot-mono
+    gopls
+    grim
+    gtk-engine-murrine
+    gvfs # dependency for Thunar's volume management
+    gwenview
+    htop
+    hyfetch
+    hypridle
+    hyprland
+    hyprlock
+    hyprpaper
+    hyprpicker
+    hyprpolkitagent
+    hyprshot
+    i3-wm
+    inkscape
+    intellij-idea-community-edition
+    jdk-openjdk
+    kdenlive
+    keepassxc
+    keyd
+    kitty
+    komikku
+    kvantum
+    lazygit
+    libreoffice-still
+    loupe # gnome's image viewer
+    lua
+    lutris
+    maven
+    mercurial
+    ncdu   # WinDirStat like tool
+    ncspot # TUI for spotify
+    ncurses
+    neomutt
+    neovim
+    networkmanager
+    network-manager-applet
+    noto-fonts-cjk
+    npm
+    nushell
+    nvtop
+    nwg-look
+    obsidian
+    obs-studio
+    odin
+    okular
+    openrgb
+    pandoc-cli
+    pavucontrol
+    power-profiles-daemon
+    proton-vpn-gtk-app
+    qalculate-gtk
+    qbittorrent
+    qt5ct
+    qt5-wayland
+    qt6-wayland
+    ranger
+    raylib
+    ripgrep
+    rofi-emoji
+    rofi-wayland
+    rsync
+    rustup
+    sagemath
+    seahorse
+    shfmt
+    skim
+    spotify-launcher
+    steam
+    steam-native-runtime
+    swww
+    tesseract
+    tesseract-data-chi_sim
+    tesseract-data-eng
+    tesseract-data-jpn
+    texlive-basic
+    texlive-bibtexextra
+    texlive-binextra
+    texlive-fontsrecommended
+    texlive-lang
+    texlive-latex
+    texlive-latexextra
+    texlive-latexrecommended
+    texlive-luatex
+    texlive-mathscience
+    texlive-plaingeneric
+    texlive-xetex
+    thefuck
+    thunar
+    thunar-volman # dependency for Thunar's volume management
+    thunderbird
+    tmux
+    torbrowser-launcher
+    tree
+    ttf-fira-code
+    ttf-iosevkaterm-nerd
+    ttf-nerd-fonts-symbols-mono
+    tumbler # needed to display thumbnails in Thunar
+    typst
+    uv
+    vlc
+    vlc-plugins-all
+    vlc-plugin-x264
+    waybar
+    wev
+    wine
+    wine-mono
+    wl-clipboard
+    xdg-desktop-portal-hyprland
+    xournalpp
+    yarn
+    yazi
+    zig
+    zls
+    zsh
+)
+
+case "$1" in
+"v" | "vim")
+    nvim "$0"
+    ;;
+*)
+    paru -Syu --noconfirm
+    paru -S --noconfirm --needed "${pkgs[@]}"
+    paru -S --noconfirm --needed "${aur[@]}"
+    ;;
+esac

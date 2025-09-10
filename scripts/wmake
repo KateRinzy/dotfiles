@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+stty -ixon
+trap 'stty ixon' EXIT
+
+while true; do
+    make
+    printf '%*s\n' "$COLUMNS" '' | tr ' ' -
+    echo
+    read -p "Waiting on input..."
+done
