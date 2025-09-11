@@ -148,10 +148,10 @@ case "$1" in
     sync_diff
     ;;
 "z" | "zen")
-    zen-browser --new-tab "https://github.com/laeva-lady/denver"
+    zen-browser --new-tab "https://github.com/KateRinzy/dotfiles"
     ;;
 "f" | "firefox")
-    firefox "https://github.com/laeva-lady/denver"
+    firefox "https://github.com/KateRinzy/dotfiles"
     ;;
 *)
     sync_files

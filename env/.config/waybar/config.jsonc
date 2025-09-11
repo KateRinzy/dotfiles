@@ -22,8 +22,9 @@
     "modules-right": [
         "tray",
         "custom/sep",
-        "custom/mode",
-        "battery"
+        "battery",
+        "custom/sep",
+        "custom/mode"
     ],
     "custom/power": {
         "rotate": 90,
