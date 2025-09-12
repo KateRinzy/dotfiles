@@ -37,7 +37,7 @@ return {
 			builtin.grep_string({ search = vim.fn.input("Grep > ") })
 		end)
 		vim.keymap.set('n', '<C-b>', builtin.buffers, {})
-		vim.keymap.set("n", "<leader>pdf", function()
+		vim.keymap.set("n", "<leader>py", function()
 			require("telescope.builtin").find_files({
 				prompt_title = "Find PDF",
 				find_command = { "fd", "--type", "f", "--extension", "pdf" },

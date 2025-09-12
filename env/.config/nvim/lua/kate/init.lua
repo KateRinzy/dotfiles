@@ -47,7 +47,14 @@ autocmd({ "BufWritePre" }, {
 --         end
 --     end,
 -- })
-vim.cmd.colorscheme("kanagawa-dragon")
+-- vim.cmd.colorscheme("kanagawa-dragon")
+--
+local dark_mode = true
+if dark_mode then
+	vim.cmd.colorscheme("catppuccin-frappe")
+else
+	vim.cmd.colorscheme("catppuccin-latte")
+end
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 1
