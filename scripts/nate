@@ -60,7 +60,7 @@ sync_files() {
     update_env_files
 
     echo "Copying scripts"
-    cp $CP_FLAGS ~/documents/scripts/* $WORKSTATION/scripts/
+    cp $CP_FLAGS ~/Documents/scripts/* $WORKSTATION/scripts/
 
     echo "Copying vscode user settings"
     cp $CP_FLAGS ~/.config/Code/User/settings.json $WORKSTATION/resources/Code

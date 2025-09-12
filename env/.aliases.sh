@@ -6,9 +6,9 @@ alias def="~/personal"
 
 alias ff="fastfetch"
 
-alias chat="nvim ~/documents/chat.md"
-alias zxcv="nvim ~/documents/zxcv.md"
-alias fair="nvim ~/documents/notes/todo.md"
+alias chat="nvim ~/Documents/chat.md"
+alias zxcv="nvim ~/Documents/zxcv.md"
+alias fair="nvim ~/Documents/notes/todo.md"
 
 alias ls="eza -a1 -s type"
 
@@ -21,7 +21,7 @@ alias rel="omz reload"
 
 alias rin="tmux-sessionizer $WORKSTATION"
 alias whore="tmux-sessionizer $HOME"
-alias why="tmux-sessionizer $HOME/documents"
+alias why="tmux-sessionizer $HOME/Documents"
 
 alias g="git"
 alias gs="git status"
