@@ -34,6 +34,9 @@ alias gacm="git commit -am"
 alias gpush="git push"
 alias gpull="git pull"
 
+alias open="xdg-open"
+alias maple="~/maple2022/bin/xmaple" # should maybe put this in $PATH i suppose, too lazy to do that
+
 psk() {
     for str in "$@"; do
         printf "%-15s %.2f GB\n" "$str" "$(ps -o rss= -p $(pgrep $str) | awk '{s+=$1} END {print s / (1024*1024)}')"
@@ -52,6 +55,7 @@ complete -o dirnames t
 tl() {
     tmux list-sessions
 }
+
 
 cursor() {
     command cursor --enable-features=UseOzonePlatform --ozone-platform=wayland "$@" >/dev/null 2>&1 &
