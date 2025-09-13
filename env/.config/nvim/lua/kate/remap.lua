@@ -13,7 +13,7 @@ set({ "n", "v" }, "!", ":!")
 set({ "n" }, "<leader>t", "i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>",
 	{ desc = "Insert the date and time under the cursor" })
 
-set({ "n", "v", "i" }, "<C-w>", "<ESC>:w<CR>")
+set({ "n", "v" }, "<C-s>", "<ESC>:w<CR>")
 
 -- set("i", "<C-u>", "<Esc>")
 
@@ -47,12 +47,11 @@ set("n", "<leader>k", ":make<CR>", { desc = "Call make" })
 set("n", "<leader>ch", ":e ~/Documents/chat.md<CR>", { desc = "Open chat.md" })
 
 local function toggle_catppuccin_theme()
-	if vim.g.catppuccin_flavour == "frappe" then
-		vim.g.catppuccin_flavour = "latte"
+	if vim.g.colors_name == "kanagawa" then
+		vim.cmd.colorscheme("catppuccin-latte")
 	else
-		vim.g.catppuccin_flavour = "frappe"
+		vim.cmd.colorscheme("kanagawa-wave")
 	end
-	vim.cmd("colorscheme catppuccin")
 end
 
 set("n", "<leader>cs", toggle_catppuccin_theme, { desc = "Toggle Catppuccin Theme" })

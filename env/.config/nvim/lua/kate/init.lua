@@ -51,7 +51,7 @@ autocmd({ "BufWritePre" }, {
 --
 local dark_mode = true
 if dark_mode then
-	vim.cmd.colorscheme("catppuccin-frappe")
+	vim.cmd.colorscheme("kanagawa-wave")
 else
 	vim.cmd.colorscheme("catppuccin-latte")
 end

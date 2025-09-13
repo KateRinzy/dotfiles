@@ -7,7 +7,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 
-local useTabs = true
+local useTabs = false
 if (useTabs) then
 	vim.opt.softtabstop = nil
 	vim.opt.expandtab = false

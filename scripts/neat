@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
 aur=(
-    cnijfilter2 # canon printer drivers
-    thorium-browser-bin
-    evince-no-gnome
+    ani-cli
     chatterino2-bin
+    cnijfilter2 # canon printer drivers
+    evince-no-gnome
     fcitx5-mozc-ut
     gemini-cli-bin
     localsend-bin # share files locally
@@ -13,12 +13,14 @@ aur=(
     r2modman-bin
     rider
     rose-pine-cursor
+    thorium-browser-bin
     timg # view img in terminal
     ttf-comic-sans
     unityhub
     vesktop-bin
     wlogout
     wlrobs # plugin for OBS to record in wayland
+    wxmaxima
     zen-browser-bin
 )
 
@@ -26,8 +28,6 @@ pkgs=(
     aspnet-runtime
     base-devel
     bat
-    zathura
-    zathura-pdf-poppler
     breeze
     breeze5
     brightnessctl
@@ -45,7 +45,6 @@ pkgs=(
     elixir
     erlang
     eza
-    hexchat
     fastfetch
     fcitx5-configtool
     fcitx5-gtk
@@ -69,6 +68,7 @@ pkgs=(
     gtk-engine-murrine
     gvfs # dependency for Thunar's volume management
     gwenview
+    hexchat
     htop
     hyfetch
     hypridle
@@ -94,6 +94,7 @@ pkgs=(
     lua
     lutris
     maven
+    maxima
     mercurial
     ncdu   # WinDirStat like tool
     ncspot # TUI for spotify
@@ -177,6 +178,8 @@ pkgs=(
     xournalpp
     yarn
     yazi
+    zathura
+    zathura-pdf-poppler
     zig
     zls
     zsh

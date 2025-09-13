@@ -17,10 +17,7 @@ shell-integration-features = no-cursor
 gtk-single-instance = true
 # theme = rose-pine
 # theme = GruvboxDark
-# theme = Kanagawa Wave
-# theme = Kanagawa Dragon
-# theme = catppuccin-latte
-theme = catppuccin-frappe
+theme = Kanagawa Wave
 
 window-inherit-working-directory = false
 working-directory = /home/user/Documents
