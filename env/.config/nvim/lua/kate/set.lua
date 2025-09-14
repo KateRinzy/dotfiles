@@ -8,7 +8,7 @@ vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 
 local useTabs = false
-if (useTabs) then
+if useTabs then
     vim.opt.softtabstop = nil
     vim.opt.expandtab = false
 else
@@ -48,8 +48,22 @@ vim.opt.listchars:append("space:·")
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.api.nvim_create_user_command("Writing", function()
-    vim.opt.list = false
-    vim.opt.nu = false
-    vim.opt.relativenumber = false
-end, {})
+vim.keymap.set("n", "<leader>ts", function()
+    -- toggle the status line
+    if vim.o.laststatus == 0 then
+        vim.o.laststatus = 2
+    else
+        vim.o.laststatus = 0
+    end
+
+    -- toggle the cmd line
+    if vim.o.cmdheight == 0 then
+        vim.o.cmdheight = 1
+    else
+        vim.o.cmdheight = 0
+    end
+
+    vim.o.list = not vim.o.list
+    vim.wo.nu = not vim.wo.nu
+    vim.wo.relativenumber = not vim.wo.relativenumber
+end, { desc = "Toggle focus mode" })

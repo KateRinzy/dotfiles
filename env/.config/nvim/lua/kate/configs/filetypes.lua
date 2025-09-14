@@ -22,14 +22,14 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "typst", "tex" },
+    pattern = { "typst" },
     callback = function()
         vim.opt.spell = true
         vim.opt.spelllang = { "en", "fr", "cjk" }
 
-        vim.opt.colorcolumn = "120"
+        vim.opt.colorcolumn = "90"
         vim.opt.linebreak = true
-        vim.opt.textwidth = 120
+        vim.opt.textwidth = 90
         vim.opt.formatoptions:append("t")
 
         -- keymap to open compiled PDF in zathura

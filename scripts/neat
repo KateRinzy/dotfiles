@@ -41,6 +41,7 @@ pkgs=(
     discord
     dotnet-runtime
     dotnet-sdk
+    cuda
     dunst
     elixir
     erlang
