@@ -2,7 +2,7 @@
     "workbench.colorTheme": "Kanagawa Wave",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "'IosevkaTerm Nerd Font Mono', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'IosevkaTerm NFM Light', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
     "haskell.manageHLS": "GHCup",
     "debug.inlineValues": "off",
     "editor.renderWhitespace": "all",

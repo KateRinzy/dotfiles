@@ -9,11 +9,11 @@ vim.opt.smartindent = true
 
 local useTabs = false
 if (useTabs) then
-	vim.opt.softtabstop = nil
-	vim.opt.expandtab = false
+    vim.opt.softtabstop = nil
+    vim.opt.expandtab = false
 else
-	vim.opt.softtabstop = 4
-	vim.opt.expandtab = true
+    vim.opt.softtabstop = 4
+    vim.opt.expandtab = true
 end
 
 vim.opt.wrap = false
@@ -47,3 +47,9 @@ vim.opt.listchars:append("space:·")
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.api.nvim_create_user_command("Writing", function()
+    vim.opt.list = false
+    vim.opt.nu = false
+    vim.opt.relativenumber = false
+end, {})

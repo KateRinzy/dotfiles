@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "left",
     "width": 6,
-    // "output": "eDP-1",
+    "output": "eDP-1",
     // "margin": "2 2 2 2",
     "spacing": 2,
     // "margin-left": 5,
@@ -52,7 +52,8 @@
         "format": " \n{name}\n ",
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1"
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "all-outputs": true
     },
     "hyprland/window": {
         "rotate": 90,
