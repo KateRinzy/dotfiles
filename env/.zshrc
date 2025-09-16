@@ -48,4 +48,5 @@ bindkey -s ^q "^ukitty sh -c ranger\n"
 
 
 [ -f "/home/kate/.ghcup/env" ] && . "/home/kate/.ghcup/env" # ghcup-env
+
 eval $(thefuck --alias)

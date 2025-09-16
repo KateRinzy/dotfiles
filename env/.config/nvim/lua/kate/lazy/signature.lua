@@ -1,9 +1,9 @@
 return {
-    {
-        "ray-x/lsp_signature.nvim",
-        event = "InsertEnter",
-        opts = {
-            -- cfg options
-        },
-    }
+    -- {
+    --     "ray-x/lsp_signature.nvim",
+    --     event = "InsertEnter",
+    --     opts = {
+    --         -- cfg options
+    --     },
+    -- }
 }

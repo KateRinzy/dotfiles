@@ -3,8 +3,8 @@ alias vim="nvim"
 alias cim="nvim -u ~/.config/nvim/min-init.lua"
 
 alias def="~/personal"
-
 alias ff="fastfetch"
+alias f="fuck"
 
 alias chat="nvim ~/Documents/chat.md"
 alias zxcv="nvim ~/Documents/zxcv.md"
@@ -55,7 +55,6 @@ complete -o dirnames t
 tl() {
     tmux list-sessions
 }
-
 
 cursor() {
     command cursor --enable-features=UseOzonePlatform --ozone-platform=wayland "$@" >/dev/null 2>&1 &
