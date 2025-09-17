@@ -93,7 +93,7 @@ end
 
 vim.keymap.set("n", "<leader>ts", function()
     -- toggle_tmux_status()
-    toggle_nvim_status()
+    -- toggle_nvim_status()
     -- toggle_cml_line()
     toggle_side_scrolloff()
     toggle_list_nu()

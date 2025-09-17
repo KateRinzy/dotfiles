@@ -2,7 +2,7 @@
     "workbench.colorTheme": "Kanagawa Wave",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "'IosevkaTerm NFM Light', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'Raleway', 'IosevkaTerm NFM Light', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
     "haskell.manageHLS": "GHCup",
     "debug.inlineValues": "off",
     "editor.renderWhitespace": "all",
@@ -45,5 +45,6 @@
     "FSharp.codeLenses.signature.enabled": false,
     "editor.inlayHints.enabled": "off",
     "explorer.confirmDelete": false,
-    "editor.codeLens": false
+    "editor.codeLens": false,
+    "tinymist.exportPdf": "onType"
 }

@@ -10,6 +10,8 @@ alias chat="nvim ~/Documents/chat.md"
 alias zxcv="nvim ~/Documents/zxcv.md"
 alias fair="nvim ~/Documents/notes/todo.md"
 
+alias vnotes="nvim notes.typ"
+
 alias ls="eza -a1 -s type"
 
 alias e="exit"

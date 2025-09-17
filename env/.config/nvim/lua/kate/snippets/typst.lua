@@ -24,10 +24,17 @@ return {
     --         i(1)
     --     })
     -- ),
-    s({ trig = "([^%s]+);d", snippetType = "autosnippet", regTrig = true },
-        fmta("<>/(<>)", {
-            f(function(_, s) return s.captures[1] end),
-            i(1)
+    -- s({ trig = "([^%s]+);d", snippetType = "autosnippet", regTrig = true },
+    --     fmta("<>/(<>)", {
+    --         f(function(_, s) return s.captures[1] end),
+    --         i(1)
+    --     })
+    -- ),
+    s({ trig = ";d", snippetType = "autosnippet" },
+        fmta("(<>)/(<>) <>", {
+            i(1),
+            i(2),
+            i(3)
         })
     ),
     s({ trig = "([^%s]+);f", snippetType = "autosnippet", regTrig = true },
