@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+# needed packages
+
 aur=(
     ani-cli
     chatterino2-bin
@@ -10,8 +12,7 @@ aur=(
     localsend-bin # share files locally
     minecraft-launcher
     protontricks # needed it to install webview for Forza Horizon
-    r2modman-bin
-    rider
+    r2modman-bin # thunderstore thing for linux
     rose-pine-cursor
     thorium-browser-bin
     timg # view img in terminal

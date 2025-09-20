@@ -2,7 +2,7 @@
 vim.opt.winborder = "single"
 
 vim.opt.nu = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -46,6 +46,7 @@ vim.opt.colorcolumn = "120"
 
 vim.opt.list = true
 vim.opt.listchars:append("space:·")
+-- vim.opt.listchars:append("space:_")
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -88,7 +89,7 @@ end
 local function toggle_list_nu()
     vim.o.list = not vim.o.list
     vim.wo.nu = not vim.wo.nu
-    vim.wo.relativenumber = not vim.wo.relativenumber
+    -- vim.wo.relativenumber = not vim.wo.relativenumber
 end
 
 vim.keymap.set("n", "<leader>ts", function()

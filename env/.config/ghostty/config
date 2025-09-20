@@ -8,7 +8,7 @@ confirm-close-surface = false
 # font-family = "Fira Code Retina"
 font-family = "IosevkaTerm NFM Light"
 
-font-size = 23
+font-size = 22
 
 gtk-wide-tabs = false
 gtk-tabs-location= bottom
@@ -20,4 +20,4 @@ gtk-single-instance = true
 theme = Kanagawa Wave
 
 window-inherit-working-directory = false
-working-directory = /home/user/Documents
+working-directory = /home/kate/Documents
