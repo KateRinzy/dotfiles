@@ -64,7 +64,6 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-
 # Validate split options are only used with session commands
 if [[ -n "$split_type" && -z "$session_idx" ]]; then
     echo "Error: --vsplit and --hsplit can only be used with -s/--session option"
@@ -133,11 +132,11 @@ set_pane_id() {
     init_pane_cache
 
     # Remove existing entry if it exists
-    grep -v "^${session_idx}:${split_type}:" "$PANE_CACHE_FILE" > "${PANE_CACHE_FILE}.tmp" 2>/dev/null || true
+    grep -v "^${session_idx}:${split_type}:" "$PANE_CACHE_FILE" >"${PANE_CACHE_FILE}.tmp" 2>/dev/null || true
     mv "${PANE_CACHE_FILE}.tmp" "$PANE_CACHE_FILE"
 
     # Add new entry
-    echo "${session_idx}:${split_type}:${pane_id}" >> "$PANE_CACHE_FILE"
+    echo "${session_idx}:${split_type}:${pane_id}" >>"$PANE_CACHE_FILE"
 }
 
 cleanup_dead_panes() {
@@ -146,9 +145,9 @@ cleanup_dead_panes() {
 
     while IFS=: read -r idx split pane_id; do
         if tmux list-panes -a -F "#{pane_id}" 2>/dev/null | grep -q "^${pane_id}$"; then
-            echo "${idx}:${split}:${pane_id}" >> "$temp_file"
+            echo "${idx}:${split}:${pane_id}" >>"$temp_file"
         fi
-    done < "$PANE_CACHE_FILE"
+    done <"$PANE_CACHE_FILE"
 
     mv "$temp_file" "$PANE_CACHE_FILE" 2>/dev/null || touch "$PANE_CACHE_FILE"
 }
@@ -189,10 +188,10 @@ find_dirs() {
         fi
 
         [[ -d "$path" ]] && find "$path" \
-          -mindepth 1 \
-          -maxdepth "${depth:-${TS_MAX_DEPTH:-1}}" \
-          \( -path '*/.git' -o -path '*/.cache' \) -prune -o \
-          -type d -print
+            -mindepth 1 \
+            -maxdepth "${depth:-${TS_MAX_DEPTH:-1}}" \
+            \( -path '*/.git' -o -path '*/.cache' \) -prune -o \
+            -type d -print
     done
 }
 
@@ -213,7 +212,7 @@ handle_window_session_cmd() {
     start_index=$((69 + $session_idx))
     target="$current_session:$start_index"
 
-    if tmux has-session -t="$target" 2> /dev/null; then
+    if tmux has-session -t="$target" 2>/dev/null; then
         switch_to "$target"
     else
         tmux neww -dt $target "$session_cmd"
@@ -227,7 +226,7 @@ if [[ ! -z $session_cmd ]]; then
 elif [[ ! -z $user_selected ]]; then
     selected="$user_selected"
 else
-    selected=$(find_dirs | fzf)
+    selected=$(find_dirs | fzf --tmux=center,80%,50%)
 fi
 
 if [[ -z $selected ]]; then

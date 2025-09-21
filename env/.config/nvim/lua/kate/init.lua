@@ -4,36 +4,36 @@ require("kate.configs.status-bar")
 require("kate.set")
 
 local augroup = vim.api.nvim_create_augroup
-local kateGroup = augroup('kate', {})
-
 local autocmd = vim.api.nvim_create_autocmd
-local yank_group = augroup('HighlightYank', {})
-
-function R(name)
-    require("plenary.reload").reload_module(name)
-end
-
-vim.filetype.add({
-    extension = {
-        templ = 'templ',
-    }
-})
-
 autocmd('TextYankPost', {
-    group = yank_group,
+    group = augroup('HighlightYank', {}),
     pattern = '*',
     callback = function()
         vim.highlight.on_yank({
             higroup = 'IncSearch',
-            timeout = 40,
+            timeout = 120,
         })
     end,
 })
 
+-- remove trailing whitespaces at the end of a line
 autocmd({ "BufWritePre" }, {
-    group = kateGroup,
+    group = augroup('kate', {}),
     pattern = "*",
     command = [[%s/\s\+$//e]],
+})
+
+-- format on save
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = augroup("lsp", { clear = true }),
+    callback = function(args)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = args.buf,
+            callback = function()
+                vim.lsp.buf.format { async = false, id = args.data.client_id }
+            end,
+        })
+    end
 })
 
 -- autocmd({ "BufEnter", "BufWritePost" }, {
@@ -67,7 +67,7 @@ vim.keymap.set({ "i", "s" }, "<C-x>", function() ls.jump(1) end, { silent = true
 
 
 autocmd('LspAttach', {
-    group = kateGroup,
+    group = augroup("kate", {}),
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
