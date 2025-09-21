@@ -11,8 +11,6 @@ set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
 set({ "n", "v" }, ";", ":")
 set({ "n", "v" }, "!", ":!")
 
-set({ "n" }, "<leader>t", "i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>",
-    { desc = "Insert the date and time under the cursor" })
 
 set({ "n", "v" }, "<C-s>", "<ESC>:w<CR>")
 
@@ -50,14 +48,5 @@ set("n", "<leader>sa", selectALL, { desc = "Select the entire file" })
 set("n", "<leader>k", ":make<CR>", { desc = "Call make" })
 
 
-set("n", "<leader>ch", ":e ~/Documents/chat.md<CR>", { desc = "Open chat.md" })
+set("n", "<leader>ch", ":e ~/Documents/chat.typ<CR>", { desc = "Open chat.typ" })
 
-local function toggle_catppuccin_theme()
-    if vim.g.colors_name == "kanagawa" then
-        vim.cmd.colorscheme("catppuccin-latte")
-    else
-        vim.cmd.colorscheme("kanagawa-wave")
-    end
-end
-
-set("n", "<leader>cs", toggle_catppuccin_theme, { desc = "Toggle Catppuccin Theme" })

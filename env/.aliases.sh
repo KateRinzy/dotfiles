@@ -6,11 +6,9 @@ alias def="~/personal"
 alias ff="fastfetch"
 alias f="fuck"
 
-alias chat="nvim ~/Documents/chat.md"
-alias zxcv="nvim ~/Documents/zxcv.md"
-alias fair="nvim ~/Documents/notes/todo.md"
-
-alias vnotes="nvim notes.typ"
+alias chat="nvim ~/Documents/chat.typ"
+alias zxcv="nvim ~/Documents/zxcv.typ"
+alias fair="nvim ~/Documents/notes/todo.typ"
 
 alias ls="eza -a1 -s type"
 

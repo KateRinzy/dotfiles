@@ -92,10 +92,31 @@ local function toggle_list_nu()
     -- vim.wo.relativenumber = not vim.wo.relativenumber
 end
 
-vim.keymap.set("n", "<leader>ts", function()
+vim.keymap.set("n", "<leader>tw", function()
     -- toggle_tmux_status()
     -- toggle_nvim_status()
     -- toggle_cml_line()
     toggle_side_scrolloff()
     toggle_list_nu()
 end, { desc = "Toggle focus mode" })
+
+local function toggle_catppuccin_theme()
+    if vim.g.colors_name == "kanagawa" then
+        vim.cmd.colorscheme("catppuccin-latte")
+    else
+        vim.cmd.colorscheme("kanagawa-wave")
+    end
+end
+local function toggle_highlight() -- with treesitter
+    vim.cmd [[TSToggle highlight]]
+end
+vim.keymap.set("n", "<leader>tu", toggle_catppuccin_theme, { desc = "Toggle Catppuccin Theme" })
+vim.keymap.set("n", "<leader>ts", toggle_highlight, { desc = "Toggle TreeSitter" })
+
+
+local function insert_datetime()
+    local datetime = os.date("%Y-%m-%d %H:%M:%S")
+    vim.api.nvim_put({ datetime }, "c", true, true)
+end
+
+vim.api.nvim_create_user_command("InsertTime", insert_datetime, {})
