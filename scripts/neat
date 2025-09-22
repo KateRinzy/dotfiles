@@ -17,7 +17,6 @@ aur=(
     thorium-browser-bin
     timg # view img in terminal
     ttf-comic-sans
-    unityhub
     vesktop-bin
     wlogout
     wlrobs # plugin for OBS to record in wayland
@@ -82,7 +81,6 @@ pkgs=(
     hyprshot
     i3-wm
     inkscape
-    intellij-idea-community-edition
     jdk-openjdk
     kdenlive
     keepassxc

@@ -12,6 +12,7 @@ tarball_url=$(curl -s https://api.github.com/repos/GloriousEggroll/proton-ge-cus
 tarball_name=$(basename $tarball_url)
 clean_name=$(echo "$tarball_name" | awk -F "." '{print $1}')
 
+echo "Checking if compatibilitytools directory exists"
 if find ~/.steam/steam/compatibilitytools.d -maxdepth 1 -type d | awk -F "/" '{print $NF}' | grep "$clean_name" &>/dev/null; then
     echo "$clean_name already installed, exiting"
     rm -rf /tmp/proton-ge-custom

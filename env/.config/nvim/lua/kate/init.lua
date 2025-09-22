@@ -5,6 +5,7 @@ require("kate.set")
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
+local kateGroup = augroup("kate", {})
 autocmd('TextYankPost', {
     group = augroup('HighlightYank', {}),
     pattern = '*',
@@ -18,7 +19,7 @@ autocmd('TextYankPost', {
 
 -- remove trailing whitespaces at the end of a line
 autocmd({ "BufWritePre" }, {
-    group = augroup('kate', {}),
+    group = kateGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
@@ -36,20 +37,19 @@ autocmd({ "BufWritePre" }, {
 --     end
 -- })
 
--- autocmd({ "BufEnter", "BufWritePost" }, {
---     group = kateGroup,
---     callback = function()
---         local hour = tonumber(os.date('%H'))
---         if hour >= 9 and hour < 22 then
---             vim.cmd.colorscheme("kanagawa-wave")
---         else
---             vim.cmd.colorscheme("kanagawa-dragon")
---         end
---     end,
--- })
--- vim.cmd.colorscheme("kanagawa-dragon")
---
-vim.cmd.colorscheme("kanagawa-wave")
+-- vim.cmd.colorscheme("kanagawa-wave")
+local function set_dark()
+    vim.cmd [[colorscheme monochrome]]
+    vim.opt.background = "dark"
+end
+local function set_light()
+    vim.cmd [[colorscheme catppuccin-latte]]
+    vim.opt.background = "light"
+end
+set_dark()
+vim.api.nvim_create_user_command("DarkMode", set_dark, {})
+vim.api.nvim_create_user_command("LightMode", set_light, {})
+vim.api.nvim_set_hl(0, "SpellBad", { fg = "#cea1a1", undercurl = false, sp = "#ff0000" })
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 1
@@ -67,7 +67,7 @@ vim.keymap.set({ "i", "s" }, "<C-x>", function() ls.jump(1) end, { silent = true
 
 
 autocmd('LspAttach', {
-    group = augroup("kate", {}),
+    group = kateGroup,
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)

@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Kanagawa Wave",
+    "workbench.colorTheme": "Monocroix Dark",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
     "editor.fontFamily": "'IosevkaTerm NFM Light', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
@@ -46,5 +46,6 @@
     "editor.inlayHints.enabled": "off",
     "explorer.confirmDelete": false,
     "editor.codeLens": false,
-    "tinymist.exportPdf": "onType"
+    "tinymist.exportPdf": "onType",
+    "tinymist.formatterPrintWidth": 70
 }

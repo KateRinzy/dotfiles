@@ -20,7 +20,7 @@ set("n", "<C-f>", ":Files<CR>", { desc = "Open fzf" })
 set("n", "<leader>f",
     function()
         vim.lsp.buf.format()
-        print("Bogus Binted 🤨")
+        print("Bogus Binted? 🤨")
     end
     , { desc = "Format the file" })
 

@@ -3,7 +3,7 @@ require "lspconfig"["tinymist"].setup {
         formatterMode = "typstyle",
         exportPdf = "onType",
         semanticTokens = "enable",
-        formatterPrintWidth = 80,
+        formatterPrintWidth = 70,
         formatterProseWrap = true
     }
 }
