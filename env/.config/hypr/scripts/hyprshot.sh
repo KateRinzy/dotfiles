@@ -23,7 +23,7 @@ window
 output
 screen"
 
-    selection=$(echo "$opts" | rofi -dmenu -p "Screenshot Options" -theme ~/.config/rofi/aorstie.rasi)
+    selection=$(echo "$opts" | rofi -dmenu -p "Screenshot Options")
 
     [ -z "$selection" ] && exit 0
 
