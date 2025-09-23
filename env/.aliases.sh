@@ -9,6 +9,7 @@ alias f="fuck"
 alias chat="nvim ~/Documents/chat.typ"
 alias zxcv="nvim ~/Documents/zxcv.typ"
 alias fair="nvim ~/Documents/notes/todo.typ"
+alias all="nvim ~/Documents/notes/all.typ"
 
 alias ls="eza -a1 -s type"
 
