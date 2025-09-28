@@ -6,6 +6,8 @@ alias def="~/personal"
 alias ff="fastfetch"
 alias f="fuck"
 
+alias mate="make"
+
 alias chat="nvim ~/Documents/chat.typ"
 alias zxcv="nvim ~/Documents/zxcv.typ"
 alias fair="nvim ~/Documents/notes/todo.typ"

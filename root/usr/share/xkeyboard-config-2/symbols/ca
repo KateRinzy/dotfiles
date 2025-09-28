@@ -31,7 +31,7 @@ xkb_symbols "fr" {
     key <AD11>	{[dead_circumflex, dead_circumflex  ]};
     key <AD12>	{[   dead_cedilla,  dead_diaeresis  ]};
 
-    key <AC01>	{[         a,          A ]};
+    key <AC01>	{[         a,          A, oe, OE ]};
     key <AC02>	{[         r,          R ]};
     key <AC03>	{[         s,          S ]};
     key <AC04>	{[         t,          T ]};

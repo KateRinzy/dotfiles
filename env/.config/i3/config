@@ -49,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec ghostty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+c kill
@@ -201,4 +201,4 @@ exec --no-startup-id dunst
 exec --no-startup-id nitrogen --restore
 exec ckb-next
 exec keepassxc
-exec fcitx5
+# exec fcitx5

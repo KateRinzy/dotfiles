@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 confs=(
+    awesome
     dunst
     fastfetch
     fcitx
@@ -21,4 +22,3 @@ envs=(
     .tmux.conf
     .zshrc
 )
-
