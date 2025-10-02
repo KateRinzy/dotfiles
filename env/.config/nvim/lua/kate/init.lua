@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 require("kate.remap")
 require("kate.lazy_init")
 require("kate.configs.status-bar")
@@ -37,24 +38,7 @@ autocmd({ "BufWritePre" }, {
 --     end
 -- })
 
--- vim.cmd.colorscheme("kanagawa-wave")
-local function set_dark()
-    vim.cmd [[colorscheme monochrome]]
-    vim.opt.background = "dark"
-end
-local function set_light()
-    vim.cmd [[colorscheme catppuccin-latte]]
-    vim.opt.background = "light"
-end
-local function set_blue()
-    vim.cmd [[colorscheme catppuccin]]
-    vim.opt.background = "dark"
-end
 vim.cmd [[colorscheme rose-pine]]
-vim.api.nvim_create_user_command("DarkMode", set_dark, {})
-vim.api.nvim_create_user_command("LightMode", set_light, {})
-vim.api.nvim_create_user_command("BlueMode", set_blue, {})
--- vim.api.nvim_set_hl(0, "SpellBad", { fg = "#cea1a1", undercurl = false, sp = "#ff0000" })
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 1

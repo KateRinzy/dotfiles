@@ -1,4 +1,4 @@
-# denver; my dev setup
+# My dev setup
 <sub>(I use Arch BTW)</sub>
 
 ![Current desktop](assets/2025-09-23-114434_hyprshot.png)

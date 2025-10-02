@@ -25,7 +25,7 @@ return {
             cmp_lsp.default_capabilities())
 
         local cmp_enabled = true
-        vim.keymap.set("n", "<leader>ac", function()
+        vim.keymap.set("n", "<leader>tc", function()
             cmp_enabled = not cmp_enabled
             cmp.setup({
                 enabled = function()

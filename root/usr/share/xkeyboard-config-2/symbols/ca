@@ -2,7 +2,7 @@
 
 default partial
 xkb_symbols "fr" {
-    name[Group1] = "French (Canada)";
+    name[Group1] = "FrCAC";
 
     key <TLDE>	{[ numbersign,       bar,     backslash ]};
     key <AE01>	{[         1,     exclam,   bracketleft ]};

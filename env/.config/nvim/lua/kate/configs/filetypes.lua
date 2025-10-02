@@ -27,11 +27,11 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt.spell = true
         vim.opt.spelllang = { "en", "fr", "cjk" }
 
-        vim.opt.colorcolumn = "90"
+        vim.opt.colorcolumn = "80"
         vim.opt.linebreak = true
-        vim.opt.textwidth = 90
+        vim.opt.textwidth = 80
         vim.opt.formatoptions:append("t")
-
+        vim.opt.sidescrolloff = 0
         -- keymap to open compiled PDF in zathura
         vim.keymap.set("n", "<leader>y", function()
             local pdf = vim.fn.expand("%:p:r") .. ".pdf"

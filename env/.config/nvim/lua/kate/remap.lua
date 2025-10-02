@@ -50,3 +50,65 @@ set("n", "<leader>k", ":make<CR>", { desc = "Call make" })
 
 set("n", "<leader>ch", ":e ~/Documents/chat.typ<CR>", { desc = "Open chat.typ" })
 
+
+local function toggle_side_scrolloff()
+    if vim.o.sidescrolloff == sidescrolloff then
+        vim.o.sidescrolloff = 0
+    else
+        vim.o.sidescrolloff = sidescrolloff
+    end
+end
+local function toggle_list_nu()
+    vim.o.list = not vim.o.list
+    vim.wo.nu = not vim.wo.nu
+    -- vim.wo.relativenumber = not vim.wo.relativenumber
+end
+function toggle_status_line()
+  local ls = vim.opt.laststatus:get()
+  if ls == 0 then
+    vim.opt.laststatus = 2
+  else
+    vim.opt.laststatus = 0
+  end
+end
+
+vim.keymap.set("n", "<leader>tw", function()
+    -- toggle_side_scrolloff()
+    toggle_list_nu()
+    toggle_status_line()
+end, { desc = "Toggle focus mode" })
+
+vim.keymap.set("n", "<leader>ts", function()
+    vim.cmd [[TSToggle highlight]]
+end, { desc = "Toggle TreeSitter" })
+
+vim.keymap.set("n", "<leader>tc", function()
+    vim.keymap.set("n", "<leader>tc", function()
+        _G.cmp_enabled = not _G.cmp_enabled
+        print("nvim-cmp " .. (_G.cmp_enabled and "enabled" or "disabled"))
+    end, { desc = "Toggle nvim-cmp" })
+end)
+
+vim.api.nvim_create_user_command("InsertTime", function()
+    local datetime = os.date("%Y-%m-%d %H:%M:%S")
+    vim.api.nvim_put({ datetime }, "c", true, true)
+end, {})
+
+vim.api.nvim_create_user_command("DarkMode", function()
+    vim.cmd [[colorscheme monochrome]]
+    vim.opt.background = "dark"
+    local fg = "#777777"
+    local bg = "#101010"
+    vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#ff0000" })
+    vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = "#000000" })
+    vim.api.nvim_set_hl(0, "Comment", { fg = "#333333", bg = "#000000" })
+    vim.api.nvim_set_hl(0, "Visual", { fg = bg, bg = fg })
+end, {})
+vim.api.nvim_create_user_command("LightMode", function()
+    vim.opt.background = "light"
+    vim.cmd [[colorscheme rose-pine-dawn]]
+end, {})
+vim.api.nvim_create_user_command("BlueMode", function()
+    vim.opt.background = "dark"
+    vim.cmd [[colorscheme rose-pine-moon]]
+end, {})

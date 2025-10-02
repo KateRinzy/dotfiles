@@ -11,7 +11,8 @@ configuration {
 
 * {
     width: 1000;
-    font: "IosevkaTerm NFM Light 18";
+    // font: "The Suavity 24";
+    font: "IosevkaTerm NFM Light 24";
 }
 
 element-text, element-icon, mode-switcher {
