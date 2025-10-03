@@ -35,6 +35,7 @@ pkgs=(
     btop
     cantor
     chafa
+    antimicrox
     ckb-next
     clang
     cliphist

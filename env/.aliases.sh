@@ -13,7 +13,7 @@ alias zxcv="nvim ~/Documents/zxcv.typ"
 alias fair="nvim ~/Documents/notes/todo.typ"
 alias all="nvim ~/Documents/notes/all.typ"
 
-alias ls="eza -a1 -s type"
+alias ls="eza -A1 -s type"
 
 alias e="exit"
 alias q="exit"

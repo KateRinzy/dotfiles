@@ -34,7 +34,8 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats ' %F{cyan}[%f%F{red}%b%f%F{cyan}]%f'
 
 setopt PROMPT_SUBST
-PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_} %F{yellow};%f '
+# %F{yellow};%f
+PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_} '
 # PROMPT="%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_} %F{yellow}
 # %n.whore =>%f "
 # RPROMPT='%F{8} %* $(battery)%% %f'

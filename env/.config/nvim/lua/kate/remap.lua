@@ -9,11 +9,14 @@ set("n", "<C-y>", "<cmd>silent !tmux neww yazi-tmux<CR>")
 set("n", "<leader>pv", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
 set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
 
-set({ "n", "v" }, ";", ":")
+set({ "n", "v", "x" }, ";", ":")
+set({ "n", "v", "x" }, ":", ";")
 set({ "n", "v" }, "!", ":!")
 
+set('n', '<leader>u', '<Cmd>e #<CR>')
+set('n', '<leader>U', '<Cmd>bot sf #<CR>')
 
-set({ "n", "v" }, "<C-s>", "<ESC>:w<CR>")
+set({ "n", "v" }, "<leader>w", "<ESC>:w<CR>")
 
 -- set("i", "<C-u>", "<Esc>")
 
@@ -31,30 +34,21 @@ set("n", "<C-c>", ":bdelete<CR>")
 
 set("n", "<C-o>", "<nop>")
 
+set("n", "<leader>k", ":make<CR>", { desc = "Call make" })
+
 -- set("n", "<leader>\\", ":ToggleTerm<CR>")
 
 -- set("n", "<leader>mv", ":Markview<CR>")
 
 -- commands related to functions
 --
-local function removeRN()
-    vim.cmd([[%s/\r//ge]])
-end
-local function selectALL()
-    vim.cmd([[normal! ggVG]])
-end
-set("n", "<leader>re", removeRN, { desc = "Remove all \\r" })
-set("n", "<leader>sa", selectALL, { desc = "Select the entire file" })
 
-set("n", "<leader>k", ":make<CR>", { desc = "Call make" })
-
-
-set("n", "<leader>ch", ":e ~/Documents/chat.typ<CR>", { desc = "Open chat.typ" })
+set("n", "<leader>re", function() vim.cmd([[%s/\r//ge]]) end, { desc = "Remove all \\r" })
+set("n", "<leader>sa", function() vim.cmd([[normal! ggVG]]) end, { desc = "Select the entire file" })
 
 local function toggle_list_nu()
     vim.o.list = not vim.o.list
     vim.wo.nu = not vim.wo.nu
-    -- vim.wo.relativenumber = not vim.wo.relativenumber
 end
 
 local function toggle_status_line()
@@ -69,6 +63,7 @@ end
 vim.keymap.set("n", "<leader>tw", function()
     toggle_list_nu()
     toggle_status_line()
+    print('Eepy girl')
 end, { desc = "Toggle focus mode" })
 
 vim.keymap.set("n", "<leader>tc", function()

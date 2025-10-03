@@ -52,3 +52,13 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.o.cmdheight = 0
+vim.api.nvim_create_autocmd({ "CmdlineLeave", "CmdlineChanged", "CmdlineEnter" }, {
+    callback = function()
+        -- this forces the cmdline to hide after some time
+        vim.defer_fn(function()
+            if vim.fn.mode() ~= "c" then
+                vim.o.cmdheight = 0
+            end
+        end, 500) -- 500ms
+    end,
+})
