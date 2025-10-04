@@ -2,19 +2,12 @@
     "layer": "top",
     "position": "left",
     "width": 6,
-    // "output": "eDP-1",
-    // "margin": "2 2 2 2",
     "spacing": 2,
-    // "margin-left": 5,
-    // "margin-top": 5,
-    // "margin-bottom": 5,
     "modules-left": [
         "custom/sep",
         "clock",
         "custom/sep",
-        "pulseaudio",
-        "custom/sep",
-        "hyprland/language"
+        "pulseaudio"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -52,20 +45,13 @@
         "format": " \n{name}\n ",
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1"
         // "all-outputs": true
     },
     "hyprland/window": {
         "rotate": 90,
         "format": "{} ",
         "max-length": 30
-    },
-    "hyprland/language": {
-        "format": "{}",
-        "format-en": "EN",
-        "format-fr": "CA",
-        "format-de": "DE",
-        "format-pl": "PL"
     },
     "clock": {
         "tooltip": true,

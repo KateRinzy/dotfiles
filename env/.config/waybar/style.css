@@ -30,17 +30,32 @@
 /* -------------------------------
    Black Monochrome Theme
 -------------------------------- */
-@define-color fg #e5e5e5;
-@define-color bg #000000;
-@define-color bg-alt #1c1c1c;
-@define-color red #777777;
-@define-color green #bbbbbb;
-@define-color yellow #aaaaaa;
-@define-color blue #999999;
-@define-color magenta #ffffff;
-@define-color gray #888888;
-@define-color gray-dark #444444;
-@define-color highlight #dddddd;
+/* @define-color fg #e5e5e5; */
+/* @define-color bg #000000; */
+/* @define-color bg-alt #1c1c1c; */
+/* @define-color red #777777; */
+/* @define-color green #bbbbbb; */
+/* @define-color yellow #aaaaaa; */
+/* @define-color blue #999999; */
+/* @define-color magenta #ffffff; */
+/* @define-color gray #888888; */
+/* @define-color gray-dark #444444; */
+/* @define-color highlight #dddddd; */
+
+/* -------------------------------
+   Rosé Pine Theme
+-------------------------------- */
+@define-color fg #e0def4;
+@define-color bg #191724;
+@define-color bg-alt #1f1d2e;
+@define-color red #eb6f92;
+@define-color green #31748f;
+@define-color yellow #f6c177;
+@define-color blue #9ccfd8;
+@define-color magenta #c4a7e7;
+@define-color gray #908caa;
+@define-color gray-dark #6e6a86;
+@define-color highlight #ebbcba;
 
 /* -------------------------------
    Waybar Styling
@@ -77,19 +92,17 @@ tooltip * {
     text-shadow: none;
 }
 
-.modules-center {}
-
 #custom-sep {
     color: @gray-dark;
     margin: 4px 0;
 }
 
-#workspaces,
-#clock,
-#custom-bluetooth_devices,
-#custom-powermenu,
-#pulseaudio,
-#tray {}
+/* #workspaces, */
+/* #clock, */
+/* #custom-bluetooth_devices, */
+/* #custom-powermenu, */
+/* #pulseaudio, */
+/* #tray {} */
 
 #workspaces {
     border-radius: 4px;
@@ -99,6 +112,9 @@ tooltip * {
     color: @gray;
     background: none;
     padding: 0;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
 }
 
 #workspaces button:hover {
@@ -107,6 +123,7 @@ tooltip * {
 
 #workspaces button.active {
     color: @magenta;
+    border-color: @highlight;
 }
 
 #temperature {
@@ -139,6 +156,7 @@ tooltip * {
 #battery {
     color: @gray;
 }
+
 #custom-mode {
     color: @gray;
 }

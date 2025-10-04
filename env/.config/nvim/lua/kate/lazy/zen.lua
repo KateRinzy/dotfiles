@@ -3,13 +3,13 @@ return {
         "folke/zen-mode.nvim",
         opts = {
             window = {
-                backdrop = 0, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
-                width = 80, -- width of the Zen window
+                backdrop = 1, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+                width = 80,   -- width of the Zen window
                 height = 0.6, -- height of the Zen window
                 options = {
-                    number = false,
+                    number = true,
                     relativenumber = false, -- disable relative numbers
-                    list = false, -- disable whitespace characters
+                    list = false,           -- disable whitespace characters
                 },
             },
             plugins = {
@@ -17,6 +17,7 @@ return {
             },
             -- callback where you can add custom code when the Zen window opens
             on_open = function(win)
+                -- vim.cmd [[DarkMode]]
             end,
             -- callback where you can add custom code when the Zen window closes
             on_close = function()

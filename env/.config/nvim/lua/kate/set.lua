@@ -59,6 +59,6 @@ vim.api.nvim_create_autocmd({ "CmdlineLeave", "CmdlineChanged", "CmdlineEnter" }
             if vim.fn.mode() ~= "c" then
                 vim.o.cmdheight = 0
             end
-        end, 500) -- 500ms
+        end, 1000)
     end,
 })
