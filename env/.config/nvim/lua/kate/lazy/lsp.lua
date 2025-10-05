@@ -99,23 +99,18 @@ return {
         }
 
         cmp.setup({
+            experimental = {
+                ghost_text = true
+            },
             snippet = {
                 expand = function(args)
                     require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
                 end
             },
-            -- experimental = {
-            --     ghost_text = true, -- inline preview of selected completion
-            -- },
             mapping = cmp.mapping.preset.insert({
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-                -- ['<Enter>'] = cmp.mapping.confirm({
-                --     select = true
-                -- }),
-                ['<Tab>'] = cmp.mapping.confirm({
-                    select = true
-                }),
+                ['<Tab>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
                 ["<C-e>"] = cmp.mapping.abort()
             }),

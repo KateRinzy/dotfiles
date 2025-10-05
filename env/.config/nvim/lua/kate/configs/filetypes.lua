@@ -25,11 +25,20 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt.textwidth = 80
         vim.opt.formatoptions:append("t")
         vim.opt.sidescrolloff = 0
+
         -- keymap to open compiled PDF in zathura
         vim.keymap.set("n", "<leader>y", function()
             local pdf = vim.fn.expand("%:p:r") .. ".pdf"
             vim.fn.jobstart({ "zathura", pdf }, { detach = true })
         end, { buffer = true, desc = "Open PDF in Zathura" })
+
+        vim.keymap.set("n", "<leader>q", function()
+            local tw = 70
+            vim.bo.textwidth = tw
+            local pos = vim.api.nvim_win_get_cursor(0)
+            vim.cmd("normal! ggVGgq")
+            vim.api.nvim_win_set_cursor(0, pos)
+        end, { desc = "Wrap all text to 70 chars" })
     end
 })
 

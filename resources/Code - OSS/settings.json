@@ -5,7 +5,7 @@
     "editor.fontFamily": "'IosevkaTerm NFM Light', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
     "haskell.manageHLS": "GHCup",
     "debug.inlineValues": "off",
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "none",
     "editor.cursorSurroundingLines": 3,
     "editor.formatOnSave": true,
     "vim.leader": "space",
@@ -17,6 +17,15 @@
             ],
             "after": [
                 ":"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                ":w"
             ]
         },
         {
@@ -47,5 +56,7 @@
     "explorer.confirmDelete": false,
     "editor.codeLens": false,
     "tinymist.exportPdf": "onType",
-    "tinymist.formatterPrintWidth": 70
+    "tinymist.formatterPrintWidth": 70,
+    "tinymist.formatterProseWrap": true,
+    "editor.minimap.enabled": false
 }

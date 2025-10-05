@@ -20,7 +20,7 @@ set({ "n", "v" }, "<leader>w", "<ESC>:w<CR>")
 
 -- set("i", "<C-u>", "<Esc>")
 
-set("n", "<C-f>", ":Files<CR>", { desc = "Open fzf" })
+set("n", "<leader>pf", ":Files<CR>", { desc = "Open fzf" })
 set("n", "<leader>f",
     function()
         vim.lsp.buf.format()

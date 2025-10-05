@@ -5,5 +5,5 @@ require "lspconfig"["tinymist"].setup {
         semanticTokens = "enable",
         formatterPrintWidth = 70,
         formatterProseWrap = true
-    }
+    },
 }
