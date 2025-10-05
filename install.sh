@@ -17,14 +17,10 @@ fi
 set -e
 set -o pipefail
 
-# --- Configuration ---
-# The GitHub repository to clone.
-# IMPORTANT: Replace with your actual repository URL.
-REPO_URL="https://github.com/laeva-lady/dev-env.git"
+REPO_URL="https://github.com/KateRinzy/dev-env.git"
 
-# The local directory to clone into.
 if [ -z "$WORKSTATION" ]; then
-    WORKSTATION="$HOME/personal/dev-env"
+    WORKSTATION="$HOME/Documents/denver"
 fi
 DEST_DIR="$WORKSTATION"
 
@@ -103,7 +99,6 @@ run_install() {
     msg "You may need to restart your shell for changes to take effect."
 }
 
-
 # --- Script Entry Point ---
 
 # Check if we are inside the destination directory already
@@ -116,7 +111,7 @@ fi
 # If not in the repo, we assume we need to clone.
 msg "dev-env repository not found locally or not in the correct directory."
 
-if ! command -v git &> /dev/null; then
+if ! command -v git &>/dev/null; then
     msg "Error: git is not installed. Please install git and try again."
     exit 1
 fi
