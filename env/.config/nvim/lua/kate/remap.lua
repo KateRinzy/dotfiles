@@ -30,48 +30,36 @@ set("n", "<leader>f",
 
 set("n", "<C-m>", ":bnext<CR>")
 set("n", "<C-k>", ":bprev<CR>")
-set("n", "<C-c>", ":bdelete<CR>")
+vim.keymap.set("n", "<C-c>", function()
+    vim.cmd.bwipeout()
+end, { silent = true })
 
 set("n", "<C-o>", "<nop>")
 
 set("n", "<leader>k", ":make<CR>", { desc = "Call make" })
 
--- set("n", "<leader>\\", ":ToggleTerm<CR>")
-
--- set("n", "<leader>mv", ":Markview<CR>")
-
--- commands related to functions
---
-
 set("n", "<leader>re", function() vim.cmd([[%s/\r//ge]]) end, { desc = "Remove all \\r" })
 set("n", "<leader>sa", function() vim.cmd([[normal! ggVG]]) end, { desc = "Select the entire file" })
 
-local function toggle_list_nu()
-    vim.o.list = not vim.o.list
-    vim.wo.nu = not vim.wo.nu
-end
+vim.api.nvim_create_user_command("FocusModeEnable", function()
+    vim.o.list = false
+    vim.wo.nu = false
+    vim.opt.laststatus = 0
+    print('Eepy girl On')
+end, {})
+vim.api.nvim_create_user_command("FocusModeDisable", function()
+    vim.o.list = true
+    vim.wo.nu = true
+    vim.opt.laststatus = 2
+    print('Eepy girl Off')
+end, {})
 
-local function toggle_status_line()
-    local ls = vim.opt.laststatus:get()
-    if ls == 0 then
-        vim.opt.laststatus = 2
-    else
-        vim.opt.laststatus = 0
-    end
-end
-
-vim.keymap.set("n", "<leader>tw", function()
-    toggle_list_nu()
-    toggle_status_line()
-    print('Eepy girl')
-end, { desc = "Toggle focus mode" })
-
-vim.keymap.set("n", "<leader>tc", function()
+vim.api.nvim_create_user_command("ToggleCmp", function()
     vim.keymap.set("n", "<leader>tc", function()
         _G.cmp_enabled = not _G.cmp_enabled
         print("nvim-cmp " .. (_G.cmp_enabled and "enabled" or "disabled"))
     end, { desc = "Toggle nvim-cmp" })
-end)
+end, {})
 
 vim.api.nvim_create_user_command("InsertTime", function()
     local datetime = os.date("%Y-%m-%d %H:%M:%S")
@@ -98,6 +86,7 @@ end, {})
 
 vim.api.nvim_create_user_command("BlueMode", function()
     vim.opt.background = "dark"
-    vim.cmd [[colorscheme rose-pine-moon]]
+    vim.cmd [[colorscheme rose-pine-main]]
     print("OHHH, pwetty colours")
 end, {})
+

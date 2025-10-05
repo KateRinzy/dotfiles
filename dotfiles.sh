@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
 confs=(
-    awesome
     dunst
     fastfetch
     fcitx
@@ -9,7 +8,6 @@ confs=(
     ghostty
     hyfetch.json
     hypr
-    i3
     kitty
     nvim
     rofi
