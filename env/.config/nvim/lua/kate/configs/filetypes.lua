@@ -71,3 +71,10 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt.foldlevel = 0
     end
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "html" },
+    callback = function()
+        vim.opt.indentexpr = ""
+    end
+})

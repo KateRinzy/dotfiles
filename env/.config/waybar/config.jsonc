@@ -3,6 +3,7 @@
     "position": "left",
     "width": 6,
     "spacing": 2,
+    "output": "eDP-1",
     "modules-left": [
         "custom/sep",
         "clock",
@@ -45,8 +46,8 @@
         "format": "\n{name}\n",
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1"
-        // "all-outputs": true
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "all-outputs": true
     },
     "hyprland/window": {
         "rotate": 90,
