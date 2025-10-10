@@ -4,13 +4,13 @@
 
 aur=(
     ani-cli
-    lorien-bin
     chatterino2-bin
     cnijfilter2 # canon printer drivers
     evince-no-gnome
     fcitx5-mozc-ut
     gemini-cli-bin
     localsend-bin # share files locally
+    lorien-bin
     minecraft-launcher
     protontricks # needed it to install webview for Forza Horizon
     r2modman-bin # thunderstore thing for linux
@@ -26,6 +26,7 @@ aur=(
 )
 
 pkgs=(
+    antimicrox
     aspnet-runtime
     base-devel
     bat
@@ -35,15 +36,14 @@ pkgs=(
     btop
     cantor
     chafa
-    antimicrox
     ckb-next
     clang
     cliphist
     code # the OSS version of vscode
+    cuda
     discord
     dotnet-runtime
     dotnet-sdk
-    cuda
     dunst
     elixir
     erlang
@@ -127,6 +127,7 @@ pkgs=(
     ranger
     raylib
     ripgrep
+    rofi-calc
     rofi-emoji
     rofi-wayland
     rsync
