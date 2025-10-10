@@ -6,7 +6,7 @@ confirm-close-surface = false
 # background-opacity = 0.80
 
 font-family = "Fira Code Retina"
-font-size = 16
+font-size = 22
 
 gtk-wide-tabs = false
 gtk-tabs-location= bottom

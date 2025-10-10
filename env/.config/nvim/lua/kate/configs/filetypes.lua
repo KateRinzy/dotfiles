@@ -20,9 +20,9 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt.spell = true
         vim.opt.spelllang = { "en", "fr", "cjk" }
 
-        vim.opt.colorcolumn = "80"
+        vim.opt.colorcolumn = "70"
         vim.opt.linebreak = true
-        vim.opt.textwidth = 80
+        vim.opt.textwidth = 70
         vim.opt.formatoptions:append("t")
         vim.opt.sidescrolloff = 0
 
@@ -31,14 +31,6 @@ vim.api.nvim_create_autocmd("FileType", {
             local pdf = vim.fn.expand("%:p:r") .. ".pdf"
             vim.fn.jobstart({ "zathura", pdf }, { detach = true })
         end, { buffer = true, desc = "Open PDF in Zathura" })
-
-        vim.keymap.set("n", "<leader>q", function()
-            local tw = 70
-            vim.bo.textwidth = tw
-            local pos = vim.api.nvim_win_get_cursor(0)
-            vim.cmd("normal! ggVGgq")
-            vim.api.nvim_win_set_cursor(0, pos)
-        end, { desc = "Wrap all text to 70 chars" })
     end
 })
 

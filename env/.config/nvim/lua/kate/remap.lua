@@ -28,15 +28,9 @@ set("n", "<leader>f",
     end
     , { desc = "Format the file" })
 
-set("n", "<C-m>", ":bnext<CR>")
-set("n", "<C-k>", ":bprev<CR>")
-vim.keymap.set("n", "<C-c>", function()
-    vim.cmd.bwipeout()
-end, { silent = true })
-
 set("n", "<C-o>", "<nop>")
 
-set("n", "<leader>k", ":make<CR>", { desc = "Call make" })
+set("n", "<leader>k", ":!make<CR>", { desc = "Call make" })
 
 set("n", "<leader>re", function() vim.cmd([[%s/\r//ge]]) end, { desc = "Remove all \\r" })
 set("n", "<leader>sa", function() vim.cmd([[normal! ggVG]]) end, { desc = "Select the entire file" })
@@ -90,3 +84,4 @@ vim.api.nvim_create_user_command("BlueMode", function()
     print("OHHH, pwetty colours")
 end, {})
 
+set({ "n", "v" }, "<leader>3", "/")
