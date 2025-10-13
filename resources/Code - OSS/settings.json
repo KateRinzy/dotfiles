@@ -2,7 +2,7 @@
     "workbench.colorTheme": "Rosé Pine",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "'IosevkaTerm NFM Light', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'Fira Code Retina', 'IosevkaTerm NFM Light', 'Droid Sans Mono', 'monospace', monospace",
     "haskell.manageHLS": "GHCup",
     "debug.inlineValues": "off",
     "editor.renderWhitespace": "none",
@@ -58,5 +58,11 @@
     "tinymist.exportPdf": "onType",
     "tinymist.formatterPrintWidth": 70,
     "tinymist.formatterProseWrap": true,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "window.customTitleBarVisibility": "never",
+    "window.titleBarStyle": "native",
+    "editor.fontSize": 20
 }

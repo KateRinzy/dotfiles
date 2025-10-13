@@ -1,1 +1,2 @@
 cd ~/Documents
+# launch /bin/sh -c "/home/kate/Documents/scripts/tmux-sessionizer /home/kate/Documents; exec /bin/zsh"

@@ -30,7 +30,7 @@ screen"
     if [ "$selection" = "screen" ]; then
         screen
     else
-        hyprshot -m "$selection" -o "$output_dir"
+        hyprshot -m "$selection" -o "$output_dir" -- loupe
     fi
     ;;
 esac

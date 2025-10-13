@@ -32,12 +32,12 @@ vim.keymap.set('n', '<A-,>', function()
     vim.cmd [[BufferLineMovePrev]]
 end, { desc = 'Move buffer left' })
 
-vim.keymap.set("n", "<M-m>", function ()
+vim.keymap.set("n", "<C-m>", function ()
     vim.cmd [[BufferLineCycleNext]]
 end)
-vim.keymap.set("n", "<M-k>", function ()
+vim.keymap.set("n", "<C-k>", function ()
     vim.cmd [[BufferLineCyclePrev]]
 end)
-vim.keymap.set("n", "<M-c>", function()
+vim.keymap.set("n", "<C-c>", function()
     vim.cmd.bwipeout()
 end, { silent = true })

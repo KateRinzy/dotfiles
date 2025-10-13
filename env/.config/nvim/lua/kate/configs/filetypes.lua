@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "fs", "fsharp" },
     callback = function()
@@ -26,7 +28,6 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt.formatoptions:append("t")
         vim.opt.sidescrolloff = 0
 
-        -- keymap to open compiled PDF in zathura
         vim.keymap.set("n", "<leader>y", function()
             local pdf = vim.fn.expand("%:p:r") .. ".pdf"
             vim.fn.jobstart({ "zathura", pdf }, { detach = true })

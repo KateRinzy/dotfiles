@@ -8,7 +8,9 @@
         "custom/sep",
         "clock",
         "custom/sep",
-        "pulseaudio"
+        "pulseaudio",
+        "custom/sep",
+        "custom/rofi"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -20,10 +22,9 @@
         "custom/sep",
         "custom/mode"
     ],
-    "custom/power": {
-        "rotate": 90,
-        "format": "パワー",
-        "on-click": "wlogout"
+    "custom/rofi": {
+        "format": "風",
+        "on-click": "rofi -show drun"
     },
     "custom/pron": {
         "rotate": 90,
