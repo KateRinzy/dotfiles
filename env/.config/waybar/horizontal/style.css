@@ -12,20 +12,36 @@
 /* @define-color gray #928374; */
 /* @define-color gray-dark #504945; */
 /* @define-color highlight #fabd2f; */
+
 /* -------------------------------
    Kanagawa Theme Variables
+ -------------------------------- */
+/* @define-color fg #dcd7ba; */
+/* @define-color bg #1f1f28; */
+/* @define-color bg-alt #2a2a37; */
+/* @define-color red #c34043; */
+/* @define-color green #76946a; */
+/* @define-color yellow #c0a36e; */
+/* @define-color blue #7e9cd8; */
+/* @define-color magenta #957fb8; */
+/* @define-color gray #9cabca; */
+/* @define-color gray-dark #727169; */
+/* @define-color highlight #ff9e3b; */
+
+/* -------------------------------
+   Rosé Pine Theme
 -------------------------------- */
-@define-color fg #dcd7ba;
-@define-color bg #1f1f28;
-@define-color bg-alt #2a2a37;
-@define-color red #c34043;
-@define-color green #76946a;
-@define-color yellow #c0a36e;
-@define-color blue #7e9cd8;
-@define-color magenta #957fb8;
-@define-color gray #9cabca;
-@define-color gray-dark #727169;
-@define-color highlight #ff9e3b;
+@define-color fg #e0def4;
+@define-color bg #191724;
+@define-color bg-alt #1f1d2e;
+@define-color red #eb6f92;
+@define-color green #31748f;
+@define-color yellow #f6c177;
+@define-color blue #9ccfd8;
+@define-color magenta #c4a7e7;
+@define-color gray #908caa;
+@define-color gray-dark #6e6a86;
+@define-color highlight #ebbcba;
 
 /* -------------------------------
    Waybar Styling
@@ -33,7 +49,7 @@
 * {
     border: none;
     font-family: "Fira Code";
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     background: none;
 }
@@ -46,9 +62,7 @@ window#waybar {
 .modules-left,
 .modules-right,
 .modules-center {
-    /* border-radius: 6px; */
     background: @bg;
-    /* padding: 12px 0; */
 }
 
 tooltip {
@@ -62,22 +76,9 @@ tooltip * {
     text-shadow: none;
 }
 
-.modules-center {}
-
 #custom-sep {
     color: @gray-dark;
     margin: 4px 0;
-}
-
-#workspaces,
-#clock,
-#custom-bluetooth_devices,
-#custom-powermenu,
-#pulseaudio,
-#tray {}
-
-#workspaces {
-    border-radius: 4px;
 }
 
 #workspaces button {
@@ -113,11 +114,6 @@ tooltip * {
 
 #pulseaudio.muted {
     color: @red;
-}
-
-#custom-powermenu {
-    margin: 12px 0 0 0;
-    color: @gray;
 }
 
 #tray menu {
