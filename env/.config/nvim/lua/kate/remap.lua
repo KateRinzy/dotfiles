@@ -9,6 +9,8 @@ set("n", "<C-y>", "<cmd>silent !tmux neww yazi-tmux<CR>")
 set("n", "<leader>pv", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
 set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
 
+set("n", "<ESC>", "<CMD>noh<CR>")
+
 set({ "n", "v", "x" }, ";", ":")
 set({ "n", "v", "x" }, ":", ";")
 set({ "n", "v" }, "!", ":!")

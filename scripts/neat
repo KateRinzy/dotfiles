@@ -33,6 +33,7 @@ pkgs=(
     breeze
     breeze5
     brightnessctl
+    php
     btop
     cantor
     chafa

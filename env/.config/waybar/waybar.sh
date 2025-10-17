@@ -44,6 +44,20 @@ case "$1" in
 "regular" | "work" | "horizontal")
     switch_to "$1"
     ;;
+"togglehiding")
+    if pgrep -x waybar >/dev/null; then
+        # running → hide
+        pkill -x waybar
+    else
+        # not running → spawn last mode
+        if [[ -f "$STATE_FILE" ]]; then
+            mode=$(cat "$STATE_FILE")
+        else
+            mode="regular"
+        fi
+        switch_to "$mode"
+    fi
+    ;;
 "toggle")
     if [[ -f "$STATE_FILE" ]]; then
         current=$(cat "$STATE_FILE")

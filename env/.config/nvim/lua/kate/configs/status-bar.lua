@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- Put the functions in the global namespace so statusline can call them
 function _G.lsp_diagnostics()
     local bufnr    = vim.api.nvim_get_current_buf()
@@ -41,6 +42,17 @@ function _G.supermaven_status()
     return ""
 end
 
+function _G.search_status()
+    local sc = vim.fn.searchcount({ recompute = 1, maxcount = 9999 })
+    if sc.incomplete == 1 then
+        return "…"
+    end
+    if sc.total > 0 then
+        return sc.current .. "/" .. sc.total
+    end
+    return ""
+end
+
 local function status_line()
     local file_name = " [%-.20t]"
     local modified = " %-m"
@@ -50,12 +62,15 @@ local function status_line()
     local supermaven = " %{v:lua.supermaven_status()}"
     local right_align = "%="
     local line_no = "%10([%l/%L%)]"
+    local search = "%{v:hlsearch ? v:lua.search_status() : ''}"
+
 
     return table.concat({
         file_name,
         modified,
         file_type,
         right_align,
+        search,
         diagnostics,
         lsp,
         supermaven,
