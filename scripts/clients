@@ -1,13 +1,18 @@
 #!/usr/bin/bash
+printf '\e[?7l'
+
+# get active window address
+active=$(hyprctl activewindow -j | jq -r .address)
 
 hyprctl clients -j \
-  | jq -r '.[] | [.class, (.pid|tostring), (.xwayland|tostring), .workspace.id, .workspace.name] | @tsv' \
-  | sort -k5,5n \
-  | awk -F'\t' \
-      '{printf "class: %-25s pid: %-8s xwayland: %-10s workspace: (%3s) %-10s\n", $1, $2, $3, $4, $5}'
+| jq -r '.[] | [.address, .class, (.xwayland|tostring), .workspace.id, .title] | @tsv' \
+| sort -k5,5n \
+| awk -F'\t' -v active="$active" '
+{
+    mark = ($1 == active ? "*" : " ")
+    # $1 = address, skip printing it
+    printf "%s class: %20s   xwayland: %6s   workspace: %3s   title: %s\n",
+           mark, $2, $3, $4, $5
+}'
 
-echo
-
-hyprctl activewindow -j \
-  | jq -r '[.class, .workspace.name] | @tsv' \
-  | awk '{printf "active window: %25s [%s]\n", $1, $2}'
+printf '\e[?7h'
