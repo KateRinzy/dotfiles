@@ -3,8 +3,6 @@
 confs=(
     dunst
     fastfetch
-    fcitx
-    fcitx5
     ghostty
     hyfetch.json
     hypr
