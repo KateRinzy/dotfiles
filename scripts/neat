@@ -13,6 +13,7 @@ aur=(
     lorien-bin
     minecraft-launcher
     protontricks # needed it to install webview for Forza Horizon
+    quickshell
     r2modman-bin # thunderstore thing for linux
     rose-pine-cursor
     thorium-browser-bin
@@ -33,7 +34,6 @@ pkgs=(
     breeze
     breeze5
     brightnessctl
-    php
     btop
     cantor
     chafa
@@ -118,6 +118,7 @@ pkgs=(
     openrgb
     pandoc-cli
     pavucontrol
+    php
     power-profiles-daemon
     proton-vpn-gtk-app
     qalculate-gtk

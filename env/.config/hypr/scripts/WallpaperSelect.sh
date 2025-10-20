@@ -99,6 +99,9 @@ main() {
     # Search for the selected file in the wallpapers directory, including subdirectories
     selected_file=$(find "$wallDIR" -iname "$choice_basename.*" -print -quit)
 
+    if [[ -z "$selected_file" ]]; then
+        exit 1
+    fi
 
     # Symlink the file so Hyprlock can read the current wallpaper at ~/.current.wall
     rm $HOME/.current.wall
@@ -108,10 +111,6 @@ main() {
     sudo mkdir -p /usr/share/wallpapers/Customs/
     sudo cp "$selected_file" /usr/share/wallpapers/Customs/current.wall
 
-
-    if [[ -z "$selected_file" ]]; then
-        exit 1
-    fi
 
     if [[ "$selected_file" =~ \.(mp4|mkv|mov|webm|MP4|MKV|MOV|WEBM)$ ]]; then
         apply_video_wallpaper "$selected_file"

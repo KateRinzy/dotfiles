@@ -64,5 +64,11 @@
     "window.menuBarVisibility": "toggle",
     "window.customTitleBarVisibility": "never",
     "window.titleBarStyle": "native",
-    "editor.fontSize": 20
+    "editor.fontSize": 20,
+    "qt-core.additionalQtPaths": [
+        {
+            "name": "Qt-5.15.17-linux-g++_from_PATH",
+            "path": "/usr/bin/qtpaths"
+        }
+    ]
 }

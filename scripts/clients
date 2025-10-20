@@ -1,18 +1,24 @@
 #!/usr/bin/bash
 printf '\e[?7l'
 
-# get active window address
 active=$(hyprctl activewindow -j | jq -r .address)
 
 hyprctl clients -j \
 | jq -r '.[] | [.address, .class, (.xwayland|tostring), .workspace.id, .title] | @tsv' \
-| sort -k5,5n \
+| sort -k4,4n -k2,2 \
 | awk -F'\t' -v active="$active" '
+NR==1 { max_class=0 }
 {
-    mark = ($1 == active ? "*" : " ")
-    # $1 = address, skip printing it
-    printf "%s class: %20s   xwayland: %6s   workspace: %3s   title: %s\n",
-           mark, $2, $3, $4, $5
+    class=$2
+    if (length(class) > max_class) max_class = length(class)
+    data[NR]=$0
+}
+END {
+    for (i=1; i<=NR; i++) {
+        split(data[i], f, "\t")
+        mark = (f[1] == active ? "*" : " ")
+        printf "%s class: %-" max_class "s   xwayland: %6s   workspace: %3s   title: %s\n",
+               mark, f[2], f[3], f[4], f[5]
+    }
 }'
-
 printf '\e[?7h'
