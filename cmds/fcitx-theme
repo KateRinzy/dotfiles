@@ -30,7 +30,7 @@ case $1 in
     cd fcitx5
     cp -r rose-pine/ rose-pine-moon/ rose-pine-dawn/ ~/.local/share/fcitx5/themes
     cd ..
-    rm -rf fcitx5-nord
+    rm -rf fcitx5
     ;;
 *)
     echo "No theme selected"
