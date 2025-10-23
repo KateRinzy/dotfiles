@@ -87,3 +87,8 @@ vim.api.nvim_create_user_command("BlueMode", function()
 end, {})
 
 set({ "n", "v" }, "<leader>3", "/")
+
+-- https://swnakamura.github.io/posts/vim-japanese-input/
+set({ "n", "i" }, "<M-l>", function()
+    vim.system({ "fcitx5-remote", "-t" })
+end)

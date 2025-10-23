@@ -4,9 +4,9 @@ return {
         ft = 'typst',
         -- version = '1.*',
         opts = {
-            open_cmd = "qutebrowser %s > /dev/null 2>&1 &",
+            open_cmd = "firefox %s > /dev/null 2>&1 &",
             port = 33000,
-            follow_cursor = true,
+            follow_cursor = false,
         },
     }
 }

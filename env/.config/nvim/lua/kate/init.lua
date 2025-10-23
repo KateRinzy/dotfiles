@@ -25,6 +25,14 @@ autocmd({ "BufWritePre" }, {
     command = [[%s/\s\+$//e]],
 })
 
+autocmd("InsertLeave", {
+    group = kateGroup,
+    pattern = "*",
+    callback = function()
+        vim.system({ "fcitx5-remote", "-c" })
+    end,
+})
+
 -- format on save
 -- vim.api.nvim_create_autocmd("LspAttach", {
 --     group = augroup("lsp", { clear = true }),
