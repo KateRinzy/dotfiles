@@ -1,24 +1,38 @@
 #!/usr/bin/bash
 printf '\e[?7l'
 
+flags="${1#-}"  # strip leading dash
+[ -z "$flags" ] && flags="cxwt"  # default: all
+
 active=$(hyprctl activewindow -j | jq -r .address)
 
 hyprctl clients -j \
 | jq -r '.[] | [.address, .class, (.xwayland|tostring), .workspace.id, .title] | @tsv' \
 | sort -k4,4n -k2,2 \
-| awk -F'\t' -v active="$active" '
+| awk -F'\t' -v active="$active" -v flags="$flags" '
+BEGIN {
+    show_addr = index(flags, "a")
+    show_class = index(flags, "c")
+    show_xway = index(flags, "x")
+    show_ws = index(flags, "w")
+    show_title = index(flags, "t")
+}
 NR==1 { max_class=0 }
 {
-    class=$2
-    if (length(class) > max_class) max_class = length(class)
+    if (length($2) > max_class) max_class = length($2)
     data[NR]=$0
 }
 END {
     for (i=1; i<=NR; i++) {
         split(data[i], f, "\t")
         mark = (f[1] == active ? "*" : " ")
-        printf "%s class: %-" max_class "s   xwayland: %6s   workspace: %3s   title: %s\n",
-               mark, f[2], f[3], f[4], f[5]
+        line = mark
+        if (show_addr)  line = line sprintf(" address: %s", f[1])
+        if (show_class) line = line sprintf(" class: %-" max_class "s", f[2])
+        if (show_xway)  line = line sprintf(" xwayland: %6s", f[3])
+        if (show_ws)    line = line sprintf(" workspace: %3s", f[4])
+        if (show_title) line = line sprintf(" title: %s", f[5])
+        print line
     }
 }'
 printf '\e[?7h'

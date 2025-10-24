@@ -4,6 +4,7 @@
 
 aur=(
     ani-cli
+    anki-bin
     chatterino2-bin
     cnijfilter2 # canon printer drivers
     evince-no-gnome
