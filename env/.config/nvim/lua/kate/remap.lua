@@ -18,6 +18,9 @@ set({ "n", "v" }, "!", ":!")
 set('n', '<leader>u', '<Cmd>e #<CR>')
 set('n', '<leader>U', '<Cmd>bot sf #<CR>')
 
+set({'n', 'v', 'x'}, 'j', 'gj')
+set({'n', 'v', 'x'}, 'k', 'gk')
+
 set({ "n", "v" }, "<leader>w", "<ESC>:w<CR>")
 
 -- set("i", "<C-u>", "<Esc>")

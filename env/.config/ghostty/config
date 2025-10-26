@@ -5,8 +5,9 @@ confirm-close-surface = false
 
 # background-opacity = 0.80
 
-font-family = "Fira Code Retina"
-font-size = 22
+font-family = "IosevkaTerm NFM"
+font-family = "Noto Serif CJK JP"
+font-size = 24
 
 gtk-wide-tabs = false
 gtk-tabs-location= bottom

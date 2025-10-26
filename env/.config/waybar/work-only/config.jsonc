@@ -1,44 +1,48 @@
 {
-    // ─────────────────────────────────────────────────────────────┤ header ├───
     "layer": "bottom",
-    "position": "top",
+    "position": "bottom",
     "exclusive": false,
-    "reload_style_on_change": true,
-    "gtk-layer-shell": true,
-    "margin-left": 5,
-    "margin-top":  5,
-    "margin-right": 5,
-    // ──────────────────────────────────────────────────────────┤ positions ├───
+    "height": 24,
     "modules-left": [
-        "clock"
-    ],
-    "modules-center": [
+        "custom/sep",
         "hyprland/workspaces"
     ],
     "modules-right": [
         "tray",
         "custom/sep",
-        "hyprland/language"
+        "hyprland/language",
+        "custom/sep",
+        "pulseaudio",
+        "custom/sep",
+        "clock",
+        "custom/sep"
     ],
     "custom/sep": {
-        "format": " | "
+        "format": "  "
     },
     "hyprland/workspaces": {
-        "format": "{name}"
-    },
-    "tray": {
-        "show-passive-items": "true"
-    },
-    "hyprland/language": {
-        "format": "{}",
-        "format-en": "EN",
-        "format-fr": "CA",
-        "format-de": "DE",
-        "format-pl": "PL"
+        "format": "{}"
     },
     "clock": {
         "tooltip": true,
-        "format": "{:%m-%d | %H:%M}",
-        "tooltip-format": "{:%Y-%m-%d}"
+        "format": "{:%y/%m/%d :: %H:%M}"
+    },
+    "tray": {
+        "icon-size": 12,
+        "show-passive-items": "true"
+    },
+    "pulseaudio": {
+        "format": "{volume}",
+        "format-bluetooth": "{volume}%",
+        "format-muted": "{volume}%",
+        "format-icons": {
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 2,
+        "on-click": "hyprctl dispatch exec pavucontrol",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     }
 }

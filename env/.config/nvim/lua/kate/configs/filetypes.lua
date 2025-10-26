@@ -22,10 +22,11 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt.spell = true
         vim.opt.spelllang = { "en", "fr", "cjk" }
 
-        vim.opt.colorcolumn = "70"
-        vim.opt.linebreak = true
-        vim.opt.textwidth = 70
-        vim.opt.formatoptions:append("t")
+        vim.opt.wrap = true
+        -- vim.opt.colorcolumn = "70"
+        -- vim.opt.linebreak = true
+        -- vim.opt.textwidth = 70
+        -- vim.opt.formatoptions:append("t")
         vim.opt.sidescrolloff = 0
 
         vim.keymap.set("n", "<leader>y", function()
@@ -41,6 +42,7 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt.spell = true
         vim.opt.spelllang = { "en", "fr", "cjk" }
 
+        vim.opt.wrap = true
         vim.opt.linebreak = true
         vim.opt.formatoptions:append("t")
     end

@@ -18,6 +18,7 @@ else
 end
 
 vim.opt.wrap = false
+vim.opt.showbreak = "\\-"
 
 vim.opt.swapfile = false
 vim.opt.backup = false
