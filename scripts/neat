@@ -42,7 +42,7 @@ pkgs=(
     ckb-next
     clang
     cliphist
-    code # the OSS version of vscode
+    code
     cuda
     discord
     dotnet-runtime
