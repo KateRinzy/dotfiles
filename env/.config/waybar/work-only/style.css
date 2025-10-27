@@ -60,8 +60,7 @@ window#waybar {
 }
 
 .modules-left,
-.modules-right,
-.modules-center {
+.modules-right {
     background: @bg;
 }
 
