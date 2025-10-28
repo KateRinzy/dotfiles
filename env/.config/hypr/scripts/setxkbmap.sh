@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-setxkbmap ca,us
+setxkbmap us,ca

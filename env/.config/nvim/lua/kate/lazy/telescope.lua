@@ -1,57 +1,67 @@
 return {
-	"nvim-telescope/telescope.nvim",
+    "nvim-telescope/telescope.nvim",
 
-	tag = "0.1.5",
+    tag = "0.1.5",
 
-	dependencies = {
-		"nvim-lua/plenary.nvim"
-	},
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        {
+            "nvim-telescope/telescope-live-grep-args.nvim",
+            version = "^1.0.0",
+        },
+    },
 
-	config = function()
-		require('telescope').setup({})
+    config = function()
+        require('telescope').setup({})
+        local telescope = require "telescope"
 
-		local builtin = require('telescope.builtin')
-		-- vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-		vim.keymap.set('n', '<leader>pd', builtin.diagnostics, {})
-		vim.keymap.set('n', '<leader>pws', function()
-			local word = vim.fn.expand("<cword>")
-			builtin.grep_string({ search = word })
-		end)
-		vim.keymap.set('v', '<leader>pws', function()
-			-- save current register
-			local save_reg = vim.fn.getreg('"')
-			local save_type = vim.fn.getregtype('"')
+        telescope.load_extension("live_grep_args")
 
-			-- yank visual selection into " register
-			vim.cmd('normal! ""y')
+        local builtin = require('telescope.builtin')
+        -- vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+        vim.keymap.set('n', '<leader>pd', builtin.diagnostics, {})
+        vim.keymap.set('n', '<leader>pws', function()
+            local word = vim.fn.expand("<cword>")
+            builtin.grep_string({ search = word })
+        end)
+        vim.keymap.set('v', '<leader>pws', function()
+            -- save current register
+            local save_reg = vim.fn.getreg('"')
+            local save_type = vim.fn.getregtype('"')
 
-			-- get yanked text
-			local selection = vim.fn.getreg('"')
+            -- yank visual selection into " register
+            vim.cmd('normal! ""y')
 
-			-- restore register
-			vim.fn.setreg('"', save_reg, save_type)
+            -- get yanked text
+            local selection = vim.fn.getreg('"')
 
-			require('telescope.builtin').grep_string({ search = selection })
-		end)
-		vim.keymap.set('n', '<leader>ps', function()
-			builtin.grep_string({ search = vim.fn.input("Grep > ") })
-		end)
-		vim.keymap.set('n', '<C-b>', builtin.buffers, {})
-		vim.keymap.set("n", "<leader>py", function()
-			require("telescope.builtin").find_files({
-				prompt_title = "Find PDF",
-				find_command = { "fd", "--type", "f", "--extension", "pdf" },
-				attach_mappings = function(_, map)
-					map("i", "<CR>", function(prompt_bufnr)
-						local action_state = require("telescope.actions.state")
-						local actions = require("telescope.actions")
-						local selection = action_state.get_selected_entry()
-						actions.close(prompt_bufnr)
-						vim.fn.jobstart({ "zathura", selection.path }, { detach = true })
-					end)
-					return true
-				end,
-			})
-		end, {})
-	end
+            -- restore register
+            vim.fn.setreg('"', save_reg, save_type)
+
+            require('telescope.builtin').grep_string({ search = selection })
+        end)
+        -- vim.keymap.set('n', '<leader>ps', function()
+        --     builtin.grep_string({ search = vim.fn.input("Grep > ") })
+        -- end)
+        vim.keymap.set('n', '<leader>ps', function ()
+            require('telescope').extensions.live_grep_args.live_grep_args()
+        end)
+        vim.keymap.set('n', '<C-b>', builtin.buffers, {})
+        vim.keymap.set("n", "<leader>py", function()
+            require("telescope.builtin").find_files({
+                prompt_title = "Find PDF",
+                find_command = { "fd", "--type", "f", "--extension", "pdf" },
+                attach_mappings = function(_, map)
+                    map("i", "<CR>", function(prompt_bufnr)
+                        local action_state = require("telescope.actions.state")
+                        local actions = require("telescope.actions")
+                        local selection = action_state.get_selected_entry()
+                        actions.close(prompt_bufnr)
+                        vim.fn.jobstart({ "zathura", selection.path }, { detach = true })
+                    end)
+                    return true
+                end,
+            })
+        end, {})
+    end
 }
