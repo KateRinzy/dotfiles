@@ -2,7 +2,7 @@
     "workbench.colorTheme": "Gruvbox Dark Medium",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'IosevkaTerm NFM Light', 'Noto Serif CJK JP'",
     "haskell.manageHLS": "GHCup",
     "debug.inlineValues": "off",
     "editor.renderWhitespace": "all",
@@ -19,7 +19,7 @@
                 ":"
             ]
         },
-                {
+        {
             "before": [
                 "<leader>",
                 "s",
@@ -39,7 +39,6 @@
                 }
             ]
         }
-
     ],
     "python.analysis.typeCheckingMode": "standard",
     "git.openRepositoryInParentFolders": "never",
