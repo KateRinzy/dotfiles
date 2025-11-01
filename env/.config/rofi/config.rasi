@@ -12,7 +12,8 @@ configuration {
 * {
     width: 1000;
     // font: "The Suavity 24";
-    font: "IosevkaTerm NFM Light 24";
+    // font: "IosevkaTerm NFM Light 24";
+    font: "Noto Serif CJK JP 24";
 }
 
 element-text, element-icon, mode-switcher {
