@@ -1,6 +1,6 @@
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
-    name[Group1]= "English";
+    name[Group1]= "English (Colemak)";
 
     key <TLDE> {[ grave,        asciitilde  ]};
     key <AE01> {[ 1,            exclam      ]};

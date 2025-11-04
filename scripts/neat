@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-# needed packages
-
 aur=(
     ani-cli
     anki-bin
@@ -23,15 +21,12 @@ aur=(
     vesktop-bin
     wlogout
     wlrobs # plugin for OBS to record in wayland
-    wxmaxima
     zen-browser-bin
 )
 
 pkgs=(
-    antimicrox
     aspnet-runtime
     base-devel
-    cinnamon
     bat
     breeze
     breeze5
@@ -39,6 +34,7 @@ pkgs=(
     btop
     cantor
     chafa
+    cinnamon
     ckb-next
     clang
     cliphist

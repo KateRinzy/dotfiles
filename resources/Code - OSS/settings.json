@@ -69,5 +69,6 @@
             "name": "Qt-5.15.17-linux-g++_from_PATH",
             "path": "/usr/bin/qtpaths"
         }
-    ]
+    ],
+    "lean4.alwaysAskBeforeInstallingLeanVersions": false
 }

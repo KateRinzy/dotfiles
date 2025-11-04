@@ -47,21 +47,5 @@ return {
             require('telescope').extensions.live_grep_args.live_grep_args()
         end)
         vim.keymap.set('n', '<C-b>', builtin.buffers, {})
-        vim.keymap.set("n", "<leader>py", function()
-            require("telescope.builtin").find_files({
-                prompt_title = "Find PDF",
-                find_command = { "fd", "--type", "f", "--extension", "pdf" },
-                attach_mappings = function(_, map)
-                    map("i", "<CR>", function(prompt_bufnr)
-                        local action_state = require("telescope.actions.state")
-                        local actions = require("telescope.actions")
-                        local selection = action_state.get_selected_entry()
-                        actions.close(prompt_bufnr)
-                        vim.fn.jobstart({ "zathura", selection.path }, { detach = true })
-                    end)
-                    return true
-                end,
-            })
-        end, {})
     end
 }
