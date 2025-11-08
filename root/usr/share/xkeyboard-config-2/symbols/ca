@@ -41,7 +41,7 @@ xkb_symbols "fr" {
     key <AC08>	{[         e,          E ]};
     key <AC09>	{[         i,          I ]};
     key <AC10>	{[         o,          O ]};
-    key <AC11>	{[dead_grave, dead_grave ]};
+    key <AC11>	{[dead_grave,   question ]};
     key <BKSL>	{[      less,    greater ]};
 
     key <AB01>	{[         z,          Z, guillemotleft ]};

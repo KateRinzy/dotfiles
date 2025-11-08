@@ -2,20 +2,21 @@
 printf '\e[?7l'
 
 flags="${1#-}"  # strip leading dash
-[ -z "$flags" ] && flags="cxwt"  # default: all
+[ -z "$flags" ] && flags="cxwtp"  # default: all including pid
 
 active=$(hyprctl activewindow -j | jq -r .address)
 
 hyprctl clients -j \
-| jq -r '.[] | [.address, .class, (.xwayland|tostring), .workspace.id, .title] | @tsv' \
+| jq -r '.[] | [.address, .class, (.xwayland|tostring), .workspace.id, .title, .pid] | @tsv' \
 | sort -k4,4n -k2,2 \
 | awk -F'\t' -v active="$active" -v flags="$flags" '
 BEGIN {
-    show_addr = index(flags, "a")
+    show_addr  = index(flags, "a")
     show_class = index(flags, "c")
-    show_xway = index(flags, "x")
-    show_ws = index(flags, "w")
+    show_xway  = index(flags, "x")
+    show_ws    = index(flags, "w")
     show_title = index(flags, "t")
+    show_pid   = index(flags, "p")
 }
 NR==1 { max_class=0 }
 {
@@ -32,6 +33,7 @@ END {
         if (show_xway)  line = line sprintf(" xwayland: %6s", f[3])
         if (show_ws)    line = line sprintf(" workspace: %3s", f[4])
         if (show_title) line = line sprintf(" title: %s", f[5])
+        if (show_pid)   line = line sprintf(" pid: %s", f[6])
         print line
     }
 }'

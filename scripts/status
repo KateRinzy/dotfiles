@@ -61,12 +61,7 @@ check-disk-usage() {
     done
 }
 
-check-keymap() {
-    printf "%20s : %s\n" "$(color_string Keymap)" "$(hyprctl devices -j | jq '.keyboards | .[] | select(.main == true) | .active_keymap' -r)"
-}
-
 check-host
 check-uptime
 check-packages
-check-keymap
 check-disk-usage

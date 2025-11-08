@@ -1,5 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
-
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
 export GEM_HOME="$HOME/.local/share/gem/ruby/3.4.0"
 export PATH="$GEM_HOME/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
@@ -8,10 +9,7 @@ export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Documents/scripts:$PATH"
-
 export WORKSTATION="$HOME/denver"
-
-
 
 ZSH_THEME="robbyrussell"
 
@@ -25,9 +23,6 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.aliases.sh ] && source ~/.aliases.sh
 
-export EDITOR="nvim"
-export VISUAL="$EDITOR"
-
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
@@ -35,10 +30,8 @@ zstyle ':vcs_info:git:*' formats ' %F{cyan}[%f%F{red}%b%f%F{cyan}]%f'
 
 setopt PROMPT_SUBST
 # %F{yellow};%f
-PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_} '
-# PROMPT="%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_} %F{yellow}
-# %n.whore =>%f "
-# RPROMPT='%F{8} %* $(battery)%% %f'
+PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_}
+%F{yellow}z%f '
 
 [[ ! -r '/home/kate/.opam/opam-init/init.zsh' ]] || source '/home/kate/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 

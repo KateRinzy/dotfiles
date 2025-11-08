@@ -82,7 +82,7 @@ sync_files() {
     echo "Copying root files"
     sudo cp $CP_FLAGS /etc/sudoers $WORKSTATION/root/etc/sudoers
     sudo chown $USER:$USER $WORKSTATION/root/etc/sudoers
-    sudo cp $CP_FLAGS -r /usr/share/sddm $WORKSTATION/root/usr/share/
+    sudo cp $CP_FLAGS -r /usr/share/sddm/themes/ame $WORKSTATION/root/usr/share/sddm/themes/ame
     sudo cp $CP_FLAGS /etc/systemd/logind.conf $WORKSTATION/root/etc/systemd/logind.conf
     sudo cp $CP_FLAGS /etc/pam.d/sddm $WORKSTATION/root/etc/pam.d/sddm
 

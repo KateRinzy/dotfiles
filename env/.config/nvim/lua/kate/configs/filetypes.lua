@@ -87,5 +87,6 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = { "html" },
     callback = function()
         vim.opt.indentexpr = ""
+        vim.opt.textwidth = 80
     end
 })

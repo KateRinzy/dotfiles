@@ -70,5 +70,6 @@
             "path": "/usr/bin/qtpaths"
         }
     ],
-    "lean4.alwaysAskBeforeInstallingLeanVersions": false
+    "lean4.alwaysAskBeforeInstallingLeanVersions": false,
+    "workbench.colorTheme": "Rosé Pine"
 }
