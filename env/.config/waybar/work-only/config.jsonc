@@ -1,6 +1,7 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "position": "bottom",
+    "output": "HDMI-A-1",
     "exclusive": false,
     "height": 24,
     "modules-left": [

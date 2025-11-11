@@ -65,7 +65,7 @@ vim.api.nvim_create_user_command("InsertTime", function()
     vim.api.nvim_put({ datetime }, "c", true, true)
 end, {})
 
-vim.api.nvim_create_user_command("DarkMode", function()
+vim.api.nvim_create_user_command("Dark", function()
     vim.opt.background = "dark"
     vim.cmd [[colorscheme monochrome]]
     local fg = "#777777"
@@ -77,13 +77,13 @@ vim.api.nvim_create_user_command("DarkMode", function()
     print("Bravo Six, going dark")
 end, {})
 
-vim.api.nvim_create_user_command("LightMode", function()
+vim.api.nvim_create_user_command("Light", function()
     vim.opt.background = "light"
     vim.cmd [[colorscheme rose-pine-dawn]]
     print("Let there be light")
 end, {})
 
-vim.api.nvim_create_user_command("BlueMode", function()
+vim.api.nvim_create_user_command("Dusk", function()
     vim.opt.background = "dark"
     vim.cmd [[colorscheme rose-pine-main]]
     print("OHHH, pwetty colours")

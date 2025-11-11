@@ -71,5 +71,6 @@
         }
     ],
     "lean4.alwaysAskBeforeInstallingLeanVersions": false,
-    "workbench.colorTheme": "Rosé Pine"
+    "workbench.colorTheme": "Rosé Pine",
+    "chat.agent.enabled": false
 }
