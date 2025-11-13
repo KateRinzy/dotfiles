@@ -61,6 +61,7 @@ pkgs=(
     github-cli
     gitui
     glfw
+    gnome-clocks
     gnome-keyring
     gnome-weather
     go

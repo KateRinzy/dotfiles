@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 start-bars() {
-    HORIZONTAL_CONFIG="$HOME/.config/waybar/horizontal/config.jsonc"
-    HORIZONTAL_STYLE="$HOME/.config/waybar/horizontal/style.css"
+    LAPTOP_CONFIG="$HOME/.config/waybar/horizontal/config.jsonc"
+    LAPTOP_STYLE="$HOME/.config/waybar/horizontal/style.css"
 
-    WORK_CONFIG="$HOME/.config/waybar/work-only/config.jsonc"
-    WORK_STYLE="$HOME/.config/waybar/work-only/style.css"
+    MONITOR_CONFIG="$HOME/.config/waybar/work-only/config.jsonc"
+    MONITOR_STYLE="$HOME/.config/waybar/work-only/style.css"
 
-    waybar -c "$HORIZONTAL_CONFIG" -s "$HORIZONTAL_STYLE" &
-    waybar -c "$WORK_CONFIG" -s "$WORK_STYLE" &
+    waybar -c "$LAPTOP_CONFIG" -s "$LAPTOP_STYLE" &
+    waybar -c "$MONITOR_CONFIG" -s "$MONITOR_STYLE" &
 }
 
 pkill waybar || start-bars

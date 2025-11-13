@@ -18,6 +18,8 @@
         "pulseaudio",
         "custom/sep",
         "clock",
+        "custom/sep",
+        "battery",
         "custom/sep"
     ],
     "custom/sep": {

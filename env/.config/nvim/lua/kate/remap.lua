@@ -41,16 +41,21 @@ set("n", "<leader>re", function() vim.cmd([[%s/\r//ge]]) end, { desc = "Remove a
 set("n", "<leader>sa", function() vim.cmd([[normal! ggVG]]) end, { desc = "Select the entire file" })
 
 vim.api.nvim_create_user_command("FocusModeEnable", function()
-    vim.o.list = false
-    vim.wo.nu = false
+    vim.opt.list = false
     vim.opt.laststatus = 0
-    print('Eepy girl On')
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        vim.api.nvim_win_set_option(win, "number", false)
+    end
+    print("Eepy girl On")
 end, {})
+
 vim.api.nvim_create_user_command("FocusModeDisable", function()
-    vim.o.list = true
-    vim.wo.nu = true
+    vim.opt.list = true
     vim.opt.laststatus = 2
-    print('Eepy girl Off')
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        vim.api.nvim_win_set_option(win, "number", true)
+    end
+    print("Eepy girl Off")
 end, {})
 
 vim.api.nvim_create_user_command("ToggleCmp", function()
