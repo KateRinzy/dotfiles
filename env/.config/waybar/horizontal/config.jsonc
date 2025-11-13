@@ -7,6 +7,9 @@
         "custom/sep",
         "hyprland/workspaces"
     ],
+    "modules-center": [
+        "hyprland/window"
+    ],
     "modules-right": [
         "tray",
         "custom/sep",

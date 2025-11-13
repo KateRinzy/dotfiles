@@ -31,7 +31,7 @@ zstyle ':vcs_info:git:*' formats ' %F{cyan}[%f%F{red}%b%f%F{cyan}]%f'
 setopt PROMPT_SUBST
 # %F{yellow};%f
 PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_}
-%F{yellow}z%f '
+%F{yellow}=%f '
 
 [[ ! -r '/home/kate/.opam/opam-init/init.zsh' ]] || source '/home/kate/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 

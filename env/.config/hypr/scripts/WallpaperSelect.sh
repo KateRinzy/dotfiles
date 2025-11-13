@@ -7,7 +7,7 @@ wallDIR="$HOME/personal/wallpapers"
 # swww transition config
 FPS=144
 TYPE="fade"
-DURATION=1
+DURATION=0.3
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
 
 rofi_theme="$HOME/.config/rofi/config-wallpaper.rasi"

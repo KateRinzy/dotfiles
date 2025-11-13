@@ -7,10 +7,14 @@ function ColorMyPencils(color)
 end
 
 return {
-    { "catppuccin/nvim",      name = "catppuccin", priority = 1000 },
-    { "shaunsingh/nord.nvim", name = "nord", config = function ()
-        theme = "light"
-    end },
+    { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
+    {
+        "shaunsingh/nord.nvim",
+        name = "nord",
+        config = function()
+            theme = "light"
+        end
+    },
     { "kdheepak/monochrome.nvim" },
     {
         "ellisonleao/gruvbox.nvim",
@@ -47,10 +51,7 @@ return {
         name = "rose-pine",
         config = function()
             require('rose-pine').setup({
-                disable_background = false,
-                styles = {
-                    italic = false,
-                },
+                disable_background = true,
             })
 
             ColorMyPencils();

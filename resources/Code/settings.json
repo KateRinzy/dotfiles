@@ -1,20 +1,41 @@
 {
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.colorTheme": "Rosé Pine",
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'IosevkaTerm NFM', 'Noto Sans Serif CJK JP', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
     "haskell.manageHLS": "GHCup",
     "debug.inlineValues": "off",
     "editor.renderWhitespace": "all",
-
+    "editor.formatOnSave": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": [";"],
-            "after": [":"]
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
         }
     ],
     "qt-qml.qmlls.useQmlImportPathEnvVar": true,
     "python.analysis.typeCheckingMode": "standard",
-    "git.openRepositoryInParentFolders": "never"
+    "git.openRepositoryInParentFolders": "never",
+    "editor.fontSize": 24,
+    "editor.wordWrap": "bounded",
+    "window.menuBarVisibility": "toggle",
+    "workbench.layoutControl.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "chat.commandCenter.enabled": false,
+    "window.titleBarStyle": "native",
+    "lean4.alwaysShowTitleBarMenu": false,
+    "vim.handleKeys": {
+        "<C-b>": false,
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false
+    },
+    "dotnet.codeLens.enableReferencesCodeLens": false,
+    "explorer.confirmDelete": false
 }

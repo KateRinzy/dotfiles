@@ -5,11 +5,11 @@ xkb_symbols "fr" {
     name[Group1] = "French (Canada)";
 
     key <TLDE>	{[ numbersign,       bar,     backslash ]};
-    key <AE01>	{[         1,     exclam,               ]};
+    key <AE01>	{[         1,     exclam                ]};
     key <AE02>	{[         2,   quotedbl,            at ]};
-    key <AE03>	{[         3,      slash,               ]};
-    key <AE04>	{[         4,     dollar,               ]};
-    key <AE05>	{[         5,    percent,               ]};
+    key <AE03>	{[         3,      slash                ]};
+    key <AE04>	{[         4,     dollar                ]};
+    key <AE05>	{[         5,    percent                ]};
     key <AE06>	{[         6,   question,    asciitilde ]};
     key <AE07>	{[         7,  ampersand                ]};
     key <AE08>	{[         8,   asterisk                ]};
@@ -32,10 +32,10 @@ xkb_symbols "fr" {
     key <AD12>	{[   dead_cedilla,  dead_diaeresis  ]};
 
     key <AC01>	{[         a,          A,        oe, OE ]};
-    key <AC02>	{[         r,          R     bracketleft]};
-    key <AC03>	{[         s,          S    bracketright]};
-    key <AC04>	{[         t,          T       braceleft]};
-    key <AC05>	{[         d,          D      braceright]};
+    key <AC02>	{[         r,          R,   bracketleft ]};
+    key <AC03>	{[         s,          S,  bracketright ]};
+    key <AC04>	{[         t,          T,     braceleft ]};
+    key <AC05>	{[         d,          D,    braceright ]};
     key <AC06>	{[         h,          H                ]};
     key <AC07>	{[         n,          N                ]};
     key <AC08>	{[         e,          E                ]};

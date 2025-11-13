@@ -34,6 +34,21 @@ vim.api.nvim_create_autocmd("FileType", {
             vim.fn.jobstart({ "zathura", pdf }, { detach = true })
         end, { buffer = true, desc = "Open PDF" })
 
+        vim.keymap.set("n", "<leader>u", function()
+            local file = vim.fn.expand("%:p:r") .. ".typ"
+            local cmd = { vim.fn.expand("$HOME/Documents/scripts/typst-make"), file }
+            vim.fn.jobstart(cmd, {
+                stdout_buffered = true,
+                stderr_buffered = true,
+                on_stdout = function(_, data)
+                    if data then print(table.concat(data, "\n")) end
+                end,
+                on_stderr = function(_, data)
+                    if data then print(table.concat(data, "\n")) end
+                end,
+            })
+        end, { buffer = true, desc = "Compile using typst-make" })
+
         require('telescope')
         vim.keymap.set("n", "<leader>py", function()
             require("telescope.builtin").find_files({
@@ -84,7 +99,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "html" },
+    pattern = { "html", "vue" },
     callback = function()
         vim.opt.indentexpr = ""
         vim.opt.textwidth = 80

@@ -72,5 +72,8 @@
     ],
     "lean4.alwaysAskBeforeInstallingLeanVersions": false,
     "workbench.colorTheme": "Rosé Pine",
-    "chat.agent.enabled": false
+    "chat.agent.enabled": false,
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
