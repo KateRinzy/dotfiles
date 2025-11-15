@@ -1,8 +1,8 @@
 ---@diagnostic disable: undefined-global
 require("kate.remap")
 require("kate.lazy_init")
-require("kate.configs.status-bar")
 require("kate.set")
+require("kate.configs.status-bar")
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
@@ -45,8 +45,6 @@ autocmd("InsertLeave", {
 --         })
 --     end
 -- })
-
-vim.cmd [[colorscheme rose-pine-main]]
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 1

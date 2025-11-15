@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+---@diagnostic disable: undefined-field
 return {
     "nvim-telescope/telescope.nvim",
 

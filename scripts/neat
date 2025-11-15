@@ -25,6 +25,7 @@ aur=(
 )
 
 pkgs=(
+    network-manager-applet
     aspnet-runtime
     base-devel
     bat

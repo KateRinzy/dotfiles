@@ -1,20 +1,4 @@
-function ColorMyPencils(color)
-    color = color or "rose-pine-moon"
-    vim.cmd.colorscheme(color)
-
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
 return {
-    { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
-    {
-        "shaunsingh/nord.nvim",
-        name = "nord",
-        config = function()
-            theme = "light"
-        end
-    },
     { "kdheepak/monochrome.nvim" },
     {
         "ellisonleao/gruvbox.nvim",
@@ -25,20 +9,20 @@ return {
                 undercurl = true,
                 underline = false,
                 bold = true,
-                italic = {
-                    strings = false,
-                    emphasis = false,
-                    comments = false,
-                    operators = false,
-                    folds = false,
-                },
+                -- italic = {
+                --     strings = false,
+                --     emphasis = false,
+                --     comments = false,
+                --     operators = false,
+                --     folds = false,
+                -- },
                 strikethrough = true,
                 invert_selection = false,
                 invert_signs = false,
                 invert_tabline = false,
                 invert_intend_guides = false,
                 inverse = true, -- invert background for search, diffs, statuslines and errors
-                contrast = "",  -- can be "hard", "soft" or empty string
+                contrast = "soft",  -- can be "hard", "soft" or empty string
                 palette_overrides = {},
                 overrides = {},
                 dim_inactive = false,
@@ -53,8 +37,6 @@ return {
             require('rose-pine').setup({
                 disable_background = true,
             })
-
-            ColorMyPencils();
         end
     },
     {

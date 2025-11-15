@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "haskell", "hs", "ocaml", "cpp", "cc" },
+    pattern = { "haskell", "hs", "ocaml", "cpp", "cc", "c" },
     callback = function()
         vim.bo.shiftwidth = 2
         vim.bo.tabstop = 2
@@ -60,7 +60,7 @@ vim.api.nvim_create_autocmd("FileType", {
                         local actions = require("telescope.actions")
                         local selection = action_state.get_selected_entry()
                         actions.close(prompt_bufnr)
-                        vim.fn.jobstart({ "evince", selection.path }, { detach = true })
+                        vim.fn.jobstart({ "zathura", selection.path }, { detach = true })
                     end)
                     return true
                 end,

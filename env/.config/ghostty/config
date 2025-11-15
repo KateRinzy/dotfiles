@@ -1,5 +1,4 @@
 background-opacity = 0.80
-background = 000000
 background-blur = true
 
 confirm-close-surface = false
@@ -15,11 +14,11 @@ gtk-wide-tabs = false
 
 shell-integration-features = no-cursor
 
-theme = Rose Pine
+# theme = Rose Pine
+theme = Belafonte Day
 
 window-inherit-working-directory = false
 
-window-padding-balance = true
 window-padding-y = 0
 
 working-directory = /home/kate/Documents
