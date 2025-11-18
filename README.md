@@ -1,40 +1,17 @@
-# My dev setup
-<sub>(I use Arch BTW)</sub>
+# 私の開発環境
+<sub>どころで、アタシはArchLinuxを使ってる</sub>
 
 ![Current desktop](assets/2025-10-28-202747_hyprshot.png)
 
-- env: keeps track of my dotfiles
-- cmds: commands provided to configure/install some stuff
-- resources: some misc stuff i need
-- scripts: some useful scripts
-- root: stuff that is in root...
 
----
+| ディレクトリ | じょうほう                        |
+| :----------: | :-------------------------------: |
+| env          | ドットファイルの管理              |
+| cmds         | 各種の設定/インストール用コマンド |
+| resources    | 必要なその他情報                  |
+| scripts      | 便利なスクリプト                  |
+| root         | ルートディレクトリにあるもの…     |
 
-# Installation
-
-> [!IMPORTANT]
-> the `WORKSTATION` environment variable need to be set to the path where the git repo is/will be
-
-## First option
-```
-git pull https://github.com/KateRinzy/denver
-```
-then run:
-```
-denver/scripts/dev-install
-```
-
-## Second option
-run
-```
-install.sh
-```
-> [!WARNING]
-> `install.sh` is untested, use at your own risks
-
-
----
 
 ### credits
 - ThePrimeagen for tmux-sessionizer

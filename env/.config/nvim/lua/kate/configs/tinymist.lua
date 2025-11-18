@@ -1,7 +1,8 @@
+---@diagnostic disable: undefined-global
 require "lspconfig"["tinymist"].setup {
     settings = {
         formatterMode = "typstyle",
-        exportPdf = "onType",
+        exportPdf = "onSave",
         semanticTokens = "enable",
         formatterPrintWidth = 70,
         formatterProseWrap = true

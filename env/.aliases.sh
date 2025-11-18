@@ -2,6 +2,8 @@
 alias vim="nvim"
 alias cim="nvim -u ~/.config/nvim/min-init.lua"
 
+alias vmb="vim main.typ chapters/*.typ task.md"
+
 alias def="~/personal"
 alias ff="fastfetch"
 alias f="fuck"

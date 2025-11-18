@@ -26,7 +26,8 @@
         "format": "  "
     },
     "hyprland/workspaces": {
-        "format": "{}"
+        "format": "{}",
+        "all-outputs": true
     },
     "clock": {
         "tooltip": true,

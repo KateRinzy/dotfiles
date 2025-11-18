@@ -12,9 +12,10 @@
 /* @define-color gray #928374; */
 /* @define-color gray-dark #504945; */
 /* @define-color highlight #fabd2f; */
+
 /* -------------------------------
    Kanagawa Theme Variables
--------------------------------- */
+ -------------------------------- */
 /* @define-color fg #dcd7ba; */
 /* @define-color bg #1f1f28; */
 /* @define-color bg-alt #2a2a37; */
@@ -26,21 +27,6 @@
 /* @define-color gray #9cabca; */
 /* @define-color gray-dark #727169; */
 /* @define-color highlight #ff9e3b; */
-
-/* -------------------------------
-   Black Monochrome Theme
--------------------------------- */
-/* @define-color fg #e5e5e5; */
-/* @define-color bg #000000; */
-/* @define-color bg-alt #1c1c1c; */
-/* @define-color red #777777; */
-/* @define-color green #bbbbbb; */
-/* @define-color yellow #aaaaaa; */
-/* @define-color blue #999999; */
-/* @define-color magenta #ffffff; */
-/* @define-color gray #888888; */
-/* @define-color gray-dark #444444; */
-/* @define-color highlight #dddddd; */
 
 /* -------------------------------
    Rosé Pine Theme
@@ -62,8 +48,8 @@
 -------------------------------- */
 * {
     border: none;
-    font-family: "IosevkaTerm NFM", "Fira Code";
-    font-size: 12px;
+    font-family: "Fira Code";
+    font-size: 8pt;
     font-weight: 600;
     background: none;
 }
@@ -76,9 +62,7 @@ window#waybar {
 .modules-left,
 .modules-right,
 .modules-center {
-    /* border-radius: 6px; */
     background: @bg;
-    /* padding: 12px 0; */
 }
 
 tooltip {
@@ -97,24 +81,10 @@ tooltip * {
     margin: 4px 0;
 }
 
-/* #workspaces, */
-/* #clock, */
-/* #custom-bluetooth_devices, */
-/* #custom-powermenu, */
-/* #pulseaudio, */
-/* #tray {} */
-
-#workspaces {
-    border-radius: 4px;
-}
-
 #workspaces button {
     color: @gray;
     background: none;
     padding: 0;
-    border-width: 2px;
-    border-style: solid;
-    border-color: transparent;
 }
 
 #workspaces button:hover {
@@ -123,7 +93,6 @@ tooltip * {
 
 #workspaces button.active {
     color: @magenta;
-    border-color: @highlight;
 }
 
 #temperature {
@@ -145,20 +114,6 @@ tooltip * {
 
 #pulseaudio.muted {
     color: @red;
-}
-
-#custom-powermenu {
-    margin: 12px 0 0 0;
-    color: @gray;
-}
-
-#language,
-#battery {
-    color: @gray;
-}
-
-#custom-mode {
-    color: @gray;
 }
 
 #tray menu {
