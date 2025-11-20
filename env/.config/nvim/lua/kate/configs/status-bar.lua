@@ -54,6 +54,7 @@ function _G.search_status()
 end
 
 local function status_line()
+    local mode = " [%{mode()}]"
     local file_name = " [%-.20t]"
     local modified = " %-m"
     local file_type = " %y"
@@ -66,6 +67,7 @@ local function status_line()
 
 
     return table.concat({
+        mode,
         file_name,
         modified,
         file_type,

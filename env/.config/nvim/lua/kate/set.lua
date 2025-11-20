@@ -1,6 +1,8 @@
 ---@diagnostic disable: undefined-global
 vim.opt.winborder = "single"
 
+vim.opt.guicursor = ""
+
 vim.opt.nu = true
 
 vim.opt.tabstop = 4
@@ -42,6 +44,7 @@ vim.opt.foldlevelstart = 99
 
 vim.opt.updatetime = 50
 
+vim.opt.cursorline = true
 vim.opt.colorcolumn = "80"
 vim.opt.textwidth = 80
 
@@ -79,7 +82,7 @@ end, {})
 
 vim.api.nvim_create_user_command("Light", function()
     vim.opt.background = "light"
-    vim.cmd [[colorscheme kanagawa-lotus]]
+    vim.cmd [[colorscheme rose-pine-dawn]]
     print("Let there be light")
 end, {})
 

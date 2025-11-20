@@ -13,7 +13,7 @@ monitor() {
 
 start-bars() {
     laptop
-    # monitor
+    monitor
 }
 
 start-uniform() {

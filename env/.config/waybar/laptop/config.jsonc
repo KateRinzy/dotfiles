@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "bottom",
     "output": "eDP-1",
-    "height": 24,
+    "height": 12,
     "modules-left": [
         "custom/sep",
         "hyprland/workspaces"
@@ -34,19 +34,13 @@
         "format": "{:%y/%m/%d :: %H:%M}"
     },
     "tray": {
-        "icon-size": 12,
+        "icon-size": 6,
         "show-passive-items": "true"
     },
     "pulseaudio": {
         "format": "{volume}",
-        "format-bluetooth": "{volume}%",
-        "format-muted": "{volume}%",
-        "format-icons": {
-            "default": [
-                "",
-                ""
-            ]
-        },
+        "format-bluetooth": " {volume}%",
+        "format-muted": "",
         "scroll-step": 2,
         "on-click": "hyprctl dispatch exec pavucontrol",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"

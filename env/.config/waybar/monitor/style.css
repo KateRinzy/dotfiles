@@ -56,7 +56,7 @@
 
 window#waybar {
     color: @fg;
-    background: transparent;
+    background: @bg;
 }
 
 .modules-left,
@@ -65,13 +65,7 @@ window#waybar {
 }
 
 .modules-left {
-    border-radius: 0px 10px 0px 0px;
-    padding-right: 1em;
-}
-
-.modules-right {
-    border-radius:10px 0px 0px 0px;
-    padding-left: 1em;
+    border-radius: 0px 0px 10px 0px;
 }
 
 tooltip {
@@ -83,11 +77,6 @@ tooltip {
 tooltip * {
     color: @fg;
     text-shadow: none;
-}
-
-#custom-sep {
-    color: @gray-dark;
-    margin: 4px 0;
 }
 
 #workspaces button {
@@ -102,27 +91,6 @@ tooltip * {
 
 #workspaces button.active {
     color: @magenta;
-}
-
-#temperature {
-    color: @yellow;
-}
-
-#clock {
-    font-weight: 600;
-    color: @blue;
-}
-
-#custom-bluetooth_devices {
-    color: @blue;
-}
-
-#pulseaudio {
-    color: @green;
-}
-
-#pulseaudio.muted {
-    color: @red;
 }
 
 #tray menu {

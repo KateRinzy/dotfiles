@@ -1,32 +1,27 @@
 {
     "layer": "bottom",
-    "position": "bottom",
+    "position": "left",
     "output": "HDMI-A-1",
-    "exclusive": false,
-    "height": 24,
+    "exclusive": true,
     "modules-left": [
-        "custom/sep",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "custom/sep"
     ],
     "modules-right": [
         "tray",
-        "custom/sep",
-        "hyprland/language",
-        "custom/sep",
-        "pulseaudio",
         "custom/sep",
         "clock",
         "custom/sep"
     ],
     "custom/sep": {
-        "format": "  "
+        "format": " "
     },
     "hyprland/workspaces": {
         "format": "{name}"
     },
     "clock": {
         "tooltip": true,
-        "format": "{:%y/%m/%d :: %H:%M}"
+        "format": "{:%y\n%m\n%d\n::\n%H\n%M}"
     },
     "tray": {
         "icon-size": 12,
