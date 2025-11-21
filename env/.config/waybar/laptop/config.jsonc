@@ -34,7 +34,7 @@
         "format": "{:%y/%m/%d :: %H:%M}"
     },
     "tray": {
-        "icon-size": 6,
+        "icon-size": 12,
         "show-passive-items": "true"
     },
     "pulseaudio": {

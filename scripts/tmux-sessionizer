@@ -1,19 +1,32 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
+#
+# script taken from : https://github.com/ThePrimeagen/tmux-sessionizer/
+# this version is modified by fuyu147.
+#
+#
 PANE_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/tmux-sessionizer"
 PANE_CACHE_FILE="$PANE_CACHE_DIR/panes.cache"
 
 TS_SEARCH_PATHS=(
+    ~/Documents/projects
+    ~/Documents/book
+    ~/Documents/cours
+    ~/Documents/notes
+    ~/Documents/website
     ~/Documents/
+    /run/media/kate/Estrogen/repos
+    /run/media/kate/
     ~/.config
     /home
+    /home/kate/
 )
-TS_MAX_DEPTH=3
+TS_MAX_DEPTH=1
 
 session_idx=""
 session_cmd=""
 user_selected=""
 split_type=""
-VERSION="0.1.0"
+VERSION="1.4.7"
 
 while [[ "$#" -gt 0 ]]; do
     case "$1" in

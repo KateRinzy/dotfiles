@@ -7,6 +7,7 @@ require("kate.configs.status-bar")
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local kateGroup = augroup("kate", {})
+
 autocmd('TextYankPost', {
     group = augroup('HighlightYank', {}),
     pattern = '*',
