@@ -8,10 +8,11 @@ PANE_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/tmux-sessionizer"
 PANE_CACHE_FILE="$PANE_CACHE_DIR/panes.cache"
 
 TS_SEARCH_PATHS=(
-    ~/Documents/projects
     ~/Documents/book
     ~/Documents/cours
+    ~/Documents/porn
     ~/Documents/notes
+    ~/Documents/notes/typst/
     ~/Documents/website
     ~/Documents/
     /run/media/kate/Estrogen/repos

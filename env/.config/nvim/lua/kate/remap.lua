@@ -30,6 +30,7 @@ vim.cmd([[
     \ call fzf#vim#files('', {'source': 'rg --files --hidden --ignore --glob "!*.pdf"'}, <bang>0)
 ]])
 set("n", "<leader>pf", ":FilesNoPDF<CR>", { desc = "Open fzf (no PDFs)" })
+
 set("n", "<leader>f",
     function()
         vim.lsp.buf.format()
@@ -49,4 +50,15 @@ set({ "n", "v" }, "<leader>3", "/")
 -- https://swnakamura.github.io/posts/vim-japanese-input/
 set({ "n", "i" }, "<M-l>", function()
     vim.system({ "fcitx5-remote", "-t" })
+end)
+
+set("n", "<leader>tl", function()
+    if vim.o.background == "dark" then
+        vim.opt.background = "light"
+        vim.cmd [[colorscheme rose-pine-dawn]]
+    else
+        vim.opt.background = "dark"
+        vim.cmd [[colorscheme kanagawa-dragon]]
+    end
+    print("hey")
 end)

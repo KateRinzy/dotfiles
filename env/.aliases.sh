@@ -2,8 +2,6 @@
 alias vim="nvim"
 alias cim="nvim -u ~/.config/nvim/min-init.lua"
 
-alias vmb="vim main.typ chapters/*.typ task.md"
-
 alias def="~/personal"
 alias ff="fastfetch"
 alias f="fuck"
@@ -19,6 +17,7 @@ alias ls="eza -A1 -s type"
 
 alias e="exit"
 alias q="exit"
+alias wq="exit"
 alias s="cd"
 alias r="ranger"
 alias ..="cd .."
@@ -59,6 +58,11 @@ complete -o dirnames t
 
 tl() {
     tmux list-sessions
+}
+
+vfz() {
+    selected=$(fzf)
+    command nvim "$selected"
 }
 
 cursor() {

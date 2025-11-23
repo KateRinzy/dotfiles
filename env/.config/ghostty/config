@@ -1,11 +1,11 @@
-background-opacity = 0.80
+background-opacity = 0.90
 background-blur = true
 
 confirm-close-surface = false
 
-font-family = "IosevkaTerm NFM"
+font-family = "IosevkaTerm NFM Light"
 font-family = "Noto Sans CJK JP"
-font-size = 22
+font-size = 21
 
 gtk-single-instance = true
 
@@ -15,10 +15,12 @@ gtk-wide-tabs = false
 shell-integration-features = no-cursor
 
 # theme = Rose Pine
-theme = Belafonte Day
+# theme = HaX0R Gr33N
+theme = Kanagawa Dragon
 
 window-inherit-working-directory = false
 
+window-padding-balance = true
 window-padding-y = 0
 
 working-directory = /home/kate/Documents

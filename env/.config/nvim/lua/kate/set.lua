@@ -98,8 +98,28 @@ vim.api.nvim_create_user_command("Rose", function()
     print("OHHH, pwetty colours")
 end, {})
 
+vim.api.nvim_create_user_command("Matrix", function()
+    vim.opt.background = "dark"
+    vim.cmd [[colorscheme matrix]]
+    print("Hacked in!")
+end, {})
+
+vim.api.nvim_create_user_command("Green", function()
+    vim.opt.background = "dark"
+    vim.cmd [[colorscheme evergarden-winter]]
+    print("Touch grass, you whore")
+end, {})
+
+vim.api.nvim_create_user_command("DefaultColors", function()
+    vim.opt.background = "dark"
+    vim.cmd [[colorscheme kanagawa-dragon]]
+    print("hey, going back to your happy place, aren't you?")
+end, {})
+
 vim.opt.background = "dark"
-vim.cmd [[colorscheme rose-pine-main]]
+-- vim.cmd [[colorscheme rose-pine-main]]
+-- vim.cmd [[colorscheme evergarden]]
+vim.cmd [[colorscheme kanagawa-dragon]]
 
 vim.api.nvim_create_user_command("FocusModeEnable", function()
     vim.opt.list = false
@@ -132,4 +152,3 @@ vim.api.nvim_create_user_command("InsertTime", function()
     local datetime = os.date("%Y-%m-%d %H:%M:%S")
     vim.api.nvim_put({ datetime }, "c", true, true)
 end, {})
-

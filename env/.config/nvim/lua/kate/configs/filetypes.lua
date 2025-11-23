@@ -10,9 +10,10 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "haskell", "hs", "ocaml", "cpp", "cc", "c" },
     callback = function()
-        vim.bo.shiftwidth = 2
-        vim.bo.tabstop = 2
-        vim.bo.softtabstop = 2
+        local width = 4
+        vim.bo.shiftwidth = width
+        vim.bo.tabstop = width
+        vim.bo.softtabstop = width
     end,
 })
 
@@ -101,7 +102,8 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "html", "vue" },
     callback = function()
+        vim.opt.colorcolumn = "120"
         vim.opt.indentexpr = ""
-        vim.opt.textwidth = 80
+        vim.opt.textwidth = 120
     end
 })
