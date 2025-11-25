@@ -30,10 +30,15 @@ local function setMonochrome(background)
 end
 
 local themes = {
-    Dark = function()
+    MonoDark = function()
         setMonochrome("dark")
         print("Bravo Six, going dark")
         save_theme("MonoDark")
+    end,
+    MonoLight = function()
+        setMonochrome("light")
+        print("Let there be light")
+        save_theme("MonoLight")
     end,
     Light = function()
         vim.opt.background = "light"
@@ -56,6 +61,7 @@ local themes = {
     Matrix = function()
         vim.opt.background = "dark"
         vim.cmd [[colorscheme matrix]]
+        vim.api.nvim_set_hl(0, "SpellBad", { italic = true, undercurl = true, fg = "#008F11" })
         print("Hacked in!")
         save_theme("Matrix")
     end,
@@ -96,10 +102,13 @@ local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
 
 local function pick_theme()
+    local keys = vim.tbl_keys(themes)
+    table.sort(keys) -- alphabetical order
+
     pickers.new({}, {
         prompt_title = "Themes",
         finder = finders.new_table {
-            results = vim.tbl_keys(themes),
+            results = keys,
         },
         sorter = conf.generic_sorter({}),
         attach_mappings = function(prompt_bufnr, map)
