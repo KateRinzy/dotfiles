@@ -1,16 +1,16 @@
 # dev setup;
-<sub>どころで、アタシはArchLinuxを使ってる</sub>
+<sub>J'utilise Arch Linux en passant</sub>
 
 ![Current desktop](assets/2025-10-28-202747_hyprshot.png)
 
 
-| ディレクトリ | じょうほう                  |
-| :----------: | :-------------------------: |
-| env          | dotfiles                    |
-| cmds         | commands to install stuff   |
-| resources    | various resources I need    |
-| scripts      | useful scripts              |
-| root         | stuff configured in root    |
+| Directoire   | Informations                              |
+| :----------: | :---------------------------------------: |
+| env          | dotfiles                                  |
+| cmds         | commandes pour installer certaines choses |
+| resources    | quelques ressources dont j'ai besoin      |
+| scripts      | scripts utiles                            |
+| root         | choses configurées en root                |
 
 
 ### credits
