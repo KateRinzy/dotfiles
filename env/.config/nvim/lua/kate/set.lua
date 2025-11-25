@@ -68,59 +68,6 @@ vim.api.nvim_create_autocmd({ "CmdlineLeave", "CmdlineChanged", "CmdlineEnter" }
     end,
 })
 
-vim.api.nvim_create_user_command("Dark", function()
-    vim.opt.background = "dark"
-    vim.cmd [[colorscheme monochrome]]
-    local fg = "#777777"
-    local bg = "#101010"
-    vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#ff0000" })
-    vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = "#000000" })
-    vim.api.nvim_set_hl(0, "Comment", { fg = "#333333", bg = "#000000" })
-    vim.api.nvim_set_hl(0, "Visual", { fg = bg, bg = fg })
-    print("Bravo Six, going dark")
-end, {})
-
-vim.api.nvim_create_user_command("Light", function()
-    vim.opt.background = "light"
-    vim.cmd [[colorscheme rose-pine-dawn]]
-    print("Let there be light")
-end, {})
-
-vim.api.nvim_create_user_command("Dusk", function()
-    vim.opt.background = "dark"
-    vim.cmd [[colorscheme gruvbox]]
-    print("OHHH, pwetty colours")
-end, {})
-
-vim.api.nvim_create_user_command("Rose", function()
-    vim.opt.background = "dark"
-    vim.cmd [[colorscheme rose-pine-main]]
-    print("OHHH, pwetty colours")
-end, {})
-
-vim.api.nvim_create_user_command("Matrix", function()
-    vim.opt.background = "dark"
-    vim.cmd [[colorscheme matrix]]
-    print("Hacked in!")
-end, {})
-
-vim.api.nvim_create_user_command("Green", function()
-    vim.opt.background = "dark"
-    vim.cmd [[colorscheme evergarden-winter]]
-    print("Touch grass, you whore")
-end, {})
-
-vim.api.nvim_create_user_command("DefaultColors", function()
-    vim.opt.background = "dark"
-    vim.cmd [[colorscheme kanagawa-dragon]]
-    print("hey, going back to your happy place, aren't you?")
-end, {})
-
-vim.opt.background = "dark"
--- vim.cmd [[colorscheme rose-pine-main]]
--- vim.cmd [[colorscheme evergarden]]
-vim.cmd [[colorscheme kanagawa-dragon]]
-
 vim.api.nvim_create_user_command("FocusModeEnable", function()
     vim.opt.list = false
     vim.opt.laststatus = 0

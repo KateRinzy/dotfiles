@@ -240,7 +240,7 @@ if [[ ! -z $session_cmd ]]; then
 elif [[ ! -z $user_selected ]]; then
     selected="$user_selected"
 else
-    selected=$(find_dirs | fzf --tmux=center,80%,50%)
+    selected=$(find_dirs | fzf --tmux=top,80%,75%)
 fi
 
 if [[ -z $selected ]]; then

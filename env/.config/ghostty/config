@@ -1,4 +1,5 @@
-background-opacity = 0.90
+background = #000000
+background-opacity = 0.80
 background-blur = true
 
 confirm-close-surface = false
@@ -15,8 +16,9 @@ gtk-wide-tabs = false
 shell-integration-features = no-cursor
 
 # theme = Rose Pine
-# theme = HaX0R Gr33N
-theme = Kanagawa Dragon
+theme = HaX0R Gr33N
+# theme = Kanagawa Dragon
+# theme = Later This Evening
 
 window-inherit-working-directory = false
 

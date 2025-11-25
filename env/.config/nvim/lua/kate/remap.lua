@@ -51,14 +51,3 @@ set({ "n", "v" }, "<leader>3", "/")
 set({ "n", "i" }, "<M-l>", function()
     vim.system({ "fcitx5-remote", "-t" })
 end)
-
-set("n", "<leader>tl", function()
-    if vim.o.background == "dark" then
-        vim.opt.background = "light"
-        vim.cmd [[colorscheme rose-pine-dawn]]
-    else
-        vim.opt.background = "dark"
-        vim.cmd [[colorscheme kanagawa-dragon]]
-    end
-    print("hey")
-end)

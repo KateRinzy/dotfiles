@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Rosé Pine",
+    "workbench.colorTheme": "Kanagawa Dragon Kazte",
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
@@ -37,5 +37,8 @@
         "<C-z>": false
     },
     "dotnet.codeLens.enableReferencesCodeLens": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "python.defaultInterpreterPath": "/bin/python",
+    "workbench.secondarySideBar.defaultVisibility": "visible",
+    "chat.agent.enabled": false
 }

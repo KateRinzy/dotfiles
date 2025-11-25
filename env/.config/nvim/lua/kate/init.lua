@@ -1,6 +1,7 @@
 ---@diagnostic disable: undefined-global
 require("kate.remap")
 require("kate.lazy_init")
+require("kate.set-colors")
 require("kate.set")
 require("kate.configs.status-bar")
 

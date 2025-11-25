@@ -26,7 +26,6 @@ aur=(
 )
 
 pkgs=(
-    network-manager-applet
     aspnet-runtime
     base-devel
     bat
@@ -106,6 +105,7 @@ pkgs=(
     neomutt
     neovim
     networkmanager
+    network-manager-applet
     network-manager-applet
     noto-fonts-cjk
     npm

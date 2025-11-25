@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -111,7 +112,7 @@ return {
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-                ["<C-Space>"] = cmp.mapping.complete(),
+                ["<C-l>"] = cmp.mapping.complete(),
                 ["<C-e>"] = cmp.mapping.abort()
             }),
             sources = cmp.config.sources({

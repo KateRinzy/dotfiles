@@ -1,6 +1,10 @@
 export ZSH="$HOME/.oh-my-zsh"
+
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
+export MAKEFLAGS="-j12"
+export NPROCESSORS_CONF="12"
+
 export GEM_HOME="$HOME/.local/share/gem/ruby/3.4.0"
 export PATH="$GEM_HOME/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
