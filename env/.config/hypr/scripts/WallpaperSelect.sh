@@ -34,7 +34,7 @@ mapfile -d '' PICS < <(find -L "${wallDIR}" -type f \( \
     -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.mov" -o -iname "*.webm" \) -print0)
 
 # Rofi command
-rofi_command="rofi -i -show -dmenu -config $rofi_theme -theme-str $rofi_override"
+rofi_command="rofi -i -show -dmenu -p Wallpapers -config $rofi_theme -theme-str $rofi_override"
 
 # Sorting Wallpapers
 menu() {

@@ -5,7 +5,7 @@ lang_choices="eng
 jpn
 chi_sim"
 
-lang_selected=$(echo "$lang_choices" | rofi -dmenu -p "Language" -i )
+lang_selected=$(echo "$lang_choices" | rofi -dmenu -p "Langage" -i )
 
 # Take a screenshot of selected region and OCR it
 tmpfile=$(mktemp /tmp/ocr_XXXXXX.png)
