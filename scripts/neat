@@ -2,12 +2,12 @@
 
 aur=(
     ani-cli
+    visual-studio-code-bin
     anki-bin
     chatterino2-bin
     cnijfilter2 # canon printer drivers
     evince-no-gnome
     fcitx5-mozc-ut
-    gemini-cli-bin
     localsend-bin # share files locally
     lorien-bin
     minecraft-launcher
@@ -39,7 +39,6 @@ pkgs=(
     ckb-next
     clang
     cliphist
-    code
     cuda
     discord
     dotnet-runtime
@@ -97,7 +96,6 @@ pkgs=(
     lua
     lutris
     maven
-    maxima
     mercurial
     ncdu   # WinDirStat like tool
     ncspot # TUI for spotify
@@ -196,8 +194,8 @@ case "$1" in
     nvim "$0"
     ;;
 *)
-    paru -Syu --noconfirm
-    paru -S --noconfirm --needed "${pkgs[@]}"
-    paru -S --noconfirm --needed "${aur[@]}"
+    paru -Syu
+    paru -S --needed "${pkgs[@]}"
+    paru -S --needed "${aur[@]}"
     ;;
 esac
