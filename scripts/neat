@@ -35,6 +35,7 @@ pkgs=(
     btop
     cantor
     chafa
+    niri
     cinnamon
     ckb-next
     clang

@@ -5,7 +5,7 @@
 
 
 | Directoire   | Informations                              |
-| :----------: | :---------------------------------------: |
+| :----------: | :---------------------------------------- |
 | env          | dotfiles                                  |
 | cmds         | commandes pour installer certaines choses |
 | resources    | quelques ressources dont j'ai besoin      |

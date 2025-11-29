@@ -9,22 +9,20 @@
     ],
     "modules-right": [
         "tray",
-        "custom/sep",
-        "clock",
         "custom/sep"
     ],
     "custom/sep": {
         "format": " "
     },
     "hyprland/workspaces": {
-        "format": "{name}"
+        "format": "{}"
     },
     "clock": {
         "tooltip": true,
         "format": "{:%y\n%m\n%d\n::\n%H\n%M}"
     },
     "tray": {
-        "icon-size": 12,
+        "icon-size": 8,
         "show-passive-items": "true"
     },
     "pulseaudio": {

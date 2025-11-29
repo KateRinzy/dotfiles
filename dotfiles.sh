@@ -7,6 +7,7 @@ confs=(
     hyfetch.json
     hypr
     kitty
+    niri
     nvim
     rofi
     waybar

@@ -6,8 +6,12 @@
     "editor.fontFamily": "'IosevkaTerm NFM', 'Noto Sans Serif CJK JP', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
     "haskell.manageHLS": "GHCup",
     "debug.inlineValues": "off",
+    "editor.inlayHints.enabled": "off",
+    "editor.codeLens": false,
     "editor.renderWhitespace": "all",
     "editor.formatOnSave": true,
+    "vim.leader": " ",
+    "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -16,13 +20,42 @@
             "after": [
                 ":"
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                ":w"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s",
+                "a"
+            ],
+            "commands": [
+                {
+                    "command": "vim.remap",
+                    "args": {
+                        "after": [
+                            "g",
+                            "g",
+                            "V",
+                            "G"
+                        ]
+                    }
+                }
+            ]
         }
     ],
     "qt-qml.qmlls.useQmlImportPathEnvVar": true,
     "python.analysis.typeCheckingMode": "standard",
     "git.openRepositoryInParentFolders": "never",
     "editor.fontSize": 24,
-    "editor.wordWrap": "bounded",
+    "editor.wordWrap": "off",
     "window.menuBarVisibility": "toggle",
     "workbench.layoutControl.enabled": false,
     "workbench.navigationControl.enabled": false,

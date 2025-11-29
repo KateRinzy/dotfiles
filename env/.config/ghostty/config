@@ -19,8 +19,8 @@ shell-integration-features = no-cursor
 
 # theme = Rose Pine
 # theme = HaX0R Gr33N
-# theme = Kanagawa Dragon
-theme = Later This Evening
+theme = Kanagawa Dragon
+# theme = Later This Evening
 
 window-inherit-working-directory = false
 
