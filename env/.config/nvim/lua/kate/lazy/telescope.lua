@@ -45,7 +45,7 @@ return {
         -- vim.keymap.set('n', '<leader>ps', function()
         --     builtin.grep_string({ search = vim.fn.input("Grep > ") })
         -- end)
-        vim.keymap.set('n', '<leader>ps', function ()
+        vim.keymap.set('n', '<leader>ps', function()
             require('telescope').extensions.live_grep_args.live_grep_args()
         end)
         vim.keymap.set('n', '<C-b>', builtin.buffers, {})

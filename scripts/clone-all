@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+USERNAME="$1"
+if [[ -z USERNAME ]]; then
+    USERNAME="fuyu147"
+fi
+
+gh repo list "$USERNAME" \
+    --limit 1000 \
+    --json url \
+    -q '.[] | .url + ".git"' |
+    xargs -L1 -P4 git clone

@@ -73,5 +73,6 @@
     "explorer.confirmDelete": false,
     "python.defaultInterpreterPath": "/bin/python",
     "workbench.secondarySideBar.defaultVisibility": "visible",
-    "chat.agent.enabled": false
+    "chat.agent.enabled": false,
+    "FSharp.suggestGitignore": false
 }

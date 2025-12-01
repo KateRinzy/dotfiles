@@ -43,7 +43,7 @@ bindkey -s ^t "^utmux-sessionizer\n"
 bindkey -s ^y "^uyazi-tmux\n"
 bindkey -s ^k "^udfz\n"
 bindkey -s ^f "^uvfz\n"
-bindkey -s ^e "^ucode .\n"
+# bindkey -s ^e "^ucode .\n" # maybe shouldn't use this, i keep accidentally pressing it, should use some other keybind
 bindkey -s ^q "^ukitty sh -c ranger\n"
 
 
