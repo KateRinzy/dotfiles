@@ -1,7 +1,7 @@
 # dev setup;
 <sub>J'utilise Arch Linux en passant</sub>
 
-![Current desktop](assets/2025-10-28-202747_hyprshot.png)
+![Current desktop](assets/2025-11-30-220651_hyprshot.png)
 
 
 | Directoire   | Informations                              |
