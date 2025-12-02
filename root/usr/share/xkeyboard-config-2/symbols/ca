@@ -4,13 +4,13 @@ default partial
 xkb_symbols "fr" {
     name[Group1] = "French (Canada)";
 
-    key <TLDE>	{[ numbersign,       bar,     backslash ]};
+    key <TLDE>	{[ numbersign,       bar                ]};
     key <AE01>	{[         1,     exclam                ]};
-    key <AE02>	{[         2,   quotedbl,            at ]};
+    key <AE02>	{[         2,   quotedbl                ]};
     key <AE03>	{[         3,      slash                ]};
     key <AE04>	{[         4,     dollar                ]};
     key <AE05>	{[         5,    percent                ]};
-    key <AE06>	{[         6,   question,    asciitilde ]};
+    key <AE06>	{[         6,   question                ]};
     key <AE07>	{[         7,  ampersand                ]};
     key <AE08>	{[         8,   asterisk                ]};
     key <AE09>	{[         9,  parenleft                ]};
@@ -19,9 +19,9 @@ xkb_symbols "fr" {
     key <AE12>	{[     equal,       plus                ]};
 
     key <AD01>	{[         q,          Q                ]};
-    key <AD02>	{[         w,          W                ]};
-    key <AD03>	{[         f,          F,      EuroSign ]};
-    key <AD04>	{[         p,          P                ]};
+    key <AD02>	{[         w,          W,     backslash ]};
+    key <AD03>	{[         f,          F,            at ]};
+    key <AD04>	{[         p,          P,    asciitilde ]};
     key <AD05>	{[         g,          G                ]};
     key <AD06>	{[         j,          J,           yen ]};
     key <AD07>	{[         l,          L                ]};

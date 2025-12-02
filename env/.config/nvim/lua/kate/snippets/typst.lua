@@ -59,7 +59,7 @@ $]], { i(1) })
     ),
     s({ trig = "nmt", snippetType = "autosnippet" },
         fmta(
-            [[#numbered-eq(
+            [[#math.numbered-eq(
   $
     <>
   $

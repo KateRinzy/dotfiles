@@ -6,7 +6,8 @@ background-blur = true
 
 confirm-close-surface = false
 
-font-family = "IosevkaTerm NFM Light"
+# font-family = "IosevkaTerm NFM Light"
+font-family = "Courier New"
 font-family = "Noto Sans CJK JP"
 font-size = 21
 
