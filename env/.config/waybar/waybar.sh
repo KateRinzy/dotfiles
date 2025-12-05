@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
 
-LAPTOP=false
-MONITOR=true
+LAPTOPNAME="eDP-1"
+MONITORNAME="HDMI-A-1"
+
+has_monitor() {
+    hyprctl monitors -j | jq -e --arg name "$1" \
+        '.[] | select(.name == $name)' >/dev/null
+}
+
+LAPTOP=$(has_monitor "$LAPTOPNAME" && echo true || echo false)
+MONITOR=$(has_monitor "$MONITORNAME" && echo true || echo false)
+
+echo -e "gotten:"
+echo -e "\tLAPTOP: $LAPTOP ($LAPTOPNAME)"
+echo -e "\tMONITOR: $MONITOR ($MONITORNAME)"
 
 laptop() {
     waybar \
@@ -20,10 +32,11 @@ start-bars() {
     if $MONITOR; then monitor; fi
 }
 
-start-uniform() {
-    waybar \
-        -c "$HOME/.config/waybar/uniform/config.jsonc" \
-        -s "$HOME/.config/waybar/uniform/style.css" &
-}
+# start-uniform() {
+#     waybar \
+#         -c "$HOME/.config/waybar/uniform/config.jsonc" \
+#         -s "$HOME/.config/waybar/uniform/style.css" &
+# }
 
-pkill waybar || start-bars
+pkill waybar
+start-bars

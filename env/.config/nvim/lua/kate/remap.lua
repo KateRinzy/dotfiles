@@ -24,10 +24,19 @@ set({ 'n', 'v', 'x' }, 'k', 'gk')
 set({ "n", "v" }, "<leader>w", "<ESC>:w<CR>")
 
 -- set("i", "<C-u>", "<Esc>")
+vim.g.fzf_layout = { window = { width = 1, height = 0.4, yoffset = 1 } }
+vim.g.fzf_preview_window = { 'right:50%' }
 
 vim.cmd([[
   command! -bang FilesNoPDF
-    \ call fzf#vim#files('', {'source': 'rg --files --hidden --ignore --glob "!*.pdf"'}, <bang>0)
+    \ call fzf#vim#files(
+    \   '',
+    \   {
+    \     'source': 'rg --files --hidden --ignore --glob "!*.pdf"',
+    \     'options': '--preview "bat --style=numbers --color=always --line-range :500 {}"'
+    \   },
+    \   <bang>0
+    \ )
 ]])
 set("n", "<leader>pf", ":FilesNoPDF<CR>", { desc = "Open fzf (no PDFs)" })
 

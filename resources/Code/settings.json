@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Kanagawa Dragon Kazte",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,

@@ -61,7 +61,7 @@ local themes = {
     Matrix = function()
         vim.opt.background = "dark"
         vim.cmd [[colorscheme matrix]]
-        vim.api.nvim_set_hl(0, "SpellBad", { italic = true, undercurl = true, fg = "#008F11" })
+        vim.api.nvim_set_hl(0, "SpellBad", { italic = false, undercurl = true, fg = "#08AE2A" })
         print("Hacked in!")
         save_theme("Matrix")
     end,
