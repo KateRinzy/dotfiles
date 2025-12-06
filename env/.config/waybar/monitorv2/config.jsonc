@@ -3,18 +3,18 @@
     "position": "bottom",
     "output": "HDMI-A-1",
     "exclusive": true,
-    "modules-center": [
+    "modules-left": [
         "hyprland/window"
     ],
+    "hyprland/window": {
+        "format": "{class}"
+    },
     "modules-right": [
         "tray",
         "custom/sep",
         "clock",
         "custom/sep"
     ],
-    "hyprland/workspaces": {
-        "format": "<sub>{}</sub>"
-    },
     "custom/sep": {
         "format": " "
     },
