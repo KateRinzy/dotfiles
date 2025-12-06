@@ -1,4 +1,6 @@
 ---@diagnostic disable: undefined-global
+vim.o.termguicolors = true
+
 require("kate.remap")
 require("kate.lazy_init")
 require("kate.set-colors")

@@ -12,10 +12,8 @@ TS_SEARCH_PATHS=(
     ~/Documents/cours
     ~/Documents/porn
     ~/Documents/notes
-    ~/Documents/notes/typst/
     ~/Documents/website
     ~/Documents/devep
-    ~/Documents/
     /run/media/kate/Estrogen/repos
     /run/media/kate/
     ~/.config

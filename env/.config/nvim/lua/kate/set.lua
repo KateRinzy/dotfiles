@@ -1,6 +1,5 @@
 ---@diagnostic disable: undefined-global
 vim.opt.winborder = "single"
-
 vim.opt.guicursor = ""
 
 vim.opt.nu = true

@@ -2,11 +2,12 @@
 alias vim="nvim"
 alias cim="nvim -u ~/.config/nvim/min-init.lua"
 
-alias def="~/personal"
 alias ff="fastfetch"
 alias f="fuck"
 
 alias mate="make"
+
+alias yap="paru"
 
 alias chat="nvim ~/Documents/chat.typ"
 alias zxcv="nvim ~/Documents/zxcv.typ"
@@ -38,7 +39,6 @@ alias gacm="git commit -am"
 alias gpush="git push"
 alias gpull="git pull"
 
-alias open="xdg-open"
 alias maple="~/maple2022/bin/xmaple" # should maybe put this in $PATH i suppose, too lazy to do that
 
 psk() {
@@ -63,6 +63,16 @@ tl() {
 vfz() {
     selected=$(fzf)
     command nvim "$selected"
+}
+
+open() {
+    xdg-open $1 >/dev/null 2>&1 &
+    disown
+}
+
+openf() {
+    selected=$(fzf)
+    open "$selected"
 }
 
 cursor() {

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+FORCE_DISABLE_LAPTOP=false
+FORCE_DISABLE_MONITOR=false
+
 LAPTOPNAME="eDP-1"
 MONITORNAME="HDMI-A-1"
 
@@ -10,6 +13,9 @@ has_monitor() {
 
 LAPTOP=$(has_monitor "$LAPTOPNAME" && echo true || echo false)
 MONITOR=$(has_monitor "$MONITORNAME" && echo true || echo false)
+
+$FORCE_DISABLE_LAPTOP && LAPTOP=false
+$FORCE_DISABLE_MONITOR && MONITOR=false
 
 echo -e "gotten:"
 echo -e "\tLAPTOP: $LAPTOP ($LAPTOPNAME)"
