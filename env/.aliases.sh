@@ -11,10 +11,8 @@ alias mate="make"
 
 alias yap="paru"
 
-alias chat="nvim ~/Documents/chat.typ"
-alias zxcv="nvim ~/Documents/zxcv.typ"
-alias fair="nvim ~/Documents/notes/todo.typ"
-alias all="nvim ~/Documents/notes/all.typ"
+alias chat="nvim ~/desk/chat.typ"
+alias zxcv="nvim ~/desk/zxcv.typ"
 
 alias ls="eza -A1 -s type"
 

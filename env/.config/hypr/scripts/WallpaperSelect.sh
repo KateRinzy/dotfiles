@@ -1,8 +1,8 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # ---- taken and adapted from : https://github.com/JaKooLit/Hyprland-Dots
 
 # WALLPAPERS PATH
-wallDIR="$HOME/personal/wallpapers"
+wallDIR="$HOME/desk/wallpapers"
 
 # swww transition config
 FPS=144

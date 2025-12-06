@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Get list of workspaces
 workspaces=$(hyprctl workspaces -j | jq -r '.[].name')

@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#!/usr/bin/env bash
 
 VERBOSE=false
 
@@ -59,8 +59,8 @@ update_env_files() {
 sync_files() {
     update_env_files
 
-    echo "Copying scripts"
-    cp $CP_FLAGS ~/Documents/scripts/* $WORKSTATION/scripts/
+    echo "Copying nix configuration"
+    cp $CP_FLAGS /etc/nixos $WORKSTATION/nixos/
 
     echo "Copying vscode user settings"
     cp $CP_FLAGS ~/.config/Code/User/settings.json $WORKSTATION/resources/Code
@@ -79,14 +79,14 @@ sync_files() {
     echo "Copying themes"
     rsync $RSYNC_FLAGS ~/.themes/ $WORKSTATION/resources/themes
 
-    echo "Copying root files"
-    sudo cp $CP_FLAGS /etc/sudoers $WORKSTATION/root/etc/sudoers
-    sudo chown $USER:$USER $WORKSTATION/root/etc/sudoers
-    sudo cp $CP_FLAGS -r /usr/share/sddm/themes/ame $WORKSTATION/root/usr/share/sddm/themes/ame
-    sudo cp $CP_FLAGS /etc/systemd/logind.conf $WORKSTATION/root/etc/systemd/logind.conf
-    sudo cp $CP_FLAGS /etc/pam.d/sddm $WORKSTATION/root/etc/pam.d/sddm
+    # echo "Copying root files"
+    # sudo cp $CP_FLAGS /etc/sudoers $WORKSTATION/root/etc/sudoers
+    # sudo chown $USER:$USER $WORKSTATION/root/etc/sudoers
+    # sudo cp $CP_FLAGS -r /usr/share/sddm/themes/ame $WORKSTATION/root/usr/share/sddm/themes/ame
+    # sudo cp $CP_FLAGS /etc/systemd/logind.conf $WORKSTATION/root/etc/systemd/logind.conf
+    # sudo cp $CP_FLAGS /etc/pam.d/sddm $WORKSTATION/root/etc/pam.d/sddm
 
-    cp $HOME/.gitconfig $HOME/personal
+    # cp $HOME/.gitconfig $HOME/personal
 
     git -C "$WORKSTATION" -c color.status=always status
 }

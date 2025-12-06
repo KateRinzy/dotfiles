@@ -1,14 +1,14 @@
-Defaults        env_reset
-Defaults        mail_badpass
-Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# Don't edit this file. Set the NixOS options ‘security.sudo.configFile’
+# or ‘security.sudo.extraRules’ instead.
 
-root    ALL=(ALL:ALL) ALL
+root     ALL=(ALL:ALL)    SETENV: ALL
+%wheel  ALL=(ALL:ALL)    SETENV: ALL
 
-# Allow members of group sudo to execute any command
-%sudo   ALL=(ALL:ALL) ALL
-%wheel   ALL=(ALL:ALL) NOPASSWD: ALL
-# %wheel   ALL=(ALL:ALL) ALL
 
-# Includedir directive allows extra config files
-@includedir /etc/sudoers.d
+# extraConfig
+
+
+# Keep terminfo database for root and %wheel.
+Defaults:root,%wheel env_keep+=TERMINFO_DIRS
+Defaults:root,%wheel env_keep+=TERMINFO
 

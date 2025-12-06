@@ -5,15 +5,9 @@ export VISUAL="$EDITOR"
 export MAKEFLAGS="-j12"
 export NPROCESSORS_CONF="12"
 
-export GEM_HOME="$HOME/.local/share/gem/ruby/3.4.0"
-export PATH="$GEM_HOME/bin:$PATH"
-export PATH="$HOME/.cabal/bin:$PATH"
-export PATH="$HOME/.config/emacs/bin:$PATH"
-export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/Documents/scripts:$PATH"
-export WORKSTATION="$HOME/denver"
+export PATH="$HOME/desk/dotfiles/scripts:$PATH"
+export WORKSTATION="$HOME/desk/dotfiles"
 
 ZSH_THEME="robbyrussell"
 
@@ -23,7 +17,8 @@ plugins=(
     battery
 )
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
+
 
 [ -f ~/.aliases.sh ] && source ~/.aliases.sh
 
@@ -37,16 +32,15 @@ setopt PROMPT_SUBST
 PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_}
 %F{yellow}%%%f '
 
-[[ ! -r '/home/kate/.opam/opam-init/init.zsh' ]] || source '/home/kate/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# [[ ! -r '/home/kate/.opam/opam-init/init.zsh' ]] || source '/home/kate/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 
 bindkey -s ^t "^utmux-sessionizer\n"
 bindkey -s ^y "^uyazi-tmux\n"
-bindkey -s ^k "^udfz\n"
 bindkey -s ^f "^uvfz\n"
 # bindkey -s ^e "^ucode .\n" # maybe shouldn't use this, i keep accidentally pressing it, should use some other keybind
 bindkey -s ^q "^ukitty sh -c ranger\n"
 
 
-[ -f "/home/kate/.ghcup/env" ] && . "/home/kate/.ghcup/env" # ghcup-env
+# [ -f "/home/kate/.ghcup/env" ] && . "/home/kate/.ghcup/env" # ghcup-env
 
-eval $(thefuck --alias)
+# eval $(thefuck --alias)

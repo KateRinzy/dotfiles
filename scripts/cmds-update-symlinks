@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Clear any old symlinks
 find "$HOME/.local/bin" -type l -name 'cmds-*' -delete

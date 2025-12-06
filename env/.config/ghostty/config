@@ -9,7 +9,7 @@ confirm-close-surface = false
 # font-family = "IosevkaTerm NFM Light"
 font-family = "Courier Prime Code"
 font-family = "Noto Sans CJK JP"
-font-size = 20
+font-size = 22
 
 gtk-single-instance = true
 
@@ -28,5 +28,5 @@ window-inherit-working-directory = false
 window-padding-balance = true
 window-padding-y = 0
 
-working-directory = /home/kate/Documents
+working-directory = /home/fuyu147/desk
 

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # based on a script made by Sylvan Franklin : https://github.com/SylvanFranklin/.config/blob/main/scripts/tmux-session-dispensary.sh
 # currently not used can't figure out how to make directories the way i want it...

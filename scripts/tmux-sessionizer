@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 #
 # script taken from : https://github.com/ThePrimeagen/tmux-sessionizer/
 # this version is modified by fuyu147.
@@ -8,13 +8,15 @@ PANE_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/tmux-sessionizer"
 PANE_CACHE_FILE="$PANE_CACHE_DIR/panes.cache"
 
 TS_SEARCH_PATHS=(
-    ~/Documents/book
-    ~/Documents/cours
-    ~/Documents/porn
-    ~/Documents/notes
-    ~/Documents/website
-    ~/Documents/devep
-    /run/media/kate/Estrogen/repos
+    ~/desk/book
+    ~/desk/cours
+    ~/desk/dev
+    ~/desk/temp
+    ~/desk/dotfiles
+    ~/desk/notes
+    ~/desk/website
+    ~/desk/
+    /run/media/kate/Estrogen
     /run/media/kate/
     ~/.config
     /home

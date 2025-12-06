@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # kitty --class="kittynvimscratch" nvim $HOME/personal/zxcv.md
 #

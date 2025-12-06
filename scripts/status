@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 color_string() {
     printf "\e[36m%s\e[0m" "$1"

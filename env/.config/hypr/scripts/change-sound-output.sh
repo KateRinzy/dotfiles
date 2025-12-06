@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 output_devices=$(wpctl status | awk '
   /^Audio/ {a=1; next}
