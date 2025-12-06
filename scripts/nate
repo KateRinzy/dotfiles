@@ -60,7 +60,7 @@ sync_files() {
     update_env_files
 
     echo "Copying nix configuration"
-    cp $CP_FLAGS /etc/nixos $WORKSTATION/nixos/
+    rsync $RSYNC_FLAGS /etc/nixos $WORKSTATION/nixos/
 
     echo "Copying vscode user settings"
     cp $CP_FLAGS ~/.config/Code/User/settings.json $WORKSTATION/resources/Code
