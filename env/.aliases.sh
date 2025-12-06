@@ -1,4 +1,6 @@
-# alias vim="~/documents/nvim-linux-x86_64/bin/nvim"
+alias nrs="sudo nixos-rebuild switch"
+alias nrsu="sudo nixos-rebuild switch --upgrade"
+
 alias vim="nvim"
 alias cim="nvim -u ~/.config/nvim/min-init.lua"
 
