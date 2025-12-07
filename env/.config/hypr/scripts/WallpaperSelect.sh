@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # ---- taken and adapted from : https://github.com/JaKooLit/Hyprland-Dots
 
 # WALLPAPERS PATH

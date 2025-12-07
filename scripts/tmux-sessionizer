@@ -11,6 +11,7 @@ TS_SEARCH_PATHS=(
     ~/desk/book
     ~/desk/cours
     ~/desk/dev
+    ~/desk/repos
     ~/desk/temp
     ~/desk/dotfiles
     ~/desk/notes

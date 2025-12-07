@@ -17,7 +17,7 @@ plugins=(
     battery
 )
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 
 [ -f ~/.aliases.sh ] && source ~/.aliases.sh

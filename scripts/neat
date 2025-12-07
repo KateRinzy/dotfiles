@@ -1,61 +1,71 @@
 #!/usr/bin/env bash
 
 aur=(
-    ani-cli
     visual-studio-code-bin
+    downgrade
     anki-bin
-    chatterino2-bin
     cnijfilter2 # canon printer drivers
     evince-no-gnome
     fcitx5-mozc-ut
     localsend-bin # share files locally
+    ttf-iosevka-term
     lorien-bin
     minecraft-launcher
-    protontricks # needed it to install webview for Forza Horizon
-    quickshell
-    r2modman-bin # thunderstore thing for linux
+    # protontricks # needed it to install webview for Forza Horizon
+    # quickshell
+    # r2modman-bin # thunderstore thing for linux
     rose-pine-cursor
     spicetify-cli
-    thorium-browser-bin
+    # thorium-browser-bin
     timg # view img in terminal
-    ttf-comic-sans
+    # ttf-comic-sans
     vesktop-bin
     wlogout
     wlrobs # plugin for OBS to record in wayland
-    zen-browser-bin
+    # zen-browser-bin
 )
 
 pkgs=(
+    ghostty
     aspnet-runtime
     base-devel
     bat
     breeze
+    udiskie
+    keyd
+    node
     breeze5
     brightnessctl
     btop
     cantor
     chafa
-    niri
-    cinnamon
+    # niri
+    fzf
+    prismlauncher
+    eza
+    # cinnamon
     ckb-next
     clang
     cliphist
-    cuda
+    # cuda
     discord
     dotnet-runtime
     dotnet-sdk
     dunst
-    elixir
-    erlang
+    # elixir
+    # erlang
+    thunar
     eza
     fastfetch
     fcitx5-configtool
+    bun
     fcitx5-gtk
-    fcitx5-rime
+    fcitx5-chinese-addons
     firefox
     fzf
     gedit
     geogebra
+    jq
     ghostty
     gimp
     git
@@ -68,53 +78,41 @@ pkgs=(
     go
     godot-mono
     gopls
+    waybar
     grim
     gtk-engine-murrine
     gvfs # dependency for Thunar's volume management
     gwenview
-    hexchat
     htop
-    hyfetch
-    hypridle
     hyprland
     hyprlock
-    hyprpaper
     hyprpicker
     hyprpolkitagent
     hyprshot
-    i3-wm
-    inkscape
     jdk-openjdk
-    kdenlive
-    keepassxc
     keyd
     kitty
     komikku
-    kvantum
     lazygit
     libreoffice-still
     loupe # gnome's image viewer
     lua
-    lutris
-    maven
-    mercurial
-    ncdu   # WinDirStat like tool
-    ncspot # TUI for spotify
-    ncurses
-    neomutt
+    # maven
+    # mercurial
+    # ncdu   # WinDirStat like tool
+    # ncspot # TUI for spotify
+    # ncurses
     neovim
     networkmanager
     network-manager-applet
     network-manager-applet
     noto-fonts-cjk
+    noto-fonts
     npm
-    nushell
     nvtop
     nwg-look
-    obsidian
     obs-studio
     odin
-    okular
     openrgb
     pandoc-cli
     pavucontrol
@@ -134,7 +132,6 @@ pkgs=(
     rofi-wayland
     rsync
     rustup
-    sagemath
     seahorse
     shfmt
     skim
@@ -163,14 +160,11 @@ pkgs=(
     thunar-volman # dependency for Thunar's volume management
     thunderbird
     tmux
-    torbrowser-launcher
-    tree
     ttf-fira-code
     ttf-iosevkaterm-nerd
     ttf-nerd-fonts-symbols-mono
     tumbler # needed to display thumbnails in Thunar
     typst
-    uv
     vlc
     vlc-plugins-all
     vlc-plugin-x264
