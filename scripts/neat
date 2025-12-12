@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 
 aur=(
-    visual-studio-code-bin
-    gemini-cli
-    downgrade
     anki-bin
+    brave-bin
     cnijfilter2 # canon printer drivers
+    downgrade
     evince-no-gnome
     fcitx5-mozc-ut
+    gemini-cli
     localsend-bin # share files locally
-    ttf-iosevka-term
     lorien-bin
     minecraft-launcher
-    # protontricks # needed it to install webview for Forza Horizon
+    protontricks # needed it to install webview for Forza Horizon
     # quickshell
     # r2modman-bin # thunderstore thing for linux
     rose-pine-cursor
@@ -20,7 +19,9 @@ aur=(
     # thorium-browser-bin
     timg # view img in terminal
     # ttf-comic-sans
+    ttf-iosevka-term
     vesktop-bin
+    visual-studio-code-bin
     wlogout
     wlrobs # plugin for OBS to record in wayland
     # zen-browser-bin
