@@ -82,6 +82,10 @@ sync_files() {
     sudo cp $CP_FLAGS -r /usr/share/sddm/themes/ame $WORKSTATION/root/usr/share/sddm/themes/ame
     sudo cp $CP_FLAGS /etc/systemd/logind.conf $WORKSTATION/root/etc/systemd/logind.conf
     sudo cp $CP_FLAGS /etc/pam.d/sddm $WORKSTATION/root/etc/pam.d/sddm
+    sudo cp $CP_FLAGS /boot/loader/loader.conf $WORKSTATION/root/boot/loader/loader.conf
+    sudo cp $CP_FLAGS /etc/systemd/logind.conf $WORKSTATION/root/etc/systemd/logind.conf
+    sudo cp $CP_FLAGS /etc/mkinitcpio.conf $WORKSTATION/root/etc/mkinitcpio.conf
+    sudo cp $CP_FLAGS /etc/modprobe.d/nvidia.conf $WORKSTATION/root/etc/modprobe.d/nvidia.conf
 
     git -C "$WORKSTATION" -c color.status=always status
 }
