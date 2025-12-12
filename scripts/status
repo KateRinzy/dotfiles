@@ -36,7 +36,7 @@ check-disk-usage() {
     # Add a buffer for aesthetic spacing
     max_len=$((max_len + 1))
 
-    printf "%20s : \n" "$(color_string Disk)"
+    printf "%20s : \n" "$(color_string 'Disk(s)')"
 
     lsblk -dno NAME,LABEL | awk '$1!=""{print $1,$2}' | while read disk label; do
         total=$(lsblk -bno SIZE /dev/$disk | head -n1)

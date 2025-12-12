@@ -8,17 +8,17 @@ PANE_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/tmux-sessionizer"
 PANE_CACHE_FILE="$PANE_CACHE_DIR/panes.cache"
 
 TS_SEARCH_PATHS=(
-    ~/desk/book
-    ~/desk/cours
-    ~/desk/dev
-    ~/desk/repos
-    ~/desk/temp
-    ~/desk/dotfiles
-    ~/desk/notes
-    ~/desk/website
     ~/desk/
-    /run/media/kate/Estrogen
-    /run/media/kate/
+    # ~/desk/book
+    # ~/desk/cours
+    # ~/desk/dev
+    # ~/desk/repos
+    # ~/desk/temp
+    # ~/desk/dotfiles
+    # ~/desk/notes
+    # ~/desk/website
+    /run/media/fuyu147/Estrogen
+    /run/media/fuyu147/
     ~/.config
     /home
     /home/kate/

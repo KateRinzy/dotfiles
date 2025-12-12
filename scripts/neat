@@ -2,6 +2,7 @@
 
 aur=(
     visual-studio-code-bin
+    gemini-cli
     downgrade
     anki-bin
     cnijfilter2 # canon printer drivers
@@ -38,6 +39,7 @@ pkgs=(
     brightnessctl
     btop
     cantor
+    loupe
     chafa
     # niri
     fzf
@@ -47,6 +49,7 @@ pkgs=(
     ckb-next
     clang
     cliphist
+    fd
     # cuda
     discord
     dotnet-runtime

@@ -3,14 +3,16 @@
 confs=(
     dunst
     fastfetch
+    zathura
     ghostty
     hyfetch.json
     hypr
-    vesktop/themes
     kitty
     niri
     nvim
+    ranger
     rofi
+    vesktop/themes
     waybar
 )
 

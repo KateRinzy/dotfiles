@@ -11,7 +11,7 @@ configuration {
 
 * {
     width: 1000;
-    font: "Courier Prime Code 18";
+    font: "Courier Prime Code 26";
 }
 
 element-text, element-icon, mode-switcher {
