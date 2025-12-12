@@ -1,9 +1,8 @@
 {
-    "workbench.colorTheme": "Matrix Reloaded",
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "'IosevkaTerm NFM', 'Noto Sans Serif CJK JP', 'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "\"Courier Prime Code\", \"Zen Maru Gothic\"",
     "haskell.manageHLS": "GHCup",
     "debug.inlineValues": "off",
     "editor.inlayHints.enabled": "off",
@@ -74,5 +73,7 @@
     "python.defaultInterpreterPath": "/bin/python",
     "workbench.secondarySideBar.defaultVisibility": "visible",
     "chat.agent.enabled": false,
-    "FSharp.suggestGitignore": false
+    "FSharp.suggestGitignore": false,
+    "workbench.colorTheme": "Rosé Pine",
+    "tinymist.exportPdf": "onSave"
 }

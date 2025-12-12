@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "bottom",
     "output": "eDP-1",
-    "height": 12,
+    "height": 24,
     "modules-left": [
         "custom/sep",
         "hyprland/workspaces"
@@ -34,7 +34,7 @@
         "format": "{:%y/%m/%d :: %H:%M}"
     },
     "tray": {
-        "icon-size": 12,
+        "icon-size": 24,
         "show-passive-items": "true"
     },
     "pulseaudio": {

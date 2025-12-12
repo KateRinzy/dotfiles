@@ -76,16 +76,45 @@ local themes = {
         vim.cmd [[colorscheme kanagawa-dragon]]
         print("Here be dragons")
         save_theme("Dragons")
+    end,
+    Tokyo = function()
+        vim.opt.background = "dark"
+        vim.cmd [[colorscheme tokyonight]]
+        print("とうきょう！！！!")
+        save_theme("Tokyo")
     end
 }
 
 vim.keymap.set("n", "<leader>tl", function()
     if vim.o.background == "dark" then
-        setMonochrome("light")
-        save_theme("MonoLight")
+        require('rose-pine').setup({
+            disable_background = false,
+        })
+        vim.opt.background = "light"
+        vim.cmd [[colorscheme rose-pine-dawn]]
+
+        -- Forcefully disable transparency
+        local p = require('rose-pine.palette')
+        vim.api.nvim_set_hl(0, 'Normal', { fg = p.text, bg = p.base })
+        vim.api.nvim_set_hl(0, 'NormalNC', { fg = p.subtle, bg = p.base })
+        vim.api.nvim_set_hl(0, 'NormalFloat', { fg = p.text, bg = p.overlay })
+
+        print("Let there be light")
+        save_theme("Light")
     else
-        setMonochrome("dark")
-        save_theme("MonoDark")
+        require('rose-pine').setup({
+            disable_background = true,
+        })
+        vim.opt.background = "dark"
+        vim.cmd [[colorscheme rose-pine-main]]
+
+        -- Forcefully enable transparency
+        vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+        vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'NONE' })
+        vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
+
+        print("OHHH, pwetty colours")
+        save_theme("Rose")
     end
     print("hey")
 end)

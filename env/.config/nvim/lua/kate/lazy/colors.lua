@@ -1,6 +1,7 @@
 return {
     { "kdheepak/monochrome.nvim" },
     { "iruzo/matrix-nvim" },
+    { "folke/tokyonight.nvim" },
     {
         'everviolet/nvim',
         name = 'evergarden',
@@ -57,7 +58,7 @@ return {
         name = "rose-pine",
         config = function()
             require('rose-pine').setup({
-                disable_background = false,
+                disable_background = true,
             })
         end
     },

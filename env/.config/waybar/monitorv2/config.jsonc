@@ -7,7 +7,10 @@
         "hyprland/window"
     ],
     "hyprland/window": {
-        "format": "{class}: {title}"
+        "format": "{class}:{title}",
+        "rewrite": {
+            ":": "",
+        }
     },
     "modules-right": [
         "tray",

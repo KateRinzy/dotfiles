@@ -1,7 +1,7 @@
 background = #000000
 foreground = #FFFFFF
 
-background-opacity = 0.80
+background-opacity = 0.70
 background-blur = true
 
 confirm-close-surface = false
@@ -21,10 +21,11 @@ shell-integration-features = no-cursor
 
 bell-features = no-title
 
-# theme = Rose Pine
+theme = Rose Pine
 # theme = HaX0R Gr33N
-theme = Kanagawa Dragon
+# theme = Kanagawa Dragon
 # theme = Later This Evening
+# theme = TokyoNight
 
 window-inherit-working-directory = false
 

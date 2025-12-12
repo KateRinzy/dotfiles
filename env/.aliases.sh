@@ -1,11 +1,11 @@
-alias nrs="sudo nixos-rebuild switch"
-alias nrsu="sudo nixos-rebuild switch --upgrade"
-
 alias vim="nvim"
-alias cim="nvim -u ~/.config/nvim/min-init.lua"
+
+# stops (n)vim to see these extensions when autocompleting
+complete -f -X \
+    '*.@(o|so|so.!(conf|*/*)|a|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class|foo|bar|pdf)' \
+    vi vim nvim gvim rvim view rview rgvim rgview gview
 
 alias ff="fastfetch"
-alias f="fuck"
 
 alias mate="make"
 

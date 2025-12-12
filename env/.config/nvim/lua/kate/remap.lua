@@ -32,7 +32,7 @@ vim.cmd([[
     \ call fzf#vim#files(
     \   '',
     \   {
-    \     'source': 'rg --files --hidden --ignore --glob "!*.pdf"',
+    \     'source': 'rg --files --hidden --no-ignore-vcs --glob "!*.pdf"',
     \     'options': '--preview "bat --style=numbers --color=always --line-range :500 {}"'
     \   },
     \   <bang>0
