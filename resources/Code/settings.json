@@ -59,7 +59,6 @@
     "workbench.layoutControl.enabled": false,
     "workbench.navigationControl.enabled": false,
     "window.commandCenter": false,
-    "chat.commandCenter.enabled": false,
     "window.titleBarStyle": "native",
     "lean4.alwaysShowTitleBarMenu": false,
     "vim.handleKeys": {
@@ -72,8 +71,12 @@
     "explorer.confirmDelete": false,
     "python.defaultInterpreterPath": "/bin/python",
     "workbench.secondarySideBar.defaultVisibility": "visible",
-    "chat.agent.enabled": false,
     "FSharp.suggestGitignore": false,
     "workbench.colorTheme": "Rosé Pine",
-    "tinymist.exportPdf": "onSave"
+    "tinymist.exportPdf": "onSave",
+    "chat.agent.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "inlineChat.accessibleDiffView": "off",
+    "inlineChat.enableV2": false,
+    "terminal.integrated.initialHint": false
 }

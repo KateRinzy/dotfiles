@@ -4,6 +4,7 @@ alias vim="nvim"
 # complete -f -X \
 #     '(gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class|foo|bar|pdf)' \
 #     vi vim nvim gvim rvim view rview rgvim rgview gview
+FIGNORE=".pdf"
 
 alias ff="fastfetch"
 
