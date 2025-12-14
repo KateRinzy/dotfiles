@@ -73,7 +73,7 @@ sync_files() {
 
     echo "Copying Katypst"
     cp $CP_FLAGS -r ~/desk/dev/katypst/ $WORKSTATION/
-    rm -rf $WORKSTATION/katpyst/.git
+    rm -rf $WORKSTATION/katypst/.git
 
     echo "Copying icons"
     rsync $RSYNC_FLAGS ~/.local/share/icons/ $WORKSTATION/resources/icons
