@@ -1,0 +1,43 @@
+#let colors = (
+  title: eastern,
+  headers: maroon,
+  partfill: rgb("#002299"),
+  label: red,
+  hyperlink: blue,
+  strong: rgb("#000055"),
+)
+
+#let conf-remove-cjk-breaks(doc) = {
+  import "@preview/cjk-unbreak:0.2.1": remove-cjk-break-space
+  show: remove-cjk-break-space
+
+  doc
+}
+
+#let conf(
+  fonts: ("Noto Serif", "Noto Serif CJK JP"),
+  link_font: "Noto Serif",
+  font_size: 12pt,
+  page_numbering: "1/1",
+  maketitle: false,
+  doc,
+) = {
+  set heading(numbering: "1.")
+  set list(marker: $dash.em$)
+  set page(numbering: page_numbering, number-align: left)
+  set par(justify: true)
+  set text(lang: "fr", font: fonts, size: font_size)
+  set math.mat(delim: "[")
+  set list(marker: $dash.em$)
+
+  import "@preview/headcount:0.1.0": *
+  show heading: reset-counter(counter(math.equation), levels: 1)
+  show math.equation: set text(font: "New Computer Modern Math")
+  show link: body => text(
+    underline(body),
+    fill: color.blue,
+    font: link_font,
+  )
+
+  doc
+}

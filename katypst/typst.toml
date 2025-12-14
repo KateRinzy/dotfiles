@@ -1,0 +1,12 @@
+[package]
+name = "katypst"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Kate"]
+license = "MIT"
+description = "Collection of math stuff I use often"
+repository = "https://github.com/KateRinzy/katypst"
+categories = ["Layout"]
+keywords = ["Math"]
+exclude = ["*.pdf"]
+disciplines = ["mathematics"]
