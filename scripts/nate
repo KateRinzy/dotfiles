@@ -71,9 +71,9 @@ sync_files() {
     cp $CP_FLAGS ~/.config/Cursor/User/settings.json $WORKSTATION/resources/Cursor
     cp $CP_FLAGS ~/.config/Cursor/User/keybindings.json $WORKSTATION/resources/Cursor
 
-    # echo "Copying Katypst"
-    # cp $CP_FLAGS -r ~/desk/dev/katypst/ $WORKSTATION/
-    # rm -rf $WORKSTATION/katpyst/.git
+    echo "Copying Katypst"
+    cp $CP_FLAGS -r ~/desk/dev/katypst/ $WORKSTATION/
+    rm -rf $WORKSTATION/katpyst/.git
 
     echo "Copying icons"
     rsync $RSYNC_FLAGS ~/.local/share/icons/ $WORKSTATION/resources/icons
