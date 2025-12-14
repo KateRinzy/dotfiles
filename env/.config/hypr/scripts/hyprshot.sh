@@ -6,7 +6,7 @@ screen() {
     sleep 0.2
     filename="$output_dir/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
     if grim "$filename"; then
-        wl-copy <"$filename"
+        loupe "$filename"
     fi
 }
 

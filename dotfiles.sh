@@ -3,7 +3,6 @@
 confs=(
     dunst
     fastfetch
-    zathura
     ghostty
     hyfetch.json
     hypr
@@ -14,11 +13,11 @@ confs=(
     rofi
     vesktop/themes
     waybar
+    zathura
 )
 
 envs=(
     .aliases.sh
-    .bashrc
     .tmux.conf
     .zshrc
 )

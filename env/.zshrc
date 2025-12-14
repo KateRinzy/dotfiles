@@ -41,6 +41,7 @@ bindkey -s ^f "^uvfz\n"
 bindkey -s ^q "^ukitty sh -c ranger\n"
 
 
+zstyle ':completion:*:(vim|nvim):*' ignored-patterns '*.pdf'
 # [ -f "/home/kate/.ghcup/env" ] && . "/home/kate/.ghcup/env" # ghcup-env
 
 # eval $(thefuck --alias)
