@@ -2,6 +2,7 @@
 
 aur=(
     anki-bin
+    spotdl
     brave-bin
     cnijfilter2 # canon printer drivers
     downgrade
