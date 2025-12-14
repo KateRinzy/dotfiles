@@ -80,6 +80,7 @@ sync_files() {
     sudo cp $CP_FLAGS /etc/sudoers $WORKSTATION/root/etc/sudoers
     sudo chown $USER:$USER $WORKSTATION/root/etc/sudoers
     sudo cp $CP_FLAGS -r /usr/share/sddm/themes/ame $WORKSTATION/root/usr/share/sddm/themes/ame
+    sudo cp $CP_FLAGS /etc/sddm.conf $WORKSTATION/root/etc/sddm.conf
     sudo cp $CP_FLAGS /etc/systemd/logind.conf $WORKSTATION/root/etc/systemd/logind.conf
     sudo cp $CP_FLAGS /etc/pam.d/sddm $WORKSTATION/root/etc/pam.d/sddm
     sudo cp $CP_FLAGS /boot/loader/loader.conf $WORKSTATION/root/boot/loader/loader.conf

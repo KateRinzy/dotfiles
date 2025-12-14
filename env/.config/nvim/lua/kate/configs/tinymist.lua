@@ -4,7 +4,7 @@ require "lspconfig"["tinymist"].setup {
         formatterMode = "typstyle",
         exportPdf = "onSave",
         semanticTokens = "enable",
-        formatterPrintWidth = 70,
+        formatterPrintWidth = 80,
         formatterProseWrap = true
     },
     on_attach = function(client, bufnr)
