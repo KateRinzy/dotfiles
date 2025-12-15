@@ -64,23 +64,26 @@
 * {
     border: none;
     font-family: "Courier Prime Code", "IosevkaTerm NFM", "Noto Sans CJK JP";
-    font-size: 8pt;
-    font-weight: 600;
+    font-size: 14pt;
+    font-weight: 300;
     background: none;
 }
 
 window#waybar {
     color: @fg;
     background: @bg;
+    padding: 0px;
 }
 
 .modules-left,
-.modules-right {
+.modules-right,
+.modules-center {
     background: @bg;
+    padding: 0px;
 }
 
 .modules-left {
-    border-radius: 0px 0px 10px 0px;
+    border-radius: 0px;
 }
 
 tooltip {

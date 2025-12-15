@@ -6,18 +6,31 @@
     "modules-left": [
         "hyprland/window"
     ],
-    "hyprland/window": {
-        "format": "{class}:{title}",
-        "rewrite": {
-            ":": "",
-        }
-    },
+    "modules-center": [
+        "mpris"
+    ],
     "modules-right": [
         "tray",
         "custom/sep",
         "clock",
         "custom/sep"
     ],
+    "hyprland/window": {
+        "format": "{class}:{title}",
+        "rewrite": {
+            ":": "",
+        }
+    },
+    "mpris": {
+        "player": "spotify",
+        "interval": 1,
+        "format": "{status_icon}: {dynamic}",
+        "format-paused": "{status_icon}: <i>{dynamic}</i>",
+        "status-icons": {
+            "default": "🎵",
+            "paused": "⏸"
+        }
+    },
     "custom/sep": {
         "format": " "
     },
@@ -26,7 +39,7 @@
         "format": "{:%y%m%d::%H%M}"
     },
     "tray": {
-        "icon-size": 8,
+        "icon-size": 24,
         "show-passive-items": "true"
     }
 }

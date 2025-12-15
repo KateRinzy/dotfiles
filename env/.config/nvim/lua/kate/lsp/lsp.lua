@@ -4,8 +4,10 @@ vim.lsp.config('*', {
     root_markers = { '.git' },
 })
 local lsps = {
+    { "html" },
     { "rust_analyzer", },
-    { "bash_ls" },
+    { "bashls" },
+    { "basedpyright" },
     {
         "gopls",
         {
