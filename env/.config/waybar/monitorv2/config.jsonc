@@ -17,6 +17,7 @@
     ],
     "hyprland/window": {
         "format": "{class}:{title}",
+        "max-length": 50,
         "rewrite": {
             ":": "",
         }
@@ -39,7 +40,7 @@
         "format": "{:%y%m%d::%H%M}"
     },
     "tray": {
-        "icon-size": 24,
+        "icon-size": 12,
         "show-passive-items": "true"
     }
 }
