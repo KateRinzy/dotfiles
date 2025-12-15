@@ -16,14 +16,13 @@ return {
     },
 
     config = function()
-        require("kate.configs.gopls")
         require("conform").setup({
             formatters_by_ft = {}
         })
         local cmp = require('cmp')
-        local cmp_lsp = require("cmp_nvim_lsp")
-        local capabilities = vim.tbl_deep_extend("force", {}, vim.lsp.protocol.make_client_capabilities(),
-            cmp_lsp.default_capabilities())
+        -- local cmp_lsp = require("cmp_nvim_lsp")
+        -- local capabilities = vim.tbl_deep_extend("force", {}, vim.lsp.protocol.make_client_capabilities(),
+        --     cmp_lsp.default_capabilities())
 
         local cmp_enabled = true
         vim.keymap.set("n", "<leader>tc", function()
@@ -37,63 +36,8 @@ return {
         end, { desc = "Toggle autocompletion" })
 
         require("fidget").setup({})
-        require("mason").setup()
-        require("mason-lspconfig").setup({
-            ensure_installed = {
-                "lua_ls",
-                "rust_analyzer",
-                "tinymist",
-                "ts_ls",
-                "bashls",
-            },
-            handlers = {
-                function(server_name) -- default handler (optional)
-                    require("lspconfig")[server_name].setup {
-                        capabilities = capabilities
-                    }
-                end,
-
-                ["ts_ls"] = function()
-                    require "lspconfig".ts_ls.setup {
-                        cmd = { 'typescript-language-server', '--stdio' }
-                    }
-                end,
-                ["java-language-server"] = function()
-                    require 'lspconfig'.java_language_server.setup {
-                        root_dir = require('lspconfig').util.root_pattern('.git', 'pom.xml', 'build.gradle', 'settings.gradle'),
-                    }
-                end,
-
-                ["lua_ls"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.lua_ls.setup {
-                        capabilities = capabilities,
-                        root_dir = lspconfig.util.root_pattern({ "README.md", "init.lua", "main.lua", "*.rockspec" }),
-                        settings = {
-                            Lua = {
-                                runtime = {
-                                    version = "LuaJIT"
-                                },
-                                workspace = {
-                                    vim.env.VIMRUNTIME
-                                },
-                                diagnostics = {
-                                    globals = {
-                                        "bit",
-                                        "vim",
-                                        "it",
-                                        "describe",
-                                        "before_each",
-                                        "after_each",
-                                        "love"
-                                    }
-                                },
-                            }
-                        }
-                    }
-                end,
-            }
-        })
+        require("mason").setup({})
+        require("kate.lsp.lsp")
 
         local cmp_select = {
             behavior = cmp.SelectBehavior.Select

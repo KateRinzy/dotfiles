@@ -55,7 +55,7 @@ vim.g.netrw_banner = 1
 vim.g.netrw_winsize = 25
 
 require "kate.configs.filetypes"
-require "kate.configs.tinymist"
+-- require "kate.configs.tinymist"
 
 require("luasnip").setup({ enable_autosnippets = true })
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/kate/snippets/" })

@@ -78,5 +78,6 @@
     "chat.commandCenter.enabled": false,
     "inlineChat.accessibleDiffView": "off",
     "inlineChat.enableV2": false,
-    "terminal.integrated.initialHint": false
+    "terminal.integrated.initialHint": false,
+    "redhat.telemetry.enabled": false
 }
