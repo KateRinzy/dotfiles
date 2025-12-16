@@ -3,7 +3,6 @@
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
     "editor.fontFamily": "\"Courier Prime Code\", \"Zen Maru Gothic\"",
-    "haskell.manageHLS": "GHCup",
     "debug.inlineValues": "off",
     "editor.inlayHints.enabled": "off",
     "editor.codeLens": false,
@@ -50,8 +49,6 @@
             ]
         }
     ],
-    "qt-qml.qmlls.useQmlImportPathEnvVar": true,
-    "python.analysis.typeCheckingMode": "standard",
     "git.openRepositoryInParentFolders": "never",
     "editor.fontSize": 24,
     "editor.wordWrap": "off",
@@ -60,7 +57,6 @@
     "workbench.navigationControl.enabled": false,
     "window.commandCenter": false,
     "window.titleBarStyle": "native",
-    "lean4.alwaysShowTitleBarMenu": false,
     "vim.handleKeys": {
         "<C-b>": false,
         "<C-d>": true,
@@ -69,7 +65,6 @@
     },
     "dotnet.codeLens.enableReferencesCodeLens": false,
     "explorer.confirmDelete": false,
-    "python.defaultInterpreterPath": "/bin/python",
     "workbench.secondarySideBar.defaultVisibility": "visible",
     "FSharp.suggestGitignore": false,
     "workbench.colorTheme": "Rosé Pine",
@@ -79,5 +74,9 @@
     "inlineChat.accessibleDiffView": "off",
     "inlineChat.enableV2": false,
     "terminal.integrated.initialHint": false,
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "chat.agent.codeBlockProgress": false,
+    "chat.checkpoints.enabled": false,
+    "chat.disableAIFeatures": true,
+    "telemetry.feedback.enabled": false
 }

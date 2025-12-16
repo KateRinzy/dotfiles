@@ -3,37 +3,42 @@
 vim.lsp.config('*', {
     root_markers = { '.git' },
 })
+require('cmp')
+local cmp_lsp = require("cmp_nvim_lsp")
+local capabilities = vim.tbl_deep_extend(
+    "force",
+    {},
+    vim.lsp.protocol.make_client_capabilities(),
+    cmp_lsp.default_capabilities()
+)
+
 local lsps = {
-    { "html" },
+    { "html", },
     { "rust_analyzer", },
-    { "bashls" },
-    { "basedpyright" },
-    {
-        "gopls",
-        {
-            filetypes = { "go", "gomod" }
-        }
-    },
+    { "bashls", },
+    { "basedpyright", },
     { "ts_ls", },
     { "cssls", },
     { "lua_ls", },
     { "hls", },
-    {
-        "clangd",
-        {
-            init_options = {
-                fallbackFlags = { "--std=c23" },
-            },
-        },
-    },
-    { "csharp_ls" },
+    { "csharp_ls", },
     { "fsautocomplete", },
+    { "fsharp_language_server" },
     { "lemminx", },
     { "zls", },
-    { "java_language_server" },
+    { "java_language_server", },
+    {
+        "clangd",
+        { init_options = { fallbackFlags = { "--std=c23" }, }, },
+    },
+    {
+        "gopls",
+        { filetypes = { "go", "gomod" } }
+    },
     {
         "tinymist",
         {
+            capabilities = capabilities,
             settings = {
                 formatterMode = "typstyle",
                 exportPdf = "onSave",

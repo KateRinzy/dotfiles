@@ -7,6 +7,8 @@ export NPROCESSORS_CONF="12"
 
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/desk/dotfiles/scripts:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
+
 export WORKSTATION="$HOME/desk/dotfiles"
 
 ZSH_THEME="robbyrussell"
