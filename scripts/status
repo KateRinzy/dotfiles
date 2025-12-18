@@ -14,7 +14,7 @@ check-uptime() {
 }
 
 check-packages() {
-    output=$(paru -Q | wc -l)
+    output=$(yay -Q | wc -l)
     output2=$(checkupdates | wc -l)
     if [ "$output2" == "0" ]; then
         update=""

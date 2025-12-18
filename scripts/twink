@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+typst watch "$1"
