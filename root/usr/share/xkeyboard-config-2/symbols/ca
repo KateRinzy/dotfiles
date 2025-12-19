@@ -4,7 +4,7 @@ default partial
 xkb_symbols "fr" {
     name[Group1] = "French (Canada)";
 
-    key <TLDE>	{[ numbersign,       bar                ]};
+    key <TLDE>	{[numbersign,        bar                ]};
     key <AE01>	{[         1,     exclam                ]};
     key <AE02>	{[         2,   quotedbl                ]};
     key <AE03>	{[         3,      slash                ]};
@@ -45,17 +45,18 @@ xkb_symbols "fr" {
     key <BKSL>	{[      less,    greater                ]};
 
     key <AB01>	{[         z,          Z, guillemotleft ]};
-    key <AB02>	{[         x,          X, guillemotright ]};
-    key <AB03>	{[         c,          C, degree ]};
-    key <AB04>	{[         v,          V ]};
-    key <AB05>	{[         b,          B ]};
-    key <AB06>	{[         k,          K ]};
+    key <AB02>	{[         x,          X, guillemotright]};
+    key <AB03>	{[         c,          C, degree        ]};
+    key <AB04>	{[         v,          V, dead_tilde    ]};
+    key <AB05>	{[         b,          B                ]};
+    key <AB06>	{[         k,          K                ]};
     key <AB07>	{[         m,          M,            mu ]};
-    key <AB08>	{[     comma, apostrophe,        dead_macron ]};
+    key <AB08>	{[     comma, apostrophe,   dead_macron ]};
     key <AB09>	{[    period,  ampersand,        hyphen ]};
     key <AB10>	{[    eacute,     Eacute,    dead_acute ]};
 
     key <SPCE>	{[     space,      space,  nobreakspace ]};
+    key <CAPS> {[ Escape,       Escape      ]};
 
     include "level3(ralt_switch)"
 };

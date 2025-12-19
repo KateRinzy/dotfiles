@@ -51,6 +51,19 @@ t() {
 }
 complete -o dirnames t
 
+_twink_complete() {
+    local cur="${COMP_WORDS[COMP_CWORD]}"
+    COMPREPLY=()
+
+    # directories (unfiltered)
+    COMPREPLY+=($(compgen -d -- "$cur"))
+
+    # .typ files only
+    COMPREPLY+=($(compgen -f -X '!*.typ' -- "$cur"))
+}
+
+complete -o filenames -F _twink_complete twink
+
 tl() {
     tmux list-sessions
 }

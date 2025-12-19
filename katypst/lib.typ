@@ -12,6 +12,7 @@
   computer: "New Computer Modern",
   zenmaru: "Zen Maru Gothic",
   raleway: "Raleway",
+  fmath: "Fira Math",
 )
 
 #let present(

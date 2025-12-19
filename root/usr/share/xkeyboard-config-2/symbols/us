@@ -54,7 +54,6 @@ xkb_symbols "basic" {
     key <AB10> {[ slash,        question    ]};
 
     key <CAPS> {[ Escape,       Escape      ]};
-    key <RCTL> {[ Super_L,      Super_L     ]};
 
     include "level3(ralt_switch)"
 };

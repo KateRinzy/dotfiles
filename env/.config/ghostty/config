@@ -1,7 +1,7 @@
 background = #000000
 foreground = #FFFFFF
 
-background-opacity = 0.70
+background-opacity = 0.80
 background-blur = true
 
 confirm-close-surface = false

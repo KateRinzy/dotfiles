@@ -16,6 +16,7 @@
 
 #let conf(
   fonts: ("Noto Serif", "Noto Serif CJK JP"),
+  math_fonts: ("New Computer Modern Math", "Fira Math"),
   link_font: "Noto Serif",
   font_size: 12pt,
   page_numbering: "1/1",
@@ -32,7 +33,7 @@
 
   import "@preview/headcount:0.1.0": *
   show heading: reset-counter(counter(math.equation), levels: 1)
-  show math.equation: set text(font: "New Computer Modern Math")
+  show math.equation: set text(font: math_fonts)
   show link: body => text(
     underline(body),
     fill: color.blue,
