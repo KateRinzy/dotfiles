@@ -3,6 +3,9 @@
 FORCE_DISABLE_LAPTOP=false
 FORCE_DISABLE_MONITOR=false
 
+LAPTOP_CONFIG="laptop"
+MONITOR_CONFIG="monitorv2"
+
 LAPTOPNAME="eDP-1"
 MONITORNAME="HDMI-A-1"
 
@@ -23,26 +26,20 @@ echo -e "\tMONITOR: $MONITOR ($MONITORNAME)"
 
 laptop() {
     waybar \
-        -c "$HOME/.config/waybar/laptop/config.jsonc" \
-        -s "$HOME/.config/waybar/laptop/style.css" &
+        -c "$HOME/.config/waybar/$LAPTOP_CONFIG/config.jsonc" \
+        -s "$HOME/.config/waybar/$LAPTOP_CONFIG/style.css" &
 }
 
 monitor() {
     waybar \
-        -c "$HOME/.config/waybar/monitorv2/config.jsonc" \
-        -s "$HOME/.config/waybar/monitorv2/style.css" &
+        -c "$HOME/.config/waybar/$MONITOR_CONFIG/config.jsonc" \
+        -s "$HOME/.config/waybar/$MONITOR_CONFIG/style.css" &
 }
 
 start-bars() {
     if $LAPTOP; then laptop; fi
     if $MONITOR; then monitor; fi
 }
-
-# start-uniform() {
-#     waybar \
-#         -c "$HOME/.config/waybar/uniform/config.jsonc" \
-#         -s "$HOME/.config/waybar/uniform/style.css" &
-# }
 
 pkill waybar
 start-bars
