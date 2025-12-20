@@ -15,3 +15,6 @@
 
 ### credits
 - ThePrimeagen for tmux-sessionizer
+
+### TODO
+- [ ] maybe make a different branch when i use other systems (e.g. NixOS)?
