@@ -2,6 +2,7 @@
 
 aur=(
     anki-bin
+    oama-bin
     spotdl
     brave-bin
     cnijfilter2 # canon printer drivers

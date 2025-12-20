@@ -1,5 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+export GPG_TTY=$(tty)
+
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export MAKEFLAGS="-j12"
