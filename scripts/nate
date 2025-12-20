@@ -91,6 +91,7 @@ sync_files() {
     sudo cp $CP_FLAGS /etc/systemd/logind.conf $WORKSTATION/root/etc/systemd/logind.conf
     sudo cp $CP_FLAGS /etc/mkinitcpio.conf $WORKSTATION/root/etc/mkinitcpio.conf
     sudo cp $CP_FLAGS /etc/modprobe.d/nvidia.conf $WORKSTATION/root/etc/modprobe.d/nvidia.conf
+    sudo cp $CP_FLAGS /etc/pam.d/login $WORKSTATION/root/etc/pam.d/login
 
     git -C "$WORKSTATION" -c color.status=always status
 }
