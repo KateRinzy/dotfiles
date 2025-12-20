@@ -13,6 +13,7 @@
   zenmaru: "Zen Maru Gothic",
   raleway: "Raleway",
   fmath: "Fira Math",
+  courier: "Courier New",
 )
 
 #let present(
