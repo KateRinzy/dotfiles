@@ -13,7 +13,7 @@ output_devices=$(wpctl status | awk '
     print id, $0
 }' | head -n -1)
 
-choice=$(echo "$output_devices" | rofi -dmenu -p "Sorties audio" -i)
+choice=$(echo "$output_devices" | rofi -dmenu -p "Sorties audio" -i -no-fixed-num-lines -lines 20)
 if [ -z "$choice" ]; then
     echo "No choice provided"
     exit 0
