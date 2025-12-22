@@ -29,29 +29,21 @@ aur=(
 )
 
 pkgs=(
-    ghostty
+    alacritty
     aspnet-runtime
     base-devel
     bat
     breeze
-    udiskie
-    keyd
-    node
     breeze5
     brightnessctl
     btop
+    bun
     cantor
-    loupe
     chafa
-    # niri
-    fzf
-    prismlauncher
-    eza
     # cinnamon
     ckb-next
     clang
     cliphist
-    fd
     # cuda
     discord
     dotnet-runtime
@@ -59,18 +51,19 @@ pkgs=(
     dunst
     # elixir
     # erlang
-    thunar
+    eza
     eza
     fastfetch
-    fcitx5-configtool
-    bun
-    fcitx5-gtk
     fcitx5-chinese-addons
+    fcitx5-configtool
+    fcitx5-gtk
+    fd
     firefox
+    fzf
     fzf
     gedit
     geogebra
-    jq
+    ghostty
     ghostty
     gimp
     git
@@ -83,7 +76,6 @@ pkgs=(
     go
     godot-mono
     gopls
-    waybar
     grim
     gtk-engine-murrine
     gvfs # dependency for Thunar's volume management
@@ -95,11 +87,14 @@ pkgs=(
     hyprpolkitagent
     hyprshot
     jdk-openjdk
+    jq
+    keyd
     keyd
     kitty
     komikku
     lazygit
     libreoffice-still
+    loupe
     loupe # gnome's image viewer
     lua
     # maven
@@ -111,8 +106,10 @@ pkgs=(
     networkmanager
     network-manager-applet
     network-manager-applet
-    noto-fonts-cjk
+    # niri
+    node
     noto-fonts
+    noto-fonts-cjk
     npm
     nvtop
     nwg-look
@@ -123,6 +120,7 @@ pkgs=(
     pavucontrol
     php
     power-profiles-daemon
+    prismlauncher
     proton-vpn-gtk-app
     qalculate-gtk
     qbittorrent
@@ -162,6 +160,7 @@ pkgs=(
     texlive-xetex
     thefuck
     thunar
+    thunar
     thunar-volman # dependency for Thunar's volume management
     thunderbird
     tmux
@@ -170,9 +169,11 @@ pkgs=(
     ttf-nerd-fonts-symbols-mono
     tumbler # needed to display thumbnails in Thunar
     typst
+    udiskie
     vlc
     vlc-plugins-all
     vlc-plugin-x264
+    waybar
     waybar
     wev
     wine

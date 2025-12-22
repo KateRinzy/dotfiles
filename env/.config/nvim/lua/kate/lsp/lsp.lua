@@ -3,6 +3,7 @@
 vim.lsp.config('*', {
     root_markers = { '.git' },
 })
+
 require('cmp')
 local cmp_lsp = require("cmp_nvim_lsp")
 local capabilities = vim.tbl_deep_extend(
@@ -14,6 +15,7 @@ local capabilities = vim.tbl_deep_extend(
 
 local lsps = {
     { "html", },
+    { "ols",                   {} },
     { "rust_analyzer", },
     { "bashls", },
     { "basedpyright", },
@@ -72,7 +74,5 @@ for _, lsp in ipairs(lsps) do
     vim.lsp.enable(name)
     if config ~= nil then
         vim.lsp.config(name, config)
-    else
-        vim.lsp.enable(name)
     end
 end

@@ -3,9 +3,9 @@
 # kitty --class="kittynvimscratch" nvim $HOME/personal/zxcv.md
 #
 if [ "$1" == "zxcv" ]; then
-    kitty --class="kittynvimscratch" nvim $HOME/desk/zxcv.typ
+    ghostty --class="com.mitchellh.ghostty.scratch" -e nvim $HOME/desk/zxcv.typ
 else
     if [ "$1" == "faire" ]; then
-        kitty --class="kittynvimscratch" nvim $HOME/desk/notes/todo.typ
+        ghostty --class="com.mitchellh.ghostty.scratch" -e nvim $HOME/desk/notes/todo.typ
     fi
 fi

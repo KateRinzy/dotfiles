@@ -98,3 +98,10 @@ vim.api.nvim_create_user_command("InsertTime", function()
     local datetime = os.date("%Y-%m-%d %H:%M:%S")
     vim.api.nvim_put({ datetime }, "c", true, true)
 end, {})
+
+
+if vim.g.neovide then
+    vim.o.guifont = "Courier Prime Code:h20"
+    vim.g.neovide_opacity = 0.8
+    vim.g.transparency = 0.8
+end

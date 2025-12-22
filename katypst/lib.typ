@@ -8,7 +8,7 @@
 #let fonts = (
   serif: ("Noto Serif", "Noto Serif CJK JP"),
   sans: ("Noto Sans", "Noto Sans CJK JP"),
-  mono: "Courier Prime Code",
+  mono: "Courier Prime",
   computer: "New Computer Modern",
   zenmaru: "Zen Maru Gothic",
   raleway: "Raleway",
@@ -38,10 +38,12 @@
   }
 }
 
-
-
 #let tens(value, exponent) = {
   $
     value times 10^(exponent)
   $
+}
+
+#let inter = {
+  align(center, line(length: 90%))
 }

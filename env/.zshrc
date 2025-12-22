@@ -40,6 +40,7 @@ PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_
 
 bindkey -s ^t "^utmux-sessionizer\n"
 bindkey -s ^y "^uyazi-tmux\n"
+# bindkey -s ^y "^uyazi-neovide\n"
 bindkey -s ^f "^uvfz\n"
 # bindkey -s ^e "^ucode .\n" # maybe shouldn't use this, i keep accidentally pressing it, should use some other keybind
 bindkey -s ^q "^ukitty sh -c ranger\n"

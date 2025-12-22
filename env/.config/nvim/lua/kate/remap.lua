@@ -10,6 +10,7 @@ set("n", "<leader>pv", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
 set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
 
 set("n", "<ESC>", "<CMD>noh<CR>")
+-- set("t", "<ESC>", "<Esc> <C-\\><C-n>")
 
 set({ "n", "v", "x" }, ";", ":")
 set({ "n", "v", "x" }, ":", ";")

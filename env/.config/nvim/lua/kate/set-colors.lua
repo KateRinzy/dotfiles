@@ -29,6 +29,39 @@ local function setMonochrome(background)
     end
 end
 
+local function setRoseLight()
+    require('rose-pine').setup({
+        disable_background = false,
+    })
+    vim.opt.background = "light"
+    vim.cmd [[colorscheme rose-pine-dawn]]
+
+    -- Forcefully disable transparency
+    local p = require('rose-pine.palette')
+    vim.api.nvim_set_hl(0, 'Normal', { fg = p.text, bg = p.base })
+    vim.api.nvim_set_hl(0, 'NormalNC', { fg = p.subtle, bg = p.base })
+    vim.api.nvim_set_hl(0, 'NormalFloat', { fg = p.text, bg = p.overlay })
+
+    print("Let there be light")
+    save_theme("RoseLight")
+end
+
+local function setRoseDark()
+    require('rose-pine').setup({
+        disable_background = true,
+    })
+    vim.opt.background = "dark"
+    vim.cmd [[colorscheme rose-pine-main]]
+
+    -- Forcefully enable transparency
+    vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+    vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'NONE' })
+    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
+
+    print("OHHH, pwetty colours")
+    save_theme("RoseDark")
+end
+
 local themes = {
     MonoDark = function()
         setMonochrome("dark")
@@ -40,23 +73,17 @@ local themes = {
         print("Let there be light")
         save_theme("MonoLight")
     end,
-    Light = function()
-        vim.opt.background = "light"
-        vim.cmd [[colorscheme rose-pine-dawn]]
-        print("Let there be light")
-        save_theme("Light")
+    RoseLight = function()
+        setRoseLight()
+    end,
+    RoseDark = function()
+        setRoseDark()
     end,
     Dusk = function()
         vim.opt.background = "dark"
         vim.cmd [[colorscheme gruvbox]]
         print("OHHH, pwetty colours")
         save_theme("Dusk")
-    end,
-    Rose = function()
-        vim.opt.background = "dark"
-        vim.cmd [[colorscheme rose-pine-main]]
-        print("OHHH, pwetty colours")
-        save_theme("Rose")
     end,
     Matrix = function()
         vim.opt.background = "dark"
@@ -87,34 +114,9 @@ local themes = {
 
 vim.keymap.set("n", "<leader>tl", function()
     if vim.o.background == "dark" then
-        require('rose-pine').setup({
-            disable_background = false,
-        })
-        vim.opt.background = "light"
-        vim.cmd [[colorscheme rose-pine-dawn]]
-
-        -- Forcefully disable transparency
-        local p = require('rose-pine.palette')
-        vim.api.nvim_set_hl(0, 'Normal', { fg = p.text, bg = p.base })
-        vim.api.nvim_set_hl(0, 'NormalNC', { fg = p.subtle, bg = p.base })
-        vim.api.nvim_set_hl(0, 'NormalFloat', { fg = p.text, bg = p.overlay })
-
-        print("Let there be light")
-        save_theme("Light")
+        setRoseLight()
     else
-        require('rose-pine').setup({
-            disable_background = true,
-        })
-        vim.opt.background = "dark"
-        vim.cmd [[colorscheme rose-pine-main]]
-
-        -- Forcefully enable transparency
-        vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
-        vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'NONE' })
-        vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
-
-        print("OHHH, pwetty colours")
-        save_theme("Rose")
+        setRoseDark()
     end
     print("hey")
 end)

@@ -32,7 +32,7 @@
   set list(marker: $dash.em$)
 
   import "@preview/headcount:0.1.0": *
-  show heading: reset-counter(counter(math.equation), levels: 1)
+  show heading: reset-counter(counter(math.equation), levels: 2)
   show math.equation: set text(font: math_fonts)
   show link: body => text(
     underline(body),

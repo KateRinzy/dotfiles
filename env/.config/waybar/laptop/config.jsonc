@@ -28,6 +28,7 @@
         "player": "spotify",
         "interval": 1,
         "format": "{status_icon}: {dynamic}",
+        "max-length": 60,
         "format-paused": "{status_icon}: <i>{dynamic}</i>",
         "status-icons": {
             "default": "🎵",
