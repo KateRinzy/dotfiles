@@ -59,5 +59,4 @@ start-bars() {
     if $MONITOR; then monitor; fi
 }
 
-pkill waybar
-start-bars
+pkill waybar || start-bars

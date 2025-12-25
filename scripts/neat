@@ -2,7 +2,6 @@
 
 aur=(
     anki-bin
-    spotdl
     brave-bin
     cnijfilter2 # canon printer drivers
     downgrade
@@ -17,6 +16,7 @@ aur=(
     # r2modman-bin # thunderstore thing for linux
     rose-pine-cursor
     spicetify-cli
+    spotdl
     # thorium-browser-bin
     timg # view img in terminal
     # ttf-comic-sans
@@ -179,6 +179,7 @@ pkgs=(
     wine
     wine-mono
     wl-clipboard
+    wtype
     xdg-desktop-portal-hyprland
     xournalpp
     yarn
