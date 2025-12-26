@@ -7,6 +7,7 @@ background-blur = true
 confirm-close-surface = false
 
 # font-family = "IosevkaTerm NFM Light"
+# font-family = "Monaspace Krypton NF Medium"
 font-family = "Courier Prime Code"
 # font-family = "Noto Sans CJK JP"
 font-family = "Zen Maru Gothic"

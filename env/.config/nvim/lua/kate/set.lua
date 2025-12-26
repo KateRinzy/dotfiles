@@ -45,12 +45,11 @@ vim.opt.updatetime = 50
 
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "80"
-vim.opt.textwidth = 80
+-- vim.opt.textwidth = 80
 
 
 vim.opt.list = true
 vim.opt.listchars:append("space:·")
--- vim.opt.listchars:append("space:_")
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -58,7 +57,7 @@ vim.opt.smartcase = true
 vim.o.cmdheight = 0
 vim.api.nvim_create_autocmd({ "CmdlineLeave", "CmdlineChanged", "CmdlineEnter" }, {
     callback = function()
-        -- this forces the cmdline to hide after some time
+        -- this forces cmdline to hide after some time
         vim.defer_fn(function()
             if vim.fn.mode() ~= "c" then
                 vim.o.cmdheight = 0
@@ -87,7 +86,7 @@ vim.api.nvim_create_user_command("FocusModeDisable", function()
     print("Eepy girl Off")
 end, {})
 
-vim.api.nvim_create_user_command("ToggleCmp", function()
+vim.api.nvim_create_user_command("ToggleCompletion", function()
     vim.keymap.set("n", "<leader>tc", function()
         _G.cmp_enabled = not _G.cmp_enabled
         print("nvim-cmp " .. (_G.cmp_enabled and "enabled" or "disabled"))

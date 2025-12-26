@@ -22,7 +22,7 @@ local lsps = {
     { "ts_ls", },
     { "cssls", },
     { "lua_ls", },
-    { "hls", },
+    { "hls",                   {} },
     { "csharp_ls", },
     { "fsautocomplete", },
     { "fsharp_language_server" },

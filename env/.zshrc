@@ -10,6 +10,7 @@ export NPROCESSORS_CONF="12"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/desk/dotfiles/scripts:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
+export PATH="$HOME/.elan/bin:$PATH"
 
 export WORKSTATION="$HOME/desk/dotfiles"
 
@@ -47,6 +48,7 @@ bindkey -s ^q "^ukitty sh -c ranger\n"
 
 
 zstyle ':completion:*:(vim|nvim):*' ignored-patterns '*.pdf'
-# [ -f "/home/kate/.ghcup/env" ] && . "/home/kate/.ghcup/env" # ghcup-env
 
 # eval $(thefuck --alias)
+
+[ -f "/home/fuyu147/.ghcup/env" ] && . "/home/fuyu147/.ghcup/env" # ghcup-env

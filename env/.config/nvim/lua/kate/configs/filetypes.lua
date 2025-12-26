@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "haskell", "hs", "ocaml", "cpp", "cc", "c" },
     callback = function()
-        local width = 4
+        local width = 2
         vim.bo.shiftwidth = width
         vim.bo.tabstop = width
         vim.bo.softtabstop = width
@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = { "typst" },
     callback = function()
         vim.opt.spell = true
-        vim.opt.spelllang = { "en", "fr", "cjk" }
+        vim.opt.spelllang = { "en", "fr", "de", "es", "cjk" }
 
         vim.opt.wrap = true
         vim.opt.sidescrolloff = 0
