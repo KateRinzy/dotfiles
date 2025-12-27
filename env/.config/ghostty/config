@@ -1,37 +1,31 @@
-background = #000000
-foreground = #FFFFFF
+background   = #000000
+foreground   = #FFFFFF
+cursor-color = #575279
+cursor-text  = #FFFFFF
 
 background-opacity = 0.80
-background-blur = true
+background-blur    = true
 
 confirm-close-surface = false
 
-# font-family = "IosevkaTerm NFM Light"
-# font-family = "Monaspace Krypton NF Medium"
-font-family = "Courier Prime Code"
-# font-family = "Noto Sans CJK JP"
-font-family = "Zen Maru Gothic"
-font-size = 22
+font-family   = "Courier Prime Code"
+font-family   = "Zen Maru Gothic"
+font-size     = 22
 
 gtk-single-instance = true
 
 gtk-tabs-location= bottom
-gtk-wide-tabs = false
+gtk-wide-tabs    = false
 
 shell-integration-features = no-cursor
 
 bell-features = no-title
 
 theme = Rose Pine
-# theme = HaX0R Gr33N
-# theme = Kanagawa Dragon
-# theme = Later This Evening
-# theme = TokyoNight
 
 window-inherit-working-directory = false
 
 window-padding-balance = true
-window-padding-y = 0
+window-padding-y       = 0
 
 working-directory = /home/fuyu147/desk
-

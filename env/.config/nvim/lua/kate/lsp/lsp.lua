@@ -31,7 +31,7 @@ local lsps = {
     { "java_language_server", },
     {
         "clangd",
-        { init_options = { fallbackFlags = { "--std=c23" }, }, },
+        { init_options = { fallbackFlags = { "--std=c26" }, }, },
     },
     {
         "gopls",

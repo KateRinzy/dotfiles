@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+start="$2"
+count="$3"
+end=$((start + count - 1))
+
+printf "@@ %d,%d @@\n" "$start" "$count"
+nl -ba "$1" | sed -n "${start},${end}p" | sed 's/^/ /'

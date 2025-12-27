@@ -23,6 +23,8 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt.spell = true
         vim.opt.spelllang = { "en", "fr", "de", "es", "cjk" }
 
+        vim.opt.textwidth = 80
+
         vim.opt.wrap = true
         vim.opt.sidescrolloff = 0
 

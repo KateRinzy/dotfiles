@@ -67,7 +67,6 @@
     "explorer.confirmDelete": false,
     "workbench.secondarySideBar.defaultVisibility": "visible",
     "FSharp.suggestGitignore": false,
-    "workbench.colorTheme": "Rosé Pine",
     "tinymist.exportPdf": "onSave",
     "chat.agent.enabled": false,
     "chat.commandCenter.enabled": false,
