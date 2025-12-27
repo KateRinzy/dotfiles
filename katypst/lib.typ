@@ -13,6 +13,7 @@
   zenmaru: "Zen Maru Gothic",
   raleway: "Raleway",
   fmath: "Fira Math",
+  cmath: "New Computer Modern Math",
   courier: "Courier New",
 )
 

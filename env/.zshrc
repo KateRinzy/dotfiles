@@ -7,6 +7,7 @@ export VISUAL="$EDITOR"
 export MAKEFLAGS="-j12"
 export NPROCESSORS_CONF="12"
 
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/desk/dotfiles/scripts:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
