@@ -30,6 +30,7 @@ session_cmd=""
 user_selected=""
 split_type=""
 VERSION="1.4.7"
+previous_flag=false
 
 while [[ "$#" -gt 0 ]]; do
     case "$1" in
@@ -40,6 +41,7 @@ while [[ "$#" -gt 0 ]]; do
         echo "  -s, --session <name>   session command index."
         echo "  --vsplit               Create vertical split (horizontal layout) for session command"
         echo "  --hsplit               Create horizontal split (vertical layout) for session command"
+        echo "  --previous             Switch to the last used session."
         exit 0
         ;;
     -s | --session)
@@ -68,6 +70,9 @@ while [[ "$#" -gt 0 ]]; do
         ;;
     --hsplit)
         split_type="hsplit"
+        ;;
+    --previous)
+        previous_flag=true
         ;;
     -v | --version)
         echo "tmux-sessionizer version $VERSION"
@@ -129,6 +134,28 @@ is_tmux_running() {
     return 0
 }
 
+handle_previous_session() {
+    if ! is_tmux_running; then
+        echo "Error: tmux is not running."
+        exit 1
+    fi
+
+    if [[ -n "$TMUX" ]]; then
+        # We are inside tmux, switch to the last session for this client
+        tmux switch-client -l
+    else
+        # We are outside tmux, attach to the most recently active session
+        last_session_name=$(tmux list-sessions -F '#{session_activity} #{session_name}' | sort -rn | head -n 1 | cut -d' ' -f2-)
+        if [[ -n "$last_session_name" ]]; then
+            tmux attach-session -t "$last_session_name"
+        else
+            echo "No previous session to attach to."
+            exit 1
+        fi
+    fi
+    exit 0
+}
+
 init_pane_cache() {
     mkdir -p "$PANE_CACHE_DIR"
     touch "$PANE_CACHE_FILE"
@@ -169,6 +196,10 @@ cleanup_dead_panes() {
 }
 
 sanity_check
+
+if [[ "$previous_flag" == "true" ]]; then
+    handle_previous_session
+fi
 
 # if TS_SEARCH_PATHS is not set use default
 [[ -n "$TS_SEARCH_PATHS" ]] || TS_SEARCH_PATHS=(~/ ~/personal ~/personal/dev/env/.config)
