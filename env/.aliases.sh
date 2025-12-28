@@ -2,9 +2,7 @@ alias vim="nvim"
 
 alias ff="fastfetch"
 
-alias mate="make"
-
-alias gstat="git log --graph --stat"
+alias mutt="neomutt"
 
 alias chat="nvim ~/desk/chat.typ"
 alias zxcv="nvim ~/desk/zxcv.typ"
@@ -15,13 +13,9 @@ alias e="exit"
 alias q="exit"
 alias wq="exit"
 alias s="cd"
-alias r="ranger"
+alias r="yazi"
 alias ..="cd .."
 alias rel="omz reload"
-
-alias rin="tmux-sessionizer $WORKSTATION"
-alias whore="tmux-sessionizer $HOME"
-alias why="tmux-sessionizer $HOME/Documents"
 
 alias g="git"
 alias gs="git status"
@@ -33,8 +27,9 @@ alias gac="git commit -a"
 alias gacm="git commit -am"
 alias gpush="git push"
 alias gpull="git pull"
+alias gstat="git log --graph --stat"
 
-alias maple="~/maple2022/bin/xmaple" # should maybe put this in $PATH i suppose, too lazy to do that
+alias maple="~/maple2022/bin/xmaple"
 
 psk() {
     for str in "$@"; do
@@ -81,10 +76,6 @@ open() {
 openf() {
     selected=$(fzf)
     open "$selected"
-}
-
-cursor() {
-    command cursor --enable-features=UseOzonePlatform --ozone-platform=wayland "$@" >/dev/null 2>&1 &
 }
 
 battery() {
