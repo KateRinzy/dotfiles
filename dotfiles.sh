@@ -11,6 +11,7 @@ confs=(
     nvim
     ranger
     rofi
+    sway
     vesktop/themes
     waybar
     zathura
