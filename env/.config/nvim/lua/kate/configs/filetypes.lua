@@ -72,11 +72,12 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = { "markdown" },
     callback = function()
         vim.opt.spell = true
-        vim.opt.spelllang = { "en", "fr", "cjk" }
+        vim.opt.spelllang = { "en", "fr", "de", "es", "cjk" }
+
+        vim.opt.textwidth = 80
 
         vim.opt.wrap = true
-        vim.opt.linebreak = true
-        vim.opt.formatoptions:append("t")
+        vim.opt.sidescrolloff = 0
     end
 })
 

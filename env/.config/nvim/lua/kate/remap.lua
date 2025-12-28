@@ -12,6 +12,9 @@ set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
 set("n", "<ESC>", "<CMD>noh<CR>")
 -- set("t", "<ESC>", "<Esc> <C-\\><C-n>")
 
+set({ "n", "v", "x" }, "<M-l>", "{")
+set({ "n", "v", "x" }, "<M-u>", "}")
+
 set({ "n", "v", "x" }, ";", ":")
 set({ "n", "v", "x" }, ":", ";")
 set({ "n", "v" }, "!", ":!")
@@ -58,6 +61,6 @@ set("n", "<leader>sa", function() vim.cmd([[normal! ggVG]]) end, { desc = "Selec
 set({ "n", "v" }, "<leader>3", "/")
 
 -- https://swnakamura.github.io/posts/vim-japanese-input/
-set({ "n", "i" }, "<M-l>", function()
-    vim.system({ "fcitx5-remote", "-t" })
-end)
+-- set({ "n", "i" }, "<M-l>", function()
+--     vim.system({ "fcitx5-remote", "-t" })
+-- end)

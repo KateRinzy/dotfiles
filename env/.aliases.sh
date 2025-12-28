@@ -4,7 +4,7 @@ alias ff="fastfetch"
 
 alias mate="make"
 
-alias paru="yay"
+alias gstat="git log --graph --stat"
 
 alias chat="nvim ~/desk/chat.typ"
 alias zxcv="nvim ~/desk/zxcv.typ"

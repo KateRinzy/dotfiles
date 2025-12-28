@@ -1,5 +1,6 @@
 background   = #000000
 foreground   = #FFFFFF
+
 cursor-color = #575279
 cursor-text  = #FFFFFF
 
@@ -8,9 +9,9 @@ background-blur    = true
 
 confirm-close-surface = false
 
-font-family   = "Courier Prime Code"
+font-family   = "IosevkaTerm NFM"
 font-family   = "Zen Maru Gothic"
-font-size     = 22
+font-size     = 20
 
 gtk-single-instance = true
 
