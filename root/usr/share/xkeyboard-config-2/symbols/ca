@@ -11,14 +11,14 @@ xkb_symbols "fr" {
     key <AE04>	{[         4,     dollar                ]};
     key <AE05>	{[         5,    percent                ]};
     key <AE06>	{[         6,   question                ]};
-    key <AE07>	{[         7,  ampersand                ]};
+    key <AE07>	{[         7, dead_acute                ]};
     key <AE08>	{[         8,   asterisk                ]};
     key <AE09>	{[         9,  parenleft                ]};
     key <AE10>	{[         0, parenright                ]};
     key <AE11>	{[     minus, underscore                ]};
     key <AE12>	{[     equal,       plus                ]};
 
-    key <AD01>	{[         q,          Q,   questiondown ]};
+    key <AD01>	{[         q,          Q,  questiondown ]};
     key <AD02>	{[         w,          W,     backslash ]};
     key <AD03>	{[         f,          F,            at ]};
     key <AD04>	{[         p,          P,    asciitilde ]};
@@ -28,8 +28,8 @@ xkb_symbols "fr" {
     key <AD08>	{[         u,          U                ]};
     key <AD09>	{[         y,          Y,       section ]};
     key <AD10>	{[ semicolon,      colon,     paragraph ]};
-    key <AD11>	{[dead_circumflex, dead_circumflex  ]};
-    key <AD12>	{[   dead_cedilla,  dead_diaeresis  ]};
+    key <AD11>	{[dead_circumflex, dead_circumflex      ]};
+    key <AD12>	{[   dead_cedilla,  dead_diaeresis      ]};
 
     key <AC01>	{[         a,          A,        oe, OE ]};
     key <AC02>	{[         r,          R,   bracketleft ]};
@@ -53,7 +53,7 @@ xkb_symbols "fr" {
     key <AB07>	{[         m,          M,            mu ]};
     key <AB08>	{[     comma, apostrophe,   dead_macron ]};
     key <AB09>	{[    period,  ampersand,        hyphen ]};
-    key <AB10>	{[    eacute,     Eacute,    dead_acute ]};
+    key <AB10>	{[    eacute,     Eacute                ]};
 
     key <SPCE>	{[     space,      space,  nobreakspace ]};
     key <CAPS>	{[    Escape,     Escape                ]};
