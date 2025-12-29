@@ -39,9 +39,9 @@ psk() {
 
 t() {
     if [ -z "$1" ]; then
-        tmux-sessionizer $(pwd)
+        tmux-goway $(pwd)
     else
-        tmux-sessionizer "$(realpath $1)"
+        tmux-goway "$(realpath $1)"
     fi
 }
 complete -o dirnames t

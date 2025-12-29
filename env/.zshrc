@@ -40,7 +40,7 @@ PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_
 
 # [[ ! -r '/home/kate/.opam/opam-init/init.zsh' ]] || source '/home/kate/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 
-bindkey -s ^t "^utmux-sessionizer\n"
+bindkey -s ^t "^utmux-goway\n"
 bindkey -s ^y "^uyazi-tmux\n"
 # bindkey -s ^y "^uyazi-neovide\n"
 bindkey -s ^f "^uvfz\n"

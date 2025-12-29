@@ -3,7 +3,7 @@
 vim.g.mapleader = " "
 local set = vim.keymap.set
 
-set("n", "<C-t>", "<cmd>silent !tmux-sessionizer<CR>")
+set("n", "<C-t>", "<cmd>silent !tmux-goway<CR>")
 set("n", "<C-y>", "<cmd>silent !tmux neww yazi-tmux<CR>")
 
 set("n", "<leader>pv", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
