@@ -9,6 +9,8 @@ alias zxcv="nvim ~/desk/zxcv.typ"
 
 alias ls="eza -A1 -s type"
 
+alias t="tmux-goway"
+
 alias e="exit"
 alias q="exit"
 alias wq="exit"
@@ -36,15 +38,6 @@ psk() {
         printf "%-15s %.2f GB\n" "$str" "$(ps -o rss= -p $(pgrep $str) | awk '{s+=$1} END {print s / (1024*1024)}')"
     done
 }
-
-t() {
-    if [ -z "$1" ]; then
-        tmux-goway $(pwd)
-    else
-        tmux-goway "$(realpath $1)"
-    fi
-}
-complete -o dirnames t
 
 _twink_complete() {
     local cur="${COMP_WORDS[COMP_CWORD]}"

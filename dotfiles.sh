@@ -12,6 +12,7 @@ confs=(
     ranger
     rofi
     sway
+    tmux-goway
     vesktop/themes
     waybar
     zathura

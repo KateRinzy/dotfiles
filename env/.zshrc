@@ -50,6 +50,11 @@ bindkey -s ^q "^ukitty sh -c ranger\n"
 
 zstyle ':completion:*:(vim|nvim):*' ignored-patterns '*.pdf'
 
+_tmux-goway() {
+    _files -/
+}
+compdef _tmux-goway tmux-goway
+
 # eval $(thefuck --alias)
 
 [ -f "/home/fuyu147/.ghcup/env" ] && . "/home/fuyu147/.ghcup/env" # ghcup-env

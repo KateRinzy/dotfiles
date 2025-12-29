@@ -38,18 +38,14 @@ autocmd("InsertLeave", {
     end,
 })
 
--- format on save
--- vim.api.nvim_create_autocmd("LspAttach", {
---     group = augroup("lsp", { clear = true }),
---     callback = function(args)
---         vim.api.nvim_create_autocmd("BufWritePre", {
---             buffer = args.buf,
---             callback = function()
---                 vim.lsp.buf.format { async = false, id = args.data.client_id }
---             end,
---         })
---     end
--- })
+vim.api.nvim_create_autocmd("BufReadCmd", {
+    pattern = "*.pdf",
+    callback = function()
+        local file = vim.fn.expand("<afile>")
+        vim.fn.jobstart({ "zathura", file }, { detach = true })
+        vim.cmd("bdelete!")
+    end,
+})
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 1
