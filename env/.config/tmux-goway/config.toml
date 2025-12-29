@@ -1,4 +1,4 @@
-searchpaths = [ "~/desk/", "/run/media/fuyu147/Estrogen", "/run/media/fuyu147/", "~/.config", "/home", "/home/kate/" ]
+searchpaths = [ "~/desk/", "/run/media/fuyu147/Estrogen", "/run/media/fuyu147/", "~/.config", "/home" ]
 maxdepth    = 2
 fzfflags    = "--tmux=top,100%,50%"
 verbose     = false
