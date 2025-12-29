@@ -29,6 +29,7 @@ autocmd({ "BufWritePre" }, {
     command = [[%s/\s\+$//e]],
 })
 
+-- https://swnakamura.github.io/posts/vim-japanese-input/
 autocmd("InsertLeave", {
     group = kateGroup,
     pattern = "*",
