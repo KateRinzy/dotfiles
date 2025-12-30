@@ -4,11 +4,11 @@
 # WALLPAPERS PATH
 wallDIR="$HOME/desk/wallpapers"
 
-# swww transition config
+# awww transition config
 FPS=144
 TYPE="fade"
 DURATION=0.3
-SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
+AWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
 
 rofi_theme="$HOME/.config/rofi/config-wallpaper.rasi"
 
@@ -70,12 +70,12 @@ apply_image_wallpaper() {
 
     kill_wallpaper
 
-    if ! pgrep -x "swww-daemon" >/dev/null; then
-        echo "Starting swww-daemon..."
-        swww-daemon --format xrgb &
+    if ! pgrep -x "awww-daemon" >/dev/null; then
+        echo "Starting awww-daemon..."
+        awww-daemon --format xrgb &
     fi
 
-    swww img "$image_path" $SWWW_PARAMS
+    awww img "$image_path" $AWWW_PARAMS
 }
 
 apply_video_wallpaper() {
