@@ -10,7 +10,7 @@ configuration {
 }
 
 * {
-    font: "Courier Prime Code 26";
+    font: "IosevkaTerm NFM 20";
 }
 
 element-text, element-icon, mode-switcher {
@@ -19,12 +19,13 @@ element-text, element-icon, mode-switcher {
 }
 
 window {
-    width: 900px;
-    // height: 400px;
+    width: 500px;
     border: 2px;
     border-radius: 5px;
     border-color: @border-col;
     background-color: @bg-col;
+    location: west;
+    anchor: west;
 }
 
 mainbox {
@@ -60,12 +61,13 @@ entry {
 
 listview {
     border: 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
+    padding: 6px;
+    margin: 10px;
     columns: 1;
-    // lines: 5;
+    lines: 10;
     background-color: @bg-col;
     scroll-method: 2;
+    scrollbar: false;
 }
 
 element {

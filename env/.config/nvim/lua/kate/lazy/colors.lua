@@ -2,6 +2,7 @@ return {
     { "kdheepak/monochrome.nvim" },
     { "iruzo/matrix-nvim" },
     { "folke/tokyonight.nvim" },
+    { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
     {
         'everviolet/nvim',
         name = 'evergarden',

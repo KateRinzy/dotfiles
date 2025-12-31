@@ -76,6 +76,18 @@ local themes = {
     RoseLight = function()
         setRoseLight()
     end,
+    CatLatte = function()
+        vim.opt.background = "light"
+        vim.cmd [[colorscheme catppuccin]]
+        print("kittyyyyy 😊 (batman)")
+        save_theme("CatLatte")
+    end,
+    CatMocha = function()
+        vim.opt.background = "dark"
+        vim.cmd [[colorscheme catppuccin]]
+        print("kittyyyyy 😊 (barbie)")
+        save_theme("CatMocha")
+    end,
     RoseDark = function()
         setRoseDark()
     end,
