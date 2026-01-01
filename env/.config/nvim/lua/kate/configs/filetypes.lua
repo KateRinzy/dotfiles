@@ -69,11 +69,12 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "markdown", "text", "txt" },
+    pattern = { "markdown", "text" },
     callback = function()
         vim.opt.spell = true
         vim.opt.spelllang = { "en", "fr", "de", "es", "cjk" }
 
+        vim.opt.colorcolumn = "80"
         vim.opt.textwidth = 80
 
         vim.opt.wrap = true

@@ -35,16 +35,11 @@ zstyle ':vcs_info:git:*' formats ' %F{cyan}[%f%F{red}%b%f%F{cyan}]%f'
 
 setopt PROMPT_SUBST
 # %F{yellow};%f
-PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_}
-%F{yellow}%%%f '
-
-# [[ ! -r '/home/kate/.opam/opam-init/init.zsh' ]] || source '/home/kate/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+PROMPT='%(?.%F{green}>.%F{red}>)%f %F{cyan}[%f%F{blue}%~%f%F{cyan}]%f${vcs_info_msg_0_} %F{yellow}%%%f '
 
 bindkey -s ^t "^utmux-goway\n"
 bindkey -s ^y "^uyazi-tmux\n"
-# bindkey -s ^y "^uyazi-neovide\n"
 bindkey -s ^f "^uvfz\n"
-# bindkey -s ^e "^ucode .\n" # maybe shouldn't use this, i keep accidentally pressing it, should use some other keybind
 bindkey -s ^q "^ukitty sh -c ranger\n"
 
 
@@ -58,3 +53,4 @@ compdef _tmux-goway tmux-goway
 # eval $(thefuck --alias)
 
 [ -f "/home/fuyu147/.ghcup/env" ] && . "/home/fuyu147/.ghcup/env" # ghcup-env
+[[ ! -r '/home/fuyu147/.opam/opam-init/init.zsh' ]] || source '/home/fuyu147/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null

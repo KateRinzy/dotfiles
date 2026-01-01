@@ -44,8 +44,9 @@ vim.opt.foldlevelstart = 99
 vim.opt.updatetime = 50
 
 vim.opt.cursorline = true
+
 vim.opt.colorcolumn = "80"
--- vim.opt.textwidth = 80
+vim.opt.textwidth = 80
 
 
 vim.opt.list = true

@@ -22,6 +22,14 @@ local function l_format()
     print("Bogus Binted? 🤨")
 end
 
+local function toggleWrap()
+    if vim.o.wrap then
+        vim.opt.wrap = false
+    else
+        vim.opt.wrap = true
+    end
+end
+
 local mappings = {
     { "n",               "<C-t>",      "<cmd>silent !tmux-goway<CR>" },
     { "n",               "<C-y>",      "<cmd>silent !tmux neww yazi-tmux<CR>" },
@@ -51,6 +59,8 @@ local mappings = {
     { "n",               "<leader>sa", function() vim.cmd([[normal! ggVG]]) end, { desc = "Select the entire file" } },
     --
     { { "n", "v" },      "<leader>3",  "/" },
+    --
+    { "n",               "<leader>tw", toggleWrap }
 }
 
 for _, value in ipairs(mappings) do

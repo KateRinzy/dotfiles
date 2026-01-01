@@ -9,6 +9,7 @@ function _G.lsp_diagnostics()
     local info     = #vim.diagnostic.get(bufnr, { severity = vim.diagnostic.severity.INFO })
 
     local parts    = {}
+
     if errors > 0 then table.insert(parts, "E:" .. errors) end
     if warnings > 0 then table.insert(parts, "W:" .. warnings) end
     if hints > 0 then table.insert(parts, "H:" .. hints) end
@@ -28,7 +29,7 @@ function _G.lsp_status()
         table.insert(names, client.name)
     end
 
-    return "[" .. table.concat(names, ", ") .. "]"
+    return "[lsp: " .. table.concat(names, ", ") .. "]"
 end
 
 function _G.supermaven_status()
@@ -55,7 +56,7 @@ end
 
 local function status_line()
     local mode = " [%{mode()}]"
-    local file_name = " [%-.20t]"
+    local file_name = " [%-.40t]"
     local modified = " %-m"
     local file_type = " %y"
     local diagnostics = " %{v:lua.lsp_diagnostics()}"

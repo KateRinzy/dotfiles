@@ -81,6 +81,6 @@ y() {
     yazi "$@" --cwd-file="$tmp"
 
     IFS= read -r -d '' cwd <"$tmp"
-    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && tmux -- "$cwd"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && cd -- "$cwd"
     rm -f -- "$tmp"
 }
