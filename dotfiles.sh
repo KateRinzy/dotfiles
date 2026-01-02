@@ -6,6 +6,7 @@ confs=(
     ghostty
     hyfetch.json
     hypr
+    i3
     kitty
     niri
     nvim

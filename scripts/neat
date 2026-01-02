@@ -8,6 +8,7 @@ aur=(
     evince-no-gnome
     fcitx5-mozc-ut
     gemini-cli
+    nitrogen
     localsend-bin # share files locally
     lorien-bin
     minecraft-launcher
@@ -33,6 +34,7 @@ pkgs=(
     aspnet-runtime
     base-devel
     bat
+    polybar
     breeze
     breeze5
     brightnessctl
@@ -48,6 +50,7 @@ pkgs=(
     discord
     dotnet-runtime
     dotnet-sdk
+    gamescope
     dunst
     # elixir
     # erlang

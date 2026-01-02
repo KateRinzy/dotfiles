@@ -25,8 +25,8 @@ bell-features = no-title
 theme = Rose Pine
 
 window-inherit-working-directory = false
-
 window-padding-balance = true
 window-padding-y       = 0
+window-decoration      = server
 
 working-directory = /home/fuyu147/art/
