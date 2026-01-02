@@ -39,9 +39,6 @@
         "format": "{name} ",
         "all-outputs": true
     },
-    "hyprland/window": {
-        "format-len": 20
-    },
     "clock": {
         "tooltip": true,
         "format": "{:%y/%m/%d :: %H:%M}"

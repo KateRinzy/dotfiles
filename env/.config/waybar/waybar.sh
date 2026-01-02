@@ -14,8 +14,10 @@ if [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
     COMPOSITOR="hyprland"
 elif [ -n "$NIRI_SOCKET" ]; then
     COMPOSITOR="niri"
+elif [ -n "$SWAYSOCK" ]; then
+    COMPOSITOR="sway"
 else
-    echo "No supported compositor detected. Only Hyprland and Niri are supported."
+    echo "No supported compositor detected. Only Hyprland, Niri, and Sway are supported."
     exit 1
 fi
 
@@ -26,6 +28,9 @@ has_monitor() {
     elif [ "$COMPOSITOR" = "niri" ]; then
         niri msg --json outputs >/dev/null 2>&1 && niri msg --json outputs | jq -e --arg name "$1" \
             '.[] | select(.name == $name)' >/dev/null
+    elif [ "$COMPOSITOR" = "sway" ]; then
+        swaymsg -t get_outputs -r >/dev/null 2>&1 && swaymsg -t get_outputs -r | jq -e --arg name "$1" \
+            '.[] | select(.name == $name and .active == true)' >/dev/null
     else
         return 1
     fi

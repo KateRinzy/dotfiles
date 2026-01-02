@@ -23,14 +23,11 @@ set $mod Mod4
 # export XDG_CURRENT_DESKTOP=Sway
 # export XDG_SESSION_DESKTOP=Sway
 
-# Autostart
-exec ghostty
-exec thunar
-exec thunderbird
 exec ~/.config/hypr/scripts/setxkbmap.sh
 exec ~/.config/waybar/waybar.sh
+
 exec blueman-applet
-exec ckb-next
+exec ckb-next-daemon
 exec dunst
 exec fcitx5
 exec nm-applet
@@ -46,8 +43,7 @@ exec gnome-keyring-daemon --start --components=secrets
 
 # Input settings
 input * {
-    xkb_layout ca,de
-    xkb_options caps:escape,grp:alt_space_toggle
+    xkb_layout ca
 }
 
 focus_follows_mouse yes
@@ -70,6 +66,7 @@ input "elan06fa:00-04f3:327e-touchpad" {
 # Look and feel
 gaps inner 0
 gaps outer 0
+
 default_border pixel 2
 client.focused #C4A7E7 #C4A7E7 #1F1F28 #C4A7E7
 client.unfocused #1F1F28 #1F1F28 #1F1F28 #1F1F28
@@ -77,24 +74,10 @@ client.unfocused #1F1F28 #1F1F28 #1F1F28 #1F1F28
 # Layout: default tiling
 smart_gaps on
 
-# Decoration
-# Rounding not supported in Sway
-# Shadow none
-# Blur not supported
-
-# Animations disabled (approximated)
-# for_window [tiling] opacity 1
-
-# Misc
-# Wallpaper: set in autostart with swww
-# seat * idle_warp_to_mouse 0
-
-# Key bindings
-
 # WM
 bindsym $mod+c kill
 bindsym $mod+F8 exit
-bindsym $mod+Shift+F8 reload
+bindsym $mod+Shift+q reload
 bindsym $mod+Escape exec wlogout
 bindsym $mod+l exec hyprlock
 bindsym $mod+v floating toggle
@@ -113,7 +96,7 @@ bindsym $mod+q exec alacritty
 bindsym $mod+Return exec ghostty
 bindsym $mod+w exec firefox
 bindsym $mod+Page_Down exec kitty --class=calc tmux new-session qalc
-bindsym $mod+r exec rofi -show drun -no-fixed-num-lines -lines 20
+bindsym $mod+r exec rofi -show drun -no-fixed-num-lines
 bindsym $mod+y exec ~/.config/hypr/scripts/WallpaperSelect.sh
 bindsym $mod+t exec dunstify "$(date)"
 bindsym $mod+Shift+f exec thunar
@@ -122,42 +105,42 @@ bindsym Print exec ~/.config/hypr/scripts/hyprshot.sh "screen"
 bindsym $mod+Shift+s exec ~/.config/hypr/scripts/hyprshot.sh
 bindsym $mod+Shift+t exec ~/.config/hypr/scripts/get-text.sh
 bindsym $mod+Shift+c exec hyprpicker -a
-bindsym $mod+period exec rofi -modi emoji -show emoji -no-fixed-num-lines -lines 20
-bindsym $mod+grave exec ~/.config/hypr/scripts/vim-scratch.sh zxcv
+bindsym $mod+period exec rofi -modi emoji -show emoji -no-fixed-num-lines
+bindsym $mod+dead_grave exec ~/.config/hypr/scripts/vim-scratch.sh zxcv
 bindsym $mod+F10 exec ~/.config/hypr/scripts/vim-scratch.sh faire
 
 # Workspaces
-bindsym $mod+1 workspace $ws01
-bindsym $mod+2 workspace $ws02
-bindsym $mod+3 workspace $ws03
-bindsym $mod+4 workspace $ws04
-bindsym $mod+5 workspace $ws05
-bindsym $mod+6 exec ~/.config/hypr/scripts/spawn-if-empty.sh 6 thunderbird
-bindsym $mod+7 workspace $ws07
-bindsym $mod+8 exec ~/.config/hypr/scripts/spawn-if-empty.sh 8 spotify-launcher
-bindsym $mod+9 exec ~/.config/hypr/scripts/spawn-if-empty.sh 9 vesktop
-bindsym $mod+0 workspace $ws10
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
-bindsym $mod+F1 exec ~/.config/hypr/scripts/spawn-if-empty.sh 6 thunderbird
-bindsym $mod+F2 workspace $ws07
-bindsym $mod+F3 exec ~/.config/hypr/scripts/spawn-if-empty.sh 8 spotify-launcher
-bindsym $mod+F4 exec ~/.config/hypr/scripts/spawn-if-empty.sh 9 vesktop
+# bindsym $mod+F1 exec ~/.config/hypr/scripts/spawn-if-empty.sh 6 thunderbird
+# bindsym $mod+F2 workspace $ws07
+# bindsym $mod+F3 exec ~/.config/hypr/scripts/spawn-if-empty.sh 8 spotify-launcher
+# bindsym $mod+F4 exec ~/.config/hypr/scripts/spawn-if-empty.sh 9 vesktop
 
-bindsym $mod+Shift+1 move container to workspace $ws01
-bindsym $mod+Shift+2 move container to workspace $ws02
-bindsym $mod+Shift+3 move container to workspace $ws03
-bindsym $mod+Shift+4 move container to workspace $ws04
-bindsym $mod+Shift+5 move container to workspace $ws05
-bindsym $mod+Shift+6 move container to workspace $ws06
-bindsym $mod+Shift+7 move container to workspace $ws07
-bindsym $mod+Shift+8 move container to workspace $ws08
-bindsym $mod+Shift+9 move container to workspace $ws09
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
 
-bindsym $mod+Shift+F1 move container to workspace $ws06
-bindsym $mod+Shift+F2 move container to workspace $ws07
-bindsym $mod+Shift+F3 move container to workspace $ws08
-bindsym $mod+Shift+F4 move container to workspace $ws09
+bindsym $mod+Shift+F1 move container to workspace 6
+bindsym $mod+Shift+F2 move container to workspace 7
+bindsym $mod+Shift+F3 move container to workspace 8
+bindsym $mod+Shift+F4 move container to workspace 9
 
 bindsym --whole-window $mod+button4 workspace prev
 bindsym --whole-window $mod+button5 workspace next
@@ -231,25 +214,25 @@ for_window [title="Save.*"] resize set width 1000 px height 700 px
 # for_window [class="^$", title="^$"] border none
 
 # Workspace assignments
-assign [class="firefox"] $ws01
+assign [class="firefox"] 1
 
-assign [class="com.mitchellh.ghostty"] $ws02
+assign [class="com.mitchellh.ghostty"] 2
 
-assign [title="Minecraft.*"] $ws04
-assign [class="cs2"] $ws04
-assign [class="worldofwarships64.exe"] $ws04
-assign [class="forzahorizon5.exe"] $ws04
-assign [class="overwatch.exe"] $ws04
-assign [class="discovery.exe"] $ws04
+assign [title="Minecraft.*"] 4
+assign [class="cs2"] 4
+assign [class="worldofwarships64.exe"] 4
+assign [class="forzahorizon5.exe"] 4
+assign [class="overwatch.exe"] 4
+assign [class="discovery.exe"] 4
 
-assign [class="steam"] $ws05
+assign [class="steam"] 5
 
-assign [class="org.mozilla.Thunderbird"] $ws06
+assign [class="org.mozilla.Thunderbird"] 6
 
-assign [class="spotify"] $ws08
+assign [class="spotify"] 8
 
-assign [class="discord"] $ws09
-assign [class="vesktop"] $ws09
+assign [class="discord"] 9
+assign [class="vesktop"] 9
 
 # Workspace settings
 workspace 1 output HDMI-A-1
@@ -270,5 +253,5 @@ assign [class="com.mitchellh.ghostty.scratch"] scratchpad
 for_window [class="com.mitchellh.ghostty.scratch"] move scratchpad
 
 # Monitors
-output HDMI-A-1 res 1920x1080@120Hz pos 0 0 scale 1
 output eDP-1 res 2560x1600@60Hz pos -2048 0 scale 1.25
+output HDMI-A-1 res 1920x1080@120Hz pos 0 0 scale 1

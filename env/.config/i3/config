@@ -186,17 +186,18 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-new_window pixel 2
+new_window pixel 1
 
 exec sh -c "~/.config/i3/xrandr.sh"
 exec_always --no-startup-id setxkbmap ca
-
+exec_always --no-startup-id sudo keyd reload
 
 exec nitrogen --restore
 
 exec --no-startup-id fcitx5
 exec --no-startup-id polybar
 exec --no-startup-id ckb-next
+exec --no-startup-id dunst
 
 # Rosé Pine Moon theme
 set $base #191724
@@ -218,4 +219,27 @@ client.unfocused        $base $base $subtle $muted $muted
 client.urgent           $love $base $text $love $love
 client.placeholder      $overlay $overlay $text $overlay $overlay
 client.background       $base
+
+for_window [class="firefox"] move to workspace $ws1
+
+for_window [class="com.mitchellh.ghostty"] move to workspace $ws2
+
+for_window [title="Minecraft"] move to workspace $ws4
+for_window [class="cs2"] move to workspace $ws4
+for_window [class="worldofwarships64.exe"] move to workspace $ws4
+for_window [class="forzahorizon5.exe"] move to workspace $ws4
+for_window [class="overwatch.exe"] move to workspace $ws4
+for_window [class="discovery.exe"] move to workspace $ws4
+for_window [class="ADanceOfFireAndIce"] move to workspace $ws4
+
+for_window [class="steam"] move to workspace $ws5
+
+for_window [class="org.mozilla.Thunderbird"] move to workspace $ws6
+
+for_window [class="spotify"] move to workspace $ws8
+
+for_window [class="discord"] move to workspace $ws9
+for_window [class="vesktop"] move to workspace $ws9
+
+for_window [title="Picture-in-Picture"] move to workspace $ws10
 
