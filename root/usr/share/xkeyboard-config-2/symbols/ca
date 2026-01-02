@@ -22,7 +22,7 @@ xkb_symbols "fr" {
     key <AD02>	{[         w,          W,     backslash ]};
     key <AD03>	{[         f,          F,            at ]};
     key <AD04>	{[         p,          P,    asciitilde ]};
-    key <AD05>	{[         g,          G                ]};
+    key <AD05>	{[         g,          G,        emdash ]};
     key <AD06>	{[         j,          J,           yen ]};
     key <AD07>	{[         l,          L                ]};
     key <AD08>	{[         u,          U                ]};

@@ -1,5 +1,5 @@
-background   = #000000
-foreground   = #FFFFFF
+background = #000000
+foreground = #FFFFFF
 
 cursor-color = #575279
 cursor-text  = #FFFFFF
@@ -9,14 +9,14 @@ background-blur    = true
 
 confirm-close-surface = false
 
-font-family   = "IosevkaTerm NFM"
-font-family   = "Zen Maru Gothic"
-font-size     = 20
+font-family = "IosevkaTerm NFM"
+font-family = "Zen Maru Gothic"
+font-size   = 20
 
 gtk-single-instance = true
 
-gtk-tabs-location= bottom
-gtk-wide-tabs    = false
+gtk-tabs-location = bottom
+gtk-wide-tabs     = false
 
 shell-integration-features = no-cursor
 
@@ -25,8 +25,8 @@ bell-features = no-title
 theme = Rose Pine
 
 window-inherit-working-directory = false
-window-padding-balance = true
-window-padding-y       = 0
-window-decoration      = server
+window-padding-balance           = true
+window-padding-y                 = 0
+window-decoration                = server
 
 working-directory = /home/fuyu147/art/

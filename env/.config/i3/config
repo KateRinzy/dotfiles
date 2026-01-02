@@ -190,13 +190,13 @@ new_window pixel 1
 
 exec sh -c "~/.config/i3/xrandr.sh"
 exec_always --no-startup-id setxkbmap ca
-exec_always --no-startup-id sudo keyd reload
+exec_always --no-startup-id keyd
 
 exec nitrogen --restore
 
 exec --no-startup-id fcitx5
 exec --no-startup-id polybar
-exec --no-startup-id ckb-next
+exec ckb-next
 exec --no-startup-id dunst
 
 # Rosé Pine Moon theme
