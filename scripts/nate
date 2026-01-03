@@ -156,12 +156,6 @@ case "$1" in
 "d" | "diff")
     sync_diff
     ;;
-"z" | "zen")
-    zen-browser --new-tab "https://github.com/fuyu147/dotfiles"
-    ;;
-"f" | "firefox")
-    firefox "https://github.com/fuyu147/dotfiles"
-    ;;
 *)
     sync_files
     ;;
