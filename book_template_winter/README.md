@@ -1,2 +1,2 @@
-# Katypst
-regroups stuff i use often in Typst
+# Book Template Winter
+template to format books i write
