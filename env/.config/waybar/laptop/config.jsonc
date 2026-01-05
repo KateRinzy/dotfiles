@@ -12,7 +12,7 @@
     "modules-right": [
         "tray",
         "custom/sep",
-        "hyprland/language",
+        // "hyprland/language",
         "custom/sep",
         "pulseaudio",
         "custom/sep",

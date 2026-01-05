@@ -60,7 +60,8 @@ tl() {
 
 vfz() {
     selected=$(fzf)
-    command nvim "$selected"
+    print -s 'vim "${selected}"'
+    nvim "$selected"
 }
 
 open() {

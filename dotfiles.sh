@@ -10,6 +10,7 @@ confs=(
     kitty
     niri
     nvim
+    polybar
     ranger
     rofi
     sway
