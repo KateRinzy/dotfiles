@@ -2,6 +2,8 @@ alias vim="nvim"
 
 alias ff="fastfetch"
 
+alias p="python"
+
 alias mutt="neomutt"
 
 alias chat="nvim ~/desk/chat.typ"

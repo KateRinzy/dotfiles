@@ -60,6 +60,8 @@
     "vim.handleKeys": {
         "<C-b>": false,
         "<C-d>": true,
+        "<C-k>": false,
+        "<C-o>": false,
         "<C-s>": false,
         "<C-z>": false
     },
@@ -77,5 +79,6 @@
     "chat.agent.codeBlockProgress": false,
     "chat.checkpoints.enabled": false,
     "chat.disableAIFeatures": true,
-    "telemetry.feedback.enabled": false
+    "telemetry.feedback.enabled": false,
+    "workbench.colorTheme": "Material Theme Ocean"
 }
