@@ -80,5 +80,6 @@
     "chat.checkpoints.enabled": false,
     "chat.disableAIFeatures": true,
     "telemetry.feedback.enabled": false,
-    "workbench.colorTheme": "Material Theme Ocean"
+    "workbench.colorTheme": "Material Theme Ocean",
+    "geminicodeassist.displayInlineContextHint": false
 }

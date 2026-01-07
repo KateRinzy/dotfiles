@@ -18,7 +18,7 @@ vim.cmd([[
 ]])
 
 local function l_format()
-    if next(vim.lsp.get_active_clients({ bufnr = 0 })) then
+    if next(vim.lsp.get_clients({ bufnr = 0 })) then
         vim.lsp.buf.format()
     end
     print("Bogus Binted? 🤨")

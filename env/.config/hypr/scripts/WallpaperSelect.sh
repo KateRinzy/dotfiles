@@ -2,7 +2,7 @@
 # ---- taken and adapted from : https://github.com/JaKooLit/Hyprland-Dots
 
 # WALLPAPERS PATH
-wallDIR="$HOME/art/wallpapers"
+wallDIR="$HOME/wallpapers"
 
 # awww transition config
 FPS=144

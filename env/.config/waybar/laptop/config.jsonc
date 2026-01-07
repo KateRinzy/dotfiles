@@ -12,8 +12,6 @@
     "modules-right": [
         "tray",
         "custom/sep",
-        // "hyprland/language",
-        "custom/sep",
         "pulseaudio",
         "custom/sep",
         "clock",

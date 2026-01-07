@@ -6,8 +6,8 @@ alias p="python"
 
 alias mutt="neomutt"
 
-alias chat="nvim ~/desk/chat.typ"
-alias zxcv="nvim ~/desk/zxcv.typ"
+alias chat="nvim ~/Documents/chat.typ"
+alias zxcv="nvim ~/Documents/zxcv.typ"
 
 alias ls="eza -A1 -s type"
 

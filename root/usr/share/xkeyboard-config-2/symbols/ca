@@ -48,14 +48,14 @@ xkb_symbols "fr" {
     key <AB02>	{[         x,          X, guillemotright]};
     key <AB03>	{[         c,          C, degree        ]};
     key <AB04>	{[         v,          V, dead_tilde    ]};
-    key <AB05>	{[         b,          B                ]};
+    key <AB05>	{[         b,          B, nobreakspace  ]};
     key <AB06>	{[         k,          K                ]};
     key <AB07>	{[         m,          M,            mu ]};
     key <AB08>	{[     comma, apostrophe,   dead_macron ]};
     key <AB09>	{[    period,  ampersand,        hyphen ]};
     key <AB10>	{[    eacute,     Eacute                ]};
 
-    key <SPCE>	{[     space,      space,  nobreakspace ]};
+    key <SPCE>	{[     space,      space                ]};
     key <CAPS>	{[    Escape,     Escape                ]};
 
     include "level3(ralt_switch)"

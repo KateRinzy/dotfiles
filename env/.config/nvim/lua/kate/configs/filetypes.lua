@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+---
 
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "fs", "fsharp" },
@@ -8,7 +9,17 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "haskell", "hs", "ocaml", "cpp", "cc", "c" },
+    pattern = { "c", "h" },
+    callback = function()
+        local width = 8
+        vim.bo.shiftwidth = width
+        vim.bo.tabstop = width
+        vim.bo.softtabstop = width
+    end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "haskell", "hs", "ocaml", "cpp", "cc" },
     callback = function()
         local width = 2
         vim.bo.shiftwidth = width

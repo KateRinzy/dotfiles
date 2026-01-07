@@ -29,4 +29,4 @@ window-padding-balance           = true
 window-padding-y                 = 0
 window-decoration                = server
 
-working-directory = /home/fuyu147/art/
+# working-directory = /home/fuyu147/art/
