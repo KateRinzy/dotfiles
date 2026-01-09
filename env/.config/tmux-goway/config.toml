@@ -7,6 +7,7 @@ searchpaths = [
     "~/dotfiles/",
     "~/wallpapers/",
     "~/Documents/",
+    "~/Downloads/",
     "/run/media/fuyu147/Estrogen",
     "/run/media/fuyu147/",
     "~/.config",

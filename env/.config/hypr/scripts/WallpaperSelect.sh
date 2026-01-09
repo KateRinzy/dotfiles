@@ -89,7 +89,6 @@ main() {
     choice=$(menu | $rofi_command)
     choice=$(echo "$choice" | xargs)
 
-
     if [[ -z "$choice" ]]; then
         exit 0
     fi
@@ -110,7 +109,6 @@ main() {
     # copies in root to allow sddm to use the current wallpaper
     sudo mkdir -p /usr/share/wallpapers/Customs/
     sudo cp "$selected_file" /usr/share/wallpapers/Customs/current.wall
-
 
     if [[ "$selected_file" =~ \.(mp4|mkv|mov|webm|MP4|MKV|MOV|WEBM)$ ]]; then
         apply_video_wallpaper "$selected_file"
