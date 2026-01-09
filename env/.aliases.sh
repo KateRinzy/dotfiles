@@ -9,7 +9,7 @@ alias mutt="neomutt"
 alias chat="nvim ~/Documents/chat.typ"
 alias zxcv="nvim ~/Documents/zxcv.typ"
 
-alias ls="eza -A1 -s type"
+alias ls="eza --no-quotes -s type"
 
 alias t="tmux-goway"
 
@@ -59,8 +59,9 @@ tl() {
 }
 
 vfz() {
-    selected=$(fzf)
-    print -s 'vim "${selected}"'
+    selected=$(fzf) || return
+    realselected=$(realpath -- "$selected")
+    print -s "vim $realselected"
     nvim "$selected"
 }
 

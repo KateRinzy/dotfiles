@@ -15,7 +15,7 @@ local capabilities = vim.tbl_deep_extend(
 
 local lsps = {
     { "html", },
-    { "ols",                   {} },
+    { "ols",                  {} },
     { "rust_analyzer", },
     { "bashls", },
     { "basedpyright", },
@@ -24,7 +24,7 @@ local lsps = {
     { "basedpyright", },
     { "cssls", },
     { "lua_ls", },
-    { "hls",                   {} },
+    { "hls",                  {} },
     { "csharp_ls", },
     { "fsautocomplete", },
     { "lemminx", },
@@ -32,7 +32,7 @@ local lsps = {
     { "java_language_server", },
     {
         "clangd",
-        { init_options = { fallbackFlags = { "--std=c26" }, }, },
+        { init_options = { fallbackFlags = { "--std=c23" }, }, },
     },
     {
         "gopls",
