@@ -1,12 +1,12 @@
 :root {
   /* APP ELEMENTS */
-  --app-bg: transparent;
+  --app-bg: rgba(0, 0, 0, 0.2);
   --app-blur: 10px;
-  --app-margin: 24px;
-  --app-radius: 10px;
+  --app-margin: 12px;
+  --app-radius: 5px;
   --main-rgb: 0,0,0;
-  --main-content-opacity: 0.2;
-  --sidebar-opacity: 0.4;
+  --main-content-opacity: 0.6;
+  --sidebar-opacity: 0.7;
   --main-content-color: rgba(var(--main-rgb), var(--main-content-opacity));
   --sidebar-color: rgba(var(--main-rgb), var(--sidebar-opacity));
   /* ACCENT HSL AND TEXT COLOR SETTINGS */
