@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.o.tabstop = width
         vim.o.softtabstop = width
         vim.o.expandtab = true
-        vim.o.colorcolumn = "120"
+        vim.o.colorcolumn = "80"
     end,
 })
 
@@ -82,16 +82,22 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "markdown", "text" },
+    pattern = { "markdown", "text", "txt" },
     callback = function()
-        vim.opt.spell = true
-        vim.opt.spelllang = { "en", "fr", "de", "es", "cjk" }
+        vim.o.spell = true
+        vim.opt.spelllang = { "en", "fr", "cjk" }
 
-        vim.opt.colorcolumn = "80"
-        vim.opt.textwidth = 80
+        vim.o.colorcolumn = "80"
+        vim.o.textwidth = 80
 
-        vim.opt.wrap = true
-        vim.opt.sidescrolloff = 0
+        vim.o.wrap = true
+        vim.o.sidescrolloff = 0
+
+        local width = 8
+        vim.o.shiftwidth = width
+        vim.o.tabstop = width
+        vim.o.softtabstop = width
+        vim.o.expandtab = true
     end
 })
 

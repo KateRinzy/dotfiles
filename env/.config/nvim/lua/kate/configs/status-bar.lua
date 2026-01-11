@@ -54,12 +54,50 @@ function _G.search_status()
     return ""
 end
 
+function _G.git_status()
+    local output = vim.fn.system("git status -sb --porcelain=2 2>/dev/null")
+    if vim.v.shell_error ~= 0 then
+        return ""
+    end
+
+    local branch = ""
+    local ahead = "0"
+    local behind = "0"
+
+    for line in output:gmatch("[^\n]+") do
+        local branch_match = line:match("# branch.head (.+)")
+        if branch_match then
+            branch = branch_match
+        end
+
+        local ab_match = line:match("# branch.ab %+([%d]+) %-([%d]+)")
+        if ab_match then
+            ahead, behind = line:match("# branch.ab %+([%d]+) %-([%d]+)")
+        end
+    end
+
+    if branch == "" then
+        return ""
+    end
+
+    local result = "Git:" .. branch
+    if tonumber(ahead) > 0 then
+        result = result .. " " .. ahead
+    end
+    if tonumber(behind) > 0 then
+        result = result .. " " .. behind
+    end
+
+    return result
+end
+
 local function status_line()
     local mode = " [%{mode()}]"
     local file_name = " [%-.40t]"
     local modified = " %-m"
     local file_type = " %y"
     local diagnostics = " %{v:lua.lsp_diagnostics()}"
+    local gits = " %{v:lua.git_status()}"
     local lsp = " %{v:lua.lsp_status()}"
     local supermaven = " %{v:lua.supermaven_status()}"
     local right_align = "%="
@@ -75,6 +113,7 @@ local function status_line()
         right_align,
         search,
         diagnostics,
+        gits,
         lsp,
         supermaven,
         line_no

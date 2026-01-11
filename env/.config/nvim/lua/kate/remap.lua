@@ -36,7 +36,6 @@ local mappings = {
     { "n",               "<C-t>",      "<cmd>silent !tmux-goway<CR>" },
     { "n",               "<C-y>",      "<cmd>silent !tmux neww yazi-tmux<CR>" },
     { "n",               "<leader>pv", ":NvimTreeToggle<CR>",                    { desc = "Toggle NvimTree" } },
-    { "n",               "<leader>e",  ":NvimTreeFocus<CR>",                     { desc = "Focus NvimTree" } },
     { "n",               "<ESC>",      "<CMD>noh<CR>" },
     --
     { { "n", "v", "x" }, "<M-l>",      "{" },

@@ -21,6 +21,7 @@ confs=(
 )
 
 envs=(
+    .alacritty.toml
     .aliases.sh
     .tmux.conf
     .zshrc

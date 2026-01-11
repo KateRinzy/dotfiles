@@ -4,8 +4,9 @@ vim.opt.winborder = "single"
 
 vim.opt.nu = true
 
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+local spaceNumber = 4
+vim.opt.tabstop = spaceNumber
+vim.opt.shiftwidth = spaceNumber
 vim.opt.smartindent = true
 
 local useTabs = false
@@ -13,7 +14,7 @@ if useTabs then
     vim.opt.softtabstop = nil
     vim.opt.expandtab = false
 else
-    vim.opt.softtabstop = 4
+    vim.opt.softtabstop = spaceNumber
     vim.opt.expandtab = true
 end
 
@@ -97,6 +98,12 @@ end, {})
 vim.api.nvim_create_user_command("InsertTime", function()
     local datetime = os.date("%Y-%m-%d %H:%M:%S")
     vim.api.nvim_put({ datetime }, "c", true, true)
+end, {})
+
+vim.api.nvim_create_user_command("ModeTTY", function()
+    vim.cmd("syntax off")
+    vim.cmd("highlight clear")
+    vim.cmd("set termguicolors&")
 end, {})
 
 

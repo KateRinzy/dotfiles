@@ -61,6 +61,7 @@
         "<C-b>": false,
         "<C-d>": true,
         "<C-k>": false,
+        "<C-t>": false,
         "<C-o>": false,
         "<C-s>": false,
         "<C-z>": false

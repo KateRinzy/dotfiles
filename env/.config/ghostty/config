@@ -9,9 +9,10 @@ background-blur    = true
 
 confirm-close-surface = false
 
-font-family = "IosevkaTerm NFM"
+# font-family = "IosevkaTerm NFM"
+font-family = "Monaspace Krypton NF"
 font-family = "Zen Maru Gothic"
-font-size   = 20
+font-size   = 18
 
 gtk-single-instance = true
 

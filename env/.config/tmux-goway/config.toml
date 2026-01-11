@@ -12,7 +12,7 @@ searchpaths = [
     "/run/media/fuyu147/",
     "~/.config",
     "/home",
-    "/srv/git",
+    # "/srv/git",
 ]
 # searchpaths    = [ "~" ]
 maxdepth       = 1
