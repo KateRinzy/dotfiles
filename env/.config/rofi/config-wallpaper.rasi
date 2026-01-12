@@ -11,7 +11,7 @@ configuration {
 }
 
 window {
-  width: 75%;
+  width: 80%;
   height: inherit;
   background-color: #1F1F28;  /* WaveBlue1 */
   location: center;
