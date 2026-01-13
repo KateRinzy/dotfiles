@@ -1,13 +1,12 @@
 alias vim="nvim"
-
 alias ff="fastfetch"
 
 alias p="python"
 
 alias mutt="neomutt"
 
-alias chat="nvim ~/notes/chat"
-alias zxcv="nvim ~/notes/zxcv"
+alias chat="nvim ~/notes/chat.txt"
+alias zxcv="nvim ~/notes/zxcv.txt"
 
 alias ls="eza --no-quotes -s type"
 

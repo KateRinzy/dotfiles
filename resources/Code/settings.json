@@ -81,5 +81,6 @@
     "chat.checkpoints.enabled": false,
     "chat.disableAIFeatures": true,
     "telemetry.feedback.enabled": false,
-    "geminicodeassist.displayInlineContextHint": false
+    "geminicodeassist.displayInlineContextHint": false,
+    "workbench.colorTheme": "Rosé Pine"
 }
