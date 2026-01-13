@@ -57,6 +57,9 @@
     "workbench.navigationControl.enabled": false,
     "window.commandCenter": false,
     "window.titleBarStyle": "native",
+    "editor.rulers": [
+        80
+    ],
     "vim.handleKeys": {
         "<C-b>": false,
         "<C-d>": true,
