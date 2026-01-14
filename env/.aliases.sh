@@ -8,7 +8,7 @@ alias mutt="neomutt"
 alias chat="nvim ~/notes/chat.txt"
 alias zxcv="nvim ~/notes/zxcv.txt"
 
-alias ls="eza --no-quotes -s type"
+alias ls="eza --no-quotes -s type -a"
 
 alias t="tmux-goway"
 
