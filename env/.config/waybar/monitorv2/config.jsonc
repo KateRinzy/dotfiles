@@ -16,11 +16,8 @@
         "custom/sep"
     ],
     "hyprland/window": {
-        "format": "{class}:{title}",
+        "format": "[{class}]: [{title}]",
         "max-length": 50,
-        "rewrite": {
-            ":": "",
-        }
     },
     "mpris": {
         "player": "spotify",
