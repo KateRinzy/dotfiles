@@ -36,12 +36,15 @@
         }
     },
     "hyprland/workspaces": {
-        "format": "{name} ",
+        "format": "{name}",
         "all-outputs": true
     },
     "hyprland/window": {
-        "format": "[{class}]: [{title}]",
+        "format": "[{class}]",
         "max-length": 50,
+        "rewrite": {
+            "[]": ""
+        }
     },
     "clock": {
         "tooltip": true,

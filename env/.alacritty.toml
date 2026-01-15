@@ -11,7 +11,6 @@ normal = { family = "Monaspace Krypton NF", style = "Regular" }
 size = 20
 
 
-
 # taken from:
 #    https://github.com/rose-pine/alacritty/blob/main/dist/rose-pine.toml
 #

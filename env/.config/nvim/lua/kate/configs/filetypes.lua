@@ -5,6 +5,9 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = { "fs", "fsharp" },
     callback = function()
         vim.lsp.handlers["$/progress"] = function() end
+
+        vim.opt.textwidth = 120
+        vim.opt.colorcolumn = "120"
     end
 })
 
