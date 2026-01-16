@@ -64,23 +64,19 @@
 * {
     border: none;
     font-family: "IosevkaTerm NFM", "Courier Prime Code", "Noto Sans CJK JP";
-    font-size: 8pt;
-    font-weight: 600;
-    background: none;
+    font-size: 10pt;
+    font-weight: 300;
+    background: @bg;
 }
 
 window#waybar {
     color: @fg;
-    background: @bg;
+    background: transparent;
 }
 
 .modules-left,
 .modules-right {
     background: @bg;
-}
-
-.modules-left {
-    border-radius: 0px 0px 10px 0px;
 }
 
 tooltip {
@@ -92,6 +88,11 @@ tooltip {
 tooltip * {
     color: @fg;
     text-shadow: none;
+}
+
+#custom-sep {
+    color: @gray-dark;
+    margin: 0;
 }
 
 #workspaces button {
@@ -106,6 +107,27 @@ tooltip * {
 
 #workspaces button.active {
     color: @magenta;
+}
+
+#temperature {
+    color: @yellow;
+}
+
+#clock {
+    font-weight: 600;
+    color: @blue;
+}
+
+#custom-bluetooth_devices {
+    color: @blue;
+}
+
+#pulseaudio {
+    color: @green;
+}
+
+#pulseaudio.muted {
+    color: @red;
 }
 
 #tray menu {

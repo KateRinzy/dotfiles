@@ -116,8 +116,11 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "python" },
     callback = function()
-        -- vim.opt.foldmethod = "indent"
-        -- vim.opt.foldlevel = 0
+        local width = 8
+        vim.o.shiftwidth = width
+        vim.o.tabstop = width
+        vim.o.softtabstop = width
+        vim.o.expandtab = true
     end
 })
 
