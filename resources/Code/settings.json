@@ -85,5 +85,6 @@
     "chat.disableAIFeatures": true,
     "telemetry.feedback.enabled": false,
     "geminicodeassist.displayInlineContextHint": false,
-    "workbench.colorTheme": "Rosé Pine"
+    "workbench.colorTheme": "Rosé Pine",
+    "haskell.manageHLS": "GHCup"
 }

@@ -8,10 +8,9 @@ export MAKEFLAGS="-j12"
 export NPROCESSORS_CONF="12"
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/dotfiles/scripts:$PATH"
-export PATH="$HOME/.dotnet/tools:$PATH"
-export PATH="$HOME/.elan/bin:$PATH"
 
 export WORKSTATION="$HOME/dotfiles"
 

@@ -1,5 +1,4 @@
 ---@diagnostic disable: undefined-global
--- Put the functions in the global namespace so statusline can call them
 function _G.lsp_diagnostics()
     local bufnr    = vim.api.nvim_get_current_buf()
 
@@ -121,3 +120,12 @@ local function status_line()
 end
 
 vim.opt.statusline = status_line()
+vim.opt.laststatus = 0
+
+vim.keymap.set("n", "<leader>ts", function()
+  if vim.o.laststatus == 0 then
+    vim.o.laststatus = 3
+  else
+    vim.o.laststatus = 0
+  end
+end, { desc = "Toggle statusline" })

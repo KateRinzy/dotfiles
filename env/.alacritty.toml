@@ -8,7 +8,7 @@ blur = true
 [font]
 #normal = { family = "IosevkaTerm NFM", style = "Regular" }
 normal = { family = "Monaspace Krypton NF", style = "Regular" }
-size = 20
+size = 18
 
 
 # taken from:
