@@ -11,6 +11,7 @@ searchpaths = [
     "/run/media/fuyu147/Estrogen",
     "/run/media/fuyu147/",
     "~/.config",
+    "~/torrents",
     "/home",
     # "/srv/git",
 ]
