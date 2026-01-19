@@ -4,7 +4,7 @@
 cursor-color = #575279
 cursor-text  = #FFFFFF
 
-background-opacity = 0.80
+background-opacity = 0.90
 background-blur    = false
 
 confirm-close-surface = false

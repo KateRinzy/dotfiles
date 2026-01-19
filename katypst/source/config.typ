@@ -14,6 +14,38 @@
   doc
 }
 
+#let conf_academic(
+  fonts: "New Computer Modern",
+  math_fonts: "New Computer Modern Math",
+  font_size: 10pt,
+  doc,
+) = {
+  set heading(numbering: "1.1")
+  set list(marker: [---])
+  set page(columns: 2, numbering: "1/1", number-align: left, margin: 0.7in)
+  set par(justify: true)
+  set text(lang: "fr", font: fonts, size: font_size)
+  set math.mat(delim: "[")
+  set list(marker: $dash.em$)
+
+  import "@preview/headcount:0.1.0": *
+  show heading: reset-counter(counter(math.equation), levels: 2)
+  show math.equation: set text(font: math_fonts)
+  show link: body => text(
+    underline(body),
+    fill: color.blue,
+    font: link_font,
+  )
+
+  set outline(depth: 2)
+  show outline.entry.where(level: 1): set block(above: 1.6em)
+  show outline.entry.where(level: 1): it => {
+    strong(it)
+  }
+
+  doc
+}
+
 #let conf(
   fonts: ("Noto Serif", "Noto Serif CJK JP"),
   math_fonts: ("New Computer Modern Math", "Fira Math"),

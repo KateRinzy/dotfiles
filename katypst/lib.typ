@@ -4,17 +4,19 @@
 #import "source/theorems.typ"
 
 #let em = $dash.em$
+#let deg = [°]
 
 #let fonts = (
   serif: ("Noto Serif", "Noto Serif CJK JP"),
   sans: ("Noto Sans", "Noto Sans CJK JP"),
-  mono: "Courier Prime",
+  mono: "IosevkaTerm NFM",
   computer: "New Computer Modern",
   zenmaru: "Zen Maru Gothic",
   raleway: "Raleway",
   fmath: "Fira Math",
   cmath: "New Computer Modern Math",
   courier: "Courier New",
+  angular: "Monaspace Krypton NF",
 )
 
 #let present(
@@ -23,7 +25,6 @@
   bottom_content,
   show_outline: true,
   do_pagebreak: true,
-  makeconf: true,
 ) = {
   align(center, {
     align(top, top_content)

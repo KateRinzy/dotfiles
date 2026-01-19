@@ -1,2 +1,2 @@
 run:
-	typst c test.typ
+	./install_locally.sh
