@@ -4,7 +4,9 @@
     "output": "HDMI-A-1",
     "exclusive": true,
     "modules-left": [
-        "hyprland/window"
+        "hyprland/window",
+        "custom/sep",
+        "hyprland/language"
     ],
     "modules-center": [
         "mpris"
@@ -18,6 +20,9 @@
     "hyprland/window": {
         "format": "[{class}]",
         "max-length": 50,
+    },
+    "hyprland/language": {
+        "format": "[{}]"
     },
     "mpris": {
         "player": "spotify",

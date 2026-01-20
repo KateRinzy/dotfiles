@@ -9,7 +9,10 @@
         "custom/sep",
         "hyprland/window",
         "custom/sep",
-        "mpris",
+        "hyprland/language",
+    ],
+    "modules-center": [
+        "mpris"
     ],
     "modules-right": [
         "tray",
@@ -45,6 +48,9 @@
         "rewrite": {
             "[]": ""
         }
+    },
+    "hyprland/language": {
+        "format": "[{}]"
     },
     "clock": {
         "tooltip": true,
