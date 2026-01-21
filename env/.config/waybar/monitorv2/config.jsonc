@@ -14,6 +14,10 @@
     "modules-right": [
         "tray",
         "custom/sep",
+        "cpu",
+        "custom/sep",
+        "memory",
+        "custom/sep",
         "clock",
         "custom/sep"
     ],
@@ -35,14 +39,28 @@
         }
     },
     "custom/sep": {
-        "format": " "
+        "format": "   "
     },
     "clock": {
         "tooltip": true,
-        "format": "{:%y%m%d::%H%M}"
+        "format": "{:%y:%m:%d - %H%M}"
     },
     "tray": {
         "icon-size": 12,
         "show-passive-items": "true"
-    }
+    },
+    "cpu": {
+        "format": "CPU {}%",
+        "tooltip": true,
+        "tooltip-format": "CPU {}%",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "RAM {}%",
+        "tooltip": true,
+        "tooltip-format": "RAM {}%",
+        "interval": 3
+    },
+
 }

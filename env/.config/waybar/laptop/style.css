@@ -69,7 +69,7 @@
 }
 
 window#waybar {
-    color: @fg;
+    color: @gray;
     background: transparent;
 }
 

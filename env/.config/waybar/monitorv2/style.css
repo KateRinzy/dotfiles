@@ -70,7 +70,7 @@
 }
 
 window#waybar {
-    color: @fg;
+    color: @gray;
     background: @bg;
     padding: 0px;
 }

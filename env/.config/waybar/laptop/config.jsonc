@@ -25,7 +25,7 @@
         "custom/sep"
     ],
     "custom/sep": {
-        "format": "  "
+        "format": "   "
     },
     "mpris": {
         "player": "spotify",
@@ -39,7 +39,7 @@
         }
     },
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "[{name}]",
         "all-outputs": true
     },
     "hyprland/window": {
