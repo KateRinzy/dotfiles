@@ -4,12 +4,9 @@
     "output": "eDP-1",
     "height": 32,
     "modules-left": [
-        "custom/sep",
         "hyprland/workspaces",
         "custom/sep",
         "hyprland/window",
-        "custom/sep",
-        "hyprland/language",
     ],
     "modules-center": [
         "mpris"

@@ -5,8 +5,6 @@
     "exclusive": true,
     "modules-left": [
         "hyprland/window",
-        "custom/sep",
-        "hyprland/language"
     ],
     "modules-center": [
         "mpris"
@@ -53,14 +51,14 @@
         "format": "CPU {}%",
         "tooltip": true,
         "tooltip-format": "CPU {}%",
-        "interval": 2
+        "interval": 5
     },
 
     "memory": {
         "format": "RAM {}%",
         "tooltip": true,
         "tooltip-format": "RAM {}%",
-        "interval": 3
+        "interval": 5
     },
 
 }
