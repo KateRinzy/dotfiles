@@ -6,13 +6,19 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/sep",
-        "hyprland/window",
+        "hyprland/window"
+        // "custom/sep",
+        // "mpris"
     ],
     "modules-center": [
         "mpris"
     ],
     "modules-right": [
         "tray",
+        "custom/sep",
+        "cpu",
+        "custom/sep",
+        "memory",
         "custom/sep",
         "pulseaudio",
         "custom/sep",
@@ -26,14 +32,10 @@
     },
     "mpris": {
         "player": "spotify",
+        "max-length": 90,
         "interval": 1,
-        "format": "{status_icon}: {dynamic}",
-        "max-length": 60,
-        "format-paused": "{status_icon}: <i>{dynamic}</i>",
-        "status-icons": {
-            "default": "🎵",
-            "paused": "⏸"
-        }
+        "format": "[{position}/{length} - {artist} - {title}]",
+        "format-paused": "<i>{dynamic}</i>",
     },
     "hyprland/workspaces": {
         "format": "[{name}]",
@@ -64,5 +66,17 @@
         "scroll-step": 2,
         "on-click": "hyprctl dispatch exec pavucontrol",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-    }
+    },
+    "cpu": {
+        "format": "CPU {}%",
+        "tooltip": true,
+        "tooltip-format": "CPU {}%",
+        "interval": 5
+    },
+    "memory": {
+        "format": "RAM {}%",
+        "tooltip": true,
+        "tooltip-format": "RAM {}%",
+        "interval": 5
+    },
 }

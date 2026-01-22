@@ -53,12 +53,10 @@
         "tooltip-format": "CPU {}%",
         "interval": 5
     },
-
     "memory": {
         "format": "RAM {}%",
         "tooltip": true,
         "tooltip-format": "RAM {}%",
         "interval": 5
     },
-
 }

@@ -30,7 +30,8 @@ alias gac="git commit -a"
 alias gacm="git commit -am"
 alias gpush="git push"
 alias gpull="git pull"
-alias gstat="git log --graph --stat"
+alias gl="git log --graph --stat"
+alias glp="git log --graph --stat -p"
 
 alias maple="~/maple2022/bin/xmaple"
 
