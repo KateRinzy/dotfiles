@@ -38,8 +38,9 @@ local mappings = {
     { "n",               "<leader>pv", ":NvimTreeToggle<CR>",                    { desc = "Toggle NvimTree" } },
     { "n",               "<ESC>",      "<CMD>noh<CR>" },
     --
-    { { "n", "v", "x" }, "<M-l>",      "{" },
-    { { "n", "v", "x" }, "<M-u>",      "}" },
+    -- { { "n", "v", "x" }, "<M-l>",      "{" },
+    -- { { "n", "v", "x" }, "<M-u>",      "}" },
+    { {"n", "v" }, "é", "0" },
     --
     { { "n", "v", "x" }, ";",          ":" },
     { { "n", "v", "x" }, ":",          ";" },
