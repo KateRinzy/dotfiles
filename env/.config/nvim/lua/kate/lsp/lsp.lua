@@ -29,10 +29,7 @@ local lsps = {
     { "lemminx", },
     { "zls", },
     { "java_language_server", },
-    {
-        "clangd",
-        { init_options = { fallbackFlags = { "--std=c23" }, }, },
-    },
+    { "clangd", },
     {
         "gopls",
         { filetypes = { "go", "gomod" } }

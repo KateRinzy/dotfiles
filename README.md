@@ -11,5 +11,4 @@
 | scripts      | scripts utiles                            |
 | root         | choses configurées en root                |
 
-### TODO
-- [ ] maybe make a different branch when i use other systems (e.g. NixOS)?
+Wallpapers can be found [here](https://github.com/fuyu147/wallpapers)
