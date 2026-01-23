@@ -108,7 +108,7 @@ end, {})
 
 
 if vim.g.neovide then
-    vim.o.guifont = "IosevkaTerm Nerd Font Mono:h20"
+    vim.o.guifont = "IosevkaTerm Nerd Font Mono:h23"
     vim.g.neovide_opacity = 0.8
     vim.g.transparency = 0.8
     vim.env.PATH = vim.env.PATH .. ':/home/fuyu147/.ghcup/bin:/home/fuyu147/.cabal/bin'
