@@ -6,9 +6,9 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/sep",
-        "hyprland/window"
-        // "custom/sep",
-        // "mpris"
+        "hyprland/window",
+        "custom/sep",
+        "hyprland/language"
     ],
     "modules-center": [
         "mpris"
