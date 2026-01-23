@@ -18,4 +18,4 @@
 can be found [here](https://github.com/fuyu147/wallpapers)
 
 ### keyboard layout
-![Current keyboard layout](assets/current_keyboard_layout.svg)
+Check `assets/current_keyboard_layout.pdf`
