@@ -30,14 +30,14 @@ autocmd({ "BufWritePre" }, {
 })
 
 -- https://swnakamura.github.io/posts/vim-japanese-input/
-autocmd("InsertLeave", {
-    group = kateGroup,
-    pattern = "*",
-    callback = function()
-        vim.system({ "fcitx5-remote", "-c" })
-    end,
-})
-
+-- autocmd("InsertLeave", {
+--     group = kateGroup,
+--     pattern = "*",
+--     callback = function()
+--         vim.system({ "fcitx5-remote", "-c" })
+--     end,
+-- })
+--
 vim.api.nvim_create_autocmd("BufReadCmd", {
     pattern = "*.pdf",
     callback = function()

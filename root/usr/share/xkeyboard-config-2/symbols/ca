@@ -56,7 +56,7 @@ xkb_symbols "fr" {
     key <AB10>  {[  eacute,             Eacute,             dead_acute      ]};
 
     key <SPCE>  {[  space,              space                               ]};
-    key <CAPS>  {[  Escape,             Escape                              ]};
+    key <CAPS>  {[  Caps_Lock,          Caps_Lock                           ]};
 
     include "level3(ralt_switch)"
 };
