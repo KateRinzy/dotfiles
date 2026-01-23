@@ -1,7 +1,7 @@
 // Keyboard layouts for Canada.
 
 default partial
-xkb_symbols "fr" {
+xkb_symbols "basic" {
     name[Group1] = "French (Canada)";
 
     key <TLDE>  {[  numbersign,         bar                                 ]};

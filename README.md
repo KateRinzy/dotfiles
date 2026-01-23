@@ -1,5 +1,8 @@
-# dev setup;
 <sub>J'utilise Arch Linux en passant</sub>
+
+---
+
+# dev setup;
 
 ![Current desktop](assets/screenshot-2026-01-21_20-36-30.png)
 
@@ -11,4 +14,8 @@
 | scripts      | scripts utiles                            |
 | root         | choses configurées en root                |
 
-Wallpapers can be found [here](https://github.com/fuyu147/wallpapers)
+### Wallpapers
+can be found [here](https://github.com/fuyu147/wallpapers)
+
+### keyboard layout
+![Current keyboard layout](assets/current_keyboard_layout.svg)
