@@ -33,10 +33,7 @@ end
 ---@field name string
 ---@field set_first fun() -- usually the dark variant
 ---@field set_second? fun() -- usually the light variant
----@field message_first? string
----@field message_second? string
 
---
 ---@type ColorEntry[]
 local colorsList = {
     {
@@ -63,8 +60,6 @@ local colorsList = {
             current_name = "Chrome"
             current_variant = SECOND
         end,
-        message_first = "Bravo Six, going dark",
-        message_second = "Let there be light!"
     },
     {
         name = "RoséPine",
@@ -101,8 +96,6 @@ local colorsList = {
             current_name = "RoséPine"
             current_variant = SECOND
         end,
-        message_first = "OHHH, pwetty colows",
-        message_second = "hmmmmmmm, pastal"
     },
     {
         name = "ZenBones",
@@ -114,7 +107,6 @@ local colorsList = {
             current_name = "ZenBones"
             current_variant = FIRST
         end,
-        message_first = "zennnnnnnnn my coochie"
     },
     {
         name = "Gruvvy",
@@ -136,7 +128,6 @@ local colorsList = {
             current_name = "Matrix"
             current_variant = FIRST
         end,
-        message_first = "Hacked in!"
     }
 
 }
