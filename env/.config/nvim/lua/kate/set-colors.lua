@@ -55,7 +55,7 @@ local colorsList = {
         set_second = function()
             vim.opt.background = LIGHT
             vim.cmd [[colorscheme monochrome]]
-            vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, fg = "#85746D" })
+            vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, fg = "#0E0E0E" })
             save_theme("Chrome", SECOND)
             current_name = "Chrome"
             current_variant = SECOND
@@ -100,12 +100,22 @@ local colorsList = {
     {
         name = "ZenBones",
         set_first = function()
-            vim.opt.background = "light"
+            vim.opt.background = "dark"
             vim.cmd [[colorscheme zenbones]]
-            vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#E1DCDA" })
+            vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#2B2725" })
+            vim.api.nvim_set_hl(0, "SpellBad", { fg = "#B4BDC3", undercurl = true })
             save_theme("ZenBones", FIRST)
             current_name = "ZenBones"
             current_variant = FIRST
+        end,
+        set_second = function()
+            vim.opt.background = "light"
+            vim.cmd [[colorscheme zenbones]]
+            vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#E1DCDA" })
+            vim.api.nvim_set_hl(0, "SpellBad", { fg = "#2C363C", undercurl = true })
+            save_theme("ZenBones", SECOND)
+            current_name = "ZenBones"
+            current_variant = SECOND
         end,
     },
     {
@@ -128,8 +138,157 @@ local colorsList = {
             current_name = "Matrix"
             current_variant = FIRST
         end,
-    }
+    },
+    {
+        name = "BiChromatic",
+        set_first = function()
+            vim.cmd("highlight clear")
+            if vim.fn.exists("syntax_on") == 1 then
+                vim.cmd("syntax reset")
+            end
 
+            vim.g.colors_name = "bichromatic"
+
+            local bg = "#000000"
+            local fg = "#BBBBBB"
+            local darkGrey = "#111111"
+            local lessGrey = "#222222"
+            local tinyGrey = "#777777"
+
+            local function hi(group, opts)
+                vim.api.nvim_set_hl(0, group, opts)
+            end
+
+            -- Core UI
+            hi("Normal", { fg = fg, bg = bg })
+            hi("NormalNC", { fg = fg, bg = bg })
+            hi("Cursor", { fg = bg, bg = fg })
+            hi("CursorLine", { bg = darkGrey })
+            hi("CursorColumn", { bg = darkGrey })
+            hi("LineNr", { fg = tinyGrey, bg = bg })
+            hi("CursorLineNr", { fg = fg, bg = bg, bold = true })
+            hi("VertSplit", { fg = fg, bg = bg })
+            hi("StatusLine", { fg = fg, bg = bg, bold = true })
+            hi("StatusLineNC", { fg = tinyGrey, bg = bg })
+            hi("TabLine", { fg = tinyGrey, bg = bg })
+            hi("TabLineSel", { fg = fg, bg = bg, bold = true })
+            hi("TabLineFill", { fg = fg, bg = bg })
+
+            -- Popup / floating
+            hi("Pmenu", { fg = fg, bg = bg })
+            hi("PmenuSel", { fg = bg, bg = fg })
+            hi("PmenuSbar", { bg = lessGrey })
+            hi("PmenuThumb", { bg = fg })
+
+            -- Search / visual
+            hi("Search", { fg = bg, bg = fg })
+            hi("IncSearch", { fg = bg, bg = fg, bold = true })
+            hi("Visual", { bg = lessGrey })
+
+            -- Diagnostics
+            hi("Error", { fg = fg, bg = bg, bold = true })
+            hi("ErrorMsg", { fg = fg, bg = bg, bold = true })
+            hi("WarningMsg", { fg = fg, bg = bg })
+            hi("Todo", { fg = bg, bg = fg, bold = true })
+
+            -- Syntax (intentionally flat)
+            hi("Comment", { fg = tinyGrey, italic = true })
+            hi("Constant", { fg = fg })
+            hi("String", { fg = fg })
+            hi("Identifier", { fg = fg })
+            hi("Function", { fg = fg, bold = true })
+            hi("Statement", { fg = fg })
+            hi("Keyword", { fg = fg })
+            hi("Type", { fg = fg })
+            hi("Special", { fg = fg })
+            hi("Delimiter", { fg = fg })
+
+            -- Treesitter (optional but common)
+            hi("@comment", { link = "Comment" })
+            hi("@function", { link = "Function" })
+            hi("@keyword", { link = "Keyword" })
+            hi("@string", { link = "String" })
+            hi("@type", { link = "Type" })
+            hi("@variable", { fg = fg })
+            save_theme("BiChromatic", FIRST)
+            current_name = "BiChromatic"
+            current_variant = FIRST
+        end,
+        set_second = function()
+            vim.cmd("highlight clear")
+            if vim.fn.exists("syntax_on") == 1 then
+                vim.cmd("syntax reset")
+            end
+
+            vim.g.colors_name = "bichromatic"
+
+            local bg          = "#faf6f3"
+            local fg          = "#000000"
+            local lightGrey   = "#eeeeee"
+            local lessGrey    = "#dddddd"
+            local tinyGrey    = "#777777"
+
+            local function hi(group, opts)
+                vim.api.nvim_set_hl(0, group, opts)
+            end
+
+            -- Core UI
+            hi("Normal", { fg = fg, bg = bg })
+            hi("NormalNC", { fg = fg, bg = bg })
+            hi("Cursor", { fg = bg, bg = fg })
+            hi("CursorLine", { bg = lightGrey })
+            hi("CursorColumn", { bg = lightGrey })
+            hi("LineNr", { fg = tinyGrey, bg = bg })
+            hi("CursorLineNr", { fg = fg, bg = bg, bold = true })
+            hi("VertSplit", { fg = fg, bg = bg })
+            hi("StatusLine", { fg = fg, bg = bg, bold = true })
+            hi("StatusLineNC", { fg = tinyGrey, bg = bg })
+            hi("TabLine", { fg = tinyGrey, bg = bg })
+            hi("TabLineSel", { fg = fg, bg = bg, bold = true })
+            hi("TabLineFill", { fg = fg, bg = bg })
+
+            -- Popup / floating
+            hi("Pmenu", { fg = fg, bg = bg })
+            hi("PmenuSel", { fg = bg, bg = fg })
+            hi("PmenuSbar", { bg = lessGrey })
+            hi("PmenuThumb", { bg = fg })
+
+            -- Search / visual
+            hi("Search", { fg = bg, bg = fg })
+            hi("IncSearch", { fg = bg, bg = fg, bold = true })
+            hi("Visual", { bg = lessGrey })
+
+            -- Diagnostics
+            hi("Error", { fg = fg, bg = bg, bold = true })
+            hi("ErrorMsg", { fg = fg, bg = bg, bold = true })
+            hi("WarningMsg", { fg = fg, bg = bg })
+            hi("Todo", { fg = bg, bg = fg, bold = true })
+
+            -- Syntax (intentionally flat)
+            hi("Comment", { fg = tinyGrey, italic = true })
+            hi("Constant", { fg = fg })
+            hi("String", { fg = fg })
+            hi("Identifier", { fg = fg })
+            hi("Function", { fg = fg, bold = true })
+            hi("Statement", { fg = fg })
+            hi("Keyword", { fg = fg })
+            hi("Type", { fg = fg })
+            hi("Special", { fg = fg })
+            hi("Delimiter", { fg = fg })
+
+            -- Treesitter
+            hi("@comment", { link = "Comment" })
+            hi("@function", { link = "Function" })
+            hi("@keyword", { link = "Keyword" })
+            hi("@string", { link = "String" })
+            hi("@type", { link = "Type" })
+            hi("@variable", { fg = fg })
+
+            save_theme("BiChromatic", SECOND)
+            current_name = "BiChromatic"
+            current_variant = SECOND
+        end
+    }
 }
 
 local themes = {}
