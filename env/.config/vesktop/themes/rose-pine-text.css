@@ -58,7 +58,7 @@ body {
 
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
-    --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+    --transparency-tweaks: on; /* off: no changes, on: remove some elements for better transparency */
     --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
     --panel-blur: off; /* off: no changes, on: blur the background of panels */
     --blur-amount: 12px; /* amount of blur */
@@ -94,10 +94,10 @@ body {
     --text-5: hsl(249deg, 12%, 47%); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: hsl(248deg, 25%, 24%); /* dark buttons when clicked */
-    --bg-2: hsl(248deg, 25%, 18%); /* dark buttons */
-    --bg-3: hsl(247deg, 23%, 15%); /* spacing, secondary elements */
-    --bg-4: hsl(249deg, 22%, 12%); /* main background color */
+    --bg-1: hsl(248deg, 25%, 24%, 0.8); /* dark buttons when clicked */
+    --bg-2: hsl(248deg, 25%, 18%, 0.7); /* dark buttons */
+    --bg-3: hsl(247deg, 23%, 15%, 0.9); /* spacing, secondary elements */
+    --bg-4: hsl(249deg, 22%, 12%, 0.5); /* main background color */
     --hover: hsla(250, 20%, 40%, 0.1); /* channels and buttons when hovered */
     --active: hsla(250, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
     --active-2: hsla(250, 20%, 40%, 0.3); /* extra state for transparent buttons */
