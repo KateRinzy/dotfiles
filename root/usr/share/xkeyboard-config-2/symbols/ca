@@ -2,10 +2,10 @@
 
 
 // Disposition de touches basée sur Colemak,
-// Changement principaux:
+// Changements principaux:
 // - présences des touches utiles en programmation tel que (, [, {, }, ] et )
 // sur la ligne des chiffres;
-// - adapté pour l'écriture français.
+// - adapté pour l'écriture française.
 //
 // By Winter L. <winter.leg.147@gmail.com>
 //
