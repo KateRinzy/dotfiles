@@ -4,7 +4,7 @@
 
 # dev setup;
 
-![Current desktop](assets/screenshot-2026-01-21_20-36-30.png)
+![Capture d'écran de mon desktop actuel](assets/screenshot-2026-01-21_20-36-30.png)
 
 | Directoire   | Informations                              |
 | :----------: | :---------------------------------------- |
@@ -15,7 +15,7 @@
 | root         | choses configurées en root                |
 
 ### Wallpapers
-can be found [here](https://github.com/fuyu147/wallpapers)
+Les fonds d'écrans peuvent être trouvés ici: https://github.com/fuyu147/wallpapers
 
 ### keyboard layout
-Check the [.xkb file](root/usr/share/xkeyboard-config-2/symbols/ca)
+Check the .xkb file: root/usr/share/xkeyboard-config-2/symbols/ca
