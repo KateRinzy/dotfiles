@@ -18,5 +18,4 @@
 can be found [here](https://github.com/fuyu147/wallpapers)
 
 ### keyboard layout
-Check [Keyboard Preview](assets/current_keyboard_layout.pdf) and [Keyboard
-.xkb](root/usr/share/xkeyboard-config-2/symbols/ca)
+Check the [.xkb file](root/usr/share/xkeyboard-config-2/symbols/ca)
