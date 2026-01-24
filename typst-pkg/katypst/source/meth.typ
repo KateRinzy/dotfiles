@@ -11,6 +11,10 @@
 }
 
 #let pt(body) = {
+  body
+}
+
+#let ans(body) = {
   align(center, block(
     width: 80%,
     align(left, body),
@@ -59,7 +63,7 @@
     )
   }
   cetz.draw.set-style(
-    stroke: 1pt + color
+    stroke: 1pt + color,
   )
   cetz.draw.line(
     xyz_to_cetz(..origin),

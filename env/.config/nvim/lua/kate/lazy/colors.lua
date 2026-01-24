@@ -4,6 +4,17 @@ return {
     { "folke/tokyonight.nvim" },
     { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
     {
+        "zenbones-theme/zenbones.nvim",
+        dependencies = "rktjmp/lush.nvim",
+        lazy = false,
+        priority = 1000,
+        -- you can set set configuration options here
+        -- config = function()
+        --     vim.g.zenbones_darken_comments = 45
+        --     vim.cmd.colorscheme('zenbones')
+        -- end
+    },
+    {
         'everviolet/nvim',
         name = 'evergarden',
         opts = {

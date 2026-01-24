@@ -29,6 +29,14 @@ local function setMonochrome(background)
     end
 end
 
+local function setZenBonesLight()
+    vim.opt.background = "light"
+    vim.cmd [[colorscheme zenbones]]
+    vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#E1DCDA" })
+    print("zennnnnnnnn my coochie")
+    save_theme("ZenBones")
+end
+
 local function setRoseLight()
     require('rose-pine').setup({
         disable_background = false,
@@ -96,6 +104,9 @@ local themes = {
         vim.cmd [[colorscheme gruvbox]]
         print("OHHH, pwetty colours")
         save_theme("Dusk")
+    end,
+    ZenBones = function()
+        setZenBonesLight()
     end,
     Matrix = function()
         vim.opt.background = "dark"
