@@ -1,152 +1,160 @@
 ---@diagnostic disable: undefined-global
----
+
+DARK = "dark"
+LIGHT = "light"
+
+FIRST = 1
+SECOND = 2
+
 local state_file = vim.fn.stdpath("state") .. "/last_theme"
 
-local function save_theme(name)
-    vim.fn.writefile({ name }, state_file)
+local current_name = nil
+local current_variant = nil
+
+local function save_theme(name, variant)
+    vim.fn.writefile({ name .. "_" .. tostring(variant) }, state_file)
 end
 
 local function load_theme()
     if vim.fn.filereadable(state_file) == 1 then
         local lines = vim.fn.readfile(state_file)
-        return lines[1]
+        local saved = lines[1]
+        local name, variant_str = saved:match("^(.-)_(%d+)$")
+        if name and variant_str then
+            local variant = tonumber(variant_str)
+            current_name = name
+            current_variant = variant
+            return name, variant
+        end
     end
 end
 
-local function setMonochrome(background)
-    vim.opt.background = background
-    vim.cmd [[colorscheme monochrome]]
+---@class ColorEntry
+---@field name string
+---@field set_first fun() -- usually the dark variant
+---@field set_second? fun() -- usually the light variant
+---@field message_first? string
+---@field message_second? string
 
-    if background == "dark" then
-        local fg = "#C4C4C4"
-        local bg = "#101010"
-        vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#ff0000" })
-        vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = "#000000" })
-        vim.api.nvim_set_hl(0, "Comment", { fg = "#333333", bg = "#000000" })
-        vim.api.nvim_set_hl(0, "Visual", { fg = bg, bg = fg })
-    else
-        vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, fg = "#85746D" })
-    end
-end
+--
+---@type ColorEntry[]
+local colorsList = {
+    {
+        name = "Chrome",
+        set_first = function()
+            vim.opt.background = DARK
+            vim.cmd [[colorscheme monochrome]]
 
-local function setZenBonesLight()
-    vim.opt.background = "light"
-    vim.cmd [[colorscheme zenbones]]
-    vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#E1DCDA" })
-    print("zennnnnnnnn my coochie")
-    save_theme("ZenBones")
-end
+            local fg = "#C4C4C4"
+            local bg = "#101010"
+            vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#ff0000" })
+            vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = "#000000" })
+            vim.api.nvim_set_hl(0, "Comment", { fg = "#333333", bg = "#000000" })
+            vim.api.nvim_set_hl(0, "Visual", { fg = bg, bg = fg })
+            save_theme("Chrome", FIRST)
+            current_name = "Chrome"
+            current_variant = FIRST
+        end,
+        set_second = function()
+            vim.opt.background = LIGHT
+            vim.cmd [[colorscheme monochrome]]
+            vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, fg = "#85746D" })
+            save_theme("Chrome", SECOND)
+            current_name = "Chrome"
+            current_variant = SECOND
+        end,
+        message_first = "Bravo Six, going dark",
+        message_second = "Let there be light!"
+    },
+    {
+        name = "RoséPine",
+        set_first = function()
+            require('rose-pine').setup({
+                disable_background = true,
+            })
+            vim.opt.background = DARK
+            vim.cmd [[colorscheme rose-pine-main]]
 
-local function setRoseLight()
-    require('rose-pine').setup({
-        disable_background = false,
-    })
-    vim.opt.background = "light"
-    vim.cmd [[colorscheme rose-pine-dawn]]
+            -- Forcefully enable transparency
+            vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+            vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'NONE' })
+            vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
 
-    -- Forcefully disable transparency
-    local p = require('rose-pine.palette')
-    vim.api.nvim_set_hl(0, 'Normal', { fg = p.text, bg = p.base })
-    vim.api.nvim_set_hl(0, 'NormalNC', { fg = p.subtle, bg = p.base })
-    vim.api.nvim_set_hl(0, 'NormalFloat', { fg = p.text, bg = p.overlay })
+            save_theme("RoséPine", FIRST)
+            current_name = "RoséPine"
+            current_variant = FIRST
+        end,
+        set_second = function()
+            require('rose-pine').setup({
+                disable_background = false,
+            })
+            vim.opt.background = "light"
+            vim.cmd [[colorscheme rose-pine-dawn]]
 
-    print("Let there be light")
-    save_theme("RoseLight")
-end
+            -- Forcefully disable transparency
+            local p = require('rose-pine.palette')
+            vim.api.nvim_set_hl(0, 'Normal', { fg = p.text, bg = p.base })
+            vim.api.nvim_set_hl(0, 'NormalNC', { fg = p.subtle, bg = p.base })
+            vim.api.nvim_set_hl(0, 'NormalFloat', { fg = p.text, bg = p.overlay })
 
-local function setRoseDark()
-    require('rose-pine').setup({
-        disable_background = true,
-    })
-    vim.opt.background = "dark"
-    vim.cmd [[colorscheme rose-pine-main]]
+            save_theme("RoséPine", SECOND)
+            current_name = "RoséPine"
+            current_variant = SECOND
+        end,
+        message_first = "OHHH, pwetty colows",
+        message_second = "hmmmmmmm, pastal"
+    },
+    {
+        name = "ZenBones",
+        set_first = function()
+            vim.opt.background = "light"
+            vim.cmd [[colorscheme zenbones]]
+            vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#E1DCDA" })
+            save_theme("ZenBones", FIRST)
+            current_name = "ZenBones"
+            current_variant = FIRST
+        end,
+        message_first = "zennnnnnnnn my coochie"
+    },
+    {
+        name = "Gruvvy",
+        set_first = function()
+            vim.opt.background = "dark"
+            vim.cmd [[colorscheme gruvbox]]
+            save_theme("Gruvvy", FIRST)
+            current_name = "Gruvvy"
+            current_variant = FIRST
+        end
+    },
+    {
+        name = "Matrix",
+        set_first = function()
+            vim.opt.background = "dark"
+            vim.cmd [[colorscheme matrix]]
+            vim.api.nvim_set_hl(0, "SpellBad", { italic = false, undercurl = true, fg = "#08AE2A" })
+            save_theme("Matrix", FIRST)
+            current_name = "Matrix"
+            current_variant = FIRST
+        end,
+        message_first = "Hacked in!"
+    }
 
-    -- Forcefully enable transparency
-    vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
-    vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'NONE' })
-    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
-
-    print("OHHH, pwetty colours")
-    save_theme("RoseDark")
-end
-
-local themes = {
-    MonoDark = function()
-        setMonochrome("dark")
-        print("Bravo Six, going dark")
-        save_theme("MonoDark")
-    end,
-    MonoLight = function()
-        setMonochrome("light")
-        print("Let there be light")
-        save_theme("MonoLight")
-    end,
-    RoseLight = function()
-        setRoseLight()
-    end,
-    CatLatte = function()
-        vim.opt.background = "light"
-        vim.cmd [[colorscheme catppuccin]]
-        print("kittyyyyy 😊 (batman)")
-        save_theme("CatLatte")
-    end,
-    CatMocha = function()
-        vim.opt.background = "dark"
-        vim.cmd [[colorscheme catppuccin]]
-        print("kittyyyyy 😊 (barbie)")
-        save_theme("CatMocha")
-    end,
-    RoseDark = function()
-        setRoseDark()
-    end,
-    Dusk = function()
-        vim.opt.background = "dark"
-        vim.cmd [[colorscheme gruvbox]]
-        print("OHHH, pwetty colours")
-        save_theme("Dusk")
-    end,
-    ZenBones = function()
-        setZenBonesLight()
-    end,
-    Matrix = function()
-        vim.opt.background = "dark"
-        vim.cmd [[colorscheme matrix]]
-        vim.api.nvim_set_hl(0, "SpellBad", { italic = false, undercurl = true, fg = "#08AE2A" })
-        print("Hacked in!")
-        save_theme("Matrix")
-    end,
-    Garden = function()
-        vim.opt.background = "dark"
-        vim.cmd [[colorscheme evergarden-winter]]
-        print("Touch grass, you whore")
-        save_theme("Garden")
-    end,
-    Dragons = function()
-        vim.opt.background = "dark"
-        vim.cmd [[colorscheme kanagawa-dragon]]
-        print("Here be dragons")
-        save_theme("Dragons")
-    end,
-    Tokyo = function()
-        vim.opt.background = "dark"
-        vim.cmd [[colorscheme tokyonight]]
-        print("とうきょう！！！!")
-        save_theme("Tokyo")
-    end
 }
 
-vim.keymap.set("n", "<leader>tl", function()
-    if vim.o.background == "dark" then
-        setRoseLight()
-    else
-        setRoseDark()
+local themes = {}
+for _, entry in ipairs(colorsList) do
+    themes[entry.name .. "_1"] = entry.set_first
+    if entry.set_second then
+        themes[entry.name .. "_2"] = entry.set_second
     end
-    print("hey")
-end)
+end
 
-local last = load_theme()
-if last and themes[last] then
-    themes[last]()
+local name, variant = load_theme()
+if name and variant then
+    local key = name .. "_" .. variant
+    if themes[key] then
+        themes[key]()
+    end
 end
 
 local pickers = require("telescope.pickers")
@@ -179,3 +187,19 @@ local function pick_theme()
 end
 
 vim.keymap.set("n", "<leader>tt", pick_theme, { desc = "Pick theme" })
+
+vim.keymap.set("n", "<leader>tl", function()
+    if not current_name then return end
+    for _, entry in ipairs(colorsList) do
+        if entry.name == current_name then
+            if entry.set_second then
+                if current_variant == FIRST then
+                    entry.set_second()
+                else
+                    entry.set_first()
+                end
+            end
+            break
+        end
+    end
+end, { desc = "Toggle theme variant" })
