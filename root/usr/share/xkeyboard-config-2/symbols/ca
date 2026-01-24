@@ -3,6 +3,11 @@
 
 // Keyboard layout based on Colemak, modified to have useful keys like ([{}]) on
 // the num row and be more adapted for french
+// Disposition de touches basée sur Colemak,
+// Changement principaux:
+// - présences des touches utiles en programmation tel que (, [, {, }, ] et )
+// sur la ligne des chiffres;
+// - adapté pour l'écriture français.
 //
 // By Winter L. <winter.leg.147@gmail.com>
 //
