@@ -2,7 +2,7 @@
 
 
 // Keyboard layout based on Colemak, modified to have useful keys like ([{}]) on
-// the num row
+// the num row and be more adapted for french
 //
 // By Winter L. <winter.leg.147@gmail.com>
 //
@@ -10,18 +10,19 @@
 // │ |   │ 1   │ 2   │ 3   │ 4   │ 5   │ 6   │ 7   │ 8   │ 9   │ 0   │ _   │ +   ┃ ⌫ Retour┃
 // │ #   │ /   │ (   │ [   │ {   │ '   │ $   │ !   │ }   │ ]   │ )   │ -   │ =   ┃  arrière┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┯━━━━━━━┫
-// ┃       ┃ Q   │ W   │ F   │ P   │ G   │ J   │ L   │ U   │ Y   │ :   │ ◌̈   │ Ç   │  >    ┃
-// ┃Tab ↹  ┃ q   │ w   │ f   │ p   │ g   │ j   │ l   │ u   │ y   │ ;   │ ◌̂   │ ç   │  <    ┃
+// ┃       ┃ Q Œ │ W   │ F   │ P   │ G   │ J   │ L   │ U   │ Y   │ :   │ ◌̈   │ Ç   │  >    ┃
+// ┃Tab ↹  ┃ q œ │ w \ │ f @ │ p ~ │ g — │ j ¥ │ l   │ u   │ y § │ ; ¶ │ ◌̂   │ ç   │  <    ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┲━━━━┷━━━━━━━┫
 // ┃        ┃ A   │ R   │ S   │ T   │ D   │ H   │ N   │ E   │ I   │ O   │ ?   ┃            ┃
-// ┃Maj ⇬   ┃ a   │ r   │ s   │ t   │ d   │ h   │ n   │ e   │ i   │ o   │ ◌̀   ┃ Entrée ⏎   ┃
+// ┃Maj ⇬   ┃ a   │ r % │ s * │ t ^ │ d   │ h   │ n   │ e   │ i   │ o   │ ◌̀   ┃ Entrée ⏎   ┃
 // ┣━━━━━━━━┻━━━━┱┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┻━━━━━━━━━━━━┫
 // ┃             ┃ Z   │ X   │ C   │ V   │ B   │ K   │ M   │ "   │ &   │ É   ┃             ┃
-// ┃Shift ⇧      ┃ z   │ x   │ c   │ v   │ b   │ k   │ m   │ ,   │ .   │ é   ┃Shift ⇧      ┃
-// ┣━━━━━━━┳━━━━━╋━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
+// ┃Shift ⇧      ┃ z « │ x » │ c ° │ v   │ b[1]│ k   │ m µ │ , ◌̄ │ .   │ é ◌́ ┃Shift ⇧      ┃
+// ┣━━━━━━━┳━━━━━┻━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
 // ┃       ┃       ┃       ┃                                   ┃       ┃       ┃       ┃
 // ┃Ctrl   ┃Meta   ┃Alt    ┃ ␣ Espace                        ␣ ┃AltGr ⇮┃Menu   ┃Ctrl   ┃
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┛
+// [1]: espace insécable
 
 default partial
 xkb_symbols "basic" {
@@ -55,7 +56,7 @@ xkb_symbols "basic" {
     key <AD12>  {[  ccedilla,           Ccedilla                            ]};
     key <BKSL>  {[  less,               greater                             ]};
 
-    key <AC01>  {[  a,                  A,                  percent         ]};
+    key <AC01>  {[  a,                  A,                                  ]};
     key <AC02>  {[  r,                  R,                  percent         ]};
     key <AC03>  {[  s,                  S,                  asterisk        ]};
     key <AC04>  {[  t,                  T,                  asciicircum     ]};
@@ -75,7 +76,7 @@ xkb_symbols "basic" {
     key <AB06>  {[  k,                  K                                   ]};
     key <AB07>  {[  m,                  M,                  mu              ]};
     key <AB08>  {[  comma,              quotedbl,           dead_macron     ]};
-    key <AB09>  {[  period,             ampersand,          hyphen          ]};
+    key <AB09>  {[  period,             ampersand,                          ]};
     key <AB10>  {[  eacute,             Eacute,             dead_acute      ]};
 
     key <SPCE>  {[  space,              space                               ]};
