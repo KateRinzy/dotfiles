@@ -129,7 +129,7 @@ sync_diff() {
     sleep 0.5
     {
         cd $WORKSTATION
-        git diff
+        git --no-pager diff
     }
 }
 
@@ -153,10 +153,8 @@ case "$1" in
 "s" | "sync")
     sync_remote "$2"
     ;;
-"d" | "diff")
-    sync_diff
-    ;;
 *)
     sync_files
+    sync_diff
     ;;
 esac

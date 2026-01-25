@@ -32,6 +32,24 @@ local function toggleWrap()
     end
 end
 
+local function telescope_pdf()
+    require('telescope')
+    require("telescope.builtin").find_files({
+        prompt_title = "Find PDF",
+        find_command = { "fd", "--type", "f", "--extension", "pdf" },
+        attach_mappings = function(_, map)
+            map("i", "<CR>", function(prompt_bufnr)
+                local action_state = require("telescope.actions.state")
+                local actions = require("telescope.actions")
+                local selection = action_state.get_selected_entry()
+                actions.close(prompt_bufnr)
+                vim.fn.jobstart({ "zathura", selection.path }, { detach = true })
+            end)
+            return true
+        end,
+    })
+end
+
 local mappings = {
     { "n",               "<C-t>",      "<cmd>silent !tmux-goway<CR>" },
     { "n",               "<C-y>",      "<cmd>silent !tmux neww yazi-tmux<CR>" },
@@ -62,7 +80,8 @@ local mappings = {
     --
     { { "n", "v" },      "<leader>3",  "/" },
     --
-    { "n",               "<leader>tw", toggleWrap }
+    { "n",               "<leader>tw", toggleWrap },
+    { "n",               "<leader>py", telescope_pdf }
 }
 
 for _, value in ipairs(mappings) do

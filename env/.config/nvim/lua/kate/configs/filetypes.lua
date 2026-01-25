@@ -48,39 +48,6 @@ vim.api.nvim_create_autocmd("FileType", {
             local pdf = vim.fn.expand("%:p:r") .. ".pdf"
             vim.fn.jobstart({ "zathura", pdf }, { detach = true })
         end, { buffer = true, desc = "Open PDF" })
-
-        vim.keymap.set("n", "<leader>u", function()
-            local file = vim.fn.expand("%:p:r") .. ".typ"
-            local cmd = { vim.fn.expand("$HOME/Documents/scripts/typst-make"), file }
-            vim.fn.jobstart(cmd, {
-                stdout_buffered = true,
-                stderr_buffered = true,
-                on_stdout = function(_, data)
-                    if data then print(table.concat(data, "\n")) end
-                end,
-                on_stderr = function(_, data)
-                    if data then print(table.concat(data, "\n")) end
-                end,
-            })
-        end, { buffer = true, desc = "Compile using typst-make" })
-
-        require('telescope')
-        vim.keymap.set("n", "<leader>py", function()
-            require("telescope.builtin").find_files({
-                prompt_title = "Find PDF",
-                find_command = { "fd", "--type", "f", "--extension", "pdf" },
-                attach_mappings = function(_, map)
-                    map("i", "<CR>", function(prompt_bufnr)
-                        local action_state = require("telescope.actions.state")
-                        local actions = require("telescope.actions")
-                        local selection = action_state.get_selected_entry()
-                        actions.close(prompt_bufnr)
-                        vim.fn.jobstart({ "zathura", selection.path }, { detach = true })
-                    end)
-                    return true
-                end,
-            })
-        end, {})
     end
 })
 

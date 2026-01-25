@@ -16,6 +16,10 @@ local function save_theme(name, variant)
 end
 
 local function load_theme()
+    vim.cmd("highlight clear")
+    if vim.fn.exists("syntax_on") == 1 then
+        vim.cmd("syntax reset")
+    end
     if vim.fn.filereadable(state_file) == 1 then
         local lines = vim.fn.readfile(state_file)
         local saved = lines[1]
@@ -45,9 +49,6 @@ local colorsList = {
             local fg = "#C4C4C4"
             local bg = "#101010"
             vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#ff0000" })
-            vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = "#000000" })
-            vim.api.nvim_set_hl(0, "Comment", { fg = "#333333", bg = "#000000" })
-            vim.api.nvim_set_hl(0, "Visual", { fg = bg, bg = fg })
             save_theme("Chrome", FIRST)
             current_name = "Chrome"
             current_variant = FIRST

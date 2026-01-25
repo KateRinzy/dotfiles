@@ -106,6 +106,11 @@ vim.api.nvim_create_user_command("ModeTTY", function()
     vim.cmd("set termguicolors&")
 end, {})
 
+vim.api.nvim_create_user_command("OpenFirefox", function()
+    vim.cmd [[!firefox %]]
+end, {})
+
+
 
 if vim.g.neovide then
     vim.o.guifont = "IosevkaTerm Nerd Font Mono:h23"
