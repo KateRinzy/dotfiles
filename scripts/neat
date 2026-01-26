@@ -45,6 +45,7 @@ pkgs=(
     # cinnamon
     ckb-next
     clang
+    realtime-privileges
     cliphist
     # cuda
     discord

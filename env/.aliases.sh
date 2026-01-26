@@ -35,6 +35,11 @@ alias glp="git log --graph --stat -p"
 
 alias maple="~/maple2022/bin/xmaple"
 
+nowtext() {
+    local today=$(date +"%Y %m %d")
+    nvim "$today.txt"
+}
+
 psk() {
     for str in "$@"; do
         printf "%-15s %.2f GB\n" "$str" "$(ps -o rss= -p $(pgrep $str) | awk '{s+=$1} END {print s / (1024*1024)}')"

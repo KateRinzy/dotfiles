@@ -49,6 +49,9 @@ local colorsList = {
             local fg = "#C4C4C4"
             local bg = "#101010"
             vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#ff0000" })
+            vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = "#000000" })
+            vim.api.nvim_set_hl(0, "Comment", { fg = "#333333", bg = "#000000" })
+            vim.api.nvim_set_hl(0, "Visual", { fg = bg, bg = fg })
             save_theme("Chrome", FIRST)
             current_name = "Chrome"
             current_variant = FIRST
@@ -104,7 +107,7 @@ local colorsList = {
             vim.opt.background = "dark"
             vim.cmd [[colorscheme zenbones]]
             vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#2B2725" })
-            vim.api.nvim_set_hl(0, "SpellBad", { fg = "#B4BDC3", undercurl = true })
+            vim.api.nvim_set_hl(0, "SpellBad", { fg = "#B3BCC2", undercurl = true })
             save_theme("ZenBones", FIRST)
             current_name = "ZenBones"
             current_variant = FIRST
