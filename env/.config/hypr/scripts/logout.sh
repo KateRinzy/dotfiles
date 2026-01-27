@@ -1,15 +1,12 @@
 #!/usr/bin/env bash
 
-selection="Lock
+selection="Suspend & Lock
 Suspend
-Suspend & Lock
 Shutdown"
 
 selected=$(echo "$selection" | rofi -i -show -dmenu)
 
-if [[ "$selected" == "Lock" ]]; then
-    hyprlock
-elif [[ "$selected" == "Suspend" ]]; then
+if [[ "$selected" == "Suspend" ]]; then
     systemctl suspend
 elif [[ "$selected" == "Suspend & Lock" ]]; then
     hyprlock &

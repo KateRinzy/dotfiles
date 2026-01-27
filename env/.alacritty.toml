@@ -2,8 +2,8 @@
 working_directory = "/home/fuyu147/desk"
 
 [window]
-opacity = 0.9
-blur = true
+opacity = 1
+# blur = true
 
 [font]
 # normal = { family = "IosevkaTerm NFM", style = "Regular" }

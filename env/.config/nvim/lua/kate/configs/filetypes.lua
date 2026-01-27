@@ -72,6 +72,26 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "md", "markdown" },
+    callback = function()
+        vim.o.spell = true
+        vim.opt.spelllang = { "en", "fr", "cjk" }
+
+        vim.o.colorcolumn = "120"
+        vim.o.textwidth = 120
+
+        vim.o.wrap = false
+        vim.o.sidescrolloff = 0
+
+        local width = 8
+        vim.o.shiftwidth = width
+        vim.o.tabstop = width
+        vim.o.softtabstop = width
+        vim.o.expandtab = true
+    end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
     pattern = { "odin", "go" },
     callback = function()
         -- keep tabs instead of spaces
