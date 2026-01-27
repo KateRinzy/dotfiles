@@ -3,6 +3,7 @@ return {
     { "iruzo/matrix-nvim" },
     { "folke/tokyonight.nvim" },
     { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
+    { "rose-pine/neovim",        name = "rose-pine", },
     {
         "zenbones-theme/zenbones.nvim",
         dependencies = "rktjmp/lush.nvim",
@@ -64,15 +65,6 @@ return {
                 transparent_mode = false,
             })
         end,
-    },
-    {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        config = function()
-            require('rose-pine').setup({
-                disable_background = true,
-            })
-        end
     },
     {
         "rebelot/kanagawa.nvim",
