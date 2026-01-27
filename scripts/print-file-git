@@ -3,15 +3,24 @@
 set -euo pipefail
 
 filepath="$1"
-start="$2"
-end="$3"
+start="${2:-}"
+end="${3:-}"
 
-# Basic argument validation
 if [[ ! -f "$filepath" ]]; then
     echo "Error: file not found: $filepath" >&2
     exit 1
 fi
 
+total_lines=$(wc -l <"$filepath")
+
+# If start/end are not provided, print the whole file
+if [[ -z "$start" || -z "$end" ]]; then
+    printf "@@ 1,%d @@\n" "$total_lines"
+    nl -ba "$filepath" | sed 's/^/ /'
+    exit 0
+fi
+
+# Validate numeric input
 if ! [[ "$start" =~ ^[0-9]+$ && "$end" =~ ^[0-9]+$ ]]; then
     echo "Error: start and end must be positive integers" >&2
     exit 1
@@ -26,8 +35,6 @@ if ((end < start)); then
     echo "Error: end must be >= start" >&2
     exit 1
 fi
-
-total_lines=$(wc -l <"$filepath")
 
 if ((start > total_lines)); then
     echo "Error: start exceeds file length ($total_lines)" >&2
