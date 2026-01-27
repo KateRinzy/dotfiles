@@ -1,32 +1,19 @@
 #!/usr/bin/env bash
 
 aur=(
-    anki-bin
-    brave-bin
-    cnijfilter2 # canon printer drivers
+    cnijfilter2
     downgrade
-    evince-no-gnome
-    fcitx5-mozc-ut
-    gemini-cli
-    nitrogen
-    localsend-bin # share files locally
-    lorien-bin
+    localsend-bin
     minecraft-launcher
-    protontricks # needed it to install webview for Forza Horizon
-    # quickshell
-    # r2modman-bin # thunderstore thing for linux
+    protontricks
+    awww-git
     rose-pine-cursor
     spicetify-cli
-    spotdl
-    # thorium-browser-bin
-    timg # view img in terminal
-    # ttf-comic-sans
+    thorium-browser-bin
     ttf-iosevka-term
     vesktop-bin
     visual-studio-code-bin
-    wlogout
-    wlrobs # plugin for OBS to record in wayland
-    # zen-browser-bin
+    wlrobs
 )
 
 pkgs=(
@@ -34,40 +21,26 @@ pkgs=(
     aspnet-runtime
     base-devel
     bat
-    polybar
     breeze
     breeze5
     brightnessctl
     btop
     bun
-    cantor
     chafa
-    # cinnamon
     ckb-next
     clang
     realtime-privileges
     cliphist
-    # cuda
     discord
     dotnet-runtime
     dotnet-sdk
-    gamescope
     dunst
-    # elixir
-    # erlang
-    eza
     eza
     fastfetch
-    fcitx5-chinese-addons
-    fcitx5-configtool
-    fcitx5-gtk
     fd
     firefox
     fzf
-    fzf
     gedit
-    geogebra
-    ghostty
     ghostty
     gimp
     git
@@ -78,7 +51,6 @@ pkgs=(
     gnome-keyring
     gnome-weather
     go
-    godot-mono
     gopls
     grim
     gtk-engine-murrine
@@ -93,24 +65,16 @@ pkgs=(
     jdk-openjdk
     jq
     keyd
-    keyd
     kitty
     komikku
     lazygit
     libreoffice-still
     loupe
-    loupe # gnome's image viewer
     lua
-    # maven
-    # mercurial
-    # ncdu   # WinDirStat like tool
-    # ncspot # TUI for spotify
-    # ncurses
+    ncdu # WinDirStat like tool
     neovim
     networkmanager
     network-manager-applet
-    network-manager-applet
-    # niri
     node
     noto-fonts
     noto-fonts-cjk
@@ -118,14 +82,12 @@ pkgs=(
     nvtop
     nwg-look
     obs-studio
-    odin
     openrgb
     pandoc-cli
     pavucontrol
     php
     power-profiles-daemon
     prismlauncher
-    proton-vpn-gtk-app
     qalculate-gtk
     qbittorrent
     qt5ct
@@ -145,25 +107,10 @@ pkgs=(
     spotify-launcher
     steam
     steam-native-runtime
-    swww
     tesseract
     tesseract-data-chi_sim
     tesseract-data-eng
     tesseract-data-jpn
-    texlive-basic
-    texlive-bibtexextra
-    texlive-binextra
-    texlive-fontsrecommended
-    texlive-lang
-    texlive-latex
-    texlive-latexextra
-    texlive-latexrecommended
-    texlive-luatex
-    texlive-mathscience
-    texlive-plaingeneric
-    texlive-xetex
-    thefuck
-    thunar
     thunar
     thunar-volman # dependency for Thunar's volume management
     thunderbird
@@ -177,7 +124,6 @@ pkgs=(
     vlc
     vlc-plugins-all
     vlc-plugin-x264
-    waybar
     waybar
     wev
     wine
@@ -200,8 +146,8 @@ case "$1" in
     nvim "$0"
     ;;
 *)
-    paru -Syu
-    paru -S --needed "${pkgs[@]}"
-    paru -S --needed "${aur[@]}"
+    yay -Syu
+    yay -S --needed "${pkgs[@]}"
+    yay -S --needed "${aur[@]}"
     ;;
 esac
