@@ -1,9 +1,11 @@
 searchpaths = [
     "~/art/",
     "~/notes/",
+    "~/vault/",
     "~/book/",
     "~/repos/",
     "~/cours/",
+    "~/cours/H2026-projet-informatique",
     "~/dotfiles/",
     "~/wallpapers/",
     "~/Documents/",
