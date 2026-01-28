@@ -65,7 +65,7 @@
     border: none;
     font-family: "IosevkaTerm NFM", "Courier Prime Code", "Noto Sans CJK JP";
     font-size: 16pt;
-    background: none;
+    background: @bg;
 }
 
 window#waybar {
@@ -111,6 +111,10 @@ tooltip * {
 
 #temperature {
     color: @yellow;
+}
+
+#battery {
+    color: @highlight;
 }
 
 #clock {

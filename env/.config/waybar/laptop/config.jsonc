@@ -8,9 +8,6 @@
         "custom/sep",
         "hyprland/window",
         "custom/sep",
-        "hyprland/language"
-    ],
-    "modules-center": [
         "mpris"
     ],
     "modules-right": [
@@ -19,6 +16,8 @@
         "cpu",
         "custom/sep",
         "memory",
+        "custom/sep",
+        "disk",
         "custom/sep",
         "pulseaudio",
         "custom/sep",
@@ -51,32 +50,41 @@
     "hyprland/language": {
         "format": "[{}]"
     },
-    "clock": {
-        "tooltip": true,
-        "format": "{:%y/%m/%d :: %H:%M}"
-    },
     "tray": {
         "icon-size": 24,
         "show-passive-items": "true"
     },
     "pulseaudio": {
-        "format": "{volume}",
-        "format-bluetooth": " {volume}%",
-        "format-muted": "",
+        "format": "VOL [{volume}%]",
+        "format-bluetooth": "VOL [ {volume}%]",
+        "format-muted": "VOL []",
         "scroll-step": 2,
         "on-click": "hyprctl dispatch exec pavucontrol",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     },
+    "clock": {
+        "tooltip": true,
+        "format": "TIME [{:%y:%m:%d - %H%M}]"
+    },
+    "battery": {
+        "format": "BAT [{capacity}%]",
+        "interval": 120
+    },
     "cpu": {
-        "format": "CPU {}%",
+        "format": "CPU [{}%]",
         "tooltip": true,
         "tooltip-format": "CPU {}%",
         "interval": 5
     },
     "memory": {
-        "format": "RAM {}%",
+        "format": "RAM [{}%]",
         "tooltip": true,
         "tooltip-format": "RAM {}%",
         "interval": 5
     },
+    "disk": {
+        "format": "DISK [{percentage_used}%]",
+        "interval": 360,
+        "path": "/"
+    }
 }

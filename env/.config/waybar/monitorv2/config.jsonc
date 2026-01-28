@@ -16,6 +16,8 @@
         "custom/sep",
         "memory",
         "custom/sep",
+        "disk",
+        "custom/sep",
         "clock",
         "custom/sep"
     ],
@@ -29,7 +31,7 @@
     "mpris": {
         "player": "spotify",
         "interval": 1,
-        "format": "{status_icon}: {dynamic}",
+        "format": "[{status_icon}: {dynamic}]",
         "format-paused": "{status_icon}: <i>{dynamic}</i>",
         "status-icons": {
             "default": "🎵",
@@ -39,24 +41,29 @@
     "custom/sep": {
         "format": "   "
     },
-    "clock": {
-        "tooltip": true,
-        "format": "{:%y:%m:%d - %H%M}"
-    },
     "tray": {
         "icon-size": 12,
         "show-passive-items": "true"
     },
+    "clock": {
+        "tooltip": true,
+        "format": "TIME [{:%y:%m:%d - %H%M}]"
+    },
     "cpu": {
-        "format": "CPU {}%",
+        "format": "CPU [{}%]",
         "tooltip": true,
         "tooltip-format": "CPU {}%",
         "interval": 5
     },
     "memory": {
-        "format": "RAM {}%",
+        "format": "RAM [{}%]",
         "tooltip": true,
         "tooltip-format": "RAM {}%",
         "interval": 5
     },
+    "disk": {
+        "format": "DISK [{percentage_used}%]",
+        "interval": 360,
+        "path": "/"
+    }
 }
