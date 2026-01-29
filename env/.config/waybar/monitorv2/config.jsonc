@@ -29,7 +29,7 @@
         "format": "[{}]"
     },
     "mpris": {
-        "player": "spotify",
+        "ignored-players": ["firefox"],
         "interval": 1,
         "format": "[{artist} - {title} - {position}/{length}]",
         "format-paused": "[<i>{artist} - {title}</i>]",

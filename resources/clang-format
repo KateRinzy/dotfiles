@@ -1,6 +1,7 @@
+# Based on Microsoft style
 ---
 Language:        Cpp
-AccessModifierOffset: -2
+AccessModifierOffset: -8
 
 AlignAfterOpenBracket: Align
 AlignConsecutiveMacros: true

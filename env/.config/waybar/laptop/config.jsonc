@@ -30,7 +30,7 @@
         "format": "   "
     },
     "mpris": {
-        "player": "spotify",
+        "ignored-players": ["firefox"],
         "max-length": 90,
         "interval": 1,
         "format": "[{artist} - {title} - {position}/{length}]",
