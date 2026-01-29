@@ -6,9 +6,10 @@ opacity = 1
 # blur = true
 
 [font]
-# normal = { family = "IosevkaTerm NFM", style = "Regular" }
-normal = { family = "Monaspace Krypton NF", style = "Regular" }
-size = 20
+normal = { family = "IosevkaTerm NFM", style = "Regular" }
+# normal = { family = "Monaspace Krypton NF", style = "Regular" }
+# normal = { family = "Comic Mono", style = "Regular" }
+size = 22
 
 
 # taken from:

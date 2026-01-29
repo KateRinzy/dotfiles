@@ -18,11 +18,11 @@ bufferline.setup {
     }
 }
 
-for i = 1, 9 do
-    vim.keymap.set("n", "<A-" .. i .. ">", function()
-        bufferline.go_to(i, true) -- (index, focus)
-    end, { silent = true, desc = "Go to Bufferline tab " .. i })
-end
+-- for i = 1, 9 do
+--     vim.keymap.set("n", "<A-" .. i .. ">", function()
+--         bufferline.go_to(i, true) -- (index, focus)
+--     end, { silent = true, desc = "Go to Bufferline tab " .. i })
+-- end
 
 vim.keymap.set("n", "<C-n>", function()
     bufferline.go_to(1, true)

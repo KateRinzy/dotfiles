@@ -31,8 +31,8 @@
     "mpris": {
         "player": "spotify",
         "interval": 1,
-        "format": "[{status_icon}: {dynamic}]",
-        "format-paused": "{status_icon}: <i>{dynamic}</i>",
+        "format": "[{artist} - {title} - {position}/{length}]",
+        "format-paused": "[<i>{artist} - {title}</i>]",
         "status-icons": {
             "default": "🎵",
             "paused": "⏸"

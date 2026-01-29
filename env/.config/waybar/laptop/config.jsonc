@@ -33,8 +33,8 @@
         "player": "spotify",
         "max-length": 90,
         "interval": 1,
-        "format": "[{position}/{length} - {artist} - {title}]",
-        "format-paused": "<i>{dynamic}</i>",
+        "format": "[{artist} - {title} - {position}/{length}]",
+        "format-paused": "[<i>{artist} - {title}</i>]",
     },
     "hyprland/workspaces": {
         "format": "[{name}]",
