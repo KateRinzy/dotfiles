@@ -26,6 +26,7 @@ pkgs=(
     brightnessctl
     btop
     bun
+    mpd
     chafa
     ckb-next
     clang
@@ -40,6 +41,7 @@ pkgs=(
     fd
     firefox
     fzf
+    ncmpcpp
     gedit
     ghostty
     gimp

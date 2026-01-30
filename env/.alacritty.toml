@@ -8,8 +8,8 @@ opacity = 1
 [font]
 # normal = { family = "IosevkaTerm NFM", style = "Regular" }
 # normal = { family = "Monaspace Krypton NF", style = "Regular" }
-# normal = { family = "Comic Mono", style = "Regular" }
-normal = { family = "Courier Prime Code", style = "Regular" }
+normal = { family = "Comic Mono", style = "Regular" }
+# normal = { family = "Courier Prime Code", style = "Regular" }
 size = 22
 
 
@@ -88,3 +88,8 @@ blue = "#9ccfd8"
 magenta = "#c4a7e7"
 cyan = "#ebbcba"
 white = "#e0def4"
+
+[keyboard]
+bindings = [
+    { key = ")", mods = "Control", mode = "AppCursor", action = "ResetFontSize" },
+]
