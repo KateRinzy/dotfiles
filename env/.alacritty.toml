@@ -2,14 +2,15 @@
 working_directory = "/home/fuyu147/desk"
 
 [window]
-opacity = 1
+opacity = 0.9
 # blur = true
+dynamic_padding = true
 
 [font]
 # normal = { family = "IosevkaTerm NFM", style = "Regular" }
 # normal = { family = "Monaspace Krypton NF", style = "Regular" }
-normal = { family = "Comic Mono", style = "Regular" }
-# normal = { family = "Courier Prime Code", style = "Regular" }
+# normal = { family = "Comic Mono", style = "Regular" }
+normal = { family = "Courier Prime Code", style = "Regular" }
 size = 22
 
 

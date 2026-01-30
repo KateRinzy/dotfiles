@@ -12,6 +12,18 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "rst" },
+    callback = function()
+        local width = 2
+        vim.o.shiftwidth = width
+        vim.o.tabstop = width
+        vim.o.softtabstop = width
+        vim.o.expandtab = true
+        vim.o.colorcolumn = "80"
+    end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
     pattern = { "c", "h", "cpp", "cc" },
     callback = function()
         local width = 8
@@ -77,13 +89,13 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.o.spell = true
         vim.opt.spelllang = { "en", "fr", "cjk" }
 
-        vim.o.colorcolumn = "120"
-        vim.o.textwidth = 120
+        vim.o.colorcolumn = "80"
+        vim.o.textwidth = 80
 
         vim.o.wrap = false
         vim.o.sidescrolloff = 0
 
-        local width = 8
+        local width = 2
         vim.o.shiftwidth = width
         vim.o.tabstop = width
         vim.o.softtabstop = width
