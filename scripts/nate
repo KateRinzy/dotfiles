@@ -63,6 +63,10 @@ sync_files() {
     cp $CP_FLAGS ~/.config/Code/User/settings.json $WORKSTATION/resources/Code
     cp $CP_FLAGS ~/.config/Code/User/keybindings.json $WORKSTATION/resources/Code
 
+    echo "Copying rmpc settings"
+    cp $CP_FLAGS ~/.config/rmpc/config.ron $WORKSTATION/resources/rmpc/
+    cp $CP_FLAGS ~/.config/rmpc/theme/winlog.ron $WORKSTATION/resources/rmpc/themes/
+
     echo "Copying vscode-oss user settings"
     cp $CP_FLAGS ~/.config/Code\ -\ OSS/User/settings.json $WORKSTATION/resources/Code\ -\ OSS
     cp $CP_FLAGS ~/.config/Code\ -\ OSS/User/keybindings.json $WORKSTATION/resources/Code\ -\ OSS
