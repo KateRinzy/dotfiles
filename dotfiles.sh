@@ -5,6 +5,7 @@ confs=(
     fastfetch
     ghostty
     hyfetch.json
+    qutebrowser
     hypr
     i3
     kitty
