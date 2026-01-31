@@ -9,47 +9,67 @@
     layout: Split(
         direction: Vertical,
         panes: [
+            (pane: Pane(Header), size: "1"),
             (
-                pane: Pane(Header),
+                pane: Pane(
+                    Property(
+                        content: [
+                            (kind: Property(Song(Filename)), style: (fg: "#eb6f92")),
+                            (kind: Text(" :: ")),
+                            (kind: Property(Status(Elapsed))),
+                            (kind: Text(" / ")),
+                            (kind: Property(Status(Duration))),
+                        ],
+                        align: Left,
+                    )
+                ),
                 size: "1",
             ),
             (
-                pane: Pane(Tabs),
+                pane: Pane(Property(
+                    content: [(kind: Text(""))],
+                    align: Left,
+                )),
                 size: "1",
             ),
-            (
-                pane: Pane(TabContent),
-                size: "100%",
-            ),
-            (
-                pane: Pane(ProgressBar),
-                size: "1",
-            ),
+            (pane: Pane(Tabs), size: "1"),
+            (pane: Pane(TabContent), size: "100%"),
+            (pane: Pane(ProgressBar), size: "1"),
         ],
     ),
+
     progress_bar: (
         symbols: ["", "", "⭘", " ", " "],
-        track_style: (bg: "#1e2030"),
-        elapsed_style: (fg: "#c6a0f6", bg: "#1e2030"),
-        thumb_style: (fg: "#c6a0f6", bg: "#1e2030"),
+        track_style: (bg: "#1f1d2e"),          // surface
+        elapsed_style: (fg: "#c4a7e7", bg: "#1f1d2e"), // iris
+        thumb_style:   (fg: "#c4a7e7", bg: "#1f1d2e"),
     ),
+
     scrollbar: (
         symbols: ["│", "█", "▲", "▼"],
         track_style: (),
         ends_style: (),
-        thumb_style: (fg: "#b7bdf8"),
+        thumb_style: (fg: "#9ccfd8"), // foam
     ),
+
     browser_column_widths: [20, 38, 42],
-    text_color: "#cad3f5",
-    background_color: "#24273a",
-    header_background_color: "#1e2030",
+
+    text_color: "#e0def4",          // text
+    background_color: "#191724",    // base
+    header_background_color: "#1f1d2e", // surface
     modal_background_color: None,
     modal_backdrop: false,
-    tab_bar: (active_style: (fg: "black", bg: "#c6a0f6", modifiers: "Bold"), inactive_style: ()),
-    borders_style: (fg: "#6e738d"),
-    highlighted_item_style: (fg: "#c6a0f6", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "#b7bdf8", modifiers: "Bold"),
-    highlight_border_style: (fg: "#b7bdf8"),
+
+    tab_bar: (
+        active_style: (fg: "black", bg: "#c4a7e7", modifiers: "Bold"),
+        inactive_style: (),
+    ),
+
+    borders_style: (fg: "#6e6a86"), // muted
+    highlighted_item_style: (fg: "#ebbcba", modifiers: "Bold"), // rose
+    current_item_style: (fg: "black", bg: "#9ccfd8", modifiers: "Bold"), // foam
+    highlight_border_style: (fg: "#9ccfd8"),
+
     song_table_format: [
         (
             prop: (kind: Property(Filename),
@@ -65,25 +85,21 @@
             alignment: Center,
         ),
     ],
+
     header: (
         rows: [
             (
                 left: [
-                    (kind: Text("["), style: (fg: "#b7bdf8", modifiers: "Bold")),
-                    (kind: Property(Status(State)), style: (fg: "#b7bdf8", modifiers: "Bold")),
-                    (kind: Text("]"), style: (fg: "#b7bdf8", modifiers: "Bold"))
+                    (kind: Text("["), style: (fg: "#c4a7e7", modifiers: "Bold")),
+                    (kind: Property(Status(State)), style: (fg: "#c4a7e7", modifiers: "Bold")),
+                    (kind: Text("]"), style: (fg: "#c4a7e7", modifiers: "Bold")),
                 ],
-                center: [
-                    (
-                        kind: Property(Song(Filename)),
-                        style: (fg: "#eed49f", modifiers: "Bold"),
-                    ),
-                ],
+                center: [],
                 right: [
-                    (kind: Text("Vol: "), style: (fg: "#b7bdf8", modifiers: "Bold")),
-                    (kind: Property(Status(Volume)), style: (fg: "#b7bdf8", modifiers: "Bold")),
-                    (kind: Text("% "), style: (fg: "#b7bdf8", modifiers: "Bold"))
-                ]
+                    (kind: Text("Vol: "), style: (fg: "#c4a7e7", modifiers: "Bold")),
+                    (kind: Property(Status(Volume)), style: (fg: "#c4a7e7", modifiers: "Bold")),
+                    (kind: Text("% "), style: (fg: "#c4a7e7", modifiers: "Bold")),
+                ],
             )
         ],
     ),
