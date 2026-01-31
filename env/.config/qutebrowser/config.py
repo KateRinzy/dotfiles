@@ -86,6 +86,7 @@ c.url.start_pages = "https://github.com/fuyu147"
 c.url.default_page = "https://github.com/fuyu147"
 
 c.tabs.title.format = "{audio}{current_title}"
+c.tabs.position = 'left'
 
 c.url.searchengines = {
 # note - if you use duckduckgo, you can make use of its built in bangs, of which there are many! https://duckduckgo.com/bangs

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 aur=(
+    calcure
     cnijfilter2
     downgrade
     localsend-bin

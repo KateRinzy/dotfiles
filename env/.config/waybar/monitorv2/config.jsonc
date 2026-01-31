@@ -5,6 +5,7 @@
     "exclusive": true,
     "modules-left": [
         "hyprland/window",
+        "mpd"
     ],
     "modules-center": [
         "mpris"
@@ -37,6 +38,9 @@
             "default": "🎵",
             "paused": "⏸"
         }
+    },
+    "mpd": {
+        "format": "{filename} - {elapsedTime}/{totalTime}"
     },
     "custom/sep": {
         "format": "   "
