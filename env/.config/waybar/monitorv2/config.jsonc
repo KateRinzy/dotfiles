@@ -5,6 +5,7 @@
     "exclusive": true,
     "modules-left": [
         "hyprland/window",
+        "custom/sep",
         "mpd"
     ],
     "modules-center": [
@@ -40,7 +41,7 @@
         }
     },
     "mpd": {
-        "format": "{filename} - {elapsedTime}/{totalTime}"
+        "format": "[{filename} - {elapsedTime:%M:%S}/{totalTime:%M:%S}]"
     },
     "custom/sep": {
         "format": "   "

@@ -15,8 +15,8 @@
 
 body {
     /* font, change to '' for default discord font */
-    --font: 'DM Mono'; /* change to '' for default discord font */
-    --code-font: 'DM Mono'; /* change to '' for default discord font */
+    --font: 'Comic Mono'; /* change to '' for default discord font */
+    --code-font: 'IosevkaTerm Nerd Font Mono'; /* change to '' for default discord font */
     font-weight: 300; /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
     letter-spacing: -0.05ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
 
@@ -45,7 +45,7 @@ body {
     --custom-dms-icon: hide; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
     --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-before: var(--icon-subtle); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
     --custom-dms-background: image; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
     --dms-background-image-url: url('https://raw.githubusercontent.com/rose-pine/rose-pine-theme/main/assets/icon.png'); /* url of the background image */
@@ -94,10 +94,10 @@ body {
     --text-5: hsl(249deg, 12%, 47%); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: hsl(248deg, 25%, 24%, 0.8); /* dark buttons when clicked */
-    --bg-2: hsl(248deg, 25%, 18%, 0.7); /* dark buttons */
-    --bg-3: hsl(247deg, 23%, 15%, 0.9); /* spacing, secondary elements */
-    --bg-4: hsl(249deg, 22%, 12%, 0.5); /* main background color */
+    --bg-1: hsl(248deg, 25%, 24%, 75%); /* dark buttons when clicked */
+    --bg-2: hsl(248deg, 25%, 18%, 75%); /* dark buttons */
+    --bg-3: hsl(247deg, 23%, 15%, 75%); /* spacing, secondary elements */
+    --bg-4: hsl(249deg, 22%, 12%, 75%); /* main background color */
     --hover: hsla(250, 20%, 40%, 0.1); /* channels and buttons when hovered */
     --active: hsla(250, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
     --active-2: hsla(250, 20%, 40%, 0.3); /* extra state for transparent buttons */

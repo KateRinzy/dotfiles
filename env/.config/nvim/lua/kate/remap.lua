@@ -81,6 +81,7 @@ local mappings = {
     { { "n", "v" },      "<leader>3",  "/" },
     --
     { "n",               "<leader>tw", toggleWrap },
+    { "n",               "<leader>tm", "<CMD>Markview<CR>" },
     { "n",               "<leader>py", telescope_pdf }
 }
 

@@ -5,26 +5,18 @@
     "height": 32,
     "modules-left": [
         "hyprland/workspaces",
-        "custom/sep",
         "hyprland/window",
-        "custom/sep",
-        "mpris"
+        "mpris",
+        "mpd"
     ],
     "modules-right": [
         "tray",
-        "custom/sep",
         "cpu",
-        "custom/sep",
         "memory",
-        "custom/sep",
         "disk",
-        "custom/sep",
         "pulseaudio",
-        "custom/sep",
         "clock",
-        "custom/sep",
-        "battery",
-        "custom/sep"
+        "battery"
     ],
     "custom/sep": {
         "format": "   "
@@ -35,6 +27,10 @@
         "interval": 1,
         "format": "[{artist} - {title} - {position}/{length}]",
         "format-paused": "[<i>{artist} - {title}</i>]",
+    },
+    "mpd": {
+        "format": "[{filename} - {elapsedTime:%M:%S}/{totalTime:%M:%S}]",
+        "max-length": 50
     },
     "hyprland/workspaces": {
         "format": "[{name}]",
@@ -55,35 +51,35 @@
         "show-passive-items": "true"
     },
     "pulseaudio": {
-        "format": "VOL [{volume}%]",
-        "format-bluetooth": "VOL [ {volume}%]",
-        "format-muted": "VOL []",
+        "format": "[V]",
+        "format-bluetooth": "[V(B)]",
+        "format-muted": "[M]",
         "scroll-step": 2,
         "on-click": "hyprctl dispatch exec pavucontrol",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     },
     "clock": {
         "tooltip": true,
-        "format": "TIME [{:%y:%m:%d - %H%M}]"
+        "format": "[{:%y:%m:%d - %H%M}]"
     },
     "battery": {
-        "format": "BAT [{capacity}%]",
+        "format": "[B{capacity}%]",
         "interval": 120
     },
     "cpu": {
-        "format": "CPU [{}%]",
+        "format": "[C{}%]",
         "tooltip": true,
         "tooltip-format": "CPU {}%",
         "interval": 5
     },
     "memory": {
-        "format": "RAM [{}%]",
+        "format": "[R{}%]",
         "tooltip": true,
         "tooltip-format": "RAM {}%",
         "interval": 5
     },
     "disk": {
-        "format": "DISK [{percentage_used}%]",
+        "format": "[D{percentage_used}%]",
         "interval": 360,
         "path": "/"
     }

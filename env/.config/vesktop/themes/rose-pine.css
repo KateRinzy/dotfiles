@@ -7,14 +7,14 @@
 * @updateUrl https://github.com/rose-pine/discord/blob/rose-pine.theme.css
 */
 
-/* 
+/*
 CONFIGURATION 📝‼️
 */
 
 :root {
     /* 1=False ; 0=True */
     --windows-hover: 1;
-    
+
     --base: #191724;
     --surface: #1f1d2e;
     --overlay: #26233a;
@@ -1194,13 +1194,13 @@ button[aria-label="User Settings"] .lottieIcon__5eb9b svg path {
 
 
 
-/* 
+/*
 ==================================================================
 
 ‼️✨  ROUNDNESS CUSTOMIZATIONS AHEAD  ✨‼️
 
 ==================================================================
-Credits: 
+Credits:
 */
 
 
@@ -1951,7 +1951,7 @@ Credits:
 
 /*
 ===========================
-USER POPOUT CARD 
+USER POPOUT CARD
 ===========================
 */
 #popout_43 {
@@ -1972,9 +1972,9 @@ Server Member List
     opacity: 1;
 }
 
-/* 
+/*
 ===========================
-Collapsible Search Bar 
+Collapsible Search Bar
 ===========================
 */
 .search__49676 {
