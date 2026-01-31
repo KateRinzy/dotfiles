@@ -90,10 +90,10 @@ c.tabs.title.format = "{audio}{current_title}"
 c.url.searchengines = {
 # note - if you use duckduckgo, you can make use of its built in bangs, of which there are many! https://duckduckgo.com/bangs
         'DEFAULT': 'https://duckduckgo.com/?q={}',
-        '!gg': 'https://www.google.com/search?q={}',
-        '!aw': 'https://wiki.archlinux.org/?search={}',
-        '!apkg': 'https://archlinux.org/packages/?sort=&q={}&maintainer=&flagged=',
-        '!gh': 'https://github.com/search?o=desc&q={}&s=stars',
+        '!g': 'https://www.google.com/search?q={}',
+        # '!aw': 'https://wiki.archlinux.org/?search={}',
+        # '!apkg': 'https://archlinux.org/packages/?sort=&q={}&maintainer=&flagged=',
+        # '!gh': 'https://github.com/search?o=desc&q={}&s=stars',
         '!yt': 'https://www.youtube.com/results?search_query={}',
         }
 
