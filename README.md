@@ -18,4 +18,4 @@
 Les fonds d'écrans peuvent être trouvés ici: https://github.com/fuyu147/wallpapers
 
 ### keyboard layout
-Check the .xkb file: root/usr/share/xkeyboard-config-2/symbols/ca
+Check the [.xkb file](root/usr/share/xkeyboard-config-2/symbols/ca)
