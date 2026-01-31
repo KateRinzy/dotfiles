@@ -4,7 +4,7 @@
 
 # dev setup;
 
-![Capture d'écran de mon desktop actuel](assets/screenshot-2026-01-21_20-36-30.png)
+![Capture d'écran de mon desktop actuel](assets/screenshot-2026-01-31_14-44-34.png)
 
 | Directoire   | Informations                              |
 | :----------: | :---------------------------------------- |
