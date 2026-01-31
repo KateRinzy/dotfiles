@@ -11,7 +11,7 @@ dynamic_padding = true
 # normal = { family = "Monaspace Krypton NF", style = "Regular" }
 # normal = { family = "Comic Mono", style = "Regular" }
 normal = { family = "Courier Prime Code", style = "Regular" }
-size = 21
+size = 20
 
 
 # taken from:

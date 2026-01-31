@@ -95,11 +95,20 @@
                     (kind: Property(Status(State)), style: (fg: "#c4a7e7", modifiers: "Bold")),
                     (kind: Text("]"), style: (fg: "#c4a7e7", modifiers: "Bold")),
                 ],
-                center: [],
-                right: [
+                center: [
                     (kind: Text("Vol: "), style: (fg: "#c4a7e7", modifiers: "Bold")),
                     (kind: Property(Status(Volume)), style: (fg: "#c4a7e7", modifiers: "Bold")),
                     (kind: Text("% "), style: (fg: "#c4a7e7", modifiers: "Bold")),
+                ],
+                right: [
+                    (kind: Text("["), style: (fg: "#c4a7e7", modifiers: "Bold")),
+                        (kind: Property(Status(RepeatV2(
+                            on_label: "repeating",
+                            off_label: "no repeat",
+                            on_style: (fg: "yellow", modifiers: "Bold"),
+                            off_style: (fg: "blue", modifiers: "Dim"),
+                        )))),
+                    (kind: Text("]"), style: (fg: "#c4a7e7", modifiers: "Bold")),
                 ],
             )
         ],
