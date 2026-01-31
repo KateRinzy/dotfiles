@@ -9,7 +9,7 @@ searchpaths = [
     "~/dotfiles/",
     "~/wallpapers/",
     "~/Documents/",
-    "~/Music/",
+    # "~/Music/",
     "~/Downloads/",
     "/run/media/fuyu147/Estrogen",
     "/run/media/fuyu147/",
