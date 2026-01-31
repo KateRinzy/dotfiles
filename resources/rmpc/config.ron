@@ -44,9 +44,9 @@
             "6":       SwitchToTab("Playlists"),
             "7":       SwitchToTab("Search"),
             "q":       Quit,
-            ">":       NextTrack,
+            "<":       NextTrack,
             "p":       TogglePause,
-            "<":       PreviousTrack,
+            ">":       PreviousTrack,
             "f":       SeekForward,
             "b":       SeekBack,
             "y":       SeekToStart,
@@ -145,24 +145,8 @@
             pane: Pane(Directories),
         ),
         (
-            name: "Artists",
-            pane: Pane(Artists),
-        ),
-        (
-            name: "Album Artists",
-            pane: Pane(AlbumArtists),
-        ),
-        (
-            name: "Albums",
-            pane: Pane(Albums),
-        ),
-        (
             name: "Playlists",
             pane: Pane(Playlists),
-        ),
-        (
-            name: "Search",
-            pane: Pane(Search),
         ),
     ],
 )

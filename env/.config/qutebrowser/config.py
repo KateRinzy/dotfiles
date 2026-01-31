@@ -101,7 +101,7 @@ c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'his
 
 config.load_autoconfig() # load settings done via the gui
 
-c.auto_save.session = True # save tabs on quit/restart
+c.auto_save.session = False # save tabs on quit/restart
 
 # keybinding changes
 config.bind(';', 'cmd-set-text :')
