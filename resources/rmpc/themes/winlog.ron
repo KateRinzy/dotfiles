@@ -14,7 +14,21 @@
                 pane: Pane(
                     Property(
                         content: [
-                            (kind: Property(Song(Filename)), style: (fg: "#eb6f92")),
+                            (
+                                kind: Group([
+                                    (
+                                        kind: Property(Song(Title)),
+                                        style: (fg: "#eb6f92")
+                                    ),
+                                    (kind: Text(" - ")),
+                                    (
+                                        kind: Property(Song(Artist)),
+                                        style: (fg: "#EBBCBA", modifiers: "Bold")
+                                    ),
+                                ]),
+                                default: (kind: Property(Song(Filename))),
+                                style: (fg: "#eb6f92")
+                            ),
                             (kind: Text(" :: ")),
                             (kind: Property(Status(Elapsed))),
                             (kind: Text(" / ")),
@@ -73,17 +87,31 @@
 
     song_table_format: [
         (
-            prop: (kind: Property(Filename),
-                default: (kind: Text("Unknown"))
+            prop: (
+                kind: Group([
+                (kind: Text("#")),
+                (kind: Property(Position))
+            ])
             ),
-            width: "80%",
+            width: "5%"
         ),
         (
             prop: (kind: Property(Duration),
                 default: (kind: Text("-"))
             ),
-            width: "20%",
+            width: "10%",
             alignment: Center,
+        ),
+        (
+            prop: (
+                kind: Group([
+                    (kind: Property(Title)),
+                    (kind: Text(" - ")),
+                    (kind: Property(Artist)),
+                ]),
+                default: (kind: Property(Filename)),
+            ),
+            width: "90%",
         ),
     ],
 

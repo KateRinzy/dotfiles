@@ -140,14 +140,14 @@ c.tabs.indicator.width = 0 # no tab indicators
 c.tabs.width = '7%'
 
 # fonts
-c.fonts.default_family = []
-c.fonts.default_size = '12pt'
-c.fonts.web.size.default = 20
-c.fonts.web.size.default_fixed = 20
-c.fonts.web.family.fixed        = 'IosevkaTerm Nerd Font Mono'
-c.fonts.web.family.sans_serif   = 'IosevkaTerm Nerd Font Mono'
-c.fonts.web.family.serif        = 'IosevkaTerm Nerd Font Mono'
-c.fonts.web.family.standard     = 'IosevkaTerm Nerd Font Mono'
+c.fonts.default_family          = []
+c.fonts.default_size            = '14pt'
+c.fonts.web.size.default        = 20
+c.fonts.web.size.default_fixed  = 20
+c.fonts.web.family.fixed        = 'Courier Prime Code'
+c.fonts.web.family.sans_serif   = 'Courier Prime Code'
+c.fonts.web.family.serif        = 'Courier Prime Code'
+c.fonts.web.family.standard     = 'Courier Prime Code'
 
 # privacy - adjust these settings based on your preference
 # config.set("completion.cmd_history_max_items", 0)

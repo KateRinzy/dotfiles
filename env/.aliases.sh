@@ -44,6 +44,10 @@ myt() {
     ~/repos/yt-dlp/yt-dlp -f "bv[height>=720]+ba" -o - "$1" | mpv -
 }
 
+extract-audio() {
+    ~/repos/yt-dlp/yt-dlp "$1" -x --audio-format mp3
+}
+
 psk() {
     for str in "$@"; do
         printf "%-15s %.2f GB\n" "$str" "$(ps -o rss= -p $(pgrep $str) | awk '{s+=$1} END {print s / (1024*1024)}')"
