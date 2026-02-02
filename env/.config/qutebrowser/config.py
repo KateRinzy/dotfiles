@@ -1,7 +1,5 @@
-# pylint: disable=C0111
-c = c  # noqa: F821 pylint: disable=E0602,C0103
-config = config  # noqa: F821 pylint: disable=E0602,C0103
-# pylint settings included to disable linting errors
+c = c  # pyright: ignore[reportUndefinedVariable]
+config = config  # pyright: ignore[reportUndefinedVariable]
 
 rosepine = {
     "bg": "#191724",
@@ -127,16 +125,15 @@ config.bind('M', 'hint links spawn mpv {hint-url}')
         # config.bind('gm', 'tab-move')
 
 # dark mode setup
-c.colors.webpage.darkmode.enabled = True
-c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
-c.colors.webpage.darkmode.policy.images = 'never'
-config.set('colors.webpage.darkmode.enabled', False, 'file://*')
+# c.colors.webpage.darkmode.enabled = True
+# c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+# c.colors.webpage.darkmode.policy.images = 'never'
+# config.set('colors.webpage.darkmode.enabled', False, 'file://*')
 
 # styles, cosmetics
 # c.content.user_stylesheets = ["~/.config/qutebrowser/styles/youtube-tweaks.css"]
 c.tabs.padding = {'top': 5, 'bottom': 5, 'left': 9, 'right': 9}
 c.tabs.indicator.width = 0 # no tab indicators
-# c.window.transparent = True # apparently not needed
 c.tabs.width = '7%'
 
 # fonts

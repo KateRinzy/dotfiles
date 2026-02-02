@@ -18,10 +18,22 @@ vim.cmd([[
 ]])
 
 local function l_format()
-    if next(vim.lsp.get_clients({ bufnr = 0 })) then
-        vim.lsp.buf.format()
+    local ignored_filetypes = {
+        python = true,
+        text = true,
+        markdown = true,
+    }
+
+    local ft = vim.bo.filetype
+
+    if ignored_filetypes[ft] then
+        print "Ignored filetype 🥀"
+    else
+        if next(vim.lsp.get_clients({ bufnr = 0 })) then
+            vim.lsp.buf.format()
+        end
+        print("Bogus Binted? 🤨")
     end
-    print("Bogus Binted? 🤨")
 end
 
 local function toggleWrap()

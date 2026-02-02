@@ -29,8 +29,8 @@
         "format-paused": "[<i>{artist} - {title}</i>]",
     },
     "mpd": {
-        "format": "[{filename} - {elapsedTime:%M:%S}/{totalTime:%M:%S}]",
-        "max-length": 50
+        "format": "[{title} - {artist} - {elapsedTime:%M:%S}/{totalTime:%M:%S} - {volume}%]",
+        "max-length": 100
     },
     "hyprland/workspaces": {
         "format": "[{name}]",

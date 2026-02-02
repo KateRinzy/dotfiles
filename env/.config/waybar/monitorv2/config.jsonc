@@ -41,7 +41,7 @@
         }
     },
     "mpd": {
-        "format": "[{filename} - {elapsedTime:%M:%S}/{totalTime:%M:%S}]"
+        "format": "[{title} - {artist} - {elapsedTime:%M:%S}/{totalTime:%M:%S} - {volume}%]",
     },
     "custom/sep": {
         "format": "   "
