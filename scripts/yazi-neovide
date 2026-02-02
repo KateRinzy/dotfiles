@@ -8,9 +8,9 @@ ghostty -e yazi --cwd-file="$tmp"
 
 # Check if yazi actually wrote a file and has content
 if [ ! -s "$tmp" ]; then
-    # User likely quit yazi without selecting anything (e.g., with 'q')
-    rm -f -- "$tmp"
-    exit 1
+  # User likely quit yazi without selecting anything (e.g., with 'q')
+  rm -f -- "$tmp"
+  exit 1
 fi
 
 echo $PATH
@@ -19,5 +19,5 @@ IFS= read -r -d '' selected <"$tmp"
 rm -f -- "$tmp"
 
 if [ -n "$selected" ]; then
-    nohup zsh -c 'cd "$1" && neovide .' _ "$selected" >/dev/null 2>&1 &
+  nohup zsh -c 'cd "$1" && neovide .' _ "$selected" >/dev/null 2>&1 &
 fi

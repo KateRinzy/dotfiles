@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 printf '\e[?7l'
 
-flags="${1#-}"  # strip leading dash
-[ -z "$flags" ] && flags="cxwtp"  # default: all including pid
+flags="${1#-}"                   # strip leading dash
+[ -z "$flags" ] && flags="cxwtp" # default: all including pid
 
 active=$(hyprctl activewindow -j | jq -r .address)
 
-hyprctl clients -j \
-| jq -r '.[] | [.address, .class, (.xwayland|tostring), .workspace.id, .title, .pid] | @tsv' \
-| sort -k4,4n -k2,2 \
-| awk -F'\t' -v active="$active" -v flags="$flags" '
+hyprctl clients -j |
+  jq -r '.[] | [.address, .class, (.xwayland|tostring), .workspace.id, .title, .pid] | @tsv' |
+  sort -k4,4n -k2,2 |
+  awk -F'\t' -v active="$active" -v flags="$flags" '
 BEGIN {
     show_addr  = index(flags, "a")
     show_class = index(flags, "c")

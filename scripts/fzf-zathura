@@ -5,8 +5,8 @@ tmp="$(mktemp)"
 alacritty -e bash -lc "fd -e pdf | fzf >\"$tmp\""
 
 if [ ! -s "$tmp" ]; then
-    rm -f -- "$tmp"
-    exit 1
+  rm -f -- "$tmp"
+  exit 1
 fi
 
 read -r selected <"$tmp"
