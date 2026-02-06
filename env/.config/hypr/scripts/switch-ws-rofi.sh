@@ -8,5 +8,5 @@ selected=$(echo "$workspaces" | rofi -dmenu -p "Switch to workspace:")
 
 # If a workspace was selected, switch to it
 if [ -n "$selected" ]; then
-    hyprctl dispatch workspace "$selected"
+  hyprctl dispatch workspace "$selected"
 fi

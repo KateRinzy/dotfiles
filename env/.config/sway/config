@@ -72,42 +72,42 @@ client.focused #C4A7E7 #C4A7E7 #1F1F28 #C4A7E7
 client.unfocused #1F1F28 #1F1F28 #1F1F28 #1F1F28
 
 # Layout: default tiling
-smart_gaps on
+# smart_gaps on
 
 # WM
-bindsym $mod+c kill
-bindsym $mod+F8 exit
-bindsym $mod+Shift+q reload
-bindsym $mod+Escape exec wlogout
-bindsym $mod+l exec hyprlock
-bindsym $mod+v floating toggle
-bindsym $mod+j layout toggle split
-bindsym $mod+f fullscreen
-bindsym $mod+Shift+p move container to output right
-bindsym Mod1+Tab workspace next
-bindsym $mod+Tab workspace prev
-bindsym $mod+b exec ~/.config/waybar/waybar.sh
-bindsym $mod+F12 exec dunstctl history-pop
+bindsym $mod+c        kill
+bindsym $mod+F8       exit
+bindsym $mod+Shift+q  reload
+bindsym $mod+Escape   exec ~/.config/hypr/logout.sh
+bindsym $mod+l        exec hyprlock
+bindsym $mod+v        floating toggle
+bindsym $mod+u        layout tabbed
+bindsym $mod+j        layout toggle split
+bindsym $mod+f        fullscreen
+bindsym $mod+Shift+p  move container to output right
+bindsym $mod+Right    workspace next
+bindsym $mod+Left     workspace prev
+bindsym $mod+b        exec ~/.config/waybar/waybar.sh
+bindsym $mod+F12      exec dunstctl history-pop
 
 # Apps/Scripts
-bindsym $mod+minus exec ~/.config/hypr/scripts/nvim-anywhere.sh
-bindsym $mod+Ctrl+v exec cliphist list | rofi -dmenu -p "Clipboard" | cliphist decode | wl-copy
-bindsym $mod+q exec alacritty
-bindsym $mod+Return exec ghostty
-bindsym $mod+w exec firefox
-bindsym $mod+Page_Down exec kitty --class=calc tmux new-session qalc
-bindsym $mod+r exec rofi -show drun -no-fixed-num-lines
-bindsym $mod+y exec ~/.config/hypr/scripts/WallpaperSelect.sh
-bindsym $mod+t exec dunstify "$(date)"
-bindsym $mod+Shift+f exec thunar
-bindsym $mod+s exec ~/.config/hypr/scripts/hyprshot.sh "simple"
-bindsym Print exec ~/.config/hypr/scripts/hyprshot.sh "screen"
-bindsym $mod+Shift+s exec ~/.config/hypr/scripts/hyprshot.sh
-bindsym $mod+Shift+t exec ~/.config/hypr/scripts/get-text.sh
-bindsym $mod+Shift+c exec hyprpicker -a
-bindsym $mod+period exec rofi -modi emoji -show emoji -no-fixed-num-lines
-bindsym $mod+dead_grave exec ~/.config/hypr/scripts/vim-scratch.sh zxcv
-bindsym $mod+F10 exec ~/.config/hypr/scripts/vim-scratch.sh faire
+bindsym $mod+Ctrl+v       exec cliphist list | rofi -dmenu -p "Clipboard" | cliphist decode | wl-copy
+bindsym $mod+q            exec qutebrowser
+bindsym $mod+Return       exec alacritty
+bindsym $mod+w            exec firefox
+bindsym $mod+Page_Down    exec kitty --class=calc tmux new-session qalc
+bindsym $mod+r            exec rofi -show drun -no-fixed-num-lines
+bindsym $mod+y            exec ~/.config/hypr/scripts/WallpaperSelect.sh
+bindsym $mod+t            exec dunstify "$(date)"
+bindsym $mod+Shift+f      exec thunar
+bindsym $mod+s            exec ~/.config/hypr/scripts/hyprshot.sh "simple"
+bindsym Print             exec ~/.config/hypr/scripts/hyprshot.sh "screen"
+bindsym $mod+Shift+s      exec ~/.config/hypr/scripts/hyprshot.sh
+bindsym $mod+Shift+t      exec ~/.config/hypr/scripts/get-text.sh
+bindsym $mod+Shift+c      exec hyprpicker -a
+bindsym $mod+period       exec rofi -modi emoji -show emoji -no-fixed-num-lines
+bindsym $mod+number_sign  exec ~/.config/hypr/scripts/vim-scratch.sh zxcv
+bindsym $mod+F10          exec ~/.config/hypr/scripts/vim-scratch.sh faire
 
 # Workspaces
 bindsym $mod+1 workspace 1

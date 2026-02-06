@@ -13,14 +13,14 @@ output_devices=$(wpctl status | awk '
     print id, $0
 }' | head -n -1)
 
-choice=$(echo "$output_devices" | rofi -dmenu -p "Sorties audio" -i -no-fixed-num-lines -lines 20)
+choice=$(echo "$output_devices" | rofi -config ~/.config/rofi/config-copy.rasi -dmenu -p "Sorties audio" -i -no-fixed-num-lines -lines 20)
 if [ -z "$choice" ]; then
-    echo "No choice provided"
-    exit 0
+  echo "No choice provided"
+  exit 0
 fi
 if [[ "$choice" =~ \* ]]; then
-    echo "Already default sink"
-    exit 0
+  echo "Already default sink"
+  exit 0
 fi
 
 device_id=$(echo "$choice" | awk '{print $1}')

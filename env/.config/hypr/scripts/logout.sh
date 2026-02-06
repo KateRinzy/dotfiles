@@ -7,10 +7,10 @@ Shutdown"
 selected=$(echo "$selection" | rofi -i -show -dmenu)
 
 if [[ "$selected" == "Suspend" ]]; then
-    systemctl suspend
+  systemctl suspend
 elif [[ "$selected" == "Suspend & Lock" ]]; then
-    hyprlock &
-    systemctl suspend
+  hyprlock &
+  systemctl suspend
 elif [[ "$selected" == "Shutdown" ]]; then
-    systemctl poweroff
+  systemctl poweroff
 fi

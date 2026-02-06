@@ -44,7 +44,7 @@ myt() {
     ~/repos/yt-dlp/yt-dlp -f "bv[height>=720]+ba" -o - "$1" | mpv -
 }
 
-extract-audio() {
+ayt() {
     ~/repos/yt-dlp/yt-dlp "$1" -x --audio-format mp3
 }
 

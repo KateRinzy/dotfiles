@@ -4,6 +4,8 @@
     "output": "HDMI-A-1",
     "exclusive": true,
     "modules-left": [
+        "hyprland/workspaces",
+        "custom/sep",
         "hyprland/window",
         "custom/sep",
         "mpd"
@@ -23,6 +25,10 @@
         "clock",
         "custom/sep"
     ],
+    "hyprland/workspaces": {
+        "format": "[{name}]",
+        "all-outputs": false
+    },
     "hyprland/window": {
         "format": "[{class}]",
         "max-length": 50,

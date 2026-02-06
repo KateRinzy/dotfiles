@@ -3,30 +3,30 @@
 export GRIMBLAST_EDITOR=gimp
 
 oarsiten() {
-    grimblast --notify --freeze edit "$1"
+  grimblast --notify --freeze edit "$1"
 }
 
 case "$1" in
 "simple")
-    grimblast --notify --freeze copy area
-    ;;
+  grimblast --notify --freeze copy area
+  ;;
 "screen")
-    oarsiten "screen"
-    ;;
+  oarsiten "screen"
+  ;;
 *)
-    opts="area
+  opts="area
 active
 output
 screen"
-    selection=$(echo "$opts" | rofi -dmenu -p "Screenshot Options" -theme ~/.config/rofi/aorstie.rasi)
+  selection=$(echo "$opts" | rofi -dmenu -p "Screenshot Options" -theme ~/.config/rofi/aorstie.rasi)
 
-    [ -z "$selection" ] && exit 0
+  [ -z "$selection" ] && exit 0
 
-    if [ "$selection" = "screen" ]; then
-        oarsiten "screen"
-    else
-        oarsiten "$selection"
-    fi
+  if [ "$selection" = "screen" ]; then
+    oarsiten "screen"
+  else
+    oarsiten "$selection"
+  fi
 
-    ;;
+  ;;
 esac
