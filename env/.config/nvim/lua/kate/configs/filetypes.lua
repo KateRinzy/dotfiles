@@ -36,17 +36,17 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "c", "h", "cpp", "cc" },
-  callback = function()
-    local width = 8
-    vim.o.shiftwidth = width
-    vim.o.tabstop = width
-    vim.o.softtabstop = width
-    vim.o.expandtab = true
-    vim.o.colorcolumn = "80"
-  end,
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = { "c", "h", "cpp", "cc" },
+--   callback = function()
+--     local width = 8
+--     vim.o.shiftwidth = width
+--     vim.o.tabstop = width
+--     vim.o.softtabstop = width
+--     vim.o.expandtab = true
+--     vim.o.colorcolumn = "80"
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "haskell", "hs", "ocaml" },
