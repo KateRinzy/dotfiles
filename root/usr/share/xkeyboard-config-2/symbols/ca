@@ -11,8 +11,8 @@
 // By Winter L. <winter.leg.147@gmail.com>
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
-// │ |   │ 1 È │ 2 Ê │ 3 Ë │ 4 À │ 5 Î │ 6 Ï │ 7   │ 8   │ 9   │ 0   │ _   │ +   ┃ ⌫ Retour┃
-// │ #   │ / è │ ( ê │ [ ë │ { à │ ' î │ $ ï │ !   │ }   │ ]   │ )   │ -   │ =   ┃  arrière┃
+// │ |   │ 1   │ 2   │ 3   │ 4   │ 5   │ 6   │ 7   │ 8   │ 9   │ 0   │ _   │ +   ┃ ⌫ Retour┃
+// │ #   │ /   │ (   │ [   │ {   │ '   │ $   │ !   │ }   │ ]   │ )   │ -   │ =   ┃  arrière┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┯━━━━━━━┫
 // ┃       ┃ Q Œ │ W   │ F   │ P   │ G   │ J   │ L   │ U   │ Y   │ :   │ ◌̈   │ Ç   │  >    ┃
 // ┃Tab ↹  ┃ q œ │ w \ │ f @ │ p ~ │ g — │ j ¥ │ l   │ u   │ y § │ ; ¶ │ ◌̂   │ ç   │  <    ┃
@@ -32,14 +32,13 @@ default partial
 xkb_symbols "basic" {
     name[Group1] = "French (Canada)";
 
-    // èêëàîï
     key <TLDE>  {[  numbersign,         bar                                 ]};
-    key <AE01>  {[  slash,              1, egrave, Egrave                   ]};
-    key <AE02>  {[  parenleft,          2, ecircumflex, Ecircumflex         ]};
-    key <AE03>  {[  bracketleft,        3, ediaeresis, Ediaeresis           ]};
-    key <AE04>  {[  braceleft,          4, agrave, Agrave                   ]};
-    key <AE05>  {[  apostrophe,         5, icircumflex, Icircumflex         ]};
-    key <AE06>  {[  dollar,             6, idiaeresis, Idiaeresis           ]};
+    key <AE01>  {[  slash,              1                                   ]};
+    key <AE02>  {[  parenleft,          2                                   ]};
+    key <AE03>  {[  bracketleft,        3                                   ]};
+    key <AE04>  {[  braceleft,          4                                   ]};
+    key <AE05>  {[  apostrophe,         5                                   ]};
+    key <AE06>  {[  dollar,             6                                   ]};
     key <AE07>  {[  exclam,             7                                   ]};
     key <AE08>  {[  braceright,         8                                   ]};
     key <AE09>  {[  bracketright,       9                                   ]};

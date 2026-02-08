@@ -120,7 +120,7 @@ local function status_line()
 end
 
 vim.opt.statusline = status_line()
-vim.opt.laststatus = 0
+vim.opt.laststatus = 3
 
 vim.keymap.set("n", "<leader>ts", function()
   if vim.o.laststatus == 0 then

@@ -1,5 +1,5 @@
 [general]
-working_directory = "/home/fuyu147/desk"
+working_directory = "/home/fuyu147/"
 
 [window]
 # opacity = 0.9
@@ -7,11 +7,11 @@ working_directory = "/home/fuyu147/desk"
 dynamic_padding = true
 
 [font]
-# normal = { family = "IosevkaTerm NFM", style = "Light" }
+normal = { family = "IosevkaTerm NFM" }
 # normal = { family = "Monaspace Krypton NF", style = "Regular" }
 # normal = { family = "Comic Mono", style = "Regular" }
-normal = { family = "Courier Prime Code" }
-size = 20
+# normal = { family = "Courier Prime Code" }
+size = 22
 
 
 # taken from:

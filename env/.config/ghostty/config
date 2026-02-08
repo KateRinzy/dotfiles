@@ -9,7 +9,7 @@ background-blur    = false
 
 confirm-close-surface = false
 
-font-family = "IosevkaTerm NFM"
+font-family = "IosevkaTerm NFM Light"
 # font-family = "Monaspace Krypton NF"
 font-family = "Zen Maru Gothic"
 font-size   = 22
