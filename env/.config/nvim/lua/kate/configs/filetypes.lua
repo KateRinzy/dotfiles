@@ -69,6 +69,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.wrap = true
     vim.opt.sidescrolloff = 0
 
+    vim.keymap.set("n", "<leader>h", function()
+      local file = vim.fn.expand("%:p")
+      vim.system({ "typst", "c", file })
+    end, { buffer = true, desc = "Compile Typst file" })
+
     vim.keymap.set("n", "<leader>y", function()
       local pdf = vim.fn.expand("%:p:r") .. ".pdf"
       vim.fn.jobstart({ "zathura", pdf }, { detach = true })
