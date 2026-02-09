@@ -85,7 +85,7 @@
     "chat.disableAIFeatures": true,
     "telemetry.feedback.enabled": false,
     "geminicodeassist.displayInlineContextHint": false,
-    "workbench.colorTheme": "Rosé Pine",
+    "workbench.colorTheme": "Visual Studio Dark",
     "haskell.manageHLS": "GHCup",
     "C_Cpp.default.cppStandard": "c++26"
 }
