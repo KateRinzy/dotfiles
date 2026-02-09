@@ -161,8 +161,10 @@ case "$1" in
 "s" | "sync")
   sync_remote "$2"
   ;;
+"d")
+  sync_diff
+  ;;
 *)
   sync_files
-  sync_diff
   ;;
 esac

@@ -1,122 +1,109 @@
 ---@diagnostic disable: undefined-global
 function _G.lsp_diagnostics()
-    local bufnr    = vim.api.nvim_get_current_buf()
+  local bufnr    = vim.api.nvim_get_current_buf()
 
-    local errors   = #vim.diagnostic.get(bufnr, { severity = vim.diagnostic.severity.ERROR })
-    local warnings = #vim.diagnostic.get(bufnr, { severity = vim.diagnostic.severity.WARN })
-    local hints    = #vim.diagnostic.get(bufnr, { severity = vim.diagnostic.severity.HINT })
-    local info     = #vim.diagnostic.get(bufnr, { severity = vim.diagnostic.severity.INFO })
+  local errors   = #vim.diagnostic.get(bufnr, { severity = vim.diagnostic.severity.ERROR })
+  local warnings = #vim.diagnostic.get(bufnr, { severity = vim.diagnostic.severity.WARN })
+  local hints    = #vim.diagnostic.get(bufnr, { severity = vim.diagnostic.severity.HINT })
+  local info     = #vim.diagnostic.get(bufnr, { severity = vim.diagnostic.severity.INFO })
 
-    local parts    = {}
+  local parts    = {}
 
-    if errors > 0 then table.insert(parts, "E:" .. errors) end
-    if warnings > 0 then table.insert(parts, "W:" .. warnings) end
-    if hints > 0 then table.insert(parts, "H:" .. hints) end
-    if info > 0 then table.insert(parts, "I:" .. info) end
+  if errors > 0 then table.insert(parts, "E:" .. errors) end
+  if warnings > 0 then table.insert(parts, "W:" .. warnings) end
+  if hints > 0 then table.insert(parts, "H:" .. hints) end
+  if info > 0 then table.insert(parts, "I:" .. info) end
 
-    return table.concat(parts, " ")
+  return table.concat(parts, " ")
 end
 
 function _G.lsp_status()
-    local buf_clients = vim.lsp.get_clients({ bufnr = 0 })
-    if next(buf_clients) == nil then
-        return ""
-    end
+  local buf_clients = vim.lsp.get_clients({ bufnr = 0 })
+  if next(buf_clients) == nil then
+    return ""
+  end
 
-    local names = {}
-    for _, client in pairs(buf_clients) do
-        table.insert(names, client.name)
-    end
+  local names = {}
+  for _, client in pairs(buf_clients) do
+    table.insert(names, client.name)
+  end
 
-    return "[lsp: " .. table.concat(names, ", ") .. "]"
+  return "[lsp: " .. table.concat(names, ", ") .. "]"
 end
 
 function _G.supermaven_status()
-    local ok, sm = pcall(require, "supermaven-nvim.api")
-    if not ok then
-        return ""
-    end
-    if sm.is_running() then
-        return "[Supermaven running]"
-    end
+  local ok, sm = pcall(require, "supermaven-nvim.api")
+  if not ok then
     return ""
+  end
+  if sm.is_running() then
+    return "[Supermaven running]"
+  end
+  return ""
 end
 
 function _G.search_status()
-    local sc = vim.fn.searchcount({ recompute = 1, maxcount = 9999 })
-    if sc.incomplete == 1 then
-        return "…"
-    end
-    if sc.total > 0 then
-        return sc.current .. "/" .. sc.total
-    end
-    return ""
+  local sc = vim.fn.searchcount({ recompute = 1, maxcount = 9999 })
+  if sc.incomplete == 1 then
+    return "…"
+  end
+  if sc.total > 0 then
+    return sc.current .. "/" .. sc.total
+  end
+  return ""
 end
 
 function _G.git_status()
-    local output = vim.fn.system("git status -sb --porcelain=2 2>/dev/null")
-    if vim.v.shell_error ~= 0 then
-        return ""
+  -- % echo $(git branch --no-color)
+  -- * main
+  local output = vim.fn.system("git branch --no-color")
+  if vim.v.shell_error ~= 0 then
+    return ""
+  end
+
+  local branch = ""
+
+  for line in output:gmatch("[^\n]+") do
+    local branch_match = line:match("\\* (.+)")
+    if branch_match then
+      branch = branch_match
     end
+  end
 
-    local branch = ""
-    local ahead = "0"
-    local behind = "0"
+  if branch == "" then
+    return ""
+  end
 
-    for line in output:gmatch("[^\n]+") do
-        local branch_match = line:match("# branch.head (.+)")
-        if branch_match then
-            branch = branch_match
-        end
-
-        local ab_match = line:match("# branch.ab %+([%d]+) %-([%d]+)")
-        if ab_match then
-            ahead, behind = line:match("# branch.ab %+([%d]+) %-([%d]+)")
-        end
-    end
-
-    if branch == "" then
-        return ""
-    end
-
-    local result = "Git:" .. branch
-    if tonumber(ahead) > 0 then
-        result = result .. " " .. ahead
-    end
-    if tonumber(behind) > 0 then
-        result = result .. " " .. behind
-    end
-
-    return result
+  return "[Git:" .. branch .. "]"
 end
 
 local function status_line()
-    local mode = " [%{mode()}]"
-    local file_name = " [%-.40t]"
-    local modified = " %-m"
-    local file_type = " %y"
-    local diagnostics = " %{v:lua.lsp_diagnostics()}"
-    local gits = " %{v:lua.git_status()}"
-    local lsp = " %{v:lua.lsp_status()}"
-    local supermaven = " %{v:lua.supermaven_status()}"
-    local right_align = "%="
-    local line_no = "%10([%l/%L%)]"
-    local search = "%{v:hlsearch ? v:lua.search_status() : ''}"
+  local mode = " [%{mode()}]"
+  local file_name = " [%-.40t]"
+  local modified = " %-m"
+  local file_type = " %y"
+  local diagnostics = " %{v:lua.lsp_diagnostics()}"
+  local gits = " %{v:lua.git_status()}"
+  local lsp = " %{v:lua.lsp_status()}"
+  local supermaven = " %{v:lua.supermaven_status()}"
+  local right_align = "%="
+  local line_no = "%10([%l/%L%)]"
+  local search = "%{v:hlsearch ? v:lua.search_status() : ''}"
 
 
-    return table.concat({
-        mode,
-        file_name,
-        modified,
-        file_type,
-        right_align,
-        search,
-        diagnostics,
-        gits,
-        lsp,
-        supermaven,
-        line_no
-    })
+  return table.concat({
+    mode,
+    file_name,
+    modified,
+    file_type,
+    right_align,
+    search,
+    diagnostics,
+    gits,
+    lsp,
+    supermaven,
+    line_no
+  })
 end
 
 vim.opt.statusline = status_line()
