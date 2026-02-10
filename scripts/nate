@@ -133,11 +133,7 @@ sync_diff() {
   sleep 0.5
   {
     cd $WORKSTATION
-    if [[ -n $(echo $TMUX) ]]; then
-      git --no-pager diff
-    else
-      git diff
-    fi
+    git diff
   }
 }
 

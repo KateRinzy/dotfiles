@@ -1,84 +1,84 @@
 c = c  # pyright: ignore[reportUndefinedVariable]
 config = config  # pyright: ignore[reportUndefinedVariable]
 
-rosepine = {
-    "bg": "#191724",
-    "fg": "#e0def4",
-
-    "muted": "#6e6a86",
-    "subtle": "#908caa",
-
-    "love": "#eb6f92",
-    "gold": "#f6c177",
-    "rose": "#ebbcba",
-    "pine": "#31748f",
-    "foam": "#9ccfd8",
-    "iris": "#c4a7e7",
-
-    "highlight_low": "#21202e",
-    "highlight_med": "#403d52",
-    "highlight_high": "#524f67",
-}
-
-# statusbar
-c.colors.statusbar.normal.bg = "#00000000"
-c.colors.statusbar.command.bg = "#00000000"
-c.colors.statusbar.normal.fg = rosepine["foam"]
-c.colors.statusbar.command.fg = rosepine["fg"]
-c.colors.statusbar.passthrough.fg = rosepine["foam"]
-
-c.colors.statusbar.url.fg = rosepine["rose"]
-c.colors.statusbar.url.success.https.fg = rosepine["rose"]
-c.colors.statusbar.url.hover.fg = rosepine["pine"]
-
-# tabs
-c.colors.tabs.even.bg = "#00000000"
-c.colors.tabs.odd.bg = "#00000000"
-c.colors.tabs.bar.bg = "#00000000"
-
-c.colors.tabs.even.fg = rosepine["muted"]
-c.colors.tabs.odd.fg = rosepine["muted"]
-
-c.colors.tabs.selected.even.bg = rosepine["fg"]
-c.colors.tabs.selected.odd.bg = rosepine["fg"]
-c.colors.tabs.selected.even.fg = rosepine["bg"]
-c.colors.tabs.selected.odd.fg = rosepine["bg"]
-
-c.colors.tabs.indicator.start = rosepine["pine"]
-c.colors.tabs.indicator.stop = rosepine["muted"]
-
-# hints
-c.colors.hints.bg = rosepine["bg"]
-c.colors.hints.fg = rosepine["fg"]
-c.hints.border = f"1px solid {rosepine['iris']}"
-
-# completion
-c.colors.completion.odd.bg = rosepine["bg"]
-c.colors.completion.even.bg = rosepine["bg"]
-c.colors.completion.fg = rosepine["fg"]
-c.colors.completion.category.bg = rosepine["bg"]
-c.colors.completion.category.fg = rosepine["iris"]
-
-c.colors.completion.match.fg = rosepine["foam"]
-c.colors.completion.item.selected.match.fg = rosepine["foam"]
-c.colors.completion.item.selected.bg = rosepine["highlight_med"]
-c.colors.completion.item.selected.fg = rosepine["fg"]
-
-# messages / downloads
-c.colors.messages.info.bg = rosepine["bg"]
-c.colors.messages.info.fg = rosepine["fg"]
-c.colors.messages.error.bg = rosepine["bg"]
-c.colors.messages.error.fg = rosepine["love"]
-
-c.colors.downloads.bar.bg = rosepine["bg"]
-c.colors.downloads.start.bg = rosepine["pine"]
-c.colors.downloads.start.fg = rosepine["fg"]
-c.colors.downloads.stop.bg = rosepine["muted"]
-c.colors.downloads.stop.fg = rosepine["fg"]
-
-# tooltip / webpage
-c.colors.tooltip.bg = rosepine["bg"]
-c.colors.webpage.bg = rosepine["bg"]
+# rosepine = {
+#     "bg": "#191724",
+#     "fg": "#e0def4",
+#
+#     "muted": "#6e6a86",
+#     "subtle": "#908caa",
+#
+#     "love": "#eb6f92",
+#     "gold": "#f6c177",
+#     "rose": "#ebbcba",
+#     "pine": "#31748f",
+#     "foam": "#9ccfd8",
+#     "iris": "#c4a7e7",
+#
+#     "highlight_low": "#21202e",
+#     "highlight_med": "#403d52",
+#     "highlight_high": "#524f67",
+# }
+#
+# # statusbar
+# c.colors.statusbar.normal.bg = "#00000000"
+# c.colors.statusbar.command.bg = "#00000000"
+# c.colors.statusbar.normal.fg = rosepine["foam"]
+# c.colors.statusbar.command.fg = rosepine["fg"]
+# c.colors.statusbar.passthrough.fg = rosepine["foam"]
+#
+# c.colors.statusbar.url.fg = rosepine["rose"]
+# c.colors.statusbar.url.success.https.fg = rosepine["rose"]
+# c.colors.statusbar.url.hover.fg = rosepine["pine"]
+#
+# # tabs
+# c.colors.tabs.even.bg = "#00000000"
+# c.colors.tabs.odd.bg = "#00000000"
+# c.colors.tabs.bar.bg = "#00000000"
+#
+# c.colors.tabs.even.fg = rosepine["muted"]
+# c.colors.tabs.odd.fg = rosepine["muted"]
+#
+# c.colors.tabs.selected.even.bg = rosepine["fg"]
+# c.colors.tabs.selected.odd.bg = rosepine["fg"]
+# c.colors.tabs.selected.even.fg = rosepine["bg"]
+# c.colors.tabs.selected.odd.fg = rosepine["bg"]
+#
+# c.colors.tabs.indicator.start = rosepine["pine"]
+# c.colors.tabs.indicator.stop = rosepine["muted"]
+#
+# # hints
+# c.colors.hints.bg = rosepine["bg"]
+# c.colors.hints.fg = rosepine["fg"]
+# c.hints.border = f"1px solid {rosepine['iris']}"
+#
+# # completion
+# c.colors.completion.odd.bg = rosepine["bg"]
+# c.colors.completion.even.bg = rosepine["bg"]
+# c.colors.completion.fg = rosepine["fg"]
+# c.colors.completion.category.bg = rosepine["bg"]
+# c.colors.completion.category.fg = rosepine["iris"]
+#
+# c.colors.completion.match.fg = rosepine["foam"]
+# c.colors.completion.item.selected.match.fg = rosepine["foam"]
+# c.colors.completion.item.selected.bg = rosepine["highlight_med"]
+# c.colors.completion.item.selected.fg = rosepine["fg"]
+#
+# # messages / downloads
+# c.colors.messages.info.bg = rosepine["bg"]
+# c.colors.messages.info.fg = rosepine["fg"]
+# c.colors.messages.error.bg = rosepine["bg"]
+# c.colors.messages.error.fg = rosepine["love"]
+#
+# c.colors.downloads.bar.bg = rosepine["bg"]
+# c.colors.downloads.start.bg = rosepine["pine"]
+# c.colors.downloads.start.fg = rosepine["fg"]
+# c.colors.downloads.stop.bg = rosepine["muted"]
+# c.colors.downloads.stop.fg = rosepine["fg"]
+#
+# # tooltip / webpage
+# c.colors.tooltip.bg = rosepine["bg"]
+# c.colors.webpage.bg = rosepine["bg"]
 
 c.url.start_pages = "https://github.com/fuyu147"
 c.url.default_page = "https://github.com/fuyu147"
@@ -137,14 +137,15 @@ c.tabs.indicator.width = 0 # no tab indicators
 c.tabs.width = '7%'
 
 # fonts
-c.fonts.default_family          = []
+c.fonts.default_family          = ['Miracode']
 c.fonts.default_size            = '14pt'
 c.fonts.web.size.default        = 20
 c.fonts.web.size.default_fixed  = 20
-c.fonts.web.family.fixed        = 'Courier Prime Code'
-c.fonts.web.family.sans_serif   = 'Courier Prime Code'
-c.fonts.web.family.serif        = 'Courier Prime Code'
-c.fonts.web.family.standard     = 'Courier Prime Code'
+c.fonts.web.family.fixed        = 'Miracode'
+c.fonts.web.family.sans_serif   = 'Miracode'
+c.fonts.web.family.serif        = 'Miracode'
+c.fonts.web.family.standard     = 'Miracode'
+c.content.user_stylesheets = ["override-fonts.css"]
 
 # privacy - adjust these settings based on your preference
 # config.set("completion.cmd_history_max_items", 0)

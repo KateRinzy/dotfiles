@@ -18,6 +18,7 @@ local lsps = {
   { "ols",                  {} },
   { "rust_analyzer", },
   { "bashls", },
+  { "marksman", }, -- doesn't work... ?
   { "ts_ls", },
   { "ocamllsp", },
   { "pyright", },

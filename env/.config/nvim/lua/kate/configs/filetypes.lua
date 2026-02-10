@@ -88,9 +88,8 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.spelllang = { "en", "fr", "cjk" }
 
     vim.o.colorcolumn = "80"
-    vim.o.textwidth = 80
 
-    vim.o.wrap = true
+    vim.o.wrap = false
     vim.o.sidescrolloff = 0
 
     local width = 2
@@ -98,6 +97,16 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.o.tabstop = width
     vim.o.softtabstop = width
     vim.o.expandtab = true
+
+    vim.o.textwidth = 80
+
+    vim.bo.autoindent = false
+    vim.bo.smartindent = false
+    vim.bo.cindent = false
+    vim.bo.indentexpr = ""
+    vim.bo.indentkeys = ""
+    vim.bo.formatoptions = "t"
+    vim.cmd("TSBufDisable indent")
   end
 })
 

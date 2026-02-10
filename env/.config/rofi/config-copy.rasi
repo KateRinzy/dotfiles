@@ -10,7 +10,7 @@ configuration {
 }
 
 * {
-    font: "IosevkaTerm NFM 20";
+    font: "Miracode 20";
 }
 
 element-text, element-icon, mode-switcher {
