@@ -1,29 +1,29 @@
 #!/usr/bin/bash
 
 confs=(
-    dunst
-    fastfetch
-    ghostty
-    hyfetch.json
-    qutebrowser
-    hypr
-    i3
-    kitty
-    niri
-    nvim
-    polybar
-    ranger
-    rofi
-    sway
-    tmux-goway
-    vesktop/themes
-    waybar
-    zathura
+  alacritty
+  dunst
+  fastfetch
+  ghostty
+  hyfetch.json
+  hypr
+  i3
+  kitty
+  niri
+  nvim
+  polybar
+  qutebrowser
+  ranger
+  rofi
+  sway
+  tmux-goway
+  vesktop/themes
+  waybar
+  zathura
 )
 
 envs=(
-    .alacritty.toml
-    .aliases.sh
-    .tmux.conf
-    .zshrc
+  .aliases.sh
+  .tmux.conf
+  .zshrc
 )

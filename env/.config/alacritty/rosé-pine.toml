@@ -1,20 +1,3 @@
-[general]
-working_directory = "/home/fuyu147/"
-
-[window]
-# opacity = 0.9
-# blur = true
-dynamic_padding = true
-
-[font]
-# normal = { family = "IosevkaTerm NFM" }
-normal = { family = "Miracode" }
-# normal = { family = "Monaspace Krypton NF", style = "Regular" }
-# normal = { family = "Comic Mono", style = "Regular" }
-# normal = { family = "Courier Prime Code" }
-size = 19
-
-
 # taken from:
 #    https://github.com/rose-pine/alacritty/blob/main/dist/rose-pine.toml
 #
