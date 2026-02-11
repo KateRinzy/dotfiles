@@ -84,7 +84,7 @@ autocmd('LspAttach', {
     vim.keymap.set("n", "<leader>lv", "<CMD>LspRestart<CR>", opts)
     vim.keymap.set("n", "<leader>h", "<CMD>Gitsigns preview_hunk<CR>", {})
     vim.keymap.set("n", "<leader>i", "<CMD>Gitsigns preview_hunk_inline<CR>", {})
-    vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+    vim.keymap.set("i", "<C-k>", function() vim.lsp.buf.signature_help() end, opts)
     vim.keymap.set("n", "<leader>n", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "<leader>e", function() vim.diagnostic.goto_prev() end, opts)
   end

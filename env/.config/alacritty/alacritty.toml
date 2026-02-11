@@ -17,4 +17,7 @@ normal = { family = "Miracode" }
 # normal = { family = "Courier Prime Code" }
 size = 19
 
-
+[keyboard]
+bindings = [
+    { key = ")", mods = "Control", mode = "AppCursor", action = "ResetFontSize" },
+]

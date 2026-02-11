@@ -1,17 +1,17 @@
 /* -------------------------------
    Gruvbox Theme Variables
 -------------------------------- */
-/* @define-color fg #d4be98; */
-/* @define-color bg #282828; */
-/* @define-color bg-alt #1d2021; */
-/* @define-color red #ea6962; */
-/* @define-color green #a9b665; */
-/* @define-color yellow #d8a657; */
-/* @define-color blue #7daea3; */
-/* @define-color magenta #d3869b; */
-/* @define-color gray #928374; */
-/* @define-color gray-dark #504945; */
-/* @define-color highlight #fabd2f; */
+@define-color fg #d4be98;
+@define-color bg #282828;
+@define-color bg-alt #1d2021;
+@define-color red #ea6962;
+@define-color green #a9b665;
+@define-color yellow #d8a657;
+@define-color blue #7daea3;
+@define-color magenta #d3869b;
+@define-color gray #928374;
+@define-color gray-dark #504945;
+@define-color highlight #fabd2f;
 
 /* -------------------------------
    Kanagawa Theme Variables
@@ -31,17 +31,17 @@
 /* -------------------------------
    Rosé Pine Theme
 -------------------------------- */
-@define-color fg #e0def4;
-@define-color bg #191724;
-@define-color bg-alt #1f1d2e;
-@define-color red #eb6f92;
-@define-color green #31748f;
-@define-color yellow #f6c177;
-@define-color blue #9ccfd8;
-@define-color magenta #c4a7e7;
-@define-color gray #908caa;
-@define-color gray-dark #6e6a86;
-@define-color highlight #ebbcba;
+/* @define-color fg #e0def4; */
+/* @define-color bg #191724; */
+/* @define-color bg-alt #1f1d2e; */
+/* @define-color red #eb6f92; */
+/* @define-color green #31748f; */
+/* @define-color yellow #f6c177; */
+/* @define-color blue #9ccfd8; */
+/* @define-color magenta #c4a7e7; */
+/* @define-color gray #908caa; */
+/* @define-color gray-dark #6e6a86; */
+/* @define-color highlight #ebbcba; */
 
 /* -------------------------------
    Evergarden Theme
