@@ -1,7 +1,7 @@
-# background = #000000
+background = #000000
 # foreground = #FFFFFF
 
-# cursor-color = #575279
+cursor-color = #EC5D2A
 # cursor-text  = #FFFFFF
 
 background-opacity = 1.00
@@ -28,5 +28,3 @@ window-inherit-working-directory = false
 window-padding-balance           = true
 window-padding-y                 = 0
 window-decoration                = server
-
-# working-directory = /home/fuyu147/art/

@@ -1,7 +1,7 @@
 alias vim="nvim"
 alias ff="fastfetch"
 
-# alias calendar="cal -n 3"
+alias calendar="cal -n 3"
 
 alias p="python"
 
