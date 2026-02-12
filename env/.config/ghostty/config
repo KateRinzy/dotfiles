@@ -1,18 +1,17 @@
 # background = #000000
 # foreground = #FFFFFF
 
-cursor-color = #575279
-cursor-text  = #FFFFFF
+# cursor-color = #575279
+# cursor-text  = #FFFFFF
 
-background-opacity = 0.90
+background-opacity = 1.00
 background-blur    = false
 
 confirm-close-surface = false
 
-font-family = "IosevkaTerm NFM Light"
-# font-family = "Monaspace Krypton NF"
-font-family = "Zen Maru Gothic"
-font-size   = 22
+font-family = "Miracode"
+font-family = "Noto Sans CJK SC"
+font-size   = 19
 
 gtk-single-instance = true
 
@@ -23,7 +22,7 @@ shell-integration-features = no-cursor
 
 bell-features = no-title
 
-theme = Rose Pine
+theme = Gruvbox Material Dark
 
 window-inherit-working-directory = false
 window-padding-balance           = true

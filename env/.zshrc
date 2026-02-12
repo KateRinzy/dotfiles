@@ -42,7 +42,6 @@ bindkey -s ^y "^uyazi-tmux\n"
 bindkey -s ^f "^uvfz\n"
 bindkey -s ^q "^ukitty sh -c ranger\n"
 
-
 zstyle ':completion:*:(vim|nvim):*' ignored-patterns '*.pdf'
 
 _tmux-goway() {
