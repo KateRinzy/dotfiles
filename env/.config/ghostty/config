@@ -4,14 +4,15 @@ background = #000000
 cursor-color = #EC5D2A
 # cursor-text  = #FFFFFF
 
-background-opacity = 1.00
+background-opacity = 0.8
 background-blur    = false
 
 confirm-close-surface = false
 
-font-family = "Miracode"
-font-family = "Noto Sans CJK SC"
-font-size   = 19
+font-family  = "Miracode"
+font-family  = "Noto Sans CJK SC"
+font-size    = 19
+font-feature = -calt, -liga, -dlig
 
 gtk-single-instance = true
 

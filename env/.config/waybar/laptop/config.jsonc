@@ -30,6 +30,7 @@
     },
     "mpd": {
         "format": "[{title} - {artist} - {elapsedTime:%M:%S}/{totalTime:%M:%S} - {volume}%]",
+        "format-stopped": "",
         "max-length": 100
     },
     "hyprland/workspaces": {

@@ -11,6 +11,7 @@ dynamic_padding = true
 
 [font]
 normal = { family = "Miracode" }
+size = 19
 
 [keyboard]
 bindings = [

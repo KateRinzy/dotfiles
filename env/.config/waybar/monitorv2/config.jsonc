@@ -48,6 +48,7 @@
     },
     "mpd": {
         "format": "[{title} - {artist} - {elapsedTime:%M:%S}/{totalTime:%M:%S} - {volume}%]",
+        "format-stopped": ""
     },
     "custom/sep": {
         "format": "   "
