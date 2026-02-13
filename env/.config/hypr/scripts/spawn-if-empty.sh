@@ -7,5 +7,6 @@ hyprctl dispatch workspace "$1"
 nbOfWindows=$(hyprctl activeworkspace -j | jq '.windows' -r)
 
 if [[ "$nbOfWindows" == 0 ]]; then
-  command $2
+  shift
+  $@
 fi

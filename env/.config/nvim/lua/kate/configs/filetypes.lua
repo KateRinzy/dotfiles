@@ -147,6 +147,8 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.o.tabstop = width
     vim.o.softtabstop = width
     vim.o.expandtab = true
+
+    vim.keymap.set("n", "<leader>h", ":w<CR>:!python3 %<CR>", { buffer = true, desc = "Run Python file" })
   end
 })
 

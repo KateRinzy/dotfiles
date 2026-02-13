@@ -132,8 +132,19 @@ local colorsList = {
       current_variant = FIRST
     end,
     set_second = function()
+      -- feels illegal to use gruvbox dark with rosé pine dawn, but whatever
+      require('rose-pine').setup({
+        disable_background = false,
+      })
       vim.opt.background = "light"
-      vim.cmd [[colorscheme gruvbox]]
+      vim.cmd [[colorscheme rose-pine-dawn]]
+
+      -- Forcefully disable transparency
+      local p = require('rose-pine.palette')
+      vim.api.nvim_set_hl(0, 'Normal', { fg = p.text, bg = p.base })
+      vim.api.nvim_set_hl(0, 'NormalNC', { fg = p.subtle, bg = p.base })
+      vim.api.nvim_set_hl(0, 'NormalFloat', { fg = p.text, bg = p.overlay })
+
       save_theme("Gruvvy", SECOND)
       current_name = "Gruvvy"
       current_variant = SECOND
@@ -326,7 +337,7 @@ local action_state = require("telescope.actions.state")
 
 local function pick_theme()
   local keys = vim.tbl_keys(themes)
-  table.sort(keys)   -- alphabetical order
+  table.sort(keys) -- alphabetical order
 
   pickers.new({}, {
     prompt_title = "Themes",
