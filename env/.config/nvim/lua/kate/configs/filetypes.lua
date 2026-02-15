@@ -127,6 +127,14 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.o.tabstop = width
     vim.o.softtabstop = width
     vim.o.expandtab = true
+    vim.keymap.set("n", "<leader>f", function()
+      vim.cmd("write")
+
+      local file = vim.fn.shellescape(vim.api.nvim_buf_get_name(0))
+      vim.cmd("silent !bunx prettier " .. file .. " --write")
+
+      vim.cmd("edit!") -- reload file after formatting
+    end, { desc = "Format with Prettier (bunx)" })
   end
 })
 

@@ -5,7 +5,7 @@
     "height": 32,
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window",
+        // "hyprland/window",
         "mpris",
         "mpd"
     ],
@@ -29,7 +29,7 @@
         "format-paused": "[<i>{artist} - {title}</i>]",
     },
     "mpd": {
-        "format": "[{title} - {artist} - {elapsedTime:%M:%S}/{totalTime:%M:%S} - {volume}%]",
+        "format": "[{title} - {artist} - {elapsedTime:%H:%M:%S}/{totalTime:%H:%M:%S} - {volume}%]",
         "format-stopped": "",
         "max-length": 100
     },

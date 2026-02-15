@@ -64,7 +64,7 @@ function _G.git_status()
   local branch = ""
 
   for line in output:gmatch("[^\n]+") do
-    local branch_match = line:match("\\* (.+)")
+    local branch_match = line:match("%* (.+)")
     if branch_match then
       branch = branch_match
     end

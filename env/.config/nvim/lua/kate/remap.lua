@@ -11,11 +11,11 @@ vim.cmd([[
     \   '',
     \   {
     \     'source': 'rg --files --hidden --no-ignore-vcs --glob "!*.pdf"',
-    \     'options': '--preview "bat --style=numbers --color=always --line-range :500 {}"'
     \   },
     \   <bang>0
     \ )
 ]])
+    -- \     'options': '--preview "bat --style=numbers --color=always --line-range :500 {}"'
 
 local function l_format()
   local ignored_filetypes = {
