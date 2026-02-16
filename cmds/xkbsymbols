@@ -1,17 +1,9 @@
 #!/usr/bin/env bash
 
 sudo cp -v \
-    /home/fuyu147/dotfiles/root/usr/share/xkeyboard-config-2/symbols/ca \
-    /usr/share/xkeyboard-config-2/symbols/ca
+  /home/fuyu147/dotfiles/root/usr/share/xkeyboard-config-2/symbols/ca \
+  /usr/share/xkeyboard-config-2/symbols/ca
 
 sudo cp -v \
-    /home/fuyu147/dotfiles/root/usr/share/xkeyboard-config-2/symbols/fr \
-    /usr/share/xkeyboard-config-2/symbols/fr
-
-sudo cp -v \
-    /home/fuyu147/dotfiles/root/usr/share/xkeyboard-config-2/symbols/us \
-    /usr/share/xkeyboard-config-2/symbols/us
-
-sudo cp -v \
-    /home/fuyu147/dotfiles/root/usr/share/xkeyboard-config-2/symbols/is \
-    /usr/share/xkeyboard-config-2/symbols/is
+  /home/fuyu147/dotfiles/root/usr/share/xkeyboard-config-2/symbols/fr \
+  /usr/share/xkeyboard-config-2/symbols/fr

@@ -15,7 +15,7 @@ vim.cmd([[
     \   <bang>0
     \ )
 ]])
-    -- \     'options': '--preview "bat --style=numbers --color=always --line-range :500 {}"'
+-- \     'options': '--preview "bat --style=numbers --color=always --line-range :500 {}"'
 
 local function l_format()
   local ignored_filetypes = {
@@ -65,7 +65,7 @@ end
 local mappings = {
   { "n",               "<C-t>",      "<cmd>silent !tmux-goway<CR>" },
   { "n",               "<C-y>",      "<cmd>silent !tmux neww yazi-tmux<CR>" },
-  { "n",               "<leader>pv", "<cmd>Fyler<CR>",                    { desc = "Toggle Fyler" } },
+  { "n",               "ç",          "<CMD>Oil .<CR>",                         { desc = "Open root directory" } },
   { "n",               "<ESC>",      "<CMD>noh<CR>" },
   --
   -- { { "n", "v", "x" }, "<M-l>",      "{" },

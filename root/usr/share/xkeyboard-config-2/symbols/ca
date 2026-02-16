@@ -2,6 +2,7 @@
 
 
 // Disposition de touches basée sur Colemak,
+//
 // Changements principaux:
 // - présences des touches utiles en programmation tel que (, [, {, }, ] et )
 //   sur la ligne des chiffres;
@@ -17,7 +18,7 @@
 // ┃Tab ↹  ┃ q œ │ w \ │ f @ │ p ~ │ g — │ j ¥ │ l   │ u   │ y § │ ; ¶ │ ◌̂   │ ç   │  <    ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┲━━━━┷━━━━━━━┫
 // ┃        ┃ A   │ R   │ S   │ T   │ D   │ H   │ N   │ E   │ I   │ O   │ ?   ┃            ┃
-// ┃Échappe ┃ a   │ r % │ s * │ t ^ │ d   │ h   │ n   │ e   │ i   │ o   │ ◌̀   ┃ Entrée ⏎   ┃
+// ┃Échappe ┃ a · │ r % │ s * │ t ^ │ d   │ h   │ n   │ e   │ i   │ o   │ ◌̀   ┃ Entrée ⏎   ┃
 // ┣━━━━━━━━┻━━━━┱┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┻━━━━━━━━━━━━┫
 // ┃             ┃ Z   │ X   │ C   │ V   │ B   │ K   │ M   │ "   │ &   │ É   ┃             ┃
 // ┃ Majuscule ⇧ ┃ z « │ x » │ c ° │ v   │ b[1]│ k   │ m µ │ , ◌̄ │ .   │ é ◌́ ┃ Majuscule ⇧ ┃
@@ -59,7 +60,7 @@ xkb_symbols "basic" {
     key <AD12>  {[  ccedilla,           Ccedilla                            ]};
     key <BKSL>  {[  less,               greater                             ]};
 
-    key <AC01>  {[  a,                  A                                   ]};
+    key <AC01>  {[  a,                  A,                  periodcentered  ]};
     key <AC02>  {[  r,                  R,                  percent         ]};
     key <AC03>  {[  s,                  S,                  asterisk        ]};
     key <AC04>  {[  t,                  T,                  asciicircum     ]};
