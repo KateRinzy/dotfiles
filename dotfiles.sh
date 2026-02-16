@@ -3,6 +3,7 @@
 confs=(
   alacritty
   dunst
+  foot
   fastfetch
   ghostty
   hyfetch.json

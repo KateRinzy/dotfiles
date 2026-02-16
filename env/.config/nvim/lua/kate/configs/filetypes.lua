@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "cs", "csharp" },
+  pattern = { "cs", "csharp", "rust" },
   callback = function()
     local width = 4
     vim.o.shiftwidth = width

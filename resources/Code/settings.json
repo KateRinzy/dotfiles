@@ -2,7 +2,7 @@
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "keyboard.dispatch": "keyCode",
     "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "\"Courier Prime Code\", \"Zen Maru Gothic\"",
+    "editor.fontFamily": "\"Miracode\"",
     "debug.inlineValues": "off",
     "editor.inlayHints.enabled": "off",
     "editor.codeLens": false,
