@@ -81,7 +81,7 @@ local function status_line()
   local mode = " [%{mode()}]"
   local file_name = " [%-.40t]"
   local modified = " %-m"
-  local file_type = " %y"
+  -- local file_type = " %y"
   local diagnostics = " %{v:lua.lsp_diagnostics()}"
   local gits = " %{v:lua.git_status()}"
   local lsp = " %{v:lua.lsp_status()}"
@@ -90,12 +90,11 @@ local function status_line()
   local line_no = "%10([%l/%L%)]"
   local search = "%{v:hlsearch ? v:lua.search_status() : ''}"
 
-
   return table.concat({
     mode,
     file_name,
     modified,
-    file_type,
+    -- file_type,
     right_align,
     search,
     diagnostics,

@@ -8,15 +8,11 @@ confs=(
   ghostty
   hyfetch.json
   hypr
-  i3
   kitty
-  niri
   nvim
-  polybar
   qutebrowser
   ranger
   rofi
-  sway
   tmux-goway
   vesktop/themes
   waybar

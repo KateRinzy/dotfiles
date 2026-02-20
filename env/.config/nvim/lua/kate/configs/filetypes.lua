@@ -62,7 +62,7 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = { "typst" },
   callback = function()
     vim.opt.spell = true
-    vim.opt.spelllang = { "en", "fr", "cjk" }
+    vim.opt.spelllang = { "en", "fr", "is", "cjk" }
 
     vim.opt.textwidth = 80
 
@@ -85,7 +85,7 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = { "text", "txt", "mail" },
   callback = function()
     vim.o.spell = true
-    vim.opt.spelllang = { "en", "fr", "cjk" }
+    vim.opt.spelllang = { "en", "fr", "is" , "cjk" }
 
     vim.o.colorcolumn = "80"
 
